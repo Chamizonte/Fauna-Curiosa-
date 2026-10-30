@@ -1,0 +1,52 @@
+ame: Generar y subir short
+
+# Se dispara solo, 4 veces al día (horas en UTC: 08, 12, 16, 20 ≈ 09/10,
+# 13/14, 17/18, 21/22 hora de España según cambie el horario de verano).
+# Cada disparo genera y sube UN short (así, si uno falla, no afecta a los
+# otros 3 del día). "workflow_dispatch" deja lanzarlo a mano desde GitHub
+# para hacer pruebas sin esperar a la hora programada.
+on:
+  schedule:
+    - cron: '0 8 * * *'
+    - cron: '0 12 * * *'
+    - cron: '0 16 * * *'
+    - cron: '0 20 * * *'
+  workflow_dispatch: {}
+
+jobs:
+  generar-short:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar ffmpeg
+        run: sudo apt-get update -y && sudo apt-get install -y ffmpeg
+
+      - name: Instalar dependencias de Python
+        run: pip install -r requirements.txt
+
+      - name: Generar y subir el short
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          PRIVACIDAD_YOUTUBE: ${{ vars.PRIVACIDAD_YOUTUBE }}
+        run: python generador_shorts.py
+
+      - name: Guardar el short como respaldo (por si algo falla al subir)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: short-generado-${{ github.run_id }}
+          path: shorts_output/**/*.mp4
+          retention-days: 7
+          if-no-files-found: ignore
