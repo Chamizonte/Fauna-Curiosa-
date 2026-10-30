@@ -240,19 +240,24 @@ def _tiene_audio_real(path, umbral_db=-50.0):
 # 4) Visual de fondo (foto o vídeo REAL; nada de IA salvo que no haya nada)
 # ---------------------------------------------------------------------------
 
+WIKIMEDIA_HEADERS = {
+    "User-Agent": "MundoCuriosoShortsBot/1.0 (+https://github.com/Chamizonte/Fauna-Curiosa-; contacto: marchatov@gmail.com)"
+}
+
+
 def _pick_best_wikimedia(query, min_width=1000):
     api = "https://commons.wikimedia.org/w/api.php"
     params = {
         "action": "query", "format": "json", "list": "search",
         "srsearch": query, "srnamespace": 6, "srlimit": 10,
     }
-    r = requests.get(api, params=params, timeout=30).json()
+    r = requests.get(api, params=params, headers=WIKIMEDIA_HEADERS, timeout=30).json()
     titles = [x["title"] for x in r.get("query", {}).get("search", [])]
     for title in titles:
         info = requests.get(api, params={
             "action": "query", "format": "json", "prop": "imageinfo",
             "titles": title, "iiprop": "url|size|mime",
-        }, timeout=30).json()
+        }, headers=WIKIMEDIA_HEADERS, timeout=30).json()
         pages = info.get("query", {}).get("pages", {})
         for p in pages.values():
             ii = p.get("imageinfo")
@@ -327,7 +332,7 @@ def fetch_visual(query, fuente, modo, outfile="bg_source"):
 
     ext = ".mp4" if kind == "video" else ".jpg"
     path = outfile + ext
-    r = requests.get(url, timeout=60)
+    r = requests.get(url, headers=WIKIMEDIA_HEADERS, timeout=60)
     r.raise_for_status()
     open(path, "wb").write(r.content)
     log("Visual descargado:", path, "(", kind, "de", fuente, ")")
