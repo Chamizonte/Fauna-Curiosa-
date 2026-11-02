@@ -21,7 +21,7 @@ secreto, sin interacción humana.
 Variables de entorno necesarias (se configuran como Secrets en GitHub, ver
 GITHUB-SETUP.md):
   PEXELS_API_KEY, PIXABAY_API_KEY
-  GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REFRESH_TOKEN
+  GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REFRESH_TOKEN, YOUTUBE_REFRESH_TOKEN
 Opcionales:
   TOPICS_SHEET_NAME      (por defecto "Banco de temas - Shorts")
   MUSICA_DRIVE_NOMBRE    (por defecto "shorts_musica_piano_chill.mp3")
@@ -56,16 +56,19 @@ PIXABAY_API_KEY = os.environ.get("PIXABAY_API_KEY")
 GOOGLE_CLIENT_ID = os.environ["GOOGLE_CLIENT_ID"]
 GOOGLE_CLIENT_SECRET = os.environ["GOOGLE_CLIENT_SECRET"]
 GOOGLE_REFRESH_TOKEN = os.environ["GOOGLE_REFRESH_TOKEN"]
+YOUTUBE_REFRESH_TOKEN = os.environ["YOUTUBE_REFRESH_TOKEN"]
 
 TOPICS_SHEET_NAME = os.environ.get("TOPICS_SHEET_NAME", "Banco de temas - Shorts")
 MUSICA_DRIVE_NOMBRE = os.environ.get("MUSICA_DRIVE_NOMBRE", "shorts_musica_piano_chill.mp3")
 MARCA_TEXTO = os.environ.get("MARCA_TEXTO", "SABIAS QUE...?")
 PRIVACIDAD_YOUTUBE = os.environ.get("PRIVACIDAD_YOUTUBE") or "public"
 
-GOOGLE_SCOPES = [
-    "https://www.googleapis.com/auth/youtube.upload",
+DRIVE_SCOPES = [
     "https://www.googleapis.com/auth/drive.readonly",
     "https://www.googleapis.com/auth/spreadsheets",
+]
+YOUTUBE_SCOPES = [
+    "https://www.googleapis.com/auth/youtube.upload",
 ]
 TOKEN_URI = "https://oauth2.googleapis.com/token"
 
@@ -99,14 +102,14 @@ def log(*args):
 # 1) Autenticación con Google (sin navegador, con refresh_token guardado)
 # ---------------------------------------------------------------------------
 
-def get_google_credentials():
+def get_google_credentials(refresh_token, scopes):
     creds = Credentials(
         token=None,
-        refresh_token=GOOGLE_REFRESH_TOKEN,
+        refresh_token=refresh_token,
         token_uri=TOKEN_URI,
         client_id=GOOGLE_CLIENT_ID,
         client_secret=GOOGLE_CLIENT_SECRET,
-        scopes=GOOGLE_SCOPES,
+        scopes=scopes,
     )
     creds.refresh(GoogleAuthRequest())
     return creds
@@ -470,10 +473,11 @@ def main():
         r.raise_for_status()
         open(FONT_PATH, "wb").write(r.content)
 
-    creds = get_google_credentials()
+    creds_drive = get_google_credentials(GOOGLE_REFRESH_TOKEN, DRIVE_SCOPES)
+    creds_youtube = get_google_credentials(YOUTUBE_REFRESH_TOKEN, YOUTUBE_SCOPES)
 
-    spreadsheet_id, hoja, fila_numero, datos = obtener_siguiente_tema(creds)
-    numero = siguiente_numero_para_tema(creds, spreadsheet_id, hoja, datos["tema"])
+    spreadsheet_id, hoja, fila_numero, datos = obtener_siguiente_tema(creds_drive)
+    numero = siguiente_numero_para_tema(creds_drive, spreadsheet_id, hoja, datos["tema"])
     log(f"Tema elegido: {datos['tema']} #{numero:02d} (fila {fila_numero} del banco)")
 
     bg_path, bg_kind = fetch_visual(
@@ -489,7 +493,7 @@ def main():
         music_path = None
         log("Se conserva el sonido ambiente original del vídeo.")
     else:
-        music_path = descargar_musica_drive(creds)
+        music_path = descargar_musica_drive(creds_drive)
         log("Música (piano chill, pista fija) descargada desde Drive.")
 
     overlay_img, _ = build_text_overlay(datos["texto"], datos["resaltados"], MARCA_TEXTO, numero)
@@ -571,11 +575,11 @@ def main():
     titulo = f"{MARCA_TEXTO} #{numero:02d}"
     descripcion = datos["texto"]
     video_url = subir_a_youtube(
-        creds, str(out_path), titulo=titulo, descripcion=descripcion,
+        creds_youtube, str(out_path), titulo=titulo, descripcion=descripcion,
         privacidad=PRIVACIDAD_YOUTUBE,
     )
 
-    marcar_tema_usado(creds, spreadsheet_id, hoja, fila_numero, video_url)
+    marcar_tema_usado(creds_drive, spreadsheet_id, hoja, fila_numero, video_url)
     log("Fila", fila_numero, "marcada como usada en el banco de temas.")
     log("== Terminado OK ==")
 
