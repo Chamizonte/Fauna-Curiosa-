@@ -276,7 +276,11 @@ def _pick_best_wikimedia(query, min_width=1000):
             if not ii:
                 continue
             info0 = ii[0]
-            if info0.get("mime", "").startswith("image/") and info0.get("width", 0) >= min_width:
+            mime = info0.get("mime", "")
+            # Solo formatos de foto de verdad: nada de SVG/PDF/TIFF raros que
+            # luego Pillow no puede abrir.
+            if mime in ("image/jpeg", "image/png", "image/webp", "image/gif", "image/bmp") \
+                    and info0.get("width", 0) >= min_width:
                 return info0["url"], "image"
     return None, None
 
