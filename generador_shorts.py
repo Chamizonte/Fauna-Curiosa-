@@ -50,13 +50,22 @@ from googleapiclient.http import MediaFileUpload, MediaIoBaseDownload
 # 0) Configuración
 # ---------------------------------------------------------------------------
 
-PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY")
-PIXABAY_API_KEY = os.environ.get("PIXABAY_API_KEY")
+def _env_limpio(nombre, requerido=True):
+    v = os.environ.get(nombre)
+    if v is None:
+        if requerido:
+            raise RuntimeError(f"Falta la variable de entorno {nombre}")
+        return None
+    return v.strip()  # quita espacios/saltos de línea colados al pegar el Secret
 
-GOOGLE_CLIENT_ID = os.environ["GOOGLE_CLIENT_ID"]
-GOOGLE_CLIENT_SECRET = os.environ["GOOGLE_CLIENT_SECRET"]
-GOOGLE_REFRESH_TOKEN = os.environ["GOOGLE_REFRESH_TOKEN"]
-YOUTUBE_REFRESH_TOKEN = os.environ["YOUTUBE_REFRESH_TOKEN"]
+
+PEXELS_API_KEY = _env_limpio("PEXELS_API_KEY", requerido=False)
+PIXABAY_API_KEY = _env_limpio("PIXABAY_API_KEY", requerido=False)
+
+GOOGLE_CLIENT_ID = _env_limpio("GOOGLE_CLIENT_ID")
+GOOGLE_CLIENT_SECRET = _env_limpio("GOOGLE_CLIENT_SECRET")
+GOOGLE_REFRESH_TOKEN = _env_limpio("GOOGLE_REFRESH_TOKEN")
+YOUTUBE_REFRESH_TOKEN = _env_limpio("YOUTUBE_REFRESH_TOKEN")
 
 TOPICS_SHEET_NAME = os.environ.get("TOPICS_SHEET_NAME", "Banco de temas - Shorts")
 MUSICA_DRIVE_NOMBRE = os.environ.get("MUSICA_DRIVE_NOMBRE", "shorts_musica_piano_chill.mp3")
