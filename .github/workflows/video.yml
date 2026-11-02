@@ -1,0 +1,77 @@
+name: Generar y subir vídeo largo
+
+on:
+  schedule:
+    # 3 veces al mes: días 1, 11 y 21 a las 09:00 UTC (~10:00 España).
+    - cron: "0 9 1,11,21 * *"
+  workflow_dispatch:
+    inputs:
+      plan:
+        description: "Guion concreto de planes/ (déjalo vacío para coger el siguiente de la cola)"
+        required: false
+        default: ""
+      modo_prueba:
+        description: "Prueba corta (solo los primeros 6 beats)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write   # para marcar el guion como hecho (mover a planes/_hechos/ y hacer commit)
+
+jobs:
+  video:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Descargar el repo
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar FFmpeg y fuentes
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu-core fonts-liberation
+
+      - name: Instalar dependencias de Python
+        run: pip install -r requirements-video.txt
+
+      - name: Generar el vídeo y subirlo a YouTube (privado)
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          PRIVACIDAD_YOUTUBE: private
+          SUBIR_YT: "1"
+          # En ejecución programada no hay inputs -> PLAN_FILE vacío -> coge el siguiente de la cola.
+          PLAN_FILE: ${{ github.event.inputs.plan != '' && format('planes/{0}', github.event.inputs.plan) || '' }}
+          MODO_PRUEBA: ${{ github.event.inputs.modo_prueba || 'false' }}
+        run: python generador_video.py
+
+      - name: Marcar el guion como hecho (commit)
+        if: success()
+        run: |
+          git add -A planes
+          if git diff --cached --quiet; then
+            echo "Sin cambios en planes/ (modo prueba o subida omitida)."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Vídeo generado; guion movido a planes/_hechos/"
+            git push
+          fi
+
+      - name: Guardar el vídeo y la miniatura como respaldo
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: video
+          path: |
+            out/*.mp4
+            out/*.png
+          retention-days: 7
+          if-no-files-found: warn
