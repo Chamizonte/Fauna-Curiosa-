@@ -45,6 +45,8 @@ jobs:
           GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          SHEET_ID: "1q0Fh5G_UQxt7SsRZ6NrRjlsqhCE0QeGCUoom_wcT6i4"
           PRIVACIDAD_YOUTUBE: private
           SUBIR_YT: "1"
           # En ejecución programada no hay inputs -> PLAN_FILE vacío -> coge el siguiente de la cola.
