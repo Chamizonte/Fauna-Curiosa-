@@ -26,6 +26,8 @@ ELEVENLABS_API_KEY = env("ELEVENLABS_API_KEY")
 GOOGLE_CLIENT_ID      = env("GOOGLE_CLIENT_ID")
 GOOGLE_CLIENT_SECRET  = env("GOOGLE_CLIENT_SECRET")
 YOUTUBE_REFRESH_TOKEN = env("YOUTUBE_REFRESH_TOKEN")
+GOOGLE_REFRESH_TOKEN  = env("GOOGLE_REFRESH_TOKEN")   # Drive+Sheets (cuenta personal), para el status
+SHEET_ID              = env("SHEET_ID", "1q0Fh5G_UQxt7SsRZ6NrRjlsqhCE0QeGCUoom_wcT6i4")  # hoja "Estado de vídeos largos - Curiosa Fauna"
 
 VOICE_ID      = env("VOICE_ID", "o0SveC0zgHFuCsEO3vHR")   # David Martín (castellana)
 ELEVEN_MODEL  = env("ELEVEN_MODEL", "eleven_multilingual_v2")
@@ -471,6 +473,61 @@ def subir_a_youtube(mp4, titulo, descripcion, tags, privacidad="private", thumb=
     return f"https://youtu.be/{vid}", vid
 
 
+# ------------------------------ STATUS EN SHEET -----------------------------
+def _mmss(segundos):
+    s = int(round(segundos)); return f"{s // 60}:{s % 60:02d}"
+
+def registrar_en_sheet(datos):
+    """Crea o actualiza (buscando por 'Guion') la fila del vídeo en la Google Sheet de estado."""
+    if not (SHEET_ID and GOOGLE_REFRESH_TOKEN and GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET):
+        print("  (status en Sheet omitido: faltan SHEET_ID o credenciales de Google)")
+        return
+    try:
+        from google.oauth2.credentials import Credentials
+        from googleapiclient.discovery import build
+        creds = Credentials(
+            token=None, refresh_token=GOOGLE_REFRESH_TOKEN,
+            client_id=GOOGLE_CLIENT_ID, client_secret=GOOGLE_CLIENT_SECRET,
+            token_uri="https://oauth2.googleapis.com/token",
+            scopes=["https://www.googleapis.com/auth/spreadsheets"],
+        )
+        svc = build("sheets", "v4", credentials=creds, cache_discovery=False)
+        vals = svc.spreadsheets().values().get(spreadsheetId=SHEET_ID, range="A1:Z1000").execute().get("values", [])
+        if not vals:
+            print("  (status en Sheet omitido: la hoja no tiene cabecera)")
+            return
+        header = vals[0]
+        idx = {name.strip(): i for i, name in enumerate(header)}
+        row = [""] * len(header)
+        for k, v in datos.items():
+            if k in idx: row[idx[k]] = v
+        gc = idx.get("Guion"); found = None
+        if gc is not None:
+            for r in range(1, len(vals)):
+                rv = vals[r]
+                if len(rv) > gc and rv[gc].strip() == datos.get("Guion", "").strip():
+                    found = r; break
+        if found is not None:
+            existing = vals[found]
+            for keep in ("Nº", "Fecha a público", "Visitas"):  # no pises lo que rellenas a mano
+                ci = idx.get(keep)
+                if ci is not None and len(existing) > ci and existing[ci].strip():
+                    row[ci] = existing[ci]
+            svc.spreadsheets().values().update(
+                spreadsheetId=SHEET_ID, range=f"A{found + 1}",
+                valueInputOption="USER_ENTERED", body={"values": [row]}).execute()
+            print("  status actualizado en la Sheet (fila existente).")
+        else:
+            if idx.get("Nº") is not None: row[idx["Nº"]] = str(len(vals))
+            svc.spreadsheets().values().append(
+                spreadsheetId=SHEET_ID, range="A1",
+                valueInputOption="USER_ENTERED", insertDataOption="INSERT_ROWS",
+                body={"values": [row]}).execute()
+            print("  status añadido a la Sheet (fila nueva).")
+    except Exception as e:
+        print("  no se pudo actualizar la Google Sheet:", str(e)[:180])
+
+
 # --------------------------- SELECCIÓN DE GUION (COLA) ----------------------
 def pick_plan():
     """Guion concreto si se pasó PLAN_FILE; si no, el siguiente pendiente de planes/."""
@@ -517,6 +574,20 @@ def main():
         print("   Revísalo en YouTube Studio y pásalo a Público cuando estés conforme.")
     else:
         print("ℹ️ Subida omitida (SUBIR_YT=0 o faltan credenciales de Google). El vídeo queda como artifact.")
+
+    # Registra/actualiza el status en la Google Sheet (solo si se subió y no es prueba).
+    if uploaded and not MODO_PRUEBA:
+        registrar_en_sheet({
+            "Fecha de subida": datetime.date.today().isoformat(),
+            "Tema": (SUBJECT or "").capitalize(),
+            "Título": titulo,
+            "Duración": _mmss(ffprobe_dur(mp4)),
+            "Escenas": str(len(VIDEO_PLAN["beats"])),
+            "Estado": "Subido (privado)",
+            "Enlace YouTube": url,
+            "Guion": os.path.basename(plan_path),
+            "Notas": "Generado automáticamente",
+        })
 
     # Marca el guion como hecho SOLO si se subió y no es una prueba.
     # (El workflow hace luego git commit/push de este movimiento.)
