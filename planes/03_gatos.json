@@ -1,0 +1,877 @@
+{
+ "title": "Gatos: de dioses a demonios",
+ "output_name": "gatos_es",
+ "subject": "cat",
+ "beats": [
+  {
+   "narration": "Durante miles de años, el mismo animal fue adorado como un dios y quemado como un demonio.",
+   "q": "cat green eyes close up",
+   "syn": [
+    "mysterious cat portrait",
+    "black cat dramatic light"
+   ]
+  },
+  {
+   "narration": "Lo veneraron en templos y lo masacraron en plazas públicas.",
+   "q": "cat staring intense",
+   "syn": [
+    "cat eyes glowing",
+    "cat silhouette dark"
+   ]
+  },
+  {
+   "narration": "Pocas criaturas han pasado por los dos extremos: el altar y la hoguera.",
+   "q": "black cat shadow",
+   "syn": [
+    "cat dramatic portrait",
+    "cat eyes night"
+   ]
+  },
+  {
+   "narration": "Y quizá ningún otro animal entró tan silenciosamente en nuestras casas.",
+   "q": "cat sitting window",
+   "syn": [
+    "domestic cat relaxed",
+    "cat looking out window"
+   ]
+  },
+  {
+   "narration": "Esta es la historia del gato.",
+   "q": "cat portrait elegant",
+   "syn": [
+    "cat close up whiskers",
+    "cat face detail"
+   ]
+  },
+  {
+   "narration": "De cómo pasó de ser un dios... a un demonio... y de vuelta a ser un rey del sofá.",
+   "q": "cat lying comfortable",
+   "syn": [
+    "cat relaxing home",
+    "lazy cat sofa"
+   ]
+  },
+  {
+   "narration": "Todo empieza hace unos diez mil años, cuando los humanos empezaron a cultivar.",
+   "q": "ancient wheat field",
+   "syn": [
+    "golden grain field",
+    "wheat harvest sunset"
+   ]
+  },
+  {
+   "narration": "Donde hay grano almacenado, hay ratones. Y donde hay ratones, aparecen gatos.",
+   "q": "mouse in grain",
+   "syn": [
+    "rodent close up",
+    "field mouse wild"
+   ]
+  },
+  {
+   "narration": "El gato salvaje se acercó solo a los primeros pueblos, atraído por las plagas.",
+   "q": "wildcat prowling",
+   "syn": [
+    "wild cat stalking",
+    "cat hunting grass"
+   ]
+  },
+  {
+   "narration": "No lo domesticamos nosotros. En cierto modo, se domesticó él.",
+   "q": "cat approaching slowly",
+   "syn": [
+    "curious cat outdoor",
+    "cat walking toward camera"
+   ]
+  },
+  {
+   "narration": "Y en ningún lugar lo amaron tanto como en el antiguo Egipto.",
+   "q": "ancient egypt temple",
+   "syn": [
+    "egyptian hieroglyphs wall",
+    "egypt pyramids desert"
+   ],
+   "wiki": "Cats in ancient Egypt"
+  },
+  {
+   "narration": "Para los egipcios, el gato era sagrado.",
+   "q": "egyptian cat statue",
+   "syn": [
+    "ancient egyptian cat sculpture",
+    "cat bronze statue egypt"
+   ]
+  },
+  {
+   "narration": "Protegía el grano de los ratones y la casa de las serpientes.",
+   "q": "cat hunting snake",
+   "syn": [
+    "cat alert pose",
+    "cat ready to pounce"
+   ]
+  },
+  {
+   "narration": "Mataba a las víboras del desierto que podían acabar con una familia.",
+   "q": "desert snake close up",
+   "syn": [
+    "cobra desert",
+    "snake sand dunes"
+   ]
+  },
+  {
+   "narration": "Por eso lo asociaron con la diosa Bastet, protectora del hogar.",
+   "q": "egyptian goddess statue",
+   "syn": [
+    "bastet cat goddess",
+    "ancient egyptian deity"
+   ],
+   "wiki": "Bastet"
+  },
+  {
+   "narration": "Bastet tenía cuerpo de mujer y cabeza de gata.",
+   "q": "egyptian goddess relief",
+   "syn": [
+    "ancient egypt carving figure",
+    "egyptian temple statue"
+   ]
+  },
+  {
+   "narration": "Las familias cuidaban a sus gatos como a un miembro más.",
+   "q": "cat being petted",
+   "syn": [
+    "cat affection home",
+    "cat in lap"
+   ]
+  },
+  {
+   "narration": "Cuando un gato moría, la familia entera guardaba luto.",
+   "q": "cat sleeping peaceful",
+   "syn": [
+    "cat resting calm",
+    "cat curled up"
+   ]
+  },
+  {
+   "narration": "Y a veces se afeitaban las cejas en señal de duelo.",
+   "q": "ancient egypt painting people",
+   "syn": [
+    "egyptian mural figures",
+    "ancient egypt art"
+   ]
+  },
+  {
+   "narration": "Matar a un gato, aunque fuera sin querer, podía castigarse con la muerte.",
+   "q": "egyptian cat statue dramatic",
+   "syn": [
+    "ancient cat sculpture",
+    "cat idol egypt"
+   ]
+  },
+  {
+   "narration": "Los gatos muertos se momificaban como pequeñas personas.",
+   "q": "egyptian mummy artifact",
+   "syn": [
+    "ancient egypt sarcophagus",
+    "mummy wrapped artifact"
+   ],
+   "wiki": "Animal mummy"
+  },
+  {
+   "narration": "Se han encontrado cementerios con cientos de miles de gatos momificados.",
+   "q": "egyptian tomb artifacts",
+   "syn": [
+    "ancient egypt excavation",
+    "archaeology egypt dig"
+   ]
+  },
+  {
+   "narration": "Para los egipcios, sacar un gato de Egipto era casi un crimen de Estado.",
+   "q": "egyptian border desert",
+   "syn": [
+    "nile river ancient",
+    "egypt desert caravan"
+   ]
+  },
+  {
+   "narration": "Cada año, la ciudad de Bubastis celebraba un gran festival en honor a Bastet.",
+   "q": "ancient egypt temple columns",
+   "syn": [
+    "egyptian temple interior",
+    "egypt ruins hall"
+   ]
+  },
+  {
+   "narration": "Según los cronistas antiguos, acudían cientos de miles de personas.",
+   "q": "egyptian mural people",
+   "syn": [
+    "ancient egypt crowd art",
+    "nile boats ancient"
+   ]
+  },
+  {
+   "narration": "Era una de las fiestas más multitudinarias del mundo antiguo.",
+   "q": "egyptian temple ruins",
+   "syn": [
+    "ancient egypt architecture",
+    "egypt temple stone"
+   ]
+  },
+  {
+   "narration": "Se cuenta incluso que el amor por los gatos costó a Egipto una batalla.",
+   "q": "ancient egypt war relief",
+   "syn": [
+    "egyptian army carving",
+    "ancient egypt soldiers"
+   ],
+   "wiki": "Battle of Pelusium (525 BC)"
+  },
+  {
+   "narration": "Según la leyenda, un ejército persa pintó gatos en sus escudos.",
+   "q": "ancient persian relief",
+   "syn": [
+    "persian warriors carving",
+    "ancient soldiers shields"
+   ]
+  },
+  {
+   "narration": "Y los egipcios no se atrevieron a disparar por miedo a herir a los animales sagrados.",
+   "q": "egyptian archers relief",
+   "syn": [
+    "ancient egypt army relief",
+    "egypt warriors ancient"
+   ]
+  },
+  {
+   "narration": "Verdad o no, la historia dice mucho de cuánto respetaban al gato.",
+   "q": "egyptian cat bronze statue",
+   "syn": [
+    "ancient cat sculpture elegant",
+    "cat idol egypt"
+   ]
+  },
+  {
+   "narration": "Pero los gatos eran demasiado útiles para quedarse en un solo país.",
+   "q": "cat on boat",
+   "syn": [
+    "cat near water",
+    "cat by river"
+   ]
+  },
+  {
+   "narration": "Los mercaderes los subieron a sus barcos para proteger la comida de las ratas.",
+   "q": "ancient trading ship",
+   "syn": [
+    "old wooden boat sea",
+    "merchant ship vintage"
+   ]
+  },
+  {
+   "narration": "Y así, isla a isla y puerto a puerto, el gato conquistó el mundo.",
+   "q": "cat on dock",
+   "syn": [
+    "cat near harbor",
+    "port with cat"
+   ]
+  },
+  {
+   "narration": "Los romanos lo llevaron por todo su imperio.",
+   "q": "roman ruins landscape",
+   "syn": [
+    "ancient roman mosaic",
+    "roman villa ruins"
+   ]
+  },
+  {
+   "narration": "Donde llegaba una granja o un granero, llegaba un gato a defenderlo.",
+   "q": "cat in barn",
+   "syn": [
+    "farm cat hay",
+    "cat rural countryside"
+   ]
+  },
+  {
+   "narration": "Durante siglos, el gato fue un compañero discreto y muy apreciado.",
+   "q": "cat sitting calm",
+   "syn": [
+    "cat portrait soft",
+    "cat relaxed outdoor"
+   ]
+  },
+  {
+   "narration": "Pero entonces, en la Europa medieval, su suerte dio un giro terrible.",
+   "q": "medieval village misty",
+   "syn": [
+    "dark medieval town",
+    "gothic cathedral fog"
+   ]
+  },
+  {
+   "narration": "El gato, sobre todo el negro, empezó a asociarse con la oscuridad.",
+   "q": "black cat glowing eyes",
+   "syn": [
+    "black cat night",
+    "black cat shadow dramatic"
+   ]
+  },
+  {
+   "narration": "Su sigilo, sus ojos brillantes y su vida nocturna lo volvieron sospechoso.",
+   "q": "cat eyes glowing dark",
+   "syn": [
+    "cat in darkness",
+    "cat night prowling"
+   ]
+  },
+  {
+   "narration": "La gente empezó a verlo como compañero de brujas y del diablo.",
+   "q": "medieval witch illustration",
+   "syn": [
+    "dark medieval art",
+    "gothic dark scene"
+   ]
+  },
+  {
+   "narration": "En el año mil doscientos treinta y tres, un documento de la Iglesia selló su destino.",
+   "q": "old medieval manuscript",
+   "syn": [
+    "ancient document parchment",
+    "medieval scroll"
+   ],
+   "wiki": "Vox in Rama"
+  },
+  {
+   "narration": "Describía rituales demoníacos en los que aparecía un gato negro.",
+   "q": "dark medieval manuscript",
+   "syn": [
+    "gothic illustration old",
+    "medieval parchment dark"
+   ]
+  },
+  {
+   "narration": "A partir de ahí, en muchos lugares el gato pasó de amigo a enemigo.",
+   "q": "black cat defensive",
+   "syn": [
+    "scared cat hiding",
+    "cat alert fearful"
+   ]
+  },
+  {
+   "narration": "El gato negro, en especial, cargó con la peor fama de todas.",
+   "q": "black cat yellow eyes",
+   "syn": [
+    "black cat portrait dark",
+    "black cat staring"
+   ]
+  },
+  {
+   "narration": "Cruzarse con uno se consideraba un presagio de desgracia.",
+   "q": "black cat crossing street",
+   "syn": [
+    "black cat walking night",
+    "black cat alley"
+   ]
+  },
+  {
+   "narration": "Una superstición que, increíblemente, todavía sobrevive hoy.",
+   "q": "black cat modern close up",
+   "syn": [
+    "black cat eyes detail",
+    "black cat sitting"
+   ]
+  },
+  {
+   "narration": "Se les perseguía, se les torturaba y se les mataba por superstición.",
+   "q": "dark alley medieval",
+   "syn": [
+    "shadowy old street",
+    "gloomy medieval town"
+   ]
+  },
+  {
+   "narration": "En algunas fiestas populares se llegaban a quemar gatos en público.",
+   "q": "bonfire flames night",
+   "syn": [
+    "fire burning dramatic",
+    "flames dark night"
+   ]
+  },
+  {
+   "narration": "Era crueldad nacida del miedo y la ignorancia.",
+   "q": "sad cat eyes",
+   "syn": [
+    "cat fearful close up",
+    "cat hiding shadow"
+   ]
+  },
+  {
+   "narration": "Y aquí empieza una de las historias más repetidas... y más discutidas.",
+   "q": "medieval town dark sky",
+   "syn": [
+    "gothic city storm",
+    "medieval street gloom"
+   ]
+  },
+  {
+   "narration": "En el año mil trescientos cuarenta y siete, llegó la peste negra.",
+   "q": "medieval plague illustration",
+   "syn": [
+    "dark medieval death art",
+    "plague doctor vintage"
+   ],
+   "wiki": "Black Death"
+  },
+  {
+   "narration": "La peor pandemia de la historia europea.",
+   "q": "medieval graveyard",
+   "syn": [
+    "old cemetery fog",
+    "gothic tombstones"
+   ]
+  },
+  {
+   "narration": "Mató a decenas de millones de personas en pocos años.",
+   "q": "medieval ruins empty",
+   "syn": [
+    "abandoned medieval village",
+    "desolate old town"
+   ]
+  },
+  {
+   "narration": "La enfermedad la transmitían las pulgas que viajaban sobre las ratas.",
+   "q": "rat close up",
+   "syn": [
+    "brown rat dark",
+    "rodent in shadow"
+   ]
+  },
+  {
+   "narration": "Y aquí viene la idea tan repetida: si Europa hubiera tenido más gatos...",
+   "q": "cat hunting mouse",
+   "syn": [
+    "cat stalking rodent",
+    "cat pouncing"
+   ]
+  },
+  {
+   "narration": "...habría habido menos ratas, y quizá menos muertos.",
+   "q": "many rats dark",
+   "syn": [
+    "rats swarm night",
+    "rodents group"
+   ]
+  },
+  {
+   "narration": "Durante siglos se ha dicho que matar gatos ayudó a propagar la peste.",
+   "q": "black cat dramatic",
+   "syn": [
+    "cat shadow dark",
+    "cat eyes intense"
+   ]
+  },
+  {
+   "narration": "Es una historia potente... pero los historiadores la matizan mucho.",
+   "q": "old history book",
+   "syn": [
+    "ancient manuscript page",
+    "medieval book candle"
+   ]
+  },
+  {
+   "narration": "La peste se extendía por muchas vías, no solo por las ratas de las ciudades.",
+   "q": "medieval city illustration",
+   "syn": [
+    "old european city art",
+    "historic town drawing"
+   ]
+  },
+  {
+   "narration": "Y la matanza de gatos nunca fue tan total como suele contarse.",
+   "q": "cat walking street",
+   "syn": [
+    "stray cat alley",
+    "cat outdoor cautious"
+   ]
+  },
+  {
+   "narration": "Así que digámoslo con honestidad: los gatos ayudaban contra las ratas...",
+   "q": "cat with caught mouse",
+   "syn": [
+    "cat hunting success",
+    "cat predator pose"
+   ]
+  },
+  {
+   "narration": "...pero culparles de millones de muertes por su ausencia es ir demasiado lejos.",
+   "q": "cat sitting thoughtful",
+   "syn": [
+    "cat calm portrait",
+    "cat serious look"
+   ]
+  },
+  {
+   "narration": "Lo que sí es cierto es que, pasada la peste, el gato volvió a hacer falta.",
+   "q": "cat in granary",
+   "syn": [
+    "barn cat alert",
+    "cat guarding food"
+   ]
+  },
+  {
+   "narration": "Las ratas seguían ahí, y nadie las cazaba mejor que un gato.",
+   "q": "cat catching rat",
+   "syn": [
+    "cat hunting rodent",
+    "cat stalking prey"
+   ]
+  },
+  {
+   "narration": "El gato es una máquina de cazar casi perfecta.",
+   "q": "cat hunting pose",
+   "syn": [
+    "cat stalking focused",
+    "cat predator eyes"
+   ]
+  },
+  {
+   "narration": "Oye el chillido de un ratón a varios metros de distancia.",
+   "q": "cat ears alert",
+   "syn": [
+    "cat listening close up",
+    "cat focused"
+   ]
+  },
+  {
+   "narration": "Ve en una penumbra en la que nosotros estaríamos ciegos.",
+   "q": "cat eyes night",
+   "syn": [
+    "cat in low light",
+    "cat glowing eyes dark"
+   ]
+  },
+  {
+   "narration": "Y puede pasar horas inmóvil, esperando el momento exacto.",
+   "q": "cat crouched patient",
+   "syn": [
+    "cat waiting still",
+    "cat watching prey"
+   ]
+  },
+  {
+   "narration": "Poco a poco, el miedo dio paso de nuevo a la utilidad.",
+   "q": "cat relaxed farm",
+   "syn": [
+    "cat sunbathing",
+    "cat calm outdoor"
+   ]
+  },
+  {
+   "narration": "Y hubo un lugar donde el gato siempre fue bienvenido: el mar.",
+   "q": "cat on ship deck",
+   "syn": [
+    "cat near sea",
+    "cat sailing boat"
+   ],
+   "wiki": "Ship's cat"
+  },
+  {
+   "narration": "Durante siglos, casi todos los barcos llevaron un gato a bordo.",
+   "q": "cat on sailboat",
+   "syn": [
+    "cat ship rope",
+    "cat maritime"
+   ]
+  },
+  {
+   "narration": "Protegía la comida, las cuerdas y las velas de los roedores.",
+   "q": "cat near ropes",
+   "syn": [
+    "cat on deck",
+    "cat ship interior"
+   ]
+  },
+  {
+   "narration": "Una plaga de ratas podía hundir un barco royendo sus provisiones.",
+   "q": "rat on wood",
+   "syn": [
+    "rodent gnawing",
+    "rat dark ship"
+   ]
+  },
+  {
+   "narration": "Así que el gato se ganó un sitio en la tripulación.",
+   "q": "cat sailor mascot",
+   "syn": [
+    "cat on boat relaxed",
+    "cat sea breeze"
+   ]
+  },
+  {
+   "narration": "Los marineros los consideraban amuletos de buena suerte.",
+   "q": "cat content portrait",
+   "syn": [
+    "happy cat close up",
+    "cat relaxed smile"
+   ]
+  },
+  {
+   "narration": "Algunos gatos de barco se hicieron famosos en todo el mundo.",
+   "q": "cat on navy ship",
+   "syn": [
+    "cat ship deck vintage",
+    "cat maritime"
+   ]
+  },
+  {
+   "narration": "Uno sobrevivió al hundimiento de varios buques durante la Segunda Guerra Mundial.",
+   "q": "vintage warship sea",
+   "syn": [
+    "old navy ship ocean",
+    "wwii ship vintage"
+   ]
+  },
+  {
+   "narration": "Otro, llamado Simon, defendió las provisiones de su barco pese a estar herido.",
+   "q": "cat resilient portrait",
+   "syn": [
+    "cat navy mascot",
+    "cat brave close up"
+   ],
+   "wiki": "Simon (cat)"
+  },
+  {
+   "narration": "Recibió una medalla al valor: el único gato condecorado así en la historia.",
+   "q": "military medal close up",
+   "syn": [
+    "medal ribbon vintage",
+    "award medal"
+   ]
+  },
+  {
+   "narration": "Y en cada puerto nuevo, algún gato bajaba a tierra y se quedaba.",
+   "q": "cat exploring dock",
+   "syn": [
+    "cat walking harbor",
+    "cat port town"
+   ]
+  },
+  {
+   "narration": "Así los gatos llegaron a cada rincón habitado del planeta.",
+   "q": "world map vintage",
+   "syn": [
+    "old map continents",
+    "antique globe"
+   ]
+  },
+  {
+   "narration": "Con el tiempo, Europa dejó atrás las viejas supersticiones.",
+   "q": "cat peaceful window light",
+   "syn": [
+    "cat calm sunbeam",
+    "cat serene"
+   ]
+  },
+  {
+   "narration": "No fue un cambio de un día para otro.",
+   "q": "cat cautious outdoor",
+   "syn": [
+    "stray cat watching",
+    "cat alley cautious"
+   ]
+  },
+  {
+   "narration": "Hizo falta que la razón fuera apartando poco a poco a las viejas supersticiones.",
+   "q": "antique book candle",
+   "syn": [
+    "vintage study desk",
+    "old science book"
+   ]
+  },
+  {
+   "narration": "Los naturalistas empezaron a estudiar al gato con admiración, no con miedo.",
+   "q": "cat elegant study",
+   "syn": [
+    "cat classic portrait",
+    "cat noble pose"
+   ]
+  },
+  {
+   "narration": "Y en los hogares, su carácter independiente empezó a verse como un encanto.",
+   "q": "cat confident home",
+   "syn": [
+    "cat relaxed sofa",
+    "cat elegant indoor"
+   ]
+  },
+  {
+   "narration": "El gato volvió a entrar en las casas, ahora como compañero.",
+   "q": "cat on couch cozy",
+   "syn": [
+    "cat indoor relaxed",
+    "cat home comfortable"
+   ]
+  },
+  {
+   "narration": "Escritores, pintores y reyes presumían de sus gatos.",
+   "q": "cat elegant portrait",
+   "syn": [
+    "cat regal pose",
+    "cat noble look"
+   ]
+  },
+  {
+   "narration": "Un gato no obedece como un perro y, sin embargo, elige quedarse contigo.",
+   "q": "cat looking up owner",
+   "syn": [
+    "cat affectionate gaze",
+    "cat trust home"
+   ]
+  },
+  {
+   "narration": "Esa mezcla de distancia y cariño nos atrapó para siempre.",
+   "q": "cat content eyes",
+   "syn": [
+    "cat gentle portrait",
+    "cat purring close"
+   ]
+  },
+  {
+   "narration": "De demonio perseguido pasó, otra vez, a animal querido.",
+   "q": "cat affectionate",
+   "syn": [
+    "cat being petted happy",
+    "cat content home"
+   ]
+  },
+  {
+   "narration": "Y en nuestra época ha conquistado el mayor imperio de todos: internet.",
+   "q": "cat looking at screen",
+   "syn": [
+    "cat with laptop",
+    "cat curious camera"
+   ]
+  },
+  {
+   "narration": "Millones de personas ven vídeos de gatos cada día.",
+   "q": "cat playful jumping",
+   "syn": [
+    "funny cat playing",
+    "cat energetic indoor"
+   ]
+  },
+  {
+   "narration": "Hoy hay más gatos domésticos en el mundo que en ningún otro momento de la historia.",
+   "q": "many cats together",
+   "syn": [
+    "group of cats outdoor",
+    "cat colony"
+   ]
+  },
+  {
+   "narration": "Comparten casa con cientos de millones de personas.",
+   "q": "cat with owner home",
+   "syn": [
+    "cat in lap cozy",
+    "cat indoor relaxed"
+   ]
+  },
+  {
+   "narration": "Y siguen haciendo, a su manera, el mismo trabajo de siempre.",
+   "q": "cat watching garden",
+   "syn": [
+    "cat alert outdoor",
+    "cat hunting garden"
+   ]
+  },
+  {
+   "narration": "El mismo animal que se adoraba en los templos de Egipto...",
+   "q": "egyptian cat statue elegant",
+   "syn": [
+    "ancient cat sculpture",
+    "cat idol bronze"
+   ]
+  },
+  {
+   "narration": "...hoy duerme veinte horas al día encima de nuestro teclado.",
+   "q": "cat sleeping cozy",
+   "syn": [
+    "cat napping warm",
+    "cat lazy sleep"
+   ]
+  },
+  {
+   "narration": "El gato nunca nos ha necesitado del todo.",
+   "q": "cat independent outdoor",
+   "syn": [
+    "cat walking away",
+    "cat aloof pose"
+   ]
+  },
+  {
+   "narration": "Entró en nuestra vida porque le convenía, y se quedó en sus propios términos.",
+   "q": "cat confident stare",
+   "syn": [
+    "cat proud pose",
+    "cat independent look"
+   ]
+  },
+  {
+   "narration": "Lo hemos adorado y lo hemos temido, pero nunca lo hemos domesticado del todo.",
+   "q": "wildcat eyes",
+   "syn": [
+    "cat wild expression",
+    "cat intense gaze"
+   ]
+  },
+  {
+   "narration": "Y quizá por eso nos fascina tanto.",
+   "q": "cat mysterious portrait",
+   "syn": [
+    "cat green eyes detail",
+    "cat elegant close up"
+   ]
+  },
+  {
+   "narration": "Un pequeño cazador que un día fue dios, luego demonio...",
+   "q": "black cat majestic",
+   "syn": [
+    "cat dramatic portrait",
+    "cat shadow light"
+   ]
+  },
+  {
+   "narration": "...y que hoy nos mira desde el sofá como si todavía lo fuera.",
+   "q": "cat staring regal",
+   "syn": [
+    "cat on sofa proud",
+    "cat confident home"
+   ]
+  },
+  {
+   "narration": "Si te ha gustado esta historia, suscríbete. En el próximo vídeo: los perros que corrieron para salvar un pueblo entero.",
+   "q": "cat warm golden light",
+   "syn": [
+    "cat sunset window",
+    "cat cozy evening"
+   ]
+  }
+ ],
+ "youtube": {
+  "title": "Gatos: de Dioses de Egipto a Demonios de la Edad Media",
+  "thumb_text": "DIOSES Y DEMONIOS",
+  "tags": [
+   "gatos",
+   "historia de los gatos",
+   "Antiguo Egipto",
+   "Bastet",
+   "peste negra",
+   "Edad Media",
+   "gatos sagrados",
+   "documental",
+   "historia",
+   "gato negro",
+   "supersticiones",
+   "historia animal",
+   "documental historia",
+   "gatos en la historia",
+   "felinos"
+  ],
+  "description": "El mismo animal fue adorado como un dios en el Antiguo Egipto y quemado como un demonio en la Europa medieval: el gato.\n\nEsta es la historia de cómo el gato se coló solo en nuestras vidas, por qué los egipcios lo consideraban sagrado, cómo acabó asociado a las brujas y al diablo, y qué hay de verdad (y de mito) en la famosa idea de que matar gatos ayudó a propagar la peste negra. Un recorrido honesto desde los templos de Bastet hasta el rey del sofá actual.\n\nSuscríbete para un nuevo documental de historia animal cada semana.\n\n#historia #gatos #documental #antiguoegipto #animales"
+ }
+}

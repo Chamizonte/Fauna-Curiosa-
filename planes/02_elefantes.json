@@ -1,0 +1,912 @@
+{
+ "title": "Elefantes de guerra",
+ "output_name": "elefantes_es",
+ "subject": "elephant",
+ "beats": [
+  {
+   "narration": "Hace más de dos mil años, los ejércitos se enfrentaron a un arma viva de tres metros de altura.",
+   "q": "elephant walking savanna",
+   "syn": [
+    "large elephant close up",
+    "elephant dramatic light"
+   ]
+  },
+  {
+   "narration": "Una montaña de músculo que cargaba a toda velocidad contra las filas enemigas.",
+   "q": "elephant charging dust",
+   "syn": [
+    "elephant running fast",
+    "elephant stampede"
+   ]
+  },
+  {
+   "narration": "Aplastaba hombres, derribaba caballos y sembraba el pánico.",
+   "q": "elephant tusks close up",
+   "syn": [
+    "angry elephant trunk",
+    "elephant powerful"
+   ]
+  },
+  {
+   "narration": "No era una máquina. Era un elefante de guerra.",
+   "q": "elephant portrait tusks",
+   "syn": [
+    "asian elephant close up",
+    "elephant head detail"
+   ]
+  },
+  {
+   "narration": "Durante siglos, fue el tanque del mundo antiguo.",
+   "q": "elephant silhouette sunset",
+   "syn": [
+    "elephant walking dust",
+    "elephant dramatic sky"
+   ]
+  },
+  {
+   "narration": "Esta es su historia.",
+   "q": "elephant herd walking",
+   "syn": [
+    "elephants savanna",
+    "elephant slow motion"
+   ]
+  },
+  {
+   "narration": "Todo empezó en la India, hace más de tres mil años.",
+   "q": "india ancient temple",
+   "syn": [
+    "indian palace architecture",
+    "india landscape ancient"
+   ]
+  },
+  {
+   "narration": "Allí, los humanos aprendieron a capturar y amansar al elefante asiático.",
+   "q": "asian elephant forest",
+   "syn": [
+    "elephant with mahout",
+    "elephant india"
+   ],
+   "wiki": "War elephant"
+  },
+  {
+   "narration": "No se cría como un caballo: casi siempre se captura salvaje y se doma.",
+   "q": "wild elephant jungle",
+   "syn": [
+    "elephant in forest",
+    "elephant bathing river"
+   ]
+  },
+  {
+   "narration": "Un animal tan grande no necesitaba mucho entrenamiento para ser temible.",
+   "q": "elephant trunk raised",
+   "syn": [
+    "elephant close up power",
+    "elephant tusks detail"
+   ]
+  },
+  {
+   "narration": "Bastaba con dirigir toneladas de fuerza hacia el enemigo.",
+   "q": "elephant charging camera",
+   "syn": [
+    "elephant running dust",
+    "elephant aggressive"
+   ]
+  },
+  {
+   "narration": "Los reyes de la India los convirtieron en el corazón de sus ejércitos.",
+   "q": "indian royal palace",
+   "syn": [
+    "ancient india relief",
+    "maharaja elephant painting"
+   ]
+  },
+  {
+   "narration": "Un solo elefante podía valer por cientos de soldados.",
+   "q": "elephant large close up",
+   "syn": [
+    "elephant standing tall",
+    "elephant imposing"
+   ]
+  },
+  {
+   "narration": "Sobre su lomo montaban una torre de madera con arqueros.",
+   "q": "elephant with howdah",
+   "syn": [
+    "decorated war elephant",
+    "elephant carrying tower"
+   ]
+  },
+  {
+   "narration": "Desde allí disparaban flechas por encima de todo el campo de batalla.",
+   "q": "archers shooting arrows reenactment",
+   "syn": [
+    "ancient archers volley",
+    "medieval archers"
+   ]
+  },
+  {
+   "narration": "Y por delante, los colmillos y la trompa barrían a quien se acercara.",
+   "q": "elephant tusks menacing",
+   "syn": [
+    "elephant trunk swinging",
+    "elephant tusks close"
+   ]
+  },
+  {
+   "narration": "Para un ejército que no los había visto nunca, eran una pesadilla.",
+   "q": "elephant charging battle",
+   "syn": [
+    "war elephant reenactment",
+    "elephant dust charge"
+   ]
+  },
+  {
+   "narration": "Los caballos enemigos se aterrorizaban con su olor y con su barrito.",
+   "q": "horses spooked rearing",
+   "syn": [
+    "frightened horses battle",
+    "horse rearing dust"
+   ]
+  },
+  {
+   "narration": "La caballería, orgullo de muchos ejércitos, se volvía inútil ante ellos.",
+   "q": "cavalry charge reenactment",
+   "syn": [
+    "horses charging battle",
+    "medieval cavalry"
+   ]
+  },
+  {
+   "narration": "Y entonces, un conquistador europeo se topó con ellos de frente.",
+   "q": "ancient greek warrior",
+   "syn": [
+    "macedonian soldier reenactment",
+    "ancient hoplite armor"
+   ]
+  },
+  {
+   "narration": "Alejandro Magno había cruzado medio mundo sin perder una sola batalla.",
+   "q": "alexander the great statue",
+   "syn": [
+    "ancient macedonian army",
+    "greek warrior bust"
+   ],
+   "wiki": "Alexander the Great"
+  },
+  {
+   "narration": "En el año trescientos veintiséis antes de Cristo, llegó a la India.",
+   "q": "ancient india river",
+   "syn": [
+    "indian ancient landscape",
+    "himalaya river valley"
+   ]
+  },
+  {
+   "narration": "Al otro lado de un río lo esperaba el rey Poros.",
+   "q": "indian warrior king",
+   "syn": [
+    "ancient indian army",
+    "india ancient warrior"
+   ],
+   "wiki": "Porus"
+  },
+  {
+   "narration": "Y con él, doscientos elefantes de guerra en formación.",
+   "q": "war elephants line",
+   "syn": [
+    "elephants battle formation",
+    "war elephant reenactment"
+   ],
+   "wiki": "Battle of the Hydaspes"
+  },
+  {
+   "narration": "Fue la batalla del río Hidaspes.",
+   "q": "ancient river battle",
+   "syn": [
+    "muddy river crossing",
+    "ancient battlefield river"
+   ]
+  },
+  {
+   "narration": "Los soldados de Alejandro nunca habían luchado contra algo así.",
+   "q": "greek soldiers shocked",
+   "syn": [
+    "ancient army fear",
+    "macedonian phalanx"
+   ]
+  },
+  {
+   "narration": "Los elefantes rompieron sus filas y pisotearon a los hombres.",
+   "q": "elephant charging soldiers",
+   "syn": [
+    "war elephant battle",
+    "elephant trampling reenactment"
+   ]
+  },
+  {
+   "narration": "Pero los griegos descubrieron la gran debilidad del arma viviente.",
+   "q": "ancient greek soldiers spears",
+   "syn": [
+    "phalanx spears reenactment",
+    "hoplite spears"
+   ]
+  },
+  {
+   "narration": "Un elefante herido y aterrado no distingue amigos de enemigos.",
+   "q": "elephant panic charge",
+   "syn": [
+    "wild elephant aggressive",
+    "elephant trunk raised angry"
+   ]
+  },
+  {
+   "narration": "Lo rodearon, lo hirieron con lanzas y lo volvieron loco de dolor.",
+   "q": "ancient spears battle",
+   "syn": [
+    "soldiers with spears reenactment",
+    "spear wall ancient"
+   ]
+  },
+  {
+   "narration": "Y las bestias enloquecidas se giraron contra su propio ejército.",
+   "q": "elephant stampede dust",
+   "syn": [
+    "elephant running wild",
+    "elephant chaos"
+   ]
+  },
+  {
+   "narration": "Alejandro ganó, pero quedó tan impresionado que quiso elefantes para sí.",
+   "q": "alexander statue profile",
+   "syn": [
+    "ancient conqueror bust",
+    "greek general statue"
+   ]
+  },
+  {
+   "narration": "Desde entonces, los ejércitos griegos los adoptaron como arma de prestigio.",
+   "q": "hellenistic army reenactment",
+   "syn": [
+    "ancient greek army",
+    "macedonian soldiers"
+   ]
+  },
+  {
+   "narration": "El elefante de guerra se extendió por Persia, Egipto y el Mediterráneo.",
+   "q": "ancient persian relief",
+   "syn": [
+    "hellenistic ruins",
+    "ancient middle east ruins"
+   ]
+  },
+  {
+   "narration": "Un rey llamado Pirro los usó para invadir Italia y derrotar a Roma.",
+   "q": "ancient greek king statue",
+   "syn": [
+    "hellenistic warrior",
+    "ancient general bust"
+   ],
+   "wiki": "Pyrrhus of Epirus"
+  },
+  {
+   "narration": "Ganó sus batallas, pero con pérdidas tan brutales que la victoria no servía de nada.",
+   "q": "ancient battlefield dead",
+   "syn": [
+    "aftermath battle reenactment",
+    "ancient war field"
+   ]
+  },
+  {
+   "narration": "De ahí nació una expresión que aún usamos: una victoria pírrica.",
+   "q": "ancient ruins dramatic",
+   "syn": [
+    "greek temple sunset",
+    "ancient column ruins"
+   ]
+  },
+  {
+   "narration": "Pero la historia más famosa del elefante de guerra estaba por llegar.",
+   "q": "alps mountains snow",
+   "syn": [
+    "mountain range dramatic",
+    "snowy mountains landscape"
+   ]
+  },
+  {
+   "narration": "Y empezó en una ciudad enemiga mortal de Roma: Cartago.",
+   "q": "ancient carthage ruins",
+   "syn": [
+    "north africa ancient ruins",
+    "mediterranean ancient port"
+   ],
+   "wiki": "Carthage"
+  },
+  {
+   "narration": "Su mejor general se llamaba Aníbal.",
+   "q": "ancient general bust",
+   "syn": [
+    "carthaginian warrior",
+    "ancient commander statue"
+   ],
+   "wiki": "Hannibal"
+  },
+  {
+   "narration": "Aníbal odiaba a Roma y juró destruirla.",
+   "q": "ancient roman ruins dramatic",
+   "syn": [
+    "roman forum ruins",
+    "ancient rome columns"
+   ]
+  },
+  {
+   "narration": "En el año doscientos dieciocho antes de Cristo, lanzó un plan imposible.",
+   "q": "ancient map mediterranean",
+   "syn": [
+    "old parchment map",
+    "vintage map europe"
+   ],
+   "wiki": "Second Punic War"
+  },
+  {
+   "narration": "En vez de atacar por mar, cruzaría Europa por tierra.",
+   "q": "mountain pass landscape",
+   "syn": [
+    "european mountains wide",
+    "alpine valley"
+   ]
+  },
+  {
+   "narration": "Y llevaría consigo un ejército enorme... y treinta y siete elefantes de guerra.",
+   "q": "elephants walking line",
+   "syn": [
+    "war elephants march",
+    "elephant herd walking"
+   ]
+  },
+  {
+   "narration": "Primero cruzó España y el sur de la Galia.",
+   "q": "spanish countryside landscape",
+   "syn": [
+    "mediterranean coast hills",
+    "dry mountains spain"
+   ]
+  },
+  {
+   "narration": "Después llegó el obstáculo que nadie creía posible: los Alpes.",
+   "q": "alps snow peaks",
+   "syn": [
+    "snowy mountain pass",
+    "alpine mountains winter"
+   ]
+  },
+  {
+   "narration": "Montañas heladas, desfiladeros estrechos y pueblos hostiles.",
+   "q": "snowy mountain cliff",
+   "syn": [
+    "icy mountain path",
+    "mountain storm snow"
+   ]
+  },
+  {
+   "narration": "Imagina subir a un elefante tropical por la nieve y el hielo.",
+   "q": "elephant snow unusual",
+   "syn": [
+    "elephant cold weather",
+    "elephant walking snow"
+   ]
+  },
+  {
+   "narration": "Muchos hombres y animales cayeron por los precipicios.",
+   "q": "steep mountain cliff",
+   "syn": [
+    "mountain precipice snow",
+    "dangerous mountain path"
+   ]
+  },
+  {
+   "narration": "El frío, el hambre y las emboscadas los diezmaron.",
+   "q": "snowy mountain storm",
+   "syn": [
+    "blizzard mountains",
+    "harsh winter mountains"
+   ]
+  },
+  {
+   "narration": "Pero Aníbal logró lo imposible: bajó a Italia con su ejército.",
+   "q": "italian countryside hills",
+   "syn": [
+    "italy green valley",
+    "tuscany landscape"
+   ]
+  },
+  {
+   "narration": "Y los romanos, al verlo, no se lo podían creer.",
+   "q": "roman soldiers reenactment",
+   "syn": [
+    "roman legion marching",
+    "ancient roman army"
+   ]
+  },
+  {
+   "narration": "Un ejército africano, con elefantes, había aparecido en su propia casa.",
+   "q": "war elephant reenactment",
+   "syn": [
+    "elephant battle ancient",
+    "elephant charge dust"
+   ]
+  },
+  {
+   "narration": "Durante años, Aníbal humilló a Roma una y otra vez.",
+   "q": "roman battle reenactment",
+   "syn": [
+    "ancient battle dust",
+    "roman soldiers fighting"
+   ]
+  },
+  {
+   "narration": "En la batalla de Cannas rodeó y aniquiló a un ejército romano entero.",
+   "q": "ancient battle aftermath",
+   "syn": [
+    "roman battlefield reenactment",
+    "ancient war carnage"
+   ],
+   "wiki": "Battle of Cannae"
+  },
+  {
+   "narration": "Fue una de las peores derrotas de la historia de Roma.",
+   "q": "roman ruins dramatic sky",
+   "syn": [
+    "ancient rome sunset",
+    "roman columns storm"
+   ]
+  },
+  {
+   "narration": "Pero los elefantes que cruzaron los Alpes casi todos habían muerto por el camino.",
+   "q": "lone elephant silhouette",
+   "syn": [
+    "elephant alone dusk",
+    "elephant sad light"
+   ]
+  },
+  {
+   "narration": "El arma más espectacular de Aníbal apenas sobrevivió al viaje.",
+   "q": "elephant walking slow",
+   "syn": [
+    "tired elephant close",
+    "elephant dust evening"
+   ]
+  },
+  {
+   "narration": "Roma, herida pero no vencida, aprendió de sus errores.",
+   "q": "roman general statue",
+   "syn": [
+    "ancient roman commander",
+    "roman bust marble"
+   ]
+  },
+  {
+   "narration": "Y encontró a su propio genio militar: Escipión.",
+   "q": "roman general bust",
+   "syn": [
+    "ancient roman statue",
+    "roman commander marble"
+   ],
+   "wiki": "Scipio Africanus"
+  },
+  {
+   "narration": "En vez de defenderse en Italia, Escipión atacó la propia Cartago.",
+   "q": "north africa coast",
+   "syn": [
+    "ancient ruins africa",
+    "mediterranean coastline"
+   ]
+  },
+  {
+   "narration": "Aníbal tuvo que volver corriendo a casa para defenderla.",
+   "q": "ancient army marching",
+   "syn": [
+    "roman soldiers column",
+    "ancient troops reenactment"
+   ]
+  },
+  {
+   "narration": "Y allí, en el año doscientos dos antes de Cristo, chocaron por fin.",
+   "q": "ancient battlefield wide",
+   "syn": [
+    "dusty plain battle",
+    "ancient war plain"
+   ],
+   "wiki": "Battle of Zama"
+  },
+  {
+   "narration": "Fue la batalla de Zama.",
+   "q": "ancient battle reenactment",
+   "syn": [
+    "roman army battle",
+    "ancient soldiers clash"
+   ]
+  },
+  {
+   "narration": "Aníbal alineó ochenta elefantes de guerra al frente.",
+   "q": "war elephants line battle",
+   "syn": [
+    "elephants formation ancient",
+    "war elephant charge"
+   ]
+  },
+  {
+   "narration": "Pero Escipión ya conocía sus trucos.",
+   "q": "roman soldiers formation",
+   "syn": [
+    "roman legion shields",
+    "ancient roman army lines"
+   ]
+  },
+  {
+   "narration": "En vez de formar un muro, dejó pasillos abiertos entre sus filas.",
+   "q": "roman soldiers columns",
+   "syn": [
+    "ancient army formation",
+    "roman legion reenactment"
+   ]
+  },
+  {
+   "narration": "Cuando los elefantes cargaron, se colaron por los huecos sin aplastar a nadie.",
+   "q": "elephant charging through",
+   "syn": [
+    "war elephant running",
+    "elephant charge dust"
+   ]
+  },
+  {
+   "narration": "Y los soldados los acribillaron desde los lados con lanzas y jabalinas.",
+   "q": "ancient javelins throwing",
+   "syn": [
+    "spears thrown battle",
+    "soldiers spears reenactment"
+   ]
+  },
+  {
+   "narration": "Otros elefantes, aterrados por las trompetas, se volvieron contra los cartagineses.",
+   "q": "elephant panic running",
+   "syn": [
+    "elephant stampede wild",
+    "elephant chaos dust"
+   ]
+  },
+  {
+   "narration": "El arma que había aterrorizado a Roma se volvió contra su dueño.",
+   "q": "war elephant reenactment dust",
+   "syn": [
+    "elephant battle chaos",
+    "elephant charge wild"
+   ]
+  },
+  {
+   "narration": "Escipión ganó. Cartago fue derrotada. Aníbal, vencido para siempre.",
+   "q": "roman victory statue",
+   "syn": [
+    "roman triumph relief",
+    "ancient roman monument"
+   ]
+  },
+  {
+   "narration": "Zama demostró una verdad incómoda sobre los elefantes de guerra.",
+   "q": "elephant portrait serious",
+   "syn": [
+    "elephant close up thoughtful",
+    "elephant eye detail"
+   ]
+  },
+  {
+   "narration": "Eran aterradores... hasta que el enemigo aprendía a no tenerles miedo.",
+   "q": "elephant close up calm",
+   "syn": [
+    "elephant trunk detail",
+    "elephant face"
+   ]
+  },
+  {
+   "narration": "Un animal asustado es tan peligroso para los suyos como para el rival.",
+   "q": "elephant trunk raised",
+   "syn": [
+    "elephant agitated",
+    "elephant wild eye"
+   ]
+  },
+  {
+   "narration": "Por eso muchos ejércitos empezaron a desconfiar de ellos.",
+   "q": "war elephant reenactment",
+   "syn": [
+    "elephant battle ancient",
+    "elephant soldiers"
+   ]
+  },
+  {
+   "narration": "Aun así, en Asia siguieron siendo símbolos de poder durante siglos.",
+   "q": "decorated elephant festival",
+   "syn": [
+    "ornate elephant india",
+    "ceremonial elephant"
+   ]
+  },
+  {
+   "narration": "Reyes de la India y del sudeste asiático los usaron hasta la época moderna.",
+   "q": "indian elephant ceremony",
+   "syn": [
+    "decorated elephant parade",
+    "elephant festival colors"
+   ]
+  },
+  {
+   "narration": "Pintados y acorazados, encabezaban desfiles y batallas.",
+   "q": "armored elephant reenactment",
+   "syn": [
+    "elephant armor decorated",
+    "war elephant ornate"
+   ]
+  },
+  {
+   "narration": "Capturar un elefante salvaje era una operación peligrosa y multitudinaria.",
+   "q": "wild elephant herd",
+   "syn": [
+    "elephants river crossing",
+    "elephant jungle wild"
+   ]
+  },
+  {
+   "narration": "Una vez domado, cada elefante tenía su cuidador de por vida: el mahout.",
+   "q": "elephant with mahout",
+   "syn": [
+    "elephant handler india",
+    "mahout riding elephant"
+   ]
+  },
+  {
+   "narration": "El mahout lo alimentaba, lo bañaba y lo guiaba en plena batalla.",
+   "q": "elephant bathing river",
+   "syn": [
+    "elephant washing water",
+    "elephant care handler"
+   ]
+  },
+  {
+   "narration": "El vínculo entre ambos podía durar décadas.",
+   "q": "elephant trunk person",
+   "syn": [
+    "elephant gentle human",
+    "elephant mahout bond"
+   ]
+  },
+  {
+   "narration": "En la guerra, al elefante se le cubría con cuero y placas de metal.",
+   "q": "armored war elephant",
+   "syn": [
+    "decorated elephant battle",
+    "elephant armor reenactment"
+   ]
+  },
+  {
+   "narration": "A veces se le ataban espadas o puntas de hierro a los colmillos.",
+   "q": "elephant tusks close up",
+   "syn": [
+    "elephant ivory detail",
+    "elephant tusks sharp"
+   ]
+  },
+  {
+   "narration": "Un elefante bien dirigido podía derribar puertas y murallas.",
+   "q": "ancient fortress gate",
+   "syn": [
+    "ancient city walls stone",
+    "stone fortress wall"
+   ]
+  },
+  {
+   "narration": "Por eso también servían en los asedios, como arietes vivientes.",
+   "q": "ancient siege reenactment",
+   "syn": [
+    "fortress assault medieval",
+    "castle wall siege"
+   ]
+  },
+  {
+   "narration": "En China y en el sudeste asiático, reyes enteros combatieron a lomos de elefantes.",
+   "q": "angkor temple relief",
+   "syn": [
+    "southeast asia temple",
+    "ancient khmer ruins"
+   ]
+  },
+  {
+   "narration": "Algunos duelos entre monarcas se libraron elefante contra elefante.",
+   "q": "two elephants facing",
+   "syn": [
+    "elephant fight wild",
+    "elephants confrontation"
+   ]
+  },
+  {
+   "narration": "Quien caía de su montura solía perder también el trono.",
+   "q": "royal elephant painting",
+   "syn": [
+    "elephant throne ceremony",
+    "decorated elephant king"
+   ]
+  },
+  {
+   "narration": "El elefante no era solo un arma: era un símbolo de poder absoluto.",
+   "q": "majestic elephant portrait",
+   "syn": [
+    "elephant imposing tusks",
+    "elephant royal decorated"
+   ]
+  },
+  {
+   "narration": "Montar uno significaba estar, literalmente, por encima de todos los demás.",
+   "q": "elephant howdah high",
+   "syn": [
+    "elephant carrying tower",
+    "elephant tall rider"
+   ]
+  },
+  {
+   "narration": "Por eso, aun cuando eran poco prácticos, los reyes seguían usándolos.",
+   "q": "ornate elephant parade",
+   "syn": [
+    "elephant festival decorated",
+    "ceremonial elephant india"
+   ]
+  },
+  {
+   "narration": "Pero ningún símbolo resiste a la tecnología.",
+   "q": "old cannon reenactment",
+   "syn": [
+    "artillery vintage smoke",
+    "cannon ancient"
+   ]
+  },
+  {
+   "narration": "Pero un invento lo cambió todo: la pólvora.",
+   "q": "cannon firing smoke",
+   "syn": [
+    "old cannon blast",
+    "black powder explosion"
+   ]
+  },
+  {
+   "narration": "Un elefante es una diana enorme e imposible de ocultar.",
+   "q": "elephant large side view",
+   "syn": [
+    "big elephant profile",
+    "elephant full body"
+   ]
+  },
+  {
+   "narration": "Ante los cañones y los mosquetes, su tamaño pasó de ventaja a condena.",
+   "q": "musket firing smoke reenactment",
+   "syn": [
+    "old guns firing",
+    "cannon smoke battle"
+   ]
+  },
+  {
+   "narration": "El estruendo de las armas de fuego los enloquecía de pánico.",
+   "q": "elephant panic wild",
+   "syn": [
+    "elephant running scared",
+    "elephant stampede"
+   ]
+  },
+  {
+   "narration": "Poco a poco, el elefante de guerra desapareció del campo de batalla.",
+   "q": "elephant walking away",
+   "syn": [
+    "elephant silhouette dusk",
+    "lone elephant sunset"
+   ]
+  },
+  {
+   "narration": "Pero su leyenda siguió viva en la memoria de los pueblos.",
+   "q": "ancient relief elephant",
+   "syn": [
+    "stone carving elephant",
+    "elephant statue ancient"
+   ]
+  },
+  {
+   "narration": "Hoy, los elefantes ya no cargan contra ejércitos.",
+   "q": "elephant peaceful savanna",
+   "syn": [
+    "elephant herd calm",
+    "elephants walking wild"
+   ]
+  },
+  {
+   "narration": "Son gigantes inteligentes y sociales que lloran a sus muertos.",
+   "q": "elephant family close",
+   "syn": [
+    "baby elephant mother",
+    "elephant herd tender"
+   ]
+  },
+  {
+   "narration": "Nos cuesta imaginar que un día fueron el arma más temida del mundo.",
+   "q": "elephant portrait majestic",
+   "syn": [
+    "elephant tusks sunset",
+    "elephant dramatic portrait"
+   ]
+  },
+  {
+   "narration": "Durante casi dos mil años, decidieron el destino de imperios.",
+   "q": "elephant silhouette epic",
+   "syn": [
+    "elephant walking sunset",
+    "elephant dust golden hour"
+   ]
+  },
+  {
+   "narration": "Cruzaron montañas imposibles y aterrorizaron a las mejores legiones.",
+   "q": "elephant walking dramatic",
+   "syn": [
+    "elephant dust light",
+    "elephant powerful stride"
+   ]
+  },
+  {
+   "narration": "Y al final, su mayor enemigo no fue Roma, sino su propio miedo.",
+   "q": "elephant eye close up",
+   "syn": [
+    "elephant face detail",
+    "elephant portrait soft"
+   ]
+  },
+  {
+   "narration": "El elefante de guerra fue poder, terror y espectáculo.",
+   "q": "elephant tusks dramatic",
+   "syn": [
+    "elephant charging dust",
+    "war elephant reenactment"
+   ]
+  },
+  {
+   "narration": "Pero también fue, siempre, un animal arrastrado a las guerras de los hombres.",
+   "q": "elephant gentle close",
+   "syn": [
+    "elephant trunk gentle",
+    "elephant calm portrait"
+   ]
+  },
+  {
+   "narration": "Si te ha gustado esta historia, suscríbete. En el próximo vídeo: los gatos, de dioses a demonios.",
+   "q": "elephant walking sunset",
+   "syn": [
+    "elephant silhouette golden",
+    "elephant herd dusk"
+   ]
+  }
+ ],
+ "youtube": {
+  "title": "Elefantes de Guerra: los Tanques del Mundo Antiguo",
+  "thumb_text": "ELEFANTES DE GUERRA",
+  "tags": [
+   "elefantes de guerra",
+   "elefante",
+   "Aníbal",
+   "Alejandro Magno",
+   "batalla de Zama",
+   "Cartago",
+   "Roma antigua",
+   "historia militar",
+   "historia antigua",
+   "documental",
+   "animales en la guerra",
+   "Pirro",
+   "historia animal",
+   "documental historia",
+   "elefantes"
+  ],
+  "description": "Durante casi dos mil años, el animal más temido en el campo de batalla no fue el caballo, sino el elefante de guerra: el tanque del mundo antiguo.\n\nDesde los reyes de la India hasta Alejandro Magno en el río Hidaspes, y desde Aníbal cruzando los Alpes hasta su derrota final en Zama, esta es la historia de cómo tres metros de músculo aterrorizaron a los mejores ejércitos de la historia... y de por qué, al final, su mayor enemigo fue su propio pánico.\n\nSuscríbete para un nuevo documental de historia animal cada semana.\n\n#historia #elefantes #documental #historiamilitar #animales"
+ }
+}

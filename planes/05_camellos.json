@@ -1,0 +1,871 @@
+{
+ "title": "Camellos en la Ruta de la Seda",
+ "output_name": "camellos_es",
+ "subject": "camel",
+ "beats": [
+  {
+   "narration": "Durante dos mil años, la riqueza del mundo cruzó los desiertos a lomos de un solo animal.",
+   "q": "camel desert sunset",
+   "syn": [
+    "camel caravan dunes",
+    "camel silhouette desert"
+   ]
+  },
+  {
+   "narration": "La seda de China, las especias de la India y el oro de Arabia viajaban sobre sus jorobas.",
+   "q": "camel caravan desert",
+   "syn": [
+    "camels walking dunes",
+    "camel train sand"
+   ]
+  },
+  {
+   "narration": "Sin él, los grandes imperios jamás se habrían conocido entre sí.",
+   "q": "camel desert wide",
+   "syn": [
+    "camel dunes horizon",
+    "camel caravan sunset"
+   ]
+  },
+  {
+   "narration": "Lo llamaron el barco del desierto.",
+   "q": "camel walking sand",
+   "syn": [
+    "camel close up desert",
+    "camel profile dunes"
+   ]
+  },
+  {
+   "narration": "Y durante siglos, fue la red comercial más importante de la historia.",
+   "q": "camel caravan long line",
+   "syn": [
+    "camels crossing desert",
+    "camel train dunes"
+   ]
+  },
+  {
+   "narration": "Esta es la historia del camello y la Ruta de la Seda.",
+   "q": "camel portrait desert",
+   "syn": [
+    "camel head close up",
+    "camel face detail"
+   ]
+  },
+  {
+   "narration": "Para entenderla, primero hay que entender al animal.",
+   "q": "camel standing desert",
+   "syn": [
+    "camel full body sand",
+    "camel profile sunset"
+   ]
+  },
+  {
+   "narration": "El camello es, sencillamente, una máquina de sobrevivir en el desierto.",
+   "q": "camel in sandstorm",
+   "syn": [
+    "camel harsh desert",
+    "camel dunes wind"
+   ]
+  },
+  {
+   "narration": "Puede caminar días enteros bajo un sol que mataría a casi cualquier otro ser.",
+   "q": "camel hot desert sun",
+   "syn": [
+    "camel midday sand",
+    "camel heat dunes"
+   ]
+  },
+  {
+   "narration": "Su joroba no guarda agua, como mucha gente cree. Guarda grasa.",
+   "q": "camel hump close up",
+   "syn": [
+    "camel back detail",
+    "camel hump desert"
+   ]
+  },
+  {
+   "narration": "Esa grasa es energía y alimento para los días sin comida.",
+   "q": "camel standing profile",
+   "syn": [
+    "camel side view desert",
+    "camel full body"
+   ]
+  },
+  {
+   "narration": "Cuando por fin encuentra agua, puede beber más de cien litros de una vez.",
+   "q": "camel drinking water",
+   "syn": [
+    "camel at oasis",
+    "camel water hole"
+   ]
+  },
+  {
+   "narration": "Sus narices se cierran para que no entre la arena.",
+   "q": "camel nose close up",
+   "syn": [
+    "camel face sand",
+    "camel muzzle detail"
+   ]
+  },
+  {
+   "narration": "Sus largas pestañas protegen sus ojos de las tormentas.",
+   "q": "camel eyes eyelashes",
+   "syn": [
+    "camel eye close up",
+    "camel face detail"
+   ]
+  },
+  {
+   "narration": "Y sus patas anchas no se hunden en la arena, como si llevara raquetas.",
+   "q": "camel feet sand",
+   "syn": [
+    "camel legs desert",
+    "camel walking dunes close"
+   ]
+  },
+  {
+   "narration": "Puede cargar más de doscientos kilos y seguir andando.",
+   "q": "loaded camel desert",
+   "syn": [
+    "camel carrying cargo",
+    "pack camel caravan"
+   ]
+  },
+  {
+   "narration": "Puede vivir más de cuarenta años y recordar a quien lo ha tratado mal.",
+   "q": "camel face expression",
+   "syn": [
+    "camel eye close up",
+    "camel head detail"
+   ]
+  },
+  {
+   "narration": "Tiene mal genio y escupe cuando se enfada, pero es leal a su manada.",
+   "q": "camel mouth open",
+   "syn": [
+    "camel annoyed face",
+    "camel head close up"
+   ]
+  },
+  {
+   "narration": "Hay dos tipos principales, y conviene no confundirlos.",
+   "q": "two camels desert",
+   "syn": [
+    "camels standing together",
+    "camel pair sand"
+   ]
+  },
+  {
+   "narration": "El dromedario, de una sola joroba, domina los desiertos de Arabia y el norte de África.",
+   "q": "dromedary camel desert",
+   "syn": [
+    "single hump camel",
+    "arabian camel dunes"
+   ],
+   "wiki": "Dromedary"
+  },
+  {
+   "narration": "El camello bactriano, de dos jorobas, resiste el frío de Asia Central.",
+   "q": "bactrian camel",
+   "syn": [
+    "two hump camel",
+    "bactrian camel steppe"
+   ],
+   "wiki": "Bactrian camel"
+  },
+  {
+   "narration": "Uno aguanta el calor abrasador; el otro, inviernos helados.",
+   "q": "camel cold weather",
+   "syn": [
+    "camel snow unusual",
+    "bactrian camel winter"
+   ]
+  },
+  {
+   "narration": "Juntos, cubrían todos los desiertos entre Europa y China.",
+   "q": "camel caravan vast desert",
+   "syn": [
+    "camels endless dunes",
+    "camel train horizon"
+   ]
+  },
+  {
+   "narration": "Hace unos tres mil años, los humanos los domesticaron.",
+   "q": "ancient desert people",
+   "syn": [
+    "camel with herder",
+    "nomad camel desert"
+   ],
+   "wiki": "Camel"
+  },
+  {
+   "narration": "Y al hacerlo, abrieron rutas que antes eran puro suicidio.",
+   "q": "empty desert dunes",
+   "syn": [
+    "vast sand dunes",
+    "desert wilderness wide"
+   ]
+  },
+  {
+   "narration": "Lugares donde un caballo moría en horas, un camello los cruzaba en días.",
+   "q": "camel desert journey",
+   "syn": [
+    "camel crossing dunes",
+    "camel long walk sand"
+   ]
+  },
+  {
+   "narration": "Eso lo cambió todo.",
+   "q": "camel silhouette dawn",
+   "syn": [
+    "camel sunrise desert",
+    "camel dunes morning"
+   ]
+  },
+  {
+   "narration": "Porque al otro lado de esos desiertos había tesoros.",
+   "q": "gold treasure vintage",
+   "syn": [
+    "ancient gold coins",
+    "treasure chest old"
+   ]
+  },
+  {
+   "narration": "En China se fabricaba algo que el resto del mundo deseaba con locura: la seda.",
+   "q": "silk fabric close up",
+   "syn": [
+    "chinese silk textile",
+    "silk weaving traditional"
+   ]
+  },
+  {
+   "narration": "Un tejido suave, brillante y ligero, imposible de imitar fuera de China.",
+   "q": "silk cloth flowing",
+   "syn": [
+    "silk fabric colors",
+    "silk texture detail"
+   ]
+  },
+  {
+   "narration": "Durante siglos, China guardó el secreto de cómo se hacía.",
+   "q": "ancient china landscape",
+   "syn": [
+    "great wall china",
+    "chinese ancient architecture"
+   ]
+  },
+  {
+   "narration": "Cuenta la leyenda que unos monjes sacaron huevos de gusano de seda escondidos en sus bastones.",
+   "q": "silkworm cocoons close up",
+   "syn": [
+    "silk cocoons white",
+    "mulberry silkworm"
+   ]
+  },
+  {
+   "narration": "Cuando el secreto escapó de China, su monopolio empezó a resquebrajarse.",
+   "q": "silk weaving loom",
+   "syn": [
+    "traditional silk making",
+    "silk threads colorful"
+   ]
+  },
+  {
+   "narration": "Y lo vendía a precio de oro a quien lograra llevarlo hasta Occidente.",
+   "q": "silk road market",
+   "syn": [
+    "ancient market vintage",
+    "bazaar spices textiles"
+   ]
+  },
+  {
+   "narration": "Pero entre China y el Mediterráneo había miles de kilómetros de montañas y desierto.",
+   "q": "taklamakan desert",
+   "syn": [
+    "central asia desert",
+    "vast asian desert"
+   ],
+   "wiki": "Taklamakan Desert"
+  },
+  {
+   "narration": "Cruzarlos a pie era imposible. Cruzarlos sin camellos, también.",
+   "q": "camel caravan mountains",
+   "syn": [
+    "camels desert pass",
+    "camel train rocky desert"
+   ]
+  },
+  {
+   "narration": "Así nació la Ruta de la Seda.",
+   "q": "silk road map",
+   "syn": [
+    "ancient trade route",
+    "old map asia"
+   ],
+   "wiki": "Silk Road"
+  },
+  {
+   "narration": "No era una sola carretera, sino una red de caminos entre Oriente y Occidente.",
+   "q": "desert trade route",
+   "syn": [
+    "caravan trail dunes",
+    "ancient path desert"
+   ]
+  },
+  {
+   "narration": "Y por todos ellos circulaban caravanas de camellos.",
+   "q": "large camel caravan",
+   "syn": [
+    "camel train long line",
+    "camels caravan desert"
+   ]
+  },
+  {
+   "narration": "Decenas, a veces cientos de animales en fila, cargados de mercancías.",
+   "q": "camel caravan line",
+   "syn": [
+    "many camels desert",
+    "camel train dunes long"
+   ]
+  },
+  {
+   "narration": "Al frente marchaba un camello guía, a menudo con una campana al cuello.",
+   "q": "camel with bell neck",
+   "syn": [
+    "lead camel caravan",
+    "decorated camel head"
+   ]
+  },
+  {
+   "narration": "Su sonido mantenía unida a toda la caravana, incluso en la oscuridad.",
+   "q": "camel caravan night",
+   "syn": [
+    "camels walking dusk",
+    "camel train evening"
+   ]
+  },
+  {
+   "narration": "A veces se viajaba de noche, guiándose por las estrellas, para huir del calor.",
+   "q": "desert night stars",
+   "syn": [
+    "starry sky desert",
+    "night sky dunes"
+   ]
+  },
+  {
+   "narration": "No llevaban solo seda.",
+   "q": "loaded camels cargo",
+   "syn": [
+    "pack camels desert",
+    "camel carrying goods"
+   ]
+  },
+  {
+   "narration": "Transportaban especias, piedras preciosas, perfumes y cristal.",
+   "q": "spices market colorful",
+   "syn": [
+    "exotic spices pile",
+    "spice bazaar"
+   ]
+  },
+  {
+   "narration": "Desde Arabia viajaban el incienso y la mirra, a veces más caros que el oro.",
+   "q": "frankincense resin close up",
+   "syn": [
+    "incense resin",
+    "myrrh resin detail"
+   ]
+  },
+  {
+   "narration": "Se quemaban en templos de medio mundo, y el desierto se hizo rico vendiéndolos.",
+   "q": "incense smoke temple",
+   "syn": [
+    "burning incense ritual",
+    "temple smoke ceremony"
+   ]
+  },
+  {
+   "narration": "Llevaban papel y pólvora, inventos chinos que cambiarían el mundo.",
+   "q": "ancient paper scroll",
+   "syn": [
+    "old parchment manuscript",
+    "vintage paper document"
+   ]
+  },
+  {
+   "narration": "Y con las mercancías viajaban también ideas, religiones y enfermedades.",
+   "q": "ancient ruins silk road",
+   "syn": [
+    "old caravanserai ruins",
+    "desert ancient ruins"
+   ]
+  },
+  {
+   "narration": "La Ruta de la Seda no movía solo oro: movía civilizaciones enteras.",
+   "q": "ancient city ruins desert",
+   "syn": [
+    "silk road ruins",
+    "desert ancient city"
+   ]
+  },
+  {
+   "narration": "Un viaje completo podía durar meses, incluso años.",
+   "q": "camel caravan sunset",
+   "syn": [
+    "camels long journey",
+    "camel train golden hour"
+   ]
+  },
+  {
+   "narration": "Y era extremadamente peligroso.",
+   "q": "sandstorm desert",
+   "syn": [
+    "desert storm sand",
+    "harsh desert wind"
+   ]
+  },
+  {
+   "narration": "Había tormentas de arena capaces de enterrar a una caravana entera.",
+   "q": "massive sandstorm",
+   "syn": [
+    "sand storm wall",
+    "desert dust storm"
+   ]
+  },
+  {
+   "narration": "Había bandidos esperando en los pasos de montaña.",
+   "q": "rocky desert pass",
+   "syn": [
+    "mountain desert cliffs",
+    "desert canyon rocks"
+   ]
+  },
+  {
+   "narration": "Y días enteros sin una gota de agua.",
+   "q": "dry cracked desert",
+   "syn": [
+    "barren desert ground",
+    "arid wasteland"
+   ]
+  },
+  {
+   "narration": "Por eso, a lo largo de las rutas, se construyeron refugios.",
+   "q": "caravanserai ruins",
+   "syn": [
+    "ancient desert inn",
+    "old stone caravanserai"
+   ],
+   "wiki": "Caravanserai"
+  },
+  {
+   "narration": "Se llamaban caravasares: fortalezas donde descansar, comer y proteger la mercancía.",
+   "q": "caravanserai courtyard",
+   "syn": [
+    "ancient inn ruins",
+    "desert fortress ruins"
+   ]
+  },
+  {
+   "narration": "Eran paradas de vida o muerte en mitad de la nada.",
+   "q": "desert ruins sunset",
+   "syn": [
+    "ancient walls desert",
+    "stone ruins sand"
+   ]
+  },
+  {
+   "narration": "En ellos se mezclaban mercaderes de decenas de idiomas y religiones.",
+   "q": "bazaar people vintage",
+   "syn": [
+    "ancient market crowd",
+    "silk road traders"
+   ]
+  },
+  {
+   "narration": "Eran, en cierto modo, los primeros grandes cruces de la humanidad.",
+   "q": "caravanserai arch",
+   "syn": [
+    "ancient inn courtyard",
+    "stone archway desert"
+   ]
+  },
+  {
+   "narration": "Alrededor de esas rutas florecieron ciudades legendarias.",
+   "q": "ancient city domes",
+   "syn": [
+    "silk road city",
+    "central asia architecture"
+   ]
+  },
+  {
+   "narration": "Samarcanda se convirtió en una de las ciudades más ricas del mundo.",
+   "q": "samarkand architecture",
+   "syn": [
+    "blue domes mosque",
+    "central asia city"
+   ],
+   "wiki": "Samarkand"
+  },
+  {
+   "narration": "En el desierto de Arabia, Petra se talló directamente en la roca.",
+   "q": "petra rock city",
+   "syn": [
+    "petra treasury",
+    "ancient carved stone city"
+   ],
+   "wiki": "Petra"
+  },
+  {
+   "narration": "Y Palmira creció en mitad del desierto sirio gracias a las caravanas.",
+   "q": "palmyra ruins columns",
+   "syn": [
+    "ancient roman ruins desert",
+    "desert columns ruins"
+   ],
+   "wiki": "Palmyra"
+  },
+  {
+   "narration": "Todas ellas vivían del paso de los camellos.",
+   "q": "camel caravan city",
+   "syn": [
+    "camels near ruins",
+    "camel train ancient city"
+   ]
+  },
+  {
+   "narration": "Quien controlaba las rutas y los oasis, controlaba una fortuna.",
+   "q": "desert oasis palms",
+   "syn": [
+    "oasis water desert",
+    "palm trees desert water"
+   ]
+  },
+  {
+   "narration": "Puede que te preguntes: ¿por qué camellos y no caballos?",
+   "q": "horse vs camel desert",
+   "syn": [
+    "camel and horse",
+    "camel standing proud"
+   ]
+  },
+  {
+   "narration": "La respuesta es simple: un caballo no sobrevive a esos desiertos.",
+   "q": "horse in desert heat",
+   "syn": [
+    "horse dry land",
+    "horse arid landscape"
+   ]
+  },
+  {
+   "narration": "Necesita agua a diario y se agota enseguida bajo el sol extremo.",
+   "q": "tired horse heat",
+   "syn": [
+    "horse desert sun",
+    "horse dry ground"
+   ]
+  },
+  {
+   "narration": "El camello bebe poco, come casi cualquier matojo y aguanta semanas.",
+   "q": "camel eating desert plant",
+   "syn": [
+    "camel grazing dry",
+    "camel dry shrub"
+   ]
+  },
+  {
+   "narration": "Además, encuentra el rumbo y resiste donde cualquier otro animal caería.",
+   "q": "camel walking determined",
+   "syn": [
+    "camel desert alone",
+    "camel steady walk"
+   ]
+  },
+  {
+   "narration": "Hubo incluso un invento clave: una silla de montar diseñada para el camello.",
+   "q": "camel saddle traditional",
+   "syn": [
+    "decorated camel saddle",
+    "camel with saddle"
+   ]
+  },
+  {
+   "narration": "Esa silla permitió cargar más peso y controlar mejor al animal.",
+   "q": "loaded camel detail",
+   "syn": [
+    "camel cargo saddle",
+    "pack camel close"
+   ]
+  },
+  {
+   "narration": "Y disparó el poder de los pueblos del desierto.",
+   "q": "desert nomads camels",
+   "syn": [
+    "bedouin camel caravan",
+    "nomad desert sunset"
+   ]
+  },
+  {
+   "narration": "Con las caravanas también se expandieron grandes religiones.",
+   "q": "ancient mosque desert",
+   "syn": [
+    "old temple ruins",
+    "desert religious ruins"
+   ]
+  },
+  {
+   "narration": "El islam, por ejemplo, se difundió en buena parte por estas rutas de comercio.",
+   "q": "desert mosque minaret",
+   "syn": [
+    "islamic architecture desert",
+    "ancient mosque sand"
+   ]
+  },
+  {
+   "narration": "Los camellos no solo movían mercancías: movían la fe y el conocimiento.",
+   "q": "camel caravan dusk",
+   "syn": [
+    "camels desert evening",
+    "camel train sunset"
+   ]
+  },
+  {
+   "narration": "Y, como casi todo animal fuerte, también acabaron en la guerra.",
+   "q": "camel with rider desert",
+   "syn": [
+    "camel cavalry reenactment",
+    "camel warrior desert"
+   ]
+  },
+  {
+   "narration": "Los ejércitos del desierto montaban tropas a lomos de camellos.",
+   "q": "camel riders group",
+   "syn": [
+    "camel cavalry desert",
+    "mounted camel soldiers"
+   ]
+  },
+  {
+   "narration": "Napoleón creó un cuerpo de camelleros durante su campaña en Egipto.",
+   "q": "egypt desert pyramids",
+   "syn": [
+    "napoleon egypt vintage",
+    "desert army historic"
+   ]
+  },
+  {
+   "narration": "Y en la Primera Guerra Mundial, hubo cuerpos de camellos en Oriente Medio.",
+   "q": "ww1 camel corps",
+   "syn": [
+    "vintage camel soldiers",
+    "historic camel cavalry"
+   ],
+   "wiki": "Imperial Camel Corps"
+  },
+  {
+   "narration": "Soldados montados en camellos cruzaban desiertos que ningún vehículo podía atravesar.",
+   "q": "camel soldiers desert vintage",
+   "syn": [
+    "camel corps historic",
+    "desert cavalry old"
+   ]
+  },
+  {
+   "narration": "Durante siglos, controlar los camellos era controlar el desierto.",
+   "q": "camel herd desert",
+   "syn": [
+    "many camels sand",
+    "camel group dunes"
+   ]
+  },
+  {
+   "narration": "Pero, como todos los grandes imperios animales, el suyo también terminó.",
+   "q": "camel silhouette dusk",
+   "syn": [
+    "lone camel sunset",
+    "camel dunes evening"
+   ]
+  },
+  {
+   "narration": "El primer golpe llegó por mar.",
+   "q": "old sailing ship ocean",
+   "syn": [
+    "vintage ship sea",
+    "sailing ship sunset"
+   ]
+  },
+  {
+   "narration": "Cuando los barcos aprendieron a rodear el mundo, transportar por agua salió más barato.",
+   "q": "old cargo ship",
+   "syn": [
+    "vintage sailing vessel",
+    "ship ocean historic"
+   ]
+  },
+  {
+   "narration": "Una sola nave llevaba lo que cientos de camellos.",
+   "q": "large sailing ship",
+   "syn": [
+    "vintage merchant ship",
+    "old ship cargo"
+   ]
+  },
+  {
+   "narration": "Y el segundo golpe llegó por tierra: el ferrocarril y, después, el camión.",
+   "q": "vintage train desert",
+   "syn": [
+    "old locomotive steam",
+    "desert railway vintage"
+   ]
+  },
+  {
+   "narration": "Máquinas de metal cruzaron por fin los desiertos sin descanso ni sed.",
+   "q": "old truck desert",
+   "syn": [
+    "vintage truck sand",
+    "desert road vintage"
+   ]
+  },
+  {
+   "narration": "Poco a poco, las grandes caravanas se apagaron.",
+   "q": "empty desert dunes sunset",
+   "syn": [
+    "abandoned desert trail",
+    "lonely dunes dusk"
+   ]
+  },
+  {
+   "narration": "Las ciudades que vivían de ellas perdieron su razón de ser.",
+   "q": "desert ruins abandoned",
+   "syn": [
+    "ancient city ruins sand",
+    "ruined walls desert"
+   ]
+  },
+  {
+   "narration": "Y el barco del desierto dejó de mover el comercio del mundo.",
+   "q": "single camel dunes",
+   "syn": [
+    "camel alone desert",
+    "camel silhouette horizon"
+   ]
+  },
+  {
+   "narration": "Pero el camello no desapareció.",
+   "q": "camel portrait close",
+   "syn": [
+    "camel head desert",
+    "camel face sunset"
+   ]
+  },
+  {
+   "narration": "Todavía hoy cruza desiertos donde las máquinas tienen problemas.",
+   "q": "camel caravan modern",
+   "syn": [
+    "camels desert today",
+    "camel riders dunes"
+   ]
+  },
+  {
+   "narration": "Sigue dando leche, carne, lana y transporte a millones de personas.",
+   "q": "camel with people",
+   "syn": [
+    "camel herder modern",
+    "camel desert village"
+   ]
+  },
+  {
+   "narration": "Y en muchos lugares, sigue siendo un símbolo de riqueza y de orgullo.",
+   "q": "decorated camel festival",
+   "syn": [
+    "camel race traditional",
+    "ornate camel desert"
+   ]
+  },
+  {
+   "narration": "Durante dos mil años, un animal paciente unió Oriente y Occidente.",
+   "q": "camel caravan epic",
+   "syn": [
+    "camels desert dramatic",
+    "camel train sunset"
+   ]
+  },
+  {
+   "narration": "Cruzó los lugares más duros del planeta cargado con la riqueza de imperios.",
+   "q": "loaded camel caravan",
+   "syn": [
+    "camels carrying goods desert",
+    "pack camels dunes"
+   ]
+  },
+  {
+   "narration": "No era rápido ni elegante, pero era incansable.",
+   "q": "camel steady walk desert",
+   "syn": [
+    "camel determined dunes",
+    "camel profile sunset"
+   ]
+  },
+  {
+   "narration": "Y gracias a esa paciencia, el mundo empezó a conectarse.",
+   "q": "camel caravan horizon",
+   "syn": [
+    "camels walking sunset",
+    "camel train golden"
+   ]
+  },
+  {
+   "narration": "La seda que vestía a los emperadores de Roma había viajado sobre una joroba.",
+   "q": "silk fabric elegant",
+   "syn": [
+    "luxury silk cloth",
+    "silk drapery"
+   ]
+  },
+  {
+   "narration": "La próxima vez que oigas hablar de la Ruta de la Seda, recuerda quién la recorría.",
+   "q": "camel silhouette sunset",
+   "syn": [
+    "camel dunes golden hour",
+    "camel caravan dusk"
+   ]
+  },
+  {
+   "narration": "No fueron los mercaderes. Fueron sus camellos.",
+   "q": "camel portrait warm light",
+   "syn": [
+    "camel face golden hour",
+    "camel close up sunset"
+   ]
+  },
+  {
+   "narration": "Si te ha gustado esta historia, suscríbete. Y cuéntame en los comentarios qué animal quieres que investiguemos después.",
+   "q": "camel caravan golden hour",
+   "syn": [
+    "camels sunset dunes",
+    "camel train warm light"
+   ]
+  }
+ ],
+ "youtube": {
+  "title": "Camellos: los Animales que Movieron la Riqueza del Mundo",
+  "thumb_text": "EL BARCO DEL DESIERTO",
+  "tags": [
+   "camellos",
+   "Ruta de la Seda",
+   "barco del desierto",
+   "dromedario",
+   "camello bactriano",
+   "comercio antiguo",
+   "historia",
+   "documental",
+   "desierto",
+   "caravanas",
+   "Samarcanda",
+   "Petra",
+   "historia animal",
+   "documental historia",
+   "animales"
+  ],
+  "description": "Durante dos mil años, la seda de China, las especias de la India y el oro de Arabia cruzaron los desiertos del mundo a lomos de un solo animal: el camello, el barco del desierto.\n\nEsta es la historia de cómo el camello hizo posible la Ruta de la Seda: sus increíbles adaptaciones para sobrevivir donde todo lo demás muere, las caravanas que conectaron Oriente y Occidente, las ciudades legendarias que vivían de ellas, y por qué, al final, los barcos y los trenes acabaron con su imperio.\n\nSuscríbete para un nuevo documental de historia animal cada semana.\n\n#historia #camellos #documental #rutadelaseda #animales"
+ }
+}

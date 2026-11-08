@@ -1,0 +1,913 @@
+{
+ "title": "Palomas mensajeras en la guerra",
+ "output_name": "palomas_es",
+ "subject": "pigeon",
+ "beats": [
+  {
+   "narration": "Durante tres mil años, un pequeño pájaro gris llevó mensajes que decidieron guerras.",
+   "q": "pigeon flying sky",
+   "syn": [
+    "homing pigeon close up",
+    "grey pigeon portrait"
+   ]
+  },
+  {
+   "narration": "No un halcón. No un águila. Una simple paloma.",
+   "q": "pigeon head close up",
+   "syn": [
+    "pigeon eye macro",
+    "pigeon portrait"
+   ]
+  },
+  {
+   "narration": "Cruzaba cientos de kilómetros ella sola, sin mapa y sin brújula, para volver siempre a casa.",
+   "q": "pigeon flying over fields",
+   "syn": [
+    "bird flying horizon",
+    "pigeon in flight"
+   ]
+  },
+  {
+   "narration": "Salvó batallones enteros y cambió el curso de la historia.",
+   "q": "flock of pigeons flying",
+   "syn": [
+    "pigeons taking off",
+    "birds flying dramatic sky"
+   ]
+  },
+  {
+   "narration": "Y durante siglos fue la red de comunicaciones más rápida del mundo.",
+   "q": "pigeon flying city sky",
+   "syn": [
+    "homing pigeon flight",
+    "pigeon wings spread"
+   ]
+  },
+  {
+   "narration": "Esta es la historia de la paloma mensajera.",
+   "q": "single pigeon silhouette sunset",
+   "syn": [
+    "pigeon dramatic light",
+    "pigeon on roof dusk"
+   ]
+  },
+  {
+   "narration": "Todo empieza por un instinto asombroso: la paloma siempre sabe volver a su palomar.",
+   "q": "pigeon loft birds",
+   "syn": [
+    "racing pigeons loft",
+    "pigeon coop"
+   ]
+  },
+  {
+   "narration": "Puedes llevarla a cientos de kilómetros, a un lugar que no ha visto nunca.",
+   "q": "hand holding pigeon",
+   "syn": [
+    "person releasing pigeon",
+    "pigeon in hands"
+   ]
+  },
+  {
+   "narration": "La sueltas, y encuentra el camino de vuelta a casa.",
+   "q": "pigeon released flying",
+   "syn": [
+    "bird released sky",
+    "pigeon taking flight"
+   ]
+  },
+  {
+   "narration": "Los científicos todavía discuten cómo lo hace exactamente.",
+   "q": "pigeon flying close",
+   "syn": [
+    "homing pigeon sky",
+    "pigeon gliding"
+   ]
+  },
+  {
+   "narration": "Usa el sol, el campo magnético de la Tierra, los olores y el paisaje como guía.",
+   "q": "pigeon flying over landscape",
+   "syn": [
+    "bird flying countryside",
+    "pigeon aerial view"
+   ]
+  },
+  {
+   "narration": "Vuela a más de ochenta kilómetros por hora durante horas, sin descanso.",
+   "q": "pigeon fast flight",
+   "syn": [
+    "bird flying fast",
+    "pigeon wings motion"
+   ]
+  },
+  {
+   "narration": "Ese instinto convirtió a un ave corriente en una herramienta de poder.",
+   "q": "pigeon perched close",
+   "syn": [
+    "grey pigeon detail",
+    "pigeon standing"
+   ]
+  },
+  {
+   "narration": "Si atabas un mensaje a su pata y la soltabas lejos de casa...",
+   "q": "pigeon leg message capsule",
+   "syn": [
+    "message tied pigeon",
+    "pigeon with tube leg"
+   ]
+  },
+  {
+   "narration": "...el mensaje viajaba de vuelta volando, más rápido que cualquier jinete.",
+   "q": "pigeon flying over hills",
+   "syn": [
+    "bird flying open field",
+    "pigeon flight nature"
+   ]
+  },
+  {
+   "narration": "Los antiguos egipcios ya usaban palomas para anunciar noticias hace miles de años.",
+   "q": "ancient egypt hieroglyphs",
+   "syn": [
+    "egyptian wall relief",
+    "ancient egypt temple"
+   ],
+   "wiki": "Homing pigeon"
+  },
+  {
+   "narration": "En la antigua Grecia, una paloma llevó a casa el resultado de los primeros Juegos.",
+   "q": "ancient greek ruins",
+   "syn": [
+    "greek temple columns",
+    "ancient greece statue"
+   ]
+  },
+  {
+   "narration": "Los romanos las usaban para comunicarse con sus ejércitos en campaña.",
+   "q": "roman ruins landscape",
+   "syn": [
+    "ancient roman relief",
+    "roman legion reenactment"
+   ]
+  },
+  {
+   "narration": "Hasta Gengis Kan montó una red de palomares por todo su imperio.",
+   "q": "mongolian steppe landscape",
+   "syn": [
+    "nomad horseman steppe",
+    "asian steppe grassland"
+   ]
+  },
+  {
+   "narration": "Durante siglos, la paloma fue el mensaje más veloz que existía.",
+   "q": "pigeon flying sky clouds",
+   "syn": [
+    "bird flying clouds",
+    "pigeon soaring"
+   ]
+  },
+  {
+   "narration": "Pero su gran momento llegó con el mundo moderno.",
+   "q": "vintage city old photo",
+   "syn": [
+    "old european city",
+    "historic town vintage"
+   ]
+  },
+  {
+   "narration": "En el siglo diecinueve, un hombre construyó un imperio con ellas: Paul Reuter.",
+   "q": "victorian businessman portrait",
+   "syn": [
+    "old portrait man 19th century",
+    "vintage gentleman photo"
+   ],
+   "wiki": "Paul Reuter"
+  },
+  {
+   "narration": "Antes del telégrafo, usó palomas para llevar los precios de la bolsa entre ciudades.",
+   "q": "old stock exchange vintage",
+   "syn": [
+    "vintage financial district",
+    "19th century city street"
+   ]
+  },
+  {
+   "narration": "Sus palomas eran más rápidas que los trenes de la época.",
+   "q": "vintage steam train",
+   "syn": [
+    "old locomotive historic",
+    "steam train countryside"
+   ]
+  },
+  {
+   "narration": "Esa red de palomas fue la semilla de una de las mayores agencias de noticias del mundo.",
+   "q": "old newspaper printing",
+   "syn": [
+    "vintage newsroom",
+    "historic printing press"
+   ]
+  },
+  {
+   "narration": "Y entonces llegó la guerra que las haría legendarias.",
+   "q": "old war photograph",
+   "syn": [
+    "vintage soldiers historic",
+    "19th century army"
+   ]
+  },
+  {
+   "narration": "En mil ochocientos setenta, el ejército prusiano rodeó París.",
+   "q": "siege of paris 1870",
+   "syn": [
+    "prussian army vintage",
+    "franco prussian war"
+   ],
+   "wiki": "Siege of Paris (1870–1871)"
+  },
+  {
+   "narration": "La ciudad quedó aislada del mundo, sin telégrafo ni correo.",
+   "q": "old paris vintage photo",
+   "syn": [
+    "19th century paris",
+    "historic paris street"
+   ]
+  },
+  {
+   "narration": "La única forma de recibir mensajes del exterior eran las palomas.",
+   "q": "pigeon loft vintage",
+   "syn": [
+    "racing pigeons basket",
+    "pigeon coop old"
+   ]
+  },
+  {
+   "narration": "Se sacaban de la ciudad en globo y volvían volando con miles de mensajes.",
+   "q": "vintage hot air balloon",
+   "syn": [
+    "old balloon flight",
+    "historic balloon"
+   ]
+  },
+  {
+   "narration": "Los mensajes se encogían con fotografía para que la paloma cargara con más.",
+   "q": "old photography equipment",
+   "syn": [
+    "vintage camera antique",
+    "microfilm reel"
+   ],
+   "wiki": "Pigeon post"
+  },
+  {
+   "narration": "Una sola paloma podía llevar el equivalente a miles de cartas.",
+   "q": "old letters stack vintage",
+   "syn": [
+    "antique letters paper",
+    "vintage mail"
+   ]
+  },
+  {
+   "narration": "Cuando estalló la Primera Guerra Mundial, las palomas se alistaron por millones.",
+   "q": "ww1 soldiers marching",
+   "syn": [
+    "world war one soldiers",
+    "ww1 trench historic"
+   ],
+   "wiki": "World War I"
+  },
+  {
+   "narration": "La radio ya existía, pero era pesada, poco fiable y fácil de interceptar.",
+   "q": "ww1 field radio",
+   "syn": [
+    "vintage military radio",
+    "old radio equipment"
+   ]
+  },
+  {
+   "narration": "En las trincheras, una paloma era a menudo la forma más segura de pedir ayuda.",
+   "q": "ww1 trench soldiers",
+   "syn": [
+    "world war one trench",
+    "soldiers in trench mud"
+   ]
+  },
+  {
+   "narration": "Cada batallón llevaba cestas de palomas hasta el frente.",
+   "q": "pigeon basket soldiers",
+   "syn": [
+    "military pigeons ww1",
+    "pigeon carrier basket"
+   ]
+  },
+  {
+   "narration": "Con un mensaje en un tubo en la pata, volaban entre el humo y las balas.",
+   "q": "pigeon flying battlefield",
+   "syn": [
+    "bird flying smoke",
+    "pigeon flight war"
+   ]
+  },
+  {
+   "narration": "Muchas morían por el camino. Otras llegaban heridas, pero llegaban.",
+   "q": "pigeon close up dramatic",
+   "syn": [
+    "wounded bird close",
+    "pigeon portrait serious"
+   ]
+  },
+  {
+   "narration": "Y una de ellas se convirtió en leyenda: Cher Ami.",
+   "q": "Cher Ami pigeon",
+   "syn": [
+    "war pigeon hero",
+    "homing pigeon military"
+   ],
+   "wiki": "Cher Ami"
+  },
+  {
+   "narration": "Octubre de mil novecientos dieciocho, bosque de Argonne, en Francia.",
+   "q": "argonne forest ww1",
+   "syn": [
+    "world war one forest",
+    "misty forest battlefield"
+   ]
+  },
+  {
+   "narration": "Un batallón estadounidense quedó atrapado detrás de las líneas enemigas.",
+   "q": "ww1 american soldiers",
+   "syn": [
+    "world war one us army",
+    "soldiers surrounded trench"
+   ],
+   "wiki": "Lost Battalion (World War I)"
+  },
+  {
+   "narration": "Rodeados, sin comida ni munición, cientos de hombres resistían.",
+   "q": "ww1 soldiers exhausted",
+   "syn": [
+    "trench soldiers tired",
+    "world war one battle"
+   ]
+  },
+  {
+   "narration": "Y entonces empezó a caer fuego de su propia artillería, por error.",
+   "q": "ww1 artillery firing",
+   "syn": [
+    "cannon firing smoke",
+    "artillery explosion battlefield"
+   ]
+  },
+  {
+   "narration": "Los estaban bombardeando los suyos, y no tenían forma de avisar.",
+   "q": "ww1 explosion battlefield",
+   "syn": [
+    "battlefield explosion smoke",
+    "war bombardment"
+   ]
+  },
+  {
+   "narration": "Sus últimas palomas habían muerto. Solo quedaba una: Cher Ami.",
+   "q": "single pigeon dramatic",
+   "syn": [
+    "pigeon alone close up",
+    "lone pigeon"
+   ]
+  },
+  {
+   "narration": "Ataron un mensaje desesperado a su pata y la soltaron.",
+   "q": "pigeon leg capsule close",
+   "syn": [
+    "message tied pigeon leg",
+    "pigeon release hand"
+   ]
+  },
+  {
+   "narration": "Los alemanes la vieron y abrieron fuego. La paloma cayó.",
+   "q": "pigeon flying away fast",
+   "syn": [
+    "bird fleeing sky",
+    "pigeon flight escape"
+   ]
+  },
+  {
+   "narration": "Pero volvió a levantarse y siguió volando.",
+   "q": "pigeon flying determined",
+   "syn": [
+    "bird flying sky dramatic",
+    "pigeon wings spread flight"
+   ]
+  },
+  {
+   "narration": "Llegó a su palomar con el pecho atravesado, un ojo reventado y una pata colgando.",
+   "q": "pigeon close up intense",
+   "syn": [
+    "injured pigeon portrait",
+    "pigeon detail dramatic"
+   ]
+  },
+  {
+   "narration": "Pero el mensaje llegó. El bombardeo se detuvo.",
+   "q": "pigeon loft arrival",
+   "syn": [
+    "pigeon landing coop",
+    "homing pigeon return"
+   ]
+  },
+  {
+   "narration": "Cher Ami salvó a casi doscientos hombres.",
+   "q": "ww1 soldiers rescued",
+   "syn": [
+    "world war one survivors",
+    "soldiers relief trench"
+   ]
+  },
+  {
+   "narration": "Los médicos del ejército lucharon por salvarla y le hicieron una pata de madera.",
+   "q": "vintage medical ww1",
+   "syn": [
+    "old field hospital",
+    "antique medical tools"
+   ]
+  },
+  {
+   "narration": "Francia la condecoró con la Cruz de Guerra.",
+   "q": "war medal close up",
+   "syn": [
+    "military medal vintage",
+    "croix de guerre medal"
+   ]
+  },
+  {
+   "narration": "Hoy, disecada en un museo, sigue siendo una de las heroínas más famosas de la guerra.",
+   "q": "museum glass display",
+   "syn": [
+    "museum exhibit vintage",
+    "taxidermy bird museum"
+   ]
+  },
+  {
+   "narration": "Pero no fue la última paloma en hacer historia.",
+   "q": "pigeon flying sky open",
+   "syn": [
+    "bird flying horizon",
+    "pigeon soaring clouds"
+   ]
+  },
+  {
+   "narration": "En la Segunda Guerra Mundial, las palomas volvieron a volar.",
+   "q": "ww2 soldiers marching",
+   "syn": [
+    "world war two soldiers",
+    "wwii troops historic"
+   ]
+  },
+  {
+   "narration": "Los ejércitos ya tenían radios mucho mejores, pero seguían sin fiarse del todo.",
+   "q": "ww2 radio operator",
+   "syn": [
+    "wwii field radio",
+    "vintage military radio"
+   ]
+  },
+  {
+   "narration": "Una radio se podía escuchar a escondidas. Una paloma, no.",
+   "q": "pigeon flying secret",
+   "syn": [
+    "bird flying alone sky",
+    "pigeon stealth flight"
+   ]
+  },
+  {
+   "narration": "Británicos y estadounidenses criaron cientos de miles de ellas.",
+   "q": "pigeon loft many birds",
+   "syn": [
+    "racing pigeons flock",
+    "pigeon coop birds"
+   ]
+  },
+  {
+   "narration": "Volaban desde submarinos, desde bombarderos derribados y desde la resistencia.",
+   "q": "ww2 bomber plane",
+   "syn": [
+    "wwii aircraft vintage",
+    "old military plane"
+   ]
+  },
+  {
+   "narration": "Un paracaidista podía saltar con una paloma guardada en el pecho.",
+   "q": "ww2 paratrooper",
+   "syn": [
+    "wwii parachute soldier",
+    "vintage paratrooper jump"
+   ]
+  },
+  {
+   "narration": "Y de nuevo, una salvó a un pueblo entero: G.I. Joe.",
+   "q": "war pigeon hero",
+   "syn": [
+    "military homing pigeon",
+    "pigeon medal hero"
+   ],
+   "wiki": "G.I. Joe (pigeon)"
+  },
+  {
+   "narration": "Octubre de mil novecientos cuarenta y tres, en Italia.",
+   "q": "italian village ww2",
+   "syn": [
+    "old italian town",
+    "wwii italy village"
+   ]
+  },
+  {
+   "narration": "Las tropas británicas tomaron un pueblo antes de lo previsto.",
+   "q": "ww2 british soldiers",
+   "syn": [
+    "wwii infantry advancing",
+    "soldiers entering village"
+   ]
+  },
+  {
+   "narration": "Pero la aviación aliada ya había ordenado bombardearlo.",
+   "q": "ww2 bombers formation",
+   "syn": [
+    "wwii planes sky",
+    "bomber squadron vintage"
+   ]
+  },
+  {
+   "narration": "No había forma de avisar a tiempo por radio.",
+   "q": "ww2 radio tent",
+   "syn": [
+    "wwii command post",
+    "vintage radio operator"
+   ]
+  },
+  {
+   "narration": "G.I. Joe voló treinta kilómetros en veinte minutos.",
+   "q": "pigeon fast flight sky",
+   "syn": [
+    "bird flying fast clouds",
+    "pigeon racing flight"
+   ]
+  },
+  {
+   "narration": "Llegó justo cuando los aviones calentaban motores para despegar.",
+   "q": "ww2 airfield planes",
+   "syn": [
+    "wwii runway aircraft",
+    "vintage airfield"
+   ]
+  },
+  {
+   "narration": "El bombardeo se canceló en el último segundo.",
+   "q": "ww2 plane on ground",
+   "syn": [
+    "wwii aircraft parked",
+    "vintage warplane"
+   ]
+  },
+  {
+   "narration": "Salvó a unos mil soldados y a todo el pueblo.",
+   "q": "italian village peaceful",
+   "syn": [
+    "old town square italy",
+    "village rooftops"
+   ]
+  },
+  {
+   "narration": "Se llevó la Medalla Dickin, el mayor honor para un animal en guerra.",
+   "q": "animal war medal",
+   "syn": [
+    "dickin medal close",
+    "military medal ribbon"
+   ],
+   "wiki": "Dickin Medal"
+  },
+  {
+   "narration": "Treinta y dos palomas han recibido esa medalla: más que ningún otro animal.",
+   "q": "pigeon portrait proud",
+   "syn": [
+    "homing pigeon close up",
+    "pigeon standing detail"
+   ]
+  },
+  {
+   "narration": "Otra paloma, Mary of Exeter, voló durante toda la guerra pese a ser herida una y otra vez.",
+   "q": "pigeon close up dramatic",
+   "syn": [
+    "resilient pigeon portrait",
+    "grey pigeon detail"
+   ],
+   "wiki": "Mary of Exeter"
+  },
+  {
+   "narration": "La remendaron más de veinte veces, y siempre volvía a levantar el vuelo.",
+   "q": "hands holding pigeon",
+   "syn": [
+    "pigeon in hands care",
+    "pigeon loft hands"
+   ]
+  },
+  {
+   "narration": "William of Orange llevó la noticia de una operación clave desde los Países Bajos.",
+   "q": "ww2 paratroopers landing",
+   "syn": [
+    "wwii airborne holland",
+    "arnhem vintage war"
+   ],
+   "wiki": "William of Orange (pigeon)"
+  },
+  {
+   "narration": "Voló más de cuatrocientos kilómetros en una sola jornada.",
+   "q": "pigeon long distance flight",
+   "syn": [
+    "bird flying far horizon",
+    "pigeon endurance sky"
+   ]
+  },
+  {
+   "narration": "En el mar, las palomas avisaban de naufragios antes que cualquier radio.",
+   "q": "vintage ship ocean",
+   "syn": [
+    "old navy ship sea",
+    "ship at sea historic"
+   ]
+  },
+  {
+   "narration": "Un hidroavión caído soltaba una paloma como último recurso.",
+   "q": "vintage seaplane water",
+   "syn": [
+    "old plane ocean",
+    "aircraft sea vintage"
+   ]
+  },
+  {
+   "narration": "Y a veces esa paloma era la diferencia entre el rescate y el olvido.",
+   "q": "pigeon flying over sea",
+   "syn": [
+    "bird flying ocean sky",
+    "pigeon flight water"
+   ]
+  },
+  {
+   "narration": "Criar una buena paloma mensajera era casi un arte.",
+   "q": "pigeon breeder loft",
+   "syn": [
+    "pigeon fancier birds",
+    "racing pigeons perched"
+   ]
+  },
+  {
+   "narration": "Se seleccionaban por velocidad, resistencia y por su amor obsesivo al hogar.",
+   "q": "pigeons row in loft",
+   "syn": [
+    "racing pigeons coop",
+    "pigeon loft interior"
+   ]
+  },
+  {
+   "narration": "Se las entrenaba soltándolas cada vez más lejos de casa.",
+   "q": "pigeon released field",
+   "syn": [
+    "bird released countryside",
+    "pigeon training release"
+   ]
+  },
+  {
+   "narration": "El vínculo con el palomar, y a veces con su pareja, las empujaba a volar sin rendirse.",
+   "q": "two pigeons together",
+   "syn": [
+    "pair of pigeons close",
+    "pigeons nesting"
+   ]
+  },
+  {
+   "narration": "En el asedio de París, las palomas llegaron a traer más de un millón de mensajes.",
+   "q": "old paris vintage photo",
+   "syn": [
+    "historic paris monument",
+    "19th century french city"
+   ]
+  },
+  {
+   "narration": "Fue la primera vez que una ciudad entera dependió de unas aves para sobrevivir.",
+   "q": "flock over rooftops",
+   "syn": [
+    "birds flying over city",
+    "pigeons over old city"
+   ]
+  },
+  {
+   "narration": "Después de las guerras, ese mismo instinto dio origen a un deporte: las carreras de palomas.",
+   "q": "racing pigeons release",
+   "syn": [
+    "pigeon race flock sky",
+    "racing pigeons loft"
+   ]
+  },
+  {
+   "narration": "Aún hoy, aficionados de todo el mundo sueltan palomas que vuelven a casa desde cientos de kilómetros.",
+   "q": "pigeon racing competition",
+   "syn": [
+    "pigeon fancier modern",
+    "racing pigeon loft"
+   ]
+  },
+  {
+   "narration": "La misma brújula interior que ganó guerras ahora gana carreras.",
+   "q": "pigeon flying fast sky",
+   "syn": [
+    "racing pigeon flight",
+    "bird flying speed"
+   ]
+  },
+  {
+   "narration": "Pero su mayor hazaña siempre fue silenciosa.",
+   "q": "single pigeon calm",
+   "syn": [
+    "pigeon perched soft light",
+    "pigeon portrait gentle"
+   ]
+  },
+  {
+   "narration": "No buscaban gloria. Ni siquiera sabían que había una guerra.",
+   "q": "pigeon eye close up",
+   "syn": [
+    "pigeon head detail",
+    "grey pigeon soft light"
+   ]
+  },
+  {
+   "narration": "Solo querían llegar a casa, y por eso cruzaban el infierno.",
+   "q": "pigeon flying through smoke",
+   "syn": [
+    "bird flying dramatic sky",
+    "pigeon flight intense"
+   ]
+  },
+  {
+   "narration": "Las palomas hacían algo que la tecnología no podía garantizar.",
+   "q": "pigeon flying reliable",
+   "syn": [
+    "bird flying steady",
+    "pigeon flight calm"
+   ]
+  },
+  {
+   "narration": "No se podían piratear. No se podían escuchar. No se quedaban sin batería.",
+   "q": "pigeon flying free sky",
+   "syn": [
+    "bird flying open",
+    "pigeon soaring"
+   ]
+  },
+  {
+   "narration": "Un mensaje atado a una pata era, a veces, lo más seguro del mundo.",
+   "q": "pigeon leg message close",
+   "syn": [
+    "capsule on pigeon leg",
+    "message tube bird"
+   ]
+  },
+  {
+   "narration": "Incluso se les montaron pequeñas cámaras para espiar desde el aire.",
+   "q": "vintage spy camera",
+   "syn": [
+    "antique small camera",
+    "old camera device"
+   ],
+   "wiki": "Pigeon photography"
+  },
+  {
+   "narration": "Diminutas cámaras automáticas colgadas del pecho tomaban fotos en pleno vuelo.",
+   "q": "aerial view from above",
+   "syn": [
+    "vintage aerial photo",
+    "landscape from sky"
+   ]
+  },
+  {
+   "narration": "Durante la Guerra Fría, los servicios secretos siguieron usándolas.",
+   "q": "cold war spy vintage",
+   "syn": [
+    "secret document old",
+    "vintage espionage"
+   ]
+  },
+  {
+   "narration": "Pero el mundo cambiaba a toda velocidad.",
+   "q": "telephone lines vintage",
+   "syn": [
+    "old telegraph wires",
+    "communication towers"
+   ]
+  },
+  {
+   "narration": "La radio se volvió fiable. Llegaron los satélites. Llegó internet.",
+   "q": "satellite orbit earth",
+   "syn": [
+    "communication satellite space",
+    "radio tower sky"
+   ]
+  },
+  {
+   "narration": "Un mensaje podía dar la vuelta al planeta en un instante.",
+   "q": "earth from space",
+   "syn": [
+    "globe network connections",
+    "world map digital"
+   ]
+  },
+  {
+   "narration": "Y poco a poco, la paloma mensajera se retiró del campo de batalla.",
+   "q": "pigeon flying sunset",
+   "syn": [
+    "bird silhouette dusk",
+    "pigeon flight evening"
+   ]
+  },
+  {
+   "narration": "Los ejércitos cerraron sus palomares tras casi un siglo de servicio.",
+   "q": "empty pigeon loft",
+   "syn": [
+    "old pigeon coop abandoned",
+    "wooden loft empty"
+   ]
+  },
+  {
+   "narration": "Pero su hazaña no se olvida.",
+   "q": "pigeon monument statue",
+   "syn": [
+    "bird statue memorial",
+    "pigeon close up portrait"
+   ]
+  },
+  {
+   "narration": "Miles de palomas murieron llevando mensajes que salvaron vidas humanas.",
+   "q": "pigeon flying dramatic sky",
+   "syn": [
+    "bird flying stormy",
+    "pigeon wings dramatic"
+   ]
+  },
+  {
+   "narration": "No entendían de banderas ni de fronteras. Solo querían volver a casa.",
+   "q": "pigeon loft home",
+   "syn": [
+    "pigeon returning coop",
+    "homing pigeon landing"
+   ]
+  },
+  {
+   "narration": "Y en ese viaje de vuelta, cambiaron el curso de las guerras.",
+   "q": "pigeon flying horizon sunset",
+   "syn": [
+    "bird flying golden hour",
+    "pigeon silhouette sky"
+   ]
+  },
+  {
+   "narration": "La próxima vez que veas una paloma en la calle, mírala dos veces.",
+   "q": "pigeon city street",
+   "syn": [
+    "urban pigeon close",
+    "pigeon on pavement"
+   ]
+  },
+  {
+   "narration": "Quizá desciende de una que, hace cien años, fue una heroína de guerra.",
+   "q": "pigeon portrait warm light",
+   "syn": [
+    "pigeon close up golden",
+    "grey pigeon detail"
+   ]
+  },
+  {
+   "narration": "Si te ha gustado esta historia, suscríbete. En el próximo vídeo, los elefantes que aterrorizaron a Roma.",
+   "q": "pigeon flying into sunset",
+   "syn": [
+    "bird flying warm sky",
+    "pigeon soaring golden hour"
+   ]
+  }
+ ],
+ "youtube": {
+  "title": "Palomas Mensajeras: las Heroínas Secretas de la Guerra",
+  "thumb_text": "PALOMAS DE GUERRA",
+  "tags": [
+   "palomas mensajeras",
+   "paloma",
+   "Cher Ami",
+   "G.I. Joe",
+   "Primera Guerra Mundial",
+   "Segunda Guerra Mundial",
+   "historia militar",
+   "animales en la guerra",
+   "historia",
+   "documental",
+   "aves",
+   "Medalla Dickin",
+   "historia animal",
+   "documental historia",
+   "palomas"
+  ],
+  "description": "Durante casi un siglo, un pequeño pájaro gris fue el mensajero más rápido y fiable del mundo: la paloma mensajera.\n\nDesde el antiguo Egipto hasta las trincheras de la Primera Guerra Mundial, estas aves cruzaron cientos de kilómetros solas para llevar mensajes que decidieron batallas. Esta es la historia de Cher Ami, que salvó a casi 200 hombres atravesada por las balas; de G.I. Joe, que salvó un pueblo entero; y de las miles de palomas que murieron en servicio.\n\nSuscríbete para un nuevo documental de historia animal cada semana.\n\n#historia #palomas #documental #historiamilitar #animales"
+ }
+}

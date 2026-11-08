@@ -1,0 +1,903 @@
+{
+ "title": "Perros de trineo: la carrera del suero de 1925",
+ "output_name": "perros_trineo_es",
+ "subject": "sled dog",
+ "beats": [
+  {
+   "narration": "En el invierno de mil novecientos veinticinco, un pueblo entero iba a morir.",
+   "q": "snowy arctic town",
+   "syn": [
+    "frozen village winter",
+    "snow covered houses night"
+   ]
+  },
+  {
+   "narration": "Una enfermedad mortal se extendía entre los niños, y la única medicina estaba a mil kilómetros.",
+   "q": "vintage snowy village",
+   "syn": [
+    "old arctic settlement",
+    "winter town historic"
+   ]
+  },
+  {
+   "narration": "No había carreteras. No había aviones. Solo hielo, ventisca y oscuridad.",
+   "q": "blizzard snow storm",
+   "syn": [
+    "arctic snowstorm",
+    "whiteout snow wind"
+   ]
+  },
+  {
+   "narration": "La única esperanza eran unos perros corriendo contra la muerte.",
+   "q": "sled dog team running",
+   "syn": [
+    "huskies pulling sled snow",
+    "dog sled team snow"
+   ]
+  },
+  {
+   "narration": "Esta es la carrera del suero de mil novecientos veinticinco.",
+   "q": "sled dog team snow",
+   "syn": [
+    "husky team running",
+    "dogsled winter"
+   ]
+  },
+  {
+   "narration": "La historia real de los perros que salvaron a un pueblo entero.",
+   "q": "husky close up snow",
+   "syn": [
+    "sled dog portrait",
+    "husky blue eyes"
+   ]
+  },
+  {
+   "narration": "Para entenderla, hay que subir hasta el extremo norte del planeta.",
+   "q": "arctic landscape snow",
+   "syn": [
+    "frozen tundra wide",
+    "snowy arctic horizon"
+   ]
+  },
+  {
+   "narration": "Allí, durante miles de años, los humanos solo sobrevivieron gracias a un aliado.",
+   "q": "sled dog arctic",
+   "syn": [
+    "husky in snow",
+    "arctic dog winter"
+   ]
+  },
+  {
+   "narration": "El perro de trineo.",
+   "q": "husky portrait snow",
+   "syn": [
+    "sled dog close up",
+    "malamute snow"
+   ]
+  },
+  {
+   "narration": "En un mundo de hielo, los perros eran el único transporte posible.",
+   "q": "dog sled team tundra",
+   "syn": [
+    "huskies pulling sled",
+    "sled dogs running snow"
+   ]
+  },
+  {
+   "narration": "Tiraban de los trineos cargados de comida, pieles y personas.",
+   "q": "loaded dog sled",
+   "syn": [
+    "sled with cargo snow",
+    "dogsled travel"
+   ]
+  },
+  {
+   "narration": "Cruzaban distancias imposibles a través de la nieve.",
+   "q": "sled dogs vast snow",
+   "syn": [
+    "dog team snowy plain",
+    "huskies long distance"
+   ]
+  },
+  {
+   "narration": "Razas como el husky siberiano estaban hechas para ese frío extremo.",
+   "q": "siberian husky snow",
+   "syn": [
+    "husky thick fur",
+    "husky blue eyes close"
+   ],
+   "wiki": "Siberian Husky"
+  },
+  {
+   "narration": "Su pelaje doble los protegía a temperaturas de cincuenta grados bajo cero.",
+   "q": "husky in blizzard",
+   "syn": [
+    "husky snow covered",
+    "husky cold weather"
+   ]
+  },
+  {
+   "narration": "Podían correr durante horas tirando de un peso enorme.",
+   "q": "sled dogs pulling hard",
+   "syn": [
+    "dog team effort snow",
+    "huskies running fast"
+   ]
+  },
+  {
+   "narration": "Un buen equipo de perros era más valioso que el oro en el Ártico.",
+   "q": "husky team lineup",
+   "syn": [
+    "sled dogs harness",
+    "dog team ready snow"
+   ]
+  },
+  {
+   "narration": "Y al frente de cada equipo iba un perro guía.",
+   "q": "lead sled dog",
+   "syn": [
+    "husky leading team",
+    "front dog sled"
+   ]
+  },
+  {
+   "narration": "El perro guía marcaba el ritmo, el rumbo y encontraba el camino en la nieve.",
+   "q": "husky alert snow",
+   "syn": [
+    "lead dog focused",
+    "sled dog looking ahead"
+   ]
+  },
+  {
+   "narration": "Entre el musher, el conductor, y sus perros nacía un vínculo de vida o muerte.",
+   "q": "musher with dogs",
+   "syn": [
+    "person with sled dogs",
+    "dog sled driver snow"
+   ]
+  },
+  {
+   "narration": "En aquellas tierras, confiar en tus perros era confiar en tu propia vida.",
+   "q": "musher petting husky",
+   "syn": [
+    "sled dog bond",
+    "husky with owner snow"
+   ]
+  },
+  {
+   "narration": "Y en enero de mil novecientos veinticinco, esa confianza se puso a prueba.",
+   "q": "vintage alaska town",
+   "syn": [
+    "old snowy settlement",
+    "historic arctic village"
+   ]
+  },
+  {
+   "narration": "En Nome, un pueblo helado de Alaska, un médico detectó algo aterrador.",
+   "q": "old alaska town winter",
+   "syn": [
+    "vintage snowy town",
+    "arctic town historic"
+   ],
+   "wiki": "Nome, Alaska"
+  },
+  {
+   "narration": "Varios niños habían enfermado de difteria.",
+   "q": "vintage hospital room",
+   "syn": [
+    "old clinic interior",
+    "historic infirmary"
+   ]
+  },
+  {
+   "narration": "La difteria asfixia poco a poco a quien la sufre, sobre todo a los niños.",
+   "q": "sad child vintage",
+   "syn": [
+    "old photograph child",
+    "vintage portrait somber"
+   ],
+   "wiki": "Diphtheria"
+  },
+  {
+   "narration": "Sin un suero especial, se extendería y mataría a casi todo el pueblo.",
+   "q": "frozen town night",
+   "syn": [
+    "snowy village dark",
+    "arctic town winter night"
+   ]
+  },
+  {
+   "narration": "Pero en Nome apenas quedaban dosis, y ya habían caducado.",
+   "q": "old medicine bottles",
+   "syn": [
+    "vintage medical vials",
+    "antique pharmacy bottles"
+   ]
+  },
+  {
+   "narration": "El suero más cercano estaba a más de mil kilómetros de distancia.",
+   "q": "vast snowy wilderness",
+   "syn": [
+    "frozen alaska landscape",
+    "arctic tundra endless"
+   ]
+  },
+  {
+   "narration": "En pleno invierno, llegar hasta allí parecía imposible.",
+   "q": "blizzard wilderness",
+   "syn": [
+    "snowstorm tundra",
+    "arctic storm wind"
+   ]
+  },
+  {
+   "narration": "El mar estaba helado, así que ningún barco podía acercarse.",
+   "q": "frozen sea ice",
+   "syn": [
+    "icy ocean arctic",
+    "sea ice winter"
+   ]
+  },
+  {
+   "narration": "Los pocos aviones de la época no podían volar con ese frío y esa oscuridad.",
+   "q": "vintage biplane snow",
+   "syn": [
+    "old airplane 1920s",
+    "antique plane winter"
+   ]
+  },
+  {
+   "narration": "Solo quedaba una opción, la más antigua de todas.",
+   "q": "sled dog team ready",
+   "syn": [
+    "huskies waiting snow",
+    "dog sled lineup"
+   ]
+  },
+  {
+   "narration": "Llevar el suero con perros de trineo, en una carrera a contrarreloj.",
+   "q": "dog sled racing snow",
+   "syn": [
+    "huskies running fast snow",
+    "sled team speed"
+   ]
+  },
+  {
+   "narration": "El plan era una locura: un relevo de equipos a lo largo de toda la ruta.",
+   "q": "snowy trail wilderness",
+   "syn": [
+    "arctic trail snow",
+    "frozen path tundra"
+   ],
+   "wiki": "1925 serum run to Nome"
+  },
+  {
+   "narration": "El suero llegaría en tren hasta donde alcanzaban las vías.",
+   "q": "vintage steam train snow",
+   "syn": [
+    "old locomotive winter",
+    "train in snow historic"
+   ]
+  },
+  {
+   "narration": "Desde allí, unos veinte mushers se lo pasarían de mano en mano.",
+   "q": "musher driving sled",
+   "syn": [
+    "dog sled driver action",
+    "sled team snow motion"
+   ]
+  },
+  {
+   "narration": "Cada uno correría su tramo y entregaría el suero al siguiente.",
+   "q": "sled dog relay",
+   "syn": [
+    "huskies running trail",
+    "dog team passing"
+   ]
+  },
+  {
+   "narration": "Era como una carrera de relevos, pero contra una ventisca mortal.",
+   "q": "blizzard dog sled",
+   "syn": [
+    "snowstorm huskies",
+    "sled team storm"
+   ]
+  },
+  {
+   "narration": "El frío llegó a bajar de los cincuenta grados bajo cero.",
+   "q": "frozen landscape extreme",
+   "syn": [
+    "ice covered trees",
+    "arctic freeze"
+   ]
+  },
+  {
+   "narration": "A esas temperaturas, respirar quema y la piel expuesta se congela en minutos.",
+   "q": "frozen breath cold",
+   "syn": [
+    "icy wind snow",
+    "frost close up"
+   ]
+  },
+  {
+   "narration": "Los primeros equipos salieron de inmediato, de día y de noche.",
+   "q": "dog sled night snow",
+   "syn": [
+    "huskies running dark",
+    "sled team headlamp night"
+   ]
+  },
+  {
+   "narration": "El suero iba envuelto para protegerlo del frío, pero podía congelarse y echarse a perder.",
+   "q": "wrapped package snow",
+   "syn": [
+    "vintage parcel winter",
+    "bundle in snow"
+   ]
+  },
+  {
+   "narration": "Un hombre y sus perros se jugaban el tramo más peligroso de todos.",
+   "q": "musher portrait vintage",
+   "syn": [
+    "sled driver determined",
+    "husky team serious"
+   ]
+  },
+  {
+   "narration": "Se llamaba Leonhard Seppala, y era el mejor musher de Alaska.",
+   "q": "vintage musher portrait",
+   "syn": [
+    "old sled driver photo",
+    "arctic explorer vintage"
+   ],
+   "wiki": "Leonhard Seppala"
+  },
+  {
+   "narration": "Su perro guía era pequeño, terco y legendario: Togo.",
+   "q": "husky lead dog close",
+   "syn": [
+    "small husky portrait",
+    "sled dog intense eyes"
+   ],
+   "wiki": "Togo (dog)"
+  },
+  {
+   "narration": "Togo ya era viejo para aquello, pero nadie encontraba el camino como él.",
+   "q": "husky old wise",
+   "syn": [
+    "sled dog experienced",
+    "husky snow portrait"
+   ]
+  },
+  {
+   "narration": "A Seppala le tocó cruzar una bahía helada para acortar camino.",
+   "q": "frozen bay ice",
+   "syn": [
+    "sea ice crossing",
+    "icy coast arctic"
+   ]
+  },
+  {
+   "narration": "El hielo del mar podía romperse bajo las patas en cualquier momento.",
+   "q": "cracked sea ice",
+   "syn": [
+    "breaking ice water",
+    "ice floes arctic"
+   ]
+  },
+  {
+   "narration": "Si cedía, el trineo, los perros y el hombre se hundirían en agua helada.",
+   "q": "dark arctic water",
+   "syn": [
+    "icy ocean dangerous",
+    "frozen sea crack"
+   ]
+  },
+  {
+   "narration": "Seppala confió en el olfato y el instinto de Togo.",
+   "q": "husky nose snow",
+   "syn": [
+    "sled dog sniffing",
+    "husky focused trail"
+   ]
+  },
+  {
+   "narration": "El perro guió al equipo por el hielo en plena tormenta, sin ver casi nada.",
+   "q": "blizzard whiteout dogs",
+   "syn": [
+    "husky team storm snow",
+    "sled dogs blizzard"
+   ]
+  },
+  {
+   "narration": "Recorrieron mucho más que cualquier otro equipo del relevo.",
+   "q": "sled dogs long run",
+   "syn": [
+    "huskies endless snow",
+    "dog team distance"
+   ]
+  },
+  {
+   "narration": "Togo guió a los perros a lo largo de más de cien kilómetros en un solo esfuerzo.",
+   "q": "exhausted sled dogs",
+   "syn": [
+    "huskies tired snow",
+    "sled team effort"
+   ]
+  },
+  {
+   "narration": "Fue, con diferencia, el tramo más largo y más mortal de toda la carrera.",
+   "q": "dangerous snow trail",
+   "syn": [
+    "arctic storm trail",
+    "frozen wilderness danger"
+   ]
+  },
+  {
+   "narration": "Horas después, un último musher esperaba para el tramo final hacia Nome.",
+   "q": "musher waiting snow",
+   "syn": [
+    "sled driver vintage night",
+    "husky team night"
+   ]
+  },
+  {
+   "narration": "Se llamaba Gunnar Kaasen.",
+   "q": "vintage man portrait snow",
+   "syn": [
+    "old photo musher",
+    "arctic man winter"
+   ],
+   "wiki": "Gunnar Kaasen"
+  },
+  {
+   "narration": "Y su perro guía era un husky negro llamado Balto.",
+   "q": "black husky portrait",
+   "syn": [
+    "black sled dog snow",
+    "husky dark close up"
+   ],
+   "wiki": "Balto"
+  },
+  {
+   "narration": "Balto no era el perro más rápido ni el favorito de nadie.",
+   "q": "husky standing snow",
+   "syn": [
+    "sled dog calm",
+    "husky portrait serious"
+   ]
+  },
+  {
+   "narration": "Pero esa noche se jugaba el final de toda la carrera.",
+   "q": "dog sled night storm",
+   "syn": [
+    "huskies running night snow",
+    "sled team dark"
+   ]
+  },
+  {
+   "narration": "Cuando Kaasen salió, la ventisca era tan densa que no veía ni a sus propios perros.",
+   "q": "whiteout blizzard",
+   "syn": [
+    "snowstorm zero visibility",
+    "blinding snow storm"
+   ]
+  },
+  {
+   "narration": "El viento borraba el camino y lanzaba el trineo contra la nieve.",
+   "q": "sled in storm",
+   "syn": [
+    "dog team fighting wind",
+    "blizzard sled dogs"
+   ]
+  },
+  {
+   "narration": "En un momento, el trineo volcó y el suero salió despedido a la nieve.",
+   "q": "sled overturned snow",
+   "syn": [
+    "dog sled accident snow",
+    "spilled cargo snow"
+   ]
+  },
+  {
+   "narration": "Kaasen buscó a tientas, con las manos congeladas, hasta recuperarlo.",
+   "q": "hands in snow cold",
+   "syn": [
+    "frozen hands digging",
+    "searching snow dark"
+   ]
+  },
+  {
+   "narration": "No podía orientarse. Dependía por completo de Balto.",
+   "q": "husky lead dog night",
+   "syn": [
+    "sled dog guiding dark",
+    "husky focused night"
+   ]
+  },
+  {
+   "narration": "Y Balto, con el hocico pegado al suelo, encontró el rastro enterrado del camino.",
+   "q": "husky nose to ground",
+   "syn": [
+    "sled dog tracking snow",
+    "husky sniffing trail"
+   ]
+  },
+  {
+   "narration": "Siguió avanzando hacia Nome cuando cualquier otro se habría perdido.",
+   "q": "sled dogs pushing forward",
+   "syn": [
+    "huskies determined snow",
+    "dog team night run"
+   ]
+  },
+  {
+   "narration": "Al amanecer del dos de febrero, el trineo entró en el pueblo.",
+   "q": "snowy town dawn",
+   "syn": [
+    "arctic village morning",
+    "frozen town sunrise"
+   ]
+  },
+  {
+   "narration": "Balto y los perros llegaron agotados, cubiertos de hielo, pero vivos.",
+   "q": "exhausted husky snow",
+   "syn": [
+    "frosty sled dog",
+    "husky ice covered"
+   ]
+  },
+  {
+   "narration": "Y lo más importante: el suero había llegado.",
+   "q": "wrapped package arrival",
+   "syn": [
+    "vintage medical parcel",
+    "serum vial vintage"
+   ]
+  },
+  {
+   "narration": "Estaba congelado, pero se pudo descongelar y usar.",
+   "q": "medicine vials vintage",
+   "syn": [
+    "old medical bottles",
+    "antique serum vial"
+   ]
+  },
+  {
+   "narration": "Los niños de Nome se salvaron. La epidemia se detuvo.",
+   "q": "vintage children photo",
+   "syn": [
+    "old family photograph",
+    "historic children winter"
+   ]
+  },
+  {
+   "narration": "Más de veinte equipos habían recorrido casi mil cien kilómetros en poco más de cinco días.",
+   "q": "sled dog team triumph",
+   "syn": [
+    "huskies snow victory",
+    "dog team finish"
+   ]
+  },
+  {
+   "narration": "Una hazaña que hoy seguiría pareciendo casi imposible.",
+   "q": "arctic wilderness vast",
+   "syn": [
+    "frozen landscape epic",
+    "snowy mountains dramatic"
+   ]
+  },
+  {
+   "narration": "El mundo entero se enteró de la carrera, y buscó un héroe.",
+   "q": "vintage newspaper",
+   "syn": [
+    "old newspaper headline",
+    "historic newspaper print"
+   ]
+  },
+  {
+   "narration": "Y el héroe que eligieron fue el perro que cruzó la meta: Balto.",
+   "q": "black husky hero",
+   "syn": [
+    "balto statue dog",
+    "sled dog famous"
+   ]
+  },
+  {
+   "narration": "Balto se hizo mundialmente famoso.",
+   "q": "husky portrait proud",
+   "syn": [
+    "sled dog noble",
+    "husky close up snow"
+   ]
+  },
+  {
+   "narration": "Se le hizo una estatua en pleno Central Park de Nueva York.",
+   "q": "dog statue park",
+   "syn": [
+    "bronze dog monument",
+    "statue in park"
+   ]
+  },
+  {
+   "narration": "Allí sigue hoy, y miles de niños la tocan cada año.",
+   "q": "bronze statue close up",
+   "syn": [
+    "dog memorial statue",
+    "monument dog detail"
+   ]
+  },
+  {
+   "narration": "Pero esa fama escondía una injusticia.",
+   "q": "husky serious portrait",
+   "syn": [
+    "sled dog thoughtful",
+    "husky snow somber"
+   ]
+  },
+  {
+   "narration": "Porque el tramo más duro, más largo y más peligroso no lo había hecho Balto.",
+   "q": "husky old portrait",
+   "syn": [
+    "sled dog wise eyes",
+    "husky close up intense"
+   ]
+  },
+  {
+   "narration": "Lo había hecho Togo, el viejo perro guía de Seppala.",
+   "q": "small husky hero",
+   "syn": [
+    "sled dog veteran",
+    "husky determined snow"
+   ],
+   "wiki": "Togo (dog)"
+  },
+  {
+   "narration": "Togo había cruzado el hielo del mar arriesgando la vida de todos.",
+   "q": "frozen bay crossing",
+   "syn": [
+    "sea ice dog team",
+    "icy coast huskies"
+   ]
+  },
+  {
+   "narration": "Había recorrido muchos más kilómetros que ningún otro perro de la carrera.",
+   "q": "sled dogs long journey",
+   "syn": [
+    "huskies endless trail",
+    "dog team vast snow"
+   ]
+  },
+  {
+   "narration": "Pero como su tramo no fue el último, quedó a la sombra.",
+   "q": "husky in shadow",
+   "syn": [
+    "sled dog quiet",
+    "husky snow dim light"
+   ]
+  },
+  {
+   "narration": "Seppala se pasó años dolido porque su perro no recibía el crédito que merecía.",
+   "q": "vintage musher sad",
+   "syn": [
+    "old sled driver portrait",
+    "arctic man somber"
+   ]
+  },
+  {
+   "narration": "Con el tiempo, la historia hizo justicia.",
+   "q": "husky portrait dignified",
+   "syn": [
+    "sled dog honored",
+    "husky noble snow"
+   ]
+  },
+  {
+   "narration": "Hoy, muchos consideran a Togo el verdadero héroe de la carrera del suero.",
+   "q": "husky hero portrait",
+   "syn": [
+    "sled dog legend",
+    "husky close up proud"
+   ]
+  },
+  {
+   "narration": "Balto fue el que llegó. Togo fue el que hizo lo imposible.",
+   "q": "two huskies snow",
+   "syn": [
+    "sled dogs together",
+    "husky pair portrait"
+   ]
+  },
+  {
+   "narration": "Y tampoco fueron solo ellos dos.",
+   "q": "many sled dogs lineup",
+   "syn": [
+    "husky teams row",
+    "dog sled group snow"
+   ]
+  },
+  {
+   "narration": "La carrera no la ganó un solo hombre ni un solo perro.",
+   "q": "sled teams waiting",
+   "syn": [
+    "huskies group snow",
+    "dog sled lineup"
+   ]
+  },
+  {
+   "narration": "Cada musher del relevo arriesgó su vida en su propio tramo helado.",
+   "q": "musher in blizzard",
+   "syn": [
+    "sled driver storm snow",
+    "dog team wind snow"
+   ]
+  },
+  {
+   "narration": "Varios llegaron con la cara congelada y las manos destrozadas por el frío.",
+   "q": "frozen hands cold",
+   "syn": [
+    "frostbite winter hands",
+    "cold weather hands vintage"
+   ]
+  },
+  {
+   "narration": "Y algunos perros murieron de agotamiento por el camino.",
+   "q": "exhausted husky snow",
+   "syn": [
+    "tired sled dog winter",
+    "husky collapsed snow"
+   ]
+  },
+  {
+   "narration": "Y los dos, a su manera, salvaron a aquel pueblo helado.",
+   "q": "sled dog team sunset",
+   "syn": [
+    "huskies golden snow",
+    "dog team dusk"
+   ]
+  },
+  {
+   "narration": "La vida de Balto después de la fama fue, al principio, muy triste.",
+   "q": "husky resting sad",
+   "syn": [
+    "sled dog quiet",
+    "husky portrait somber"
+   ]
+  },
+  {
+   "narration": "Él y su equipo acabaron exhibidos como curiosidad en un espectáculo barato.",
+   "q": "vintage sideshow photo",
+   "syn": [
+    "old museum exhibit",
+    "historic display vintage"
+   ]
+  },
+  {
+   "narration": "Cuando la gente de Cleveland los vio abandonados, reunió dinero para rescatarlos.",
+   "q": "vintage crowd people",
+   "syn": [
+    "historic gathering photo",
+    "old photograph crowd"
+   ]
+  },
+  {
+   "narration": "Balto vivió sus últimos años cuidado y querido en un zoo.",
+   "q": "husky elderly resting",
+   "syn": [
+    "sled dog old calm",
+    "husky gentle portrait"
+   ]
+  },
+  {
+   "narration": "Togo también envejeció en paz, y sus descendientes siguen tirando de trineos hoy.",
+   "q": "husky puppies snow",
+   "syn": [
+    "young huskies playing",
+    "husky family snow"
+   ]
+  },
+  {
+   "narration": "Sin aquel relevo, la difteria podría haber arrasado toda la región.",
+   "q": "frozen town empty night",
+   "syn": [
+    "arctic village desolate",
+    "snowy town winter"
+   ]
+  },
+  {
+   "narration": "La hazaña de mil novecientos veinticinco nunca se olvidó.",
+   "q": "arctic memorial snow",
+   "syn": [
+    "vintage sled photo",
+    "historic dog sled"
+   ]
+  },
+  {
+   "narration": "Cada año, una gran carrera de trineos recorre Alaska en su honor.",
+   "q": "modern dog sled race",
+   "syn": [
+    "iditarod sled dogs",
+    "sled dog competition snow"
+   ],
+   "wiki": "Iditarod"
+  },
+  {
+   "narration": "Es uno de los retos más duros del mundo, y recuerda a aquellos perros.",
+   "q": "sled dogs racing modern",
+   "syn": [
+    "huskies race snow",
+    "dog team competition"
+   ]
+  },
+  {
+   "narration": "Hoy ya no dependemos de los perros para sobrevivir en el hielo.",
+   "q": "husky relaxed snow",
+   "syn": [
+    "sled dog resting",
+    "husky calm portrait"
+   ]
+  },
+  {
+   "narration": "Pero su lealtad y su resistencia siguen asombrándonos.",
+   "q": "husky loyal eyes",
+   "syn": [
+    "sled dog devoted",
+    "husky gentle close up"
+   ]
+  },
+  {
+   "narration": "Corrieron en la oscuridad, bajo la ventisca, sin entender por qué.",
+   "q": "blizzard sled dogs night",
+   "syn": [
+    "huskies storm dark",
+    "dog team snow night"
+   ]
+  },
+  {
+   "narration": "Solo sabían que su humano los necesitaba, y eso les bastó.",
+   "q": "musher hugging dog",
+   "syn": [
+    "person with husky bond",
+    "sled dog affection"
+   ]
+  },
+  {
+   "narration": "Unos perros tirando de un trineo vencieron al frío, a la distancia y a la muerte.",
+   "q": "sled dog team epic",
+   "syn": [
+    "huskies snow dramatic",
+    "dog team sunset snow"
+   ]
+  },
+  {
+   "narration": "Si te ha gustado esta historia, suscríbete. En el próximo vídeo: los camellos que movieron el comercio del mundo.",
+   "q": "sled dogs golden hour",
+   "syn": [
+    "husky team sunset",
+    "huskies warm light snow"
+   ]
+  }
+ ],
+ "youtube": {
+  "title": "La Carrera del Suero de 1925: los Perros que Salvaron un Pueblo",
+  "thumb_text": "CARRERA CONTRA LA MUERTE",
+  "tags": [
+   "perros de trineo",
+   "Balto",
+   "Togo",
+   "carrera del suero",
+   "Nome 1925",
+   "husky siberiano",
+   "Alaska",
+   "Iditarod",
+   "Leonhard Seppala",
+   "historia",
+   "documental",
+   "perros heroes",
+   "historia animal",
+   "documental historia",
+   "animales"
+  ],
+  "description": "En el invierno de 1925, un pueblo helado de Alaska iba a morir por una epidemia de difteria, y la única medicina estaba a más de mil kilómetros. Sin aviones ni barcos, la única esperanza eran los perros de trineo.\n\nEsta es la historia real de la carrera del suero de Nome: el relevo de más de 20 mushers a través de la ventisca, la hazaña imposible de Togo cruzando el hielo del mar, y la llegada de Balto a Nome. Dos perros, dos héroes, y un pueblo entero salvado.\n\nSuscríbete para un nuevo documental de historia animal cada semana.\n\n#historia #perros #documental #Balto #animales"
+ }
+}
