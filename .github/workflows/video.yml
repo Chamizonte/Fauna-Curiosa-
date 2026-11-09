@@ -64,7 +64,13 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git commit -m "Vídeo generado; guion movido a planes/_hechos/"
-            git push
+            # El render dura ~24 min y el repo puede haber cambiado mientras tanto.
+            # Integra los cambios remotos y reintenta el push varias veces.
+            for i in 1 2 3 4 5; do
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
+              echo "Push rechazado (el repo avanzó). Reintento $i..."
+              sleep 5
+            done
           fi
 
       - name: Guardar el vídeo y la miniatura como respaldo
