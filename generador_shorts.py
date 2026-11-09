@@ -285,11 +285,21 @@ def _pick_best_wikimedia(query, min_width=1000):
     return None, None
 
 
+def _tags_coinciden(tags_str, query):
+    """Comprueba si alguna palabra relevante de la query aparece en los tags de Pixabay."""
+    if not tags_str:
+        return False
+    tags_str = tags_str.lower()
+    ignorar = {"de", "la", "el", "en", "con", "un", "una", "y"}
+    palabras = [p for p in re.findall(r"[a-z\u00e1\u00e9\u00ed\u00f3\u00fa\u00f1]+", query.lower()) if p not in ignorar and len(p) > 2]
+    return any(p in tags_str for p in palabras)
+
+
 def _pick_pexels(query, want="video"):
     headers = {"Authorization": PEXELS_API_KEY}
     if want == "video":
         r = requests.get("https://api.pexels.com/videos/search",
-                          params={"query": query, "per_page": 5, "orientation": "portrait"},
+                          params={"query": query, "per_page": 15, "orientation": "portrait"},
                           headers=headers, timeout=30).json()
         for v in r.get("videos", []):
             files = sorted(v.get("video_files", []), key=lambda f: -f.get("width", 0))
@@ -298,7 +308,7 @@ def _pick_pexels(query, want="video"):
                     return f["link"], "video"
     else:
         r = requests.get("https://api.pexels.com/v1/search",
-                          params={"query": query, "per_page": 5, "orientation": "portrait"},
+                          params={"query": query, "per_page": 15, "orientation": "portrait"},
                           headers=headers, timeout=30).json()
         for p in r.get("photos", []):
             return p["src"]["large2x"], "image"
@@ -307,15 +317,19 @@ def _pick_pexels(query, want="video"):
 
 def _pick_pixabay(query, want="video"):
     ep = "https://pixabay.com/api/videos/" if want == "video" else "https://pixabay.com/api/"
-    r = requests.get(ep, params={"key": PIXABAY_API_KEY, "q": query, "per_page": 5}, timeout=30).json()
+    r = requests.get(ep, params={"key": PIXABAY_API_KEY, "q": query, "per_page": 15}, timeout=30).json()
     hits = r.get("hits", [])
     if not hits:
         return None, None
+    # Preferimos el primer resultado cuyos tags mencionen de verdad el animal buscado;
+    # si ninguno coincide, nos quedamos con el primero de todos modos (mejor algo que nada).
+    candidatos = [h for h in hits if _tags_coinciden(h.get("tags", ""), query)] or hits
+    elegido = candidatos[0]
     if want == "video":
-        v = hits[0]["videos"]
+        v = elegido["videos"]
         best = v.get("large") or v.get("medium") or v.get("small")
         return best["url"] if best else None, "video"
-    return hits[0]["largeImageURL"], "image"
+    return elegido["largeImageURL"], "image"
 
 
 def fetch_visual(query, fuente, modo, outfile="bg_source"):
