@@ -98,9 +98,12 @@ OUT_BASE.mkdir(exist_ok=True)
 # Columnas del banco de temas (Google Sheet), en este orden exacto:
 #   A=tema  B=texto  C=resaltados (separados por " | ")  D=busqueda_visual
 #   E=fuente_visual  F=modo_visual  G=usado  H=fecha_usado  I=video_url
+#   J=numero_hashtag (opcional, puesto a mano)  K=visual_usado (URL exacta del
+#   clip/foto de fondo que se usó, para no repetir el mismo en otro short)
 COL_USADO = "G"
 COL_FECHA = "H"
 COL_URL = "I"
+COL_VISUAL = "K"
 
 
 def log(*args):
@@ -158,13 +161,13 @@ def obtener_siguiente_tema(creds):
     spreadsheet_id = archivo["id"]
     hoja = _primera_hoja(sheets, spreadsheet_id)
 
-    rango = f"{hoja}!A2:I"
+    rango = f"{hoja}!A2:J"
     valores = sheets.spreadsheets().values().get(
         spreadsheetId=spreadsheet_id, range=rango
     ).execute().get("values", [])
 
     for i, fila in enumerate(valores):
-        fila = fila + [""] * (9 - len(fila))  # rellena columnas que falten
+        fila = fila + [""] * (10 - len(fila))  # rellena columnas que falten (incluye J)
         usado = (fila[6] or "").strip().upper()
         if usado in ("TRUE", "SI", "SÍ", "X", "1"):
             continue
@@ -176,6 +179,7 @@ def obtener_siguiente_tema(creds):
             "busqueda_visual": fila[3].strip(),
             "fuente_visual": (fila[4].strip() or "wikimedia").lower(),
             "modo_visual": (fila[5].strip() or "pan").lower(),
+            "numero_manual": (fila[9] or "").strip(),  # columna J: numero de hashtag fijado a mano
         }
         if not datos["tema"] or not datos["texto"]:
             continue
@@ -188,7 +192,7 @@ def obtener_siguiente_tema(creds):
     )
 
 
-def marcar_tema_usado(creds, spreadsheet_id, hoja, fila_numero, video_url):
+def marcar_tema_usado(creds, spreadsheet_id, hoja, fila_numero, video_url, visual_url=None):
     sheets = build("sheets", "v4", credentials=creds)
     rango = f"{hoja}!{COL_USADO}{fila_numero}:{COL_URL}{fila_numero}"
     sheets.spreadsheets().values().update(
@@ -197,11 +201,33 @@ def marcar_tema_usado(creds, spreadsheet_id, hoja, fila_numero, video_url):
         valueInputOption="RAW",
         body={"values": [["TRUE", date.today().isoformat(), video_url or ""]]},
     ).execute()
+    if visual_url:
+        rango_visual = f"{hoja}!{COL_VISUAL}{fila_numero}"
+        sheets.spreadsheets().values().update(
+            spreadsheetId=spreadsheet_id,
+            range=rango_visual,
+            valueInputOption="RAW",
+            body={"values": [[visual_url]]},
+        ).execute()
 
 
-def siguiente_numero_para_tema(creds, spreadsheet_id, hoja, tema):
-    """Cuenta cuántos shorts ya usados hay de este mismo tema, para numerar
-    el nuevo (#01, #02, ...) sin que nadie tenga que llevar la cuenta a mano."""
+def urls_visuales_ya_usadas(creds, spreadsheet_id, hoja):
+    """Lee todo el historial de la columna K (visual ya usado) para no repetir
+    el mismo clip/foto de fondo en shorts distintos, aunque sean de animales
+    distintos. Se consulta UNA vez por ejecucion, antes de elegir el visual."""
+    sheets = build("sheets", "v4", credentials=creds)
+    rango = f"{hoja}!{COL_VISUAL}2:{COL_VISUAL}"
+    valores = sheets.spreadsheets().values().get(
+        spreadsheetId=spreadsheet_id, range=rango
+    ).execute().get("values", [])
+    return {fila[0].strip() for fila in valores if fila and fila[0].strip()}
+
+
+def siguiente_numero_global(creds, spreadsheet_id, hoja):
+    """Cuenta cuántos shorts ya se han subido en TOTAL (de cualquier tema), para
+    numerar el nuevo con el siguiente hashtag (#01, #02, #03...) sin que se
+    repita ni reinicie por animal. Solo se usa como respaldo si la fila no
+    trae ya un numero fijado a mano en la columna J."""
     sheets = build("sheets", "v4", credentials=creds)
     rango = f"{hoja}!A2:G"
     valores = sheets.spreadsheets().values().get(
@@ -211,7 +237,7 @@ def siguiente_numero_para_tema(creds, spreadsheet_id, hoja, tema):
     for fila in valores:
         fila = fila + [""] * (7 - len(fila))
         usado = (fila[6] or "").strip().upper()
-        if fila[0].strip() == tema and usado in ("TRUE", "SI", "SÍ", "X", "1"):
+        if usado in ("TRUE", "SI", "SÍ", "X", "1"):
             contador += 1
     return contador + 1
 
@@ -257,7 +283,8 @@ WIKIMEDIA_HEADERS = {
 }
 
 
-def _pick_best_wikimedia(query, min_width=1000):
+def _pick_best_wikimedia(query, min_width=1000, excluir=None):
+    excluir = excluir or set()
     api = "https://commons.wikimedia.org/w/api.php"
     params = {
         "action": "query", "format": "json", "list": "search",
@@ -265,6 +292,7 @@ def _pick_best_wikimedia(query, min_width=1000):
     }
     r = requests.get(api, params=params, headers=WIKIMEDIA_HEADERS, timeout=30).json()
     titles = [x["title"] for x in r.get("query", {}).get("search", [])]
+    repetido = None
     for title in titles:
         info = requests.get(api, params={
             "action": "query", "format": "json", "prop": "imageinfo",
@@ -281,7 +309,14 @@ def _pick_best_wikimedia(query, min_width=1000):
             # luego Pillow no puede abrir.
             if mime in ("image/jpeg", "image/png", "image/webp", "image/gif", "image/bmp") \
                     and info0.get("width", 0) >= min_width:
-                return info0["url"], "image"
+                url = info0["url"]
+                if url in excluir:
+                    repetido = repetido or url
+                    continue
+                return url, "image"
+    # Mejor repetir una foto que fallar del todo si no hay ninguna nueva.
+    if repetido:
+        return repetido, "image"
     return None, None
 
 
@@ -295,8 +330,10 @@ def _tags_coinciden(tags_str, query):
     return any(p in tags_str for p in palabras)
 
 
-def _pick_pexels(query, want="video"):
+def _pick_pexels(query, want="video", excluir=None):
+    excluir = excluir or set()
     headers = {"Authorization": PEXELS_API_KEY}
+    repetido = None
     if want == "video":
         r = requests.get("https://api.pexels.com/videos/search",
                           params={"query": query, "per_page": 15, "orientation": "portrait"},
@@ -305,52 +342,81 @@ def _pick_pexels(query, want="video"):
             files = sorted(v.get("video_files", []), key=lambda f: -f.get("width", 0))
             for f in files:
                 if f.get("width", 0) >= 720:
-                    return f["link"], "video"
+                    link = f["link"]
+                    if link in excluir:
+                        repetido = repetido or link
+                    else:
+                        return link, "video"
+                    break
     else:
         r = requests.get("https://api.pexels.com/v1/search",
                           params={"query": query, "per_page": 15, "orientation": "portrait"},
                           headers=headers, timeout=30).json()
         for p in r.get("photos", []):
-            return p["src"]["large2x"], "image"
+            link = p["src"]["large2x"]
+            if link in excluir:
+                repetido = repetido or link
+                continue
+            return link, "image"
+    # Mejor repetir que fallar si todos los candidatos ya se usaron antes.
+    if repetido:
+        return repetido, ("video" if want == "video" else "image")
     return None, None
 
 
-def _pick_pixabay(query, want="video"):
+def _pick_pixabay(query, want="video", excluir=None):
+    excluir = excluir or set()
     ep = "https://pixabay.com/api/videos/" if want == "video" else "https://pixabay.com/api/"
     r = requests.get(ep, params={"key": PIXABAY_API_KEY, "q": query, "per_page": 15}, timeout=30).json()
     hits = r.get("hits", [])
     if not hits:
         return None, None
     # Preferimos el primer resultado cuyos tags mencionen de verdad el animal buscado;
-    # si ninguno coincide, nos quedamos con el primero de todos modos (mejor algo que nada).
+    # si ninguno coincide, nos quedamos con cualquiera (mejor algo que nada).
     candidatos = [h for h in hits if _tags_coinciden(h.get("tags", ""), query)] or hits
-    elegido = candidatos[0]
-    if want == "video":
-        v = elegido["videos"]
-        best = v.get("large") or v.get("medium") or v.get("small")
-        return best["url"] if best else None, "video"
-    return elegido["largeImageURL"], "image"
+
+    def _url_de(hit):
+        if want == "video":
+            v = hit["videos"]
+            best = v.get("large") or v.get("medium") or v.get("small")
+            return best["url"] if best else None
+        return hit.get("largeImageURL")
+
+    repetido = None
+    for h in candidatos:
+        url = _url_de(h)
+        if not url:
+            continue
+        if url in excluir:
+            repetido = repetido or url
+            continue
+        return url, ("video" if want == "video" else "image")
+    # Mejor repetir que fallar si todos los candidatos ya se usaron antes.
+    if repetido:
+        return repetido, ("video" if want == "video" else "image")
+    return None, None
 
 
-def fetch_visual(query, fuente, modo, outfile="bg_source"):
+def fetch_visual(query, fuente, modo, outfile="bg_source", excluir=None):
+    excluir = excluir or set()
     url, kind = None, None
     if fuente == "wikimedia":
-        url, kind = _pick_best_wikimedia(query)
+        url, kind = _pick_best_wikimedia(query, excluir=excluir)
     elif fuente == "pexels" and PEXELS_API_KEY:
-        url, kind = _pick_pexels(query, "video" if modo == "video" else "image")
+        url, kind = _pick_pexels(query, "video" if modo == "video" else "image", excluir=excluir)
     elif fuente == "pixabay" and PIXABAY_API_KEY:
-        url, kind = _pick_pixabay(query, "video" if modo == "video" else "image")
+        url, kind = _pick_pixabay(query, "video" if modo == "video" else "image", excluir=excluir)
 
     if not url:
         for f in ["wikimedia", "pexels", "pixabay"]:
             if f == fuente:
                 continue
             if f == "wikimedia":
-                url, kind = _pick_best_wikimedia(query)
+                url, kind = _pick_best_wikimedia(query, excluir=excluir)
             elif f == "pexels" and PEXELS_API_KEY:
-                url, kind = _pick_pexels(query, "image")
+                url, kind = _pick_pexels(query, "image", excluir=excluir)
             elif f == "pixabay" and PIXABAY_API_KEY:
-                url, kind = _pick_pixabay(query, "image")
+                url, kind = _pick_pixabay(query, "image", excluir=excluir)
             if url:
                 break
 
@@ -366,7 +432,7 @@ def fetch_visual(query, fuente, modo, outfile="bg_source"):
     r.raise_for_status()
     open(path, "wb").write(r.content)
     log("Visual descargado:", path, "(", kind, "de", fuente, ")")
-    return path, kind
+    return path, kind, url
 
 
 # ---------------------------------------------------------------------------
@@ -504,11 +570,17 @@ def main():
     creds_youtube = get_google_credentials(YOUTUBE_REFRESH_TOKEN, YOUTUBE_SCOPES)
 
     spreadsheet_id, hoja, fila_numero, datos = obtener_siguiente_tema(creds_drive)
-    numero = siguiente_numero_para_tema(creds_drive, spreadsheet_id, hoja, datos["tema"])
+    numero_manual = (datos.get("numero_manual") or "").strip()
+    if numero_manual.isdigit():
+        numero = int(numero_manual)
+    else:
+        numero = siguiente_numero_global(creds_drive, spreadsheet_id, hoja)
     log(f"Tema elegido: {datos['tema']} #{numero:02d} (fila {fila_numero} del banco)")
 
-    bg_path, bg_kind = fetch_visual(
-        datos["busqueda_visual"], datos["fuente_visual"], datos["modo_visual"]
+    urls_ya_usadas = urls_visuales_ya_usadas(creds_drive, spreadsheet_id, hoja)
+    bg_path, bg_kind, bg_url = fetch_visual(
+        datos["busqueda_visual"], datos["fuente_visual"], datos["modo_visual"],
+        excluir=urls_ya_usadas,
     )
 
     usar_sonido_original = False
@@ -606,7 +678,7 @@ def main():
         privacidad=PRIVACIDAD_YOUTUBE,
     )
 
-    marcar_tema_usado(creds_drive, spreadsheet_id, hoja, fila_numero, video_url)
+    marcar_tema_usado(creds_drive, spreadsheet_id, hoja, fila_numero, video_url, visual_url=bg_url)
     log("Fila", fila_numero, "marcada como usada en el banco de temas.")
     log("== Terminado OK ==")
 
