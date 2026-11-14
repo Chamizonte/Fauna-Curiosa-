@@ -5,8 +5,6 @@ import subprocess
 import time
 from pathlib import Path
 
-import requests
-
 UA = {"User-Agent": "CuriosaFaunaBot/2.0 (canal educativo de fauna; github.com/Chamizonte)"}
 RAIZ = Path(__file__).resolve().parent.parent
 DATOS = RAIZ / "datos"
@@ -30,6 +28,7 @@ def log(*a):
 def get_json(url, params=None, headers=None, intentos=5, timeout=60):
     """GET que tolera límites de uso (429/5xx o respuesta no JSON) con espera creciente.
     Nunca incluye cabeceras en los errores, para no filtrar claves."""
+    import requests  # import diferido: los scripts de solo lectura no lo necesitan
     h = {**UA, **(headers or {})}
     ultimo = None
     for i in range(intentos):
@@ -52,6 +51,7 @@ _ultima_descarga = {}
 def descargar(url, destino, max_mb=400, intentos=5):
     """Descarga respetando a los servidores: pausa entre descargas del mismo
     dominio y espera creciente si responden 429 (Wikimedia lo hace)."""
+    import requests
     destino = Path(destino)
     dominio = url.split("/")[2]
     for i in range(intentos):
