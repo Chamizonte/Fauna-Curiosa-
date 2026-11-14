@@ -35,6 +35,20 @@ def lic_tipo(lic):
     return "otra:" + l[:30]
 
 
+import time
+
+
+def wm_get(params):
+    """Wikimedia responde HTML (no JSON) cuando limita; reintenta con espera."""
+    for intento in range(5):
+        r = requests.get("https://commons.wikimedia.org/w/api.php", params=params, headers=UA, timeout=60)
+        try:
+            return r.json()
+        except ValueError:
+            time.sleep(5 * (intento + 1))
+    raise RuntimeError(f"Wikimedia sin JSON (HTTP {r.status_code})")
+
+
 def wikimedia(q):
     c = Counter()
     ejemplos = []
@@ -43,7 +57,8 @@ def wikimedia(q):
         params = {"action": "query", "format": "json", "generator": "search",
                   "gsrsearch": f"{q} filetype:video", "gsrnamespace": 6, "gsrlimit": 50,
                   "prop": "imageinfo", "iiprop": "url|size|mime|extmetadata", **cont}
-        r = requests.get("https://commons.wikimedia.org/w/api.php", params=params, headers=UA, timeout=60).json()
+        r = wm_get(params)
+        time.sleep(1)
         for p in r.get("query", {}).get("pages", {}).values():
             ii = (p.get("imageinfo") or [{}])[0]
             if (ii.get("width") or 0) < 1280 or (ii.get("duration") or 0) < 8:
@@ -86,7 +101,7 @@ def nasa(q):
 
 
 def pexels(q):
-    key = os.environ.get("PEXELS_API_KEY")
+    key = (os.environ.get("PEXELS_API_KEY") or "").strip()
     r = requests.get("https://api.pexels.com/videos/search", headers={"Authorization": key},
                      params={"query": q, "per_page": 80, "size": "medium"}, timeout=60).json()
     vids = r.get("videos", [])
@@ -94,7 +109,7 @@ def pexels(q):
 
 
 def pixabay(q):
-    key = os.environ.get("PIXABAY_API_KEY")
+    key = (os.environ.get("PIXABAY_API_KEY") or "").strip()
     r = requests.get("https://pixabay.com/api/videos/", params={"key": key, "q": q, "per_page": 100}, timeout=60).json()
     return {"total": r.get("totalHits")}
 
@@ -107,7 +122,8 @@ for es, en in ANIMALES.items():
         try:
             fila[nombre] = fn(en)
         except Exception as e:
-            fila[nombre] = {"error": repr(e)[:200]}
+            # Solo el tipo de error: el texto puede contener cabeceras con claves.
+            fila[nombre] = {"error": type(e).__name__}
     informe[es] = fila
     print(es, json.dumps(fila, ensure_ascii=False))
 
