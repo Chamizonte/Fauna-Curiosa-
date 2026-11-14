@@ -1,0 +1,14 @@
+name: Sala de redacción (Claude)
+# Copia mínima en main para poder lanzar a mano la versión de la rama v2
+# (gh workflow run sala-redaccion.yml --ref v2). Sin programación: no se ejecuta sola.
+on:
+  workflow_dispatch:
+    inputs:
+      cantidad:
+        description: "Guiones a escribir"
+        default: "28"
+jobs:
+  aviso:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Lanzar con --ref v2 mientras la v2 está en pruebas."
