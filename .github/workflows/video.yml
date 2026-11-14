@@ -26,18 +26,31 @@ jobs:
       - name: Descargar el repo
         uses: actions/checkout@v4
 
+      # Respaldo de la v2: si el vídeo largo v2 de hoy ya está subido, la v1 no hace nada.
+      - name: ¿Ya lo publicó la v2?
+        id: v2
+        run: |
+          hoy=$(date -u +%F)
+          if [ "${{ github.event_name }}" = "schedule" ] && grep -l "\"fecha_publicacion\": \"$hoy\"" datos/largos/publicados/*.json >/dev/null 2>&1; then
+            echo "hecho=1" >> "$GITHUB_OUTPUT"; echo "La v2 ya subió el vídeo de hoy"
+          fi
+
       - name: Preparar Python
+        if: steps.v2.outputs.hecho != '1'
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - name: Instalar FFmpeg y fuentes
+        if: steps.v2.outputs.hecho != '1'
         run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu-core fonts-liberation
 
       - name: Instalar dependencias de Python
+        if: steps.v2.outputs.hecho != '1'
         run: pip install -r requirements-video.txt
 
-      - name: Generar el vídeo y subirlo a YouTube (privado)
+      - name: Generar el vídeo y subirlo a YouTube
+        if: steps.v2.outputs.hecho != '1'
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
@@ -55,7 +68,7 @@ jobs:
         run: python generador_video.py
 
       - name: Marcar el guion como hecho (commit)
-        if: success()
+        if: success() && steps.v2.outputs.hecho != '1'
         run: |
           git add -A planes
           if git diff --cached --quiet; then

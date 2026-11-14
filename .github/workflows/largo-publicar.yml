@@ -1,0 +1,102 @@
+name: Publicar vídeo largo
+# La víspera de los días 1, 11 y 21 monta el vídeo largo y lo sube PROGRAMADO para
+# las 09:00 UTC del día siguiente (queda unas horas privado para poder revisarlo).
+# Se ejecuta a diario a las 06:00 UTC: si mañana no toca vídeo largo, termina enseguida.
+# Si no hay guion v2 o el montaje falla, el workflow v1 "Generar y subir vídeo largo"
+# publica al día siguiente como respaldo.
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+    inputs:
+      fecha:
+        description: "Fecha de publicación AAAA-MM-DD (vacío = mañana)"
+        default: ""
+      modo:
+        description: "programar | ya (público inmediato) | prueba (solo montar)"
+        default: "programar"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: largo-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - name: ¿Toca vídeo largo?
+        id: toca
+        run: |
+          fecha="${{ github.event.inputs.fecha }}"
+          [ -z "$fecha" ] && fecha=$(date -u -d tomorrow +%F)
+          echo "fecha=$fecha" >> "$GITHUB_OUTPUT"
+          if grep -l "\"fecha_publicacion\": \"$fecha\"" datos/largos/pendientes/*.json >/dev/null 2>&1; then
+            echo "si=1" >> "$GITHUB_OUTPUT"; echo "Hay guion para $fecha"
+          else
+            echo "No hay vídeo largo pendiente para $fecha"
+          fi
+      - uses: actions/setup-python@v5
+        if: steps.toca.outputs.si == '1'
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        if: steps.toca.outputs.si == '1'
+        with:
+          node-version: "22"
+      - name: Instalar
+        if: steps.toca.outputs.si == '1'
+        run: |
+          sudo apt-get update -y && sudo apt-get install -y ffmpeg
+          pip install -r requirements-v2.txt
+          cd remotion && npm install
+      - name: Completar material que falte
+        if: steps.toca.outputs.si == '1'
+        timeout-minutes: 60
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python -m cf.material_largo --max-total 150
+      - name: Montar y subir
+        if: steps.toca.outputs.si == '1'
+        timeout-minutes: 120
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          modo="${{ github.event.inputs.modo || 'programar' }}"
+          extra=""
+          [ "$modo" = "ya" ] && extra="--ya"
+          [ "$modo" = "prueba" ] && extra="--no-subir"
+          python -m cf.publicar_largo --fecha "${{ steps.toca.outputs.fecha }}" $extra
+      - name: Guardar el estado
+        if: always() && steps.toca.outputs.si == '1'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A datos/largos
+          git diff --cached --quiet && exit 0
+          git commit -m "Vídeo largo: material y publicación"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push && break
+            sleep 5
+          done
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.toca.outputs.si == '1'
+        with:
+          name: video-largo
+          path: |
+            out/*.mp4
+            out/*.jpg
+          retention-days: 7
+          if-no-files-found: ignore

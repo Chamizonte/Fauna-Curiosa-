@@ -1,7 +1,8 @@
 import React from "react";
-import { CalculateMetadataFunction, Composition } from "remotion";
+import { CalculateMetadataFunction, Composition, Still } from "remotion";
 import { PropsShort, Short } from "./Short";
 import { PropsTarjeta, Tarjeta } from "./Tarjeta";
+import { Largo, Miniatura, PropsLargo, PropsMiniatura } from "./Largo";
 
 const FPS = 30;
 
@@ -36,8 +37,29 @@ const ejemploTarjeta: PropsTarjeta = {
   volMusica: 0.35,
 };
 
+const metadatosLargo: CalculateMetadataFunction<PropsLargo> = ({ props }) => ({
+  durationInFrames: Math.max(1, Math.ceil(props.duracion * FPS)),
+});
+
+const ejemploLargo: PropsLargo = {
+  duracion: 5, planos: [], subtitulos: [], rotulos: [], cartelas: [{ texto: "3 toneladas", ini: 0, fin: 5 }],
+  capitulos: [], volMusica: 0.12,
+};
+const ejemploMiniatura: PropsMiniatura = { imagen: "render/miniatura.jpg", texto: "EL PRIMER TANQUE", posicionX: 0.3 };
+
 export const Root: React.FC = () => (
   <>
+    <Composition
+      id="Largo"
+      component={Largo}
+      fps={FPS}
+      width={1920}
+      height={1080}
+      durationInFrames={FPS * 5}
+      defaultProps={ejemploLargo}
+      calculateMetadata={metadatosLargo}
+    />
+    <Still id="Miniatura" component={Miniatura} width={1280} height={720} defaultProps={ejemploMiniatura} />
     <Composition
       id="Short"
       component={Short}
