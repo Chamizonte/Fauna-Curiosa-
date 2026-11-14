@@ -46,6 +46,8 @@ jobs:
       - uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Token propio del workflow: evita tener que instalar la app de Claude en GitHub.
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           prompt: |
             Eres la sala de redacción del canal de YouTube Curiosa Fauna. Fecha de hoy: ${{ github.run_started_at }}.
 

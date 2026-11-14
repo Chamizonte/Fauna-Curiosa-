@@ -5,7 +5,11 @@ import subprocess
 import time
 from pathlib import Path
 
-UA = {"User-Agent": "CuriosaFaunaBot/2.0 (canal educativo de fauna; github.com/Chamizonte)"}
+# Formato que exige la política de User-Agent de Wikimedia:
+# nombre/versión (contacto público) librería/versión
+UA = {"User-Agent": "CuriosaFaunaBot/2.0 (https://www.youtube.com/@CuriosaFauna-y3s; canal educativo de fauna) "
+                    "python-requests/2"}
+_bloqueados = {}  # dominio -> nº de descargas rechazadas seguidas en esta ejecución
 RAIZ = Path(__file__).resolve().parent.parent
 DATOS = RAIZ / "datos"
 
@@ -54,6 +58,10 @@ def descargar(url, destino, max_mb=400, intentos=5):
     import requests
     destino = Path(destino)
     dominio = url.split("/")[2]
+    # Si un servidor ya nos rechazó dos veces seguidas, no se insiste en esta ejecución
+    # (cada intento fallido cuesta minutos de espera y minutos de Actions).
+    if _bloqueados.get(dominio, 0) >= 2:
+        raise RuntimeError(f"{dominio} nos está limitando; se reintentará otro día")
     for i in range(intentos):
         espera = 4 - (time.time() - _ultima_descarga.get(dominio, 0))
         if espera > 0:
@@ -71,7 +79,9 @@ def descargar(url, destino, max_mb=400, intentos=5):
                     if total > max_mb * 1024 * 1024:
                         raise RuntimeError(f"Archivo demasiado grande (> {max_mb} MB)")
                     f.write(trozo)
+            _bloqueados[dominio] = 0
             return destino
+    _bloqueados[dominio] = _bloqueados.get(dominio, 0) + 1
     raise RuntimeError(f"Descarga rechazada repetidamente por {dominio}")
 
 
