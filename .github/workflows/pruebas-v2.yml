@@ -7,7 +7,7 @@ on:
   workflow_dispatch: {}
 
 jobs:
-  fuentes:
+  cobertura:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -15,55 +15,33 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: sudo apt-get update -y && sudo apt-get install -y ffmpeg
-      - run: pip install -U yt-dlp requests
-      - run: python spikes/test_fuentes.py
+      - run: pip install requests
+      - run: python spikes/test_cobertura.py
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: fuentes
+          name: cobertura
           path: spikes_out/
           retention-days: 7
 
-  voz:
+  voz-flash:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install chatterbox-tts==0.1.7 requests
-      - run: python spikes/test_voz.py
+      - run: pip install requests
+      - run: python spikes/test_voz_flash.py
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: voz
+          name: voz-flash
           path: spikes_out/
-          retention-days: 7
-
-  remotion:
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    defaults:
-      run:
-        working-directory: spikes/remotion
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-      - run: npm install
-      - name: Renderizar 20 s de short (medir tiempo)
-        run: |
-          START=$(date +%s)
-          npx remotion render src/index.ts PruebaShort out/prueba.mp4
-          echo "SEGUNDOS_RENDER=$(( $(date +%s) - START ))" | tee out/tiempo.txt
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: remotion
-          path: spikes/remotion/out/
           retention-days: 7
