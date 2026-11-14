@@ -247,8 +247,10 @@ export const Miniatura: React.FC<PropsMiniatura> = ({ imagen, texto, posicionX }
             textTransform: "uppercase",
             textAlign: animalIzq ? "right" : "left",
             maxWidth: 640,
-            WebkitTextStroke: "4px black",
-            textShadow: "0 8px 0 rgba(0,0,0,0.9)",
+            // el contorno se pinta por detrás del relleno (sin artefactos dentro de las letras)
+            WebkitTextStroke: "14px black",
+            paintOrder: "stroke fill",
+            textShadow: "0 10px 0 rgba(0,0,0,0.9)",
           }}
         >
           {texto.split(" ").map((w, i, a) => (

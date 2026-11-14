@@ -80,7 +80,12 @@ def juzgar(imagen_jpg, n_fotogramas, especie, cientifico="", contexto="", foto=F
     ultimo = None
     for modelo in MODELOS:
         for intento in range(3):
-            r = _llamar(modelo, imagen_jpg, prompt)
+            try:
+                r = _llamar(modelo, imagen_jpg, prompt)
+            except requests.RequestException as e:  # p. ej. tiempo de espera agotado
+                ultimo = type(e).__name__
+                time.sleep(10)
+                continue
             time.sleep(PAUSA_S)
             if r.status_code == 200:
                 try:

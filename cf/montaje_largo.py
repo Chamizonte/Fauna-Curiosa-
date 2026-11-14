@@ -81,7 +81,9 @@ def subtitulos(palabras, max_palabras=9):
     out, actual = [], []
     for p in palabras:
         actual.append(p)
-        if len(actual) >= max_palabras or p["t"].endswith((".", "?", "!", ",", ";", ":")) and len(actual) >= 4:
+        fin_frase = p["t"].endswith((".", "?", "!", "…"))
+        pausa = p["t"].endswith((",", ";", ":")) and len(actual) >= 4
+        if len(actual) >= max_palabras or fin_frase or pausa:
             out.append({"texto": " ".join(x["t"] for x in actual), "ini": actual[0]["ini"], "fin": actual[-1]["fin"] + 0.15})
             actual = []
     if actual:
@@ -183,7 +185,7 @@ def montar(brief_path):
     bruto = tmp / "bruto.mp4"
     log("  renderizando (puede tardar ~30 min)…")
     _remotion(["render", "src/index.ts", "Largo", str(bruto), f"--props={pp}", "--enforce-audio-track",
-               "--concurrency=100%"])
+               "--concurrency=100%", "--crf=21"])
     final = SALIDA / f"{b['id']}.mp4"
     run(["ffmpeg", "-y", "-v", "error", "-i", str(bruto), "-c:v", "copy",
          "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-c:a", "aac", "-b:a", "192k", str(final)])

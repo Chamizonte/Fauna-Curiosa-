@@ -69,7 +69,10 @@ def juzgar(c, visual, tmp):
         hoja = analisis.hoja_contacto(analisis.fotogramas(proxy, tiempos))
         v = vision.juzgar(hoja, 6, especie, visual.get("cientifico", ""), contexto)
         escenas = tec["escenas"]
-    if not (v.get("es_la_especie_buscada") and v.get("confianza", 0) >= 0.6 and v.get("calidad_visual", 0) >= 3):
+    ok = v.get("es_la_especie_buscada") and v.get("confianza", 0) >= 0.6 and v.get("calidad_visual", 0) >= 3
+    if c.tipo == "foto":  # en fotos, nada de ilustraciones, láminas ni ejemplares de museo
+        ok = ok and v.get("apto_para_short") and v.get("calidad_visual", 0) >= 4
+    if not ok:
         return None, (", ".join(v.get("problemas") or []) or v.get("descripcion", ""))[:100]
     # el tramo más largo y con más movimiento
     mejor = max(escenas, key=lambda e: (e["fin"] - e["ini"]) * (1 + e["movimiento"]), default=None)
