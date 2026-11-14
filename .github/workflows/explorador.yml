@@ -12,7 +12,7 @@ on:
       max_total:
         description: "Tope de clips a analizar con visión"
         required: false
-        default: "20"
+        default: "120"
 
 permissions:
   contents: write
@@ -45,7 +45,7 @@ jobs:
         run: |
           python -m cf.explorador \
             --animales "${{ github.event.inputs.animales }}" \
-            --nuevos 4 --max-total "${{ github.event.inputs.max_total || '40' }}"
+            --nuevos 3 --fotos 2 --max-total "${{ github.event.inputs.max_total || '120' }}"
       - name: Guardar la biblioteca en el repositorio
         if: always()   # se guarda lo analizado aunque la exploración falle o se corte
         run: |

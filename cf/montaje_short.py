@@ -29,19 +29,83 @@ def biblioteca():
     return {r["clave"]: r for r in leer_jsonl(DATOS / "biblioteca" / "momentos.jsonl")}
 
 
-def recortar_plano(src, desde, disponible, necesario, posx, destino):
-    """Recorta un tramo a vertical 1080x1920. Si el tramo es más corto de lo
-    necesario, lo ralentiza (hasta 1,6x); si es más largo, lo corta."""
-    factor = min(CAMARA_LENTA_MAX, max(1.0, necesario / max(disponible, 0.1)))
-    vf = (f"setpts={factor:.3f}*PTS,"
-          "scale=1080:1920:force_original_aspect_ratio=increase,"
-          f"crop=1080:1920:'min(max(iw*{posx:.3f}-540,0),iw-1080)':'(ih-1920)/2',"
-          f"fps={FPS},format=yuv420p")
-    run(["ffmpeg", "-y", "-v", "error", "-ss", f"{desde:.2f}", "-t", f"{disponible:.2f}", "-i", str(src),
-         "-vf", vf, "-an", "-t", f"{necesario:.2f}", "-c:v", "libx264", "-preset", "veryfast", "-crf", "18",
-         str(destino)])
-    real = sondear(destino)["duracion"]
-    return real
+def recortar_plano(src, desde, disponible, necesario, posx, destino, w=1080, h=1920, foto=False):
+    """Recorta un tramo a w x h (vertical 1080x1920 por defecto), centrando el
+    encuadre en posx. Vídeo: si el tramo es más corto de lo necesario, lo ralentiza
+    (hasta 1,6x); si es más largo, lo corta. Foto: barrido lento (efecto Ken Burns)."""
+    if foto:
+        # se escala un 12 % de más y el encuadre se desliza despacio alrededor de posx
+        vf = (f"scale={int(w * 1.12)}:{int(h * 1.12)}:force_original_aspect_ratio=increase,"
+              f"crop={w}:{h}:'min(max(iw*{posx:.3f}-{w / 2}+(t/{necesario:.2f}-0.5)*{w * 0.1:.0f},0),iw-{w})'"
+              f":'(ih-{h})/2',fps={FPS},format=yuv420p")
+        entrada = ["-loop", "1", "-t", f"{necesario:.2f}", "-i", str(src)]
+    else:
+        factor = min(CAMARA_LENTA_MAX, max(1.0, necesario / max(disponible, 0.1)))
+        vf = (f"setpts={factor:.3f}*PTS,"
+              f"scale={w}:{h}:force_original_aspect_ratio=increase,"
+              f"crop={w}:{h}:'min(max(iw*{posx:.3f}-{w / 2},0),iw-{w})':'(ih-{h})/2',"
+              f"fps={FPS},format=yuv420p")
+        entrada = ["-ss", f"{desde:.2f}", "-t", f"{disponible:.2f}", "-i", str(src)]
+    run(["ffmpeg", "-y", "-v", "error", *entrada, "-vf", vf, "-an", "-t", f"{necesario:.2f}",
+         "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", str(destino)])
+    return sondear(destino)["duracion"]
+
+
+def preparar_planos(brief, bib, duracion, tmp, w=1080, h=1920):
+    """Descarga y recorta los planos del brief repartiendo la duración total en
+    proporción al tramo pedido para cada uno."""
+    planos_brief = brief["planos"]
+    tramos = [max(0.5, p["hasta"] - p["desde"]) for p in planos_brief]
+    escala = duracion / sum(tramos)
+    descargados, planos = {}, []
+    for i, (p, tramo) in enumerate(zip(planos_brief, tramos)):
+        m = bib[p["clave"]]
+        if p["clave"] not in descargados:
+            dst = tmp / f"clip{len(descargados)}"
+            descargar(m["url"], dst)
+            descargados[p["clave"]] = dst
+        necesario = tramo * escala
+        posx = p.get("posicion_x", (m.get("vision") or {}).get("posicion_x", 0.5))
+        real = recortar_plano(descargados[p["clave"]], p["desde"], tramo, necesario, posx,
+                              PUBLICO / f"p{i}.mp4", w, h, foto=m.get("tipo") == "foto")
+        planos.append({"src": f"render/p{i}.mp4", "duracion": round(min(real, necesario), 3)})
+    # el último plano cubre cualquier diferencia de redondeo
+    falta = duracion - sum(p["duracion"] for p in planos)
+    planos[-1]["duracion"] = round(planos[-1]["duracion"] + max(0, falta), 3)
+    return planos
+
+
+def musica():
+    try:
+        from .google import descargar_de_drive
+        descargar_de_drive(MUSICA_DRIVE, PUBLICO / "musica.mp3")
+        return "render/musica.mp3"
+    except Exception as e:
+        log(f"  sin música: {type(e).__name__}")
+        return None
+
+
+def numero_tarjeta():
+    """Número correlativo de la serie de tarjetas (#1, #2…)."""
+    n = 0
+    for f in (DATOS / "shorts" / "publicados").glob("*.json"):
+        try:
+            n += json.loads(f.read_text(encoding="utf-8")).get("formato") == "tarjeta"
+        except ValueError:
+            pass
+    return n + 1
+
+
+def montar_tarjeta(brief, bib, tmp):
+    from .validar_briefs import texto_plano
+    palabras = len(texto_plano(brief["texto_tarjeta"]).split())
+    # tiempo de lectura: ~3 palabras por segundo más margen para ver el vídeo
+    duracion = round(max(10.0, palabras / 3.0 + 3.0), 2)
+    log(f"  duración de la tarjeta: {duracion:.1f} s ({palabras} palabras, sin voz)")
+    planos = preparar_planos(brief, bib, duracion, tmp, 1000, 760)  # ANCHO_MEDIA x ALTO_MEDIA de Tarjeta.tsx
+    props = {"duracion": duracion, "titular": brief["gancho_pantalla"], "numero": numero_tarjeta(),
+             "texto": brief["texto_tarjeta"], "planos": planos, "musica": musica(), "volMusica": 0.45}
+    return props, "Tarjeta"
 
 
 def montar(brief_path, sin_voz=False):
@@ -52,6 +116,10 @@ def montar(brief_path, sin_voz=False):
     PUBLICO.mkdir(parents=True)
     SALIDA.mkdir(exist_ok=True)
     tmp = Path(tempfile.mkdtemp())
+
+    if brief["formato"] == "tarjeta":
+        props, composicion = montar_tarjeta(brief, bib, tmp)
+        return _finalizar(brief, props, composicion, tmp), False
 
     # 1) Voz
     texto = brief["guion"]
@@ -69,33 +137,9 @@ def montar(brief_path, sin_voz=False):
         duracion = palabras[-1]["fin"] + 1.2
     log(f"  duración del short: {duracion:.1f} s ({'con voz' if voz_rel else 'sin voz'})")
 
-    # 2) Planos: reparto proporcional al tramo pedido para cada uno
-    planos_brief = brief["planos"]
-    tramos = [max(0.5, p["hasta"] - p["desde"]) for p in planos_brief]
-    escala = duracion / sum(tramos)
-    descargados, planos = {}, []
-    for i, (p, tramo) in enumerate(zip(planos_brief, tramos)):
-        m = bib[p["clave"]]
-        if p["clave"] not in descargados:
-            dst = tmp / f"clip{len(descargados)}"
-            descargar(m["url"], dst)
-            descargados[p["clave"]] = dst
-        necesario = tramo * escala
-        posx = p.get("posicion_x", (m.get("vision") or {}).get("posicion_x", 0.5))
-        real = recortar_plano(descargados[p["clave"]], p["desde"], tramo, necesario, posx, PUBLICO / f"p{i}.mp4")
-        planos.append({"src": f"render/p{i}.mp4", "duracion": round(min(real, necesario), 3)})
-    # el último plano cubre cualquier diferencia de redondeo
-    falta = duracion - sum(p["duracion"] for p in planos)
-    planos[-1]["duracion"] = round(planos[-1]["duracion"] + max(0, falta), 3)
-
-    # 3) Música
-    musica_rel = None
-    try:
-        from .google import descargar_de_drive
-        descargar_de_drive(MUSICA_DRIVE, PUBLICO / "musica.mp3")
-        musica_rel = "render/musica.mp3"
-    except Exception as e:
-        log(f"  sin música: {type(e).__name__}")
+    # 2) Planos y 3) música
+    planos = preparar_planos(brief, bib, duracion, tmp)
+    musica_rel = musica()
 
     # El gancho en pantalla sustituye a los subtítulos de la primera frase.
     fin_primera = next((p["fin"] for p in palabras if p["t"].endswith(("?", ".", "!", "…"))), 2.5)
@@ -105,11 +149,14 @@ def montar(brief_path, sin_voz=False):
         "voz": voz_rel, "musica": musica_rel,
         "volMusica": 0.10 if voz_rel else 0.35,
     }
+    return _finalizar(brief, props, "Short", tmp), bool(voz_rel)
+
+
+def _finalizar(brief, props, composicion, tmp):
     props_path = tmp / "props.json"
     props_path.write_text(json.dumps(props, ensure_ascii=False), encoding="utf-8")
-
     bruto = tmp / "bruto.mp4"
-    _render(props_path, bruto)
+    _render(props_path, bruto, composicion)
 
     # 4) Volumen estándar de YouTube
     final = SALIDA / f"{brief['id']}.mp4"
@@ -117,12 +164,13 @@ def montar(brief_path, sin_voz=False):
          "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-c:a", "aac", "-b:a", "192k", str(final)])
     shutil.rmtree(tmp, ignore_errors=True)
     log(f"✅ Short listo: {final} ({sondear(final)['duracion']:.1f} s)")
-    return final, bool(voz_rel)
+    return final
 
 
-def _render(props_path, destino):
+def _render(props_path, destino, composicion="Short"):
     import subprocess
-    p = subprocess.run(["npx", "remotion", "render", "src/index.ts", "Short", str(destino),
+    p = subprocess.run(["npx", "remotion", "render", "src/index.ts", composicion, str(destino),
+                        "--enforce-audio-track",
                         f"--props={props_path}"], cwd=REMOTION, capture_output=True, text=True, timeout=3600)
     if p.returncode != 0:
         raise RuntimeError("Remotion falló:\n" + (p.stderr or p.stdout)[-2000:])

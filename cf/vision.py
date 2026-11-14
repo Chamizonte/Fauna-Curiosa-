@@ -41,13 +41,19 @@ ESQUEMA = {
 }
 
 PROMPT = """Eres el editor de imagen de un canal de documentales de fauna.
-La imagen es una hoja de contacto: {n} fotogramas numerados (#1, #2…) de un mismo clip de vídeo, con su segundo.
+{intro}
 Animal que buscamos: {especie} ({cientifico}).
 Contexto de la fuente (puede ser incorrecto): {contexto}
 
 Analiza SOLO lo que se ve. Si no estás seguro de la especie, baja la confianza.
 "apto_para_short" es true solo si el animal se ve claramente, es la especie buscada, hay algo
-interesante que mostrar y no hay problemas graves (marcas de agua, texto, personas en primer plano)."""
+interesante que mostrar y no hay problemas graves (marcas de agua, texto, personas en primer plano).
+En una foto, exige además que sea nítida, bien expuesta y con el animal vivo y bien encuadrado
+(nada de ejemplares de museo, dibujos, láminas o mapas)."""
+
+INTRO_VIDEO = ("La imagen es una hoja de contacto: {n} fotogramas numerados (#1, #2…) de un mismo clip "
+               "de vídeo, con su segundo.")
+INTRO_FOTO = "La imagen es una fotografía (no un vídeo). En mejores_fotogramas responde [1]."
 
 
 def _llamar(modelo, imagen_jpg, prompt):
@@ -67,8 +73,9 @@ def _llamar(modelo, imagen_jpg, prompt):
     return r
 
 
-def juzgar(imagen_jpg, n_fotogramas, especie, cientifico="", contexto=""):
-    prompt = PROMPT.format(n=n_fotogramas, especie=especie, cientifico=cientifico or "?",
+def juzgar(imagen_jpg, n_fotogramas, especie, cientifico="", contexto="", foto=False):
+    intro = INTRO_FOTO if foto else INTRO_VIDEO.format(n=n_fotogramas)
+    prompt = PROMPT.format(intro=intro, especie=especie, cientifico=cientifico or "?",
                            contexto=(contexto or "sin datos")[:400])
     ultimo = None
     for modelo in MODELOS:

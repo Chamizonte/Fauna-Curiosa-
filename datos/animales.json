@@ -1,32 +1,807 @@
 [
-  {"es": "pulpo", "en": "octopus", "cientifico": "Octopoda"},
-  {"es": "lobo", "en": "wolf", "cientifico": "Canis lupus"},
-  {"es": "león", "en": "lion", "cientifico": "Panthera leo"},
-  {"es": "tiburón", "en": "shark", "cientifico": "Selachimorpha"},
-  {"es": "pingüino", "en": "penguin", "cientifico": "Spheniscidae"},
-  {"es": "elefante", "en": "elephant", "cientifico": "Elephantidae"},
-  {"es": "colibrí", "en": "hummingbird", "cientifico": "Trochilidae"},
-  {"es": "manatí", "en": "manatee", "cientifico": "Trichechus"},
-  {"es": "oso polar", "en": "polar bear", "cientifico": "Ursus maritimus"},
-  {"es": "camaleón", "en": "chameleon", "cientifico": "Chamaeleonidae"},
-  {"es": "mantis religiosa", "en": "praying mantis", "cientifico": "Mantodea"},
-  {"es": "medusa", "en": "jellyfish", "cientifico": "Medusozoa"},
-  {"es": "águila", "en": "eagle", "cientifico": "Accipitridae"},
-  {"es": "cocodrilo", "en": "crocodile", "cientifico": "Crocodylidae"},
-  {"es": "jirafa", "en": "giraffe", "cientifico": "Giraffa"},
-  {"es": "nutria", "en": "otter", "cientifico": "Lutrinae"},
-  {"es": "búho", "en": "owl", "cientifico": "Strigiformes"},
-  {"es": "tortuga marina", "en": "sea turtle", "cientifico": "Chelonioidea"},
-  {"es": "hormiga", "en": "ant", "cientifico": "Formicidae"},
-  {"es": "araña", "en": "spider", "cientifico": "Araneae"},
-  {"es": "delfín", "en": "dolphin", "cientifico": "Delphinidae"},
-  {"es": "ballena jorobada", "en": "humpback whale", "cientifico": "Megaptera novaeangliae"},
-  {"es": "guepardo", "en": "cheetah", "cientifico": "Acinonyx jubatus"},
-  {"es": "gorila", "en": "gorilla", "cientifico": "Gorilla"},
-  {"es": "flamenco", "en": "flamingo", "cientifico": "Phoenicopteridae"},
-  {"es": "abeja", "en": "honey bee", "cientifico": "Apis mellifera"},
-  {"es": "caballito de mar", "en": "seahorse", "cientifico": "Hippocampus"},
-  {"es": "suricata", "en": "meerkat", "cientifico": "Suricata suricatta"},
-  {"es": "oso pardo", "en": "brown bear", "cientifico": "Ursus arctos"},
-  {"es": "rana", "en": "frog", "cientifico": "Anura"}
+  {
+    "es": "pulpo",
+    "en": "octopus",
+    "cientifico": "Octopoda"
+  },
+  {
+    "es": "lobo",
+    "en": "wolf",
+    "cientifico": "Canis lupus"
+  },
+  {
+    "es": "león",
+    "en": "lion",
+    "cientifico": "Panthera leo"
+  },
+  {
+    "es": "tiburón",
+    "en": "shark",
+    "cientifico": "Selachimorpha"
+  },
+  {
+    "es": "pingüino",
+    "en": "penguin",
+    "cientifico": "Spheniscidae"
+  },
+  {
+    "es": "elefante",
+    "en": "elephant",
+    "cientifico": "Elephantidae"
+  },
+  {
+    "es": "colibrí",
+    "en": "hummingbird",
+    "cientifico": "Trochilidae"
+  },
+  {
+    "es": "manatí",
+    "en": "manatee",
+    "cientifico": "Trichechus"
+  },
+  {
+    "es": "oso polar",
+    "en": "polar bear",
+    "cientifico": "Ursus maritimus"
+  },
+  {
+    "es": "camaleón",
+    "en": "chameleon",
+    "cientifico": "Chamaeleonidae"
+  },
+  {
+    "es": "mantis religiosa",
+    "en": "praying mantis",
+    "cientifico": "Mantodea"
+  },
+  {
+    "es": "medusa",
+    "en": "jellyfish",
+    "cientifico": "Medusozoa"
+  },
+  {
+    "es": "águila",
+    "en": "eagle",
+    "cientifico": "Accipitridae"
+  },
+  {
+    "es": "cocodrilo",
+    "en": "crocodile",
+    "cientifico": "Crocodylidae"
+  },
+  {
+    "es": "jirafa",
+    "en": "giraffe",
+    "cientifico": "Giraffa"
+  },
+  {
+    "es": "nutria",
+    "en": "otter",
+    "cientifico": "Lutrinae"
+  },
+  {
+    "es": "búho",
+    "en": "owl",
+    "cientifico": "Strigiformes"
+  },
+  {
+    "es": "tortuga marina",
+    "en": "sea turtle",
+    "cientifico": "Chelonioidea"
+  },
+  {
+    "es": "hormiga",
+    "en": "ant",
+    "cientifico": "Formicidae"
+  },
+  {
+    "es": "araña",
+    "en": "spider",
+    "cientifico": "Araneae"
+  },
+  {
+    "es": "delfín",
+    "en": "dolphin",
+    "cientifico": "Delphinidae"
+  },
+  {
+    "es": "ballena jorobada",
+    "en": "humpback whale",
+    "cientifico": "Megaptera novaeangliae"
+  },
+  {
+    "es": "guepardo",
+    "en": "cheetah",
+    "cientifico": "Acinonyx jubatus"
+  },
+  {
+    "es": "gorila",
+    "en": "gorilla",
+    "cientifico": "Gorilla"
+  },
+  {
+    "es": "flamenco",
+    "en": "flamingo",
+    "cientifico": "Phoenicopteridae"
+  },
+  {
+    "es": "abeja",
+    "en": "honey bee",
+    "cientifico": "Apis mellifera"
+  },
+  {
+    "es": "caballito de mar",
+    "en": "seahorse",
+    "cientifico": "Hippocampus"
+  },
+  {
+    "es": "suricata",
+    "en": "meerkat",
+    "cientifico": "Suricata suricatta"
+  },
+  {
+    "es": "oso pardo",
+    "en": "brown bear",
+    "cientifico": "Ursus arctos"
+  },
+  {
+    "es": "rana",
+    "en": "frog",
+    "cientifico": "Anura"
+  },
+  {
+    "es": "tigre",
+    "en": "tiger",
+    "cientifico": "Panthera tigris"
+  },
+  {
+    "es": "leopardo",
+    "en": "leopard",
+    "cientifico": "Panthera pardus"
+  },
+  {
+    "es": "jaguar",
+    "en": "jaguar",
+    "cientifico": "Panthera onca"
+  },
+  {
+    "es": "leopardo de las nieves",
+    "en": "snow leopard",
+    "cientifico": "Panthera uncia"
+  },
+  {
+    "es": "lince ibérico",
+    "en": "iberian lynx",
+    "cientifico": "Lynx pardinus"
+  },
+  {
+    "es": "zorro rojo",
+    "en": "red fox",
+    "cientifico": "Vulpes vulpes"
+  },
+  {
+    "es": "zorro ártico",
+    "en": "arctic fox",
+    "cientifico": "Vulpes lagopus"
+  },
+  {
+    "es": "fénec",
+    "en": "fennec fox",
+    "cientifico": "Vulpes zerda"
+  },
+  {
+    "es": "hiena manchada",
+    "en": "spotted hyena",
+    "cientifico": "Crocuta crocuta"
+  },
+  {
+    "es": "licaón",
+    "en": "african wild dog",
+    "cientifico": "Lycaon pictus"
+  },
+  {
+    "es": "mapache",
+    "en": "raccoon",
+    "cientifico": "Procyon lotor"
+  },
+  {
+    "es": "panda gigante",
+    "en": "giant panda",
+    "cientifico": "Ailuropoda melanoleuca"
+  },
+  {
+    "es": "panda rojo",
+    "en": "red panda",
+    "cientifico": "Ailurus fulgens"
+  },
+  {
+    "es": "koala",
+    "en": "koala",
+    "cientifico": "Phascolarctos cinereus"
+  },
+  {
+    "es": "canguro",
+    "en": "kangaroo",
+    "cientifico": "Macropus"
+  },
+  {
+    "es": "wombat",
+    "en": "wombat",
+    "cientifico": "Vombatidae"
+  },
+  {
+    "es": "ornitorrinco",
+    "en": "platypus",
+    "cientifico": "Ornithorhynchus anatinus"
+  },
+  {
+    "es": "equidna",
+    "en": "echidna",
+    "cientifico": "Tachyglossidae"
+  },
+  {
+    "es": "perezoso",
+    "en": "sloth",
+    "cientifico": "Folivora"
+  },
+  {
+    "es": "oso hormiguero",
+    "en": "giant anteater",
+    "cientifico": "Myrmecophaga tridactyla"
+  },
+  {
+    "es": "armadillo",
+    "en": "armadillo",
+    "cientifico": "Cingulata"
+  },
+  {
+    "es": "pangolín",
+    "en": "pangolin",
+    "cientifico": "Manis"
+  },
+  {
+    "es": "erizo",
+    "en": "hedgehog",
+    "cientifico": "Erinaceus europaeus"
+  },
+  {
+    "es": "murciélago",
+    "en": "bat",
+    "cientifico": "Chiroptera"
+  },
+  {
+    "es": "ardilla",
+    "en": "squirrel",
+    "cientifico": "Sciurus vulgaris"
+  },
+  {
+    "es": "castor",
+    "en": "beaver",
+    "cientifico": "Castor"
+  },
+  {
+    "es": "capibara",
+    "en": "capybara",
+    "cientifico": "Hydrochoerus hydrochaeris"
+  },
+  {
+    "es": "puercoespín",
+    "en": "porcupine",
+    "cientifico": "Hystrix"
+  },
+  {
+    "es": "liebre",
+    "en": "hare",
+    "cientifico": "Lepus"
+  },
+  {
+    "es": "chimpancé",
+    "en": "chimpanzee",
+    "cientifico": "Pan troglodytes"
+  },
+  {
+    "es": "orangután",
+    "en": "orangutan",
+    "cientifico": "Pongo"
+  },
+  {
+    "es": "lémur",
+    "en": "lemur",
+    "cientifico": "Lemuroidea"
+  },
+  {
+    "es": "mono capuchino",
+    "en": "capuchin monkey",
+    "cientifico": "Cebinae"
+  },
+  {
+    "es": "macaco japonés",
+    "en": "japanese macaque",
+    "cientifico": "Macaca fuscata"
+  },
+  {
+    "es": "babuino",
+    "en": "baboon",
+    "cientifico": "Papio"
+  },
+  {
+    "es": "hipopótamo",
+    "en": "hippopotamus",
+    "cientifico": "Hippopotamus amphibius"
+  },
+  {
+    "es": "rinoceronte",
+    "en": "rhinoceros",
+    "cientifico": "Rhinocerotidae"
+  },
+  {
+    "es": "cebra",
+    "en": "zebra",
+    "cientifico": "Equus quagga"
+  },
+  {
+    "es": "ñu",
+    "en": "wildebeest",
+    "cientifico": "Connochaetes"
+  },
+  {
+    "es": "camello",
+    "en": "camel",
+    "cientifico": "Camelus"
+  },
+  {
+    "es": "alpaca",
+    "en": "alpaca",
+    "cientifico": "Vicugna pacos"
+  },
+  {
+    "es": "bisonte",
+    "en": "bison",
+    "cientifico": "Bison bison"
+  },
+  {
+    "es": "alce",
+    "en": "moose",
+    "cientifico": "Alces alces"
+  },
+  {
+    "es": "reno",
+    "en": "reindeer",
+    "cientifico": "Rangifer tarandus"
+  },
+  {
+    "es": "ciervo",
+    "en": "red deer",
+    "cientifico": "Cervus elaphus"
+  },
+  {
+    "es": "cabra montés",
+    "en": "iberian ibex",
+    "cientifico": "Capra pyrenaica"
+  },
+  {
+    "es": "jabalí",
+    "en": "wild boar",
+    "cientifico": "Sus scrofa"
+  },
+  {
+    "es": "morsa",
+    "en": "walrus",
+    "cientifico": "Odobenus rosmarus"
+  },
+  {
+    "es": "foca",
+    "en": "seal",
+    "cientifico": "Phocidae"
+  },
+  {
+    "es": "león marino",
+    "en": "sea lion",
+    "cientifico": "Otariinae"
+  },
+  {
+    "es": "nutria marina",
+    "en": "sea otter",
+    "cientifico": "Enhydra lutris"
+  },
+  {
+    "es": "orca",
+    "en": "orca",
+    "cientifico": "Orcinus orca"
+  },
+  {
+    "es": "cachalote",
+    "en": "sperm whale",
+    "cientifico": "Physeter macrocephalus"
+  },
+  {
+    "es": "ballena azul",
+    "en": "blue whale",
+    "cientifico": "Balaenoptera musculus"
+  },
+  {
+    "es": "beluga",
+    "en": "beluga whale",
+    "cientifico": "Delphinapterus leucas"
+  },
+  {
+    "es": "narval",
+    "en": "narwhal",
+    "cientifico": "Monodon monoceros"
+  },
+  {
+    "es": "tiburón blanco",
+    "en": "great white shark",
+    "cientifico": "Carcharodon carcharias"
+  },
+  {
+    "es": "tiburón ballena",
+    "en": "whale shark",
+    "cientifico": "Rhincodon typus"
+  },
+  {
+    "es": "tiburón martillo",
+    "en": "hammerhead shark",
+    "cientifico": "Sphyrnidae"
+  },
+  {
+    "es": "manta raya",
+    "en": "manta ray",
+    "cientifico": "Mobula"
+  },
+  {
+    "es": "pez payaso",
+    "en": "clownfish",
+    "cientifico": "Amphiprioninae"
+  },
+  {
+    "es": "pez globo",
+    "en": "pufferfish",
+    "cientifico": "Tetraodontidae"
+  },
+  {
+    "es": "pez león",
+    "en": "lionfish",
+    "cientifico": "Pterois"
+  },
+  {
+    "es": "calamar",
+    "en": "squid",
+    "cientifico": "Teuthida"
+  },
+  {
+    "es": "sepia",
+    "en": "cuttlefish",
+    "cientifico": "Sepiida"
+  },
+  {
+    "es": "nautilo",
+    "en": "nautilus",
+    "cientifico": "Nautilidae"
+  },
+  {
+    "es": "estrella de mar",
+    "en": "starfish",
+    "cientifico": "Asteroidea"
+  },
+  {
+    "es": "erizo de mar",
+    "en": "sea urchin",
+    "cientifico": "Echinoidea"
+  },
+  {
+    "es": "nudibranquio",
+    "en": "nudibranch",
+    "cientifico": "Nudibranchia"
+  },
+  {
+    "es": "cangrejo",
+    "en": "crab",
+    "cientifico": "Brachyura"
+  },
+  {
+    "es": "langosta",
+    "en": "lobster",
+    "cientifico": "Nephropidae"
+  },
+  {
+    "es": "camarón mantis",
+    "en": "mantis shrimp",
+    "cientifico": "Stomatopoda"
+  },
+  {
+    "es": "coral",
+    "en": "coral reef",
+    "cientifico": "Anthozoa"
+  },
+  {
+    "es": "salmón",
+    "en": "salmon",
+    "cientifico": "Salmo salar"
+  },
+  {
+    "es": "anguila",
+    "en": "eel",
+    "cientifico": "Anguilliformes"
+  },
+  {
+    "es": "ajolote",
+    "en": "axolotl",
+    "cientifico": "Ambystoma mexicanum"
+  },
+  {
+    "es": "salamandra",
+    "en": "fire salamander",
+    "cientifico": "Salamandra salamandra"
+  },
+  {
+    "es": "rana dardo venenosa",
+    "en": "poison dart frog",
+    "cientifico": "Dendrobatidae"
+  },
+  {
+    "es": "sapo",
+    "en": "toad",
+    "cientifico": "Bufonidae"
+  },
+  {
+    "es": "tortuga gigante",
+    "en": "giant tortoise",
+    "cientifico": "Chelonoidis"
+  },
+  {
+    "es": "iguana",
+    "en": "iguana",
+    "cientifico": "Iguana iguana"
+  },
+  {
+    "es": "iguana marina",
+    "en": "marine iguana",
+    "cientifico": "Amblyrhynchus cristatus"
+  },
+  {
+    "es": "dragón de Komodo",
+    "en": "komodo dragon",
+    "cientifico": "Varanus komodoensis"
+  },
+  {
+    "es": "gecko",
+    "en": "gecko",
+    "cientifico": "Gekkota"
+  },
+  {
+    "es": "serpiente pitón",
+    "en": "python",
+    "cientifico": "Pythonidae"
+  },
+  {
+    "es": "cobra",
+    "en": "cobra",
+    "cientifico": "Naja"
+  },
+  {
+    "es": "serpiente de cascabel",
+    "en": "rattlesnake",
+    "cientifico": "Crotalus"
+  },
+  {
+    "es": "anaconda",
+    "en": "anaconda",
+    "cientifico": "Eunectes murinus"
+  },
+  {
+    "es": "caimán",
+    "en": "caiman",
+    "cientifico": "Caimaninae"
+  },
+  {
+    "es": "avestruz",
+    "en": "ostrich",
+    "cientifico": "Struthio camelus"
+  },
+  {
+    "es": "emú",
+    "en": "emu",
+    "cientifico": "Dromaius novaehollandiae"
+  },
+  {
+    "es": "pavo real",
+    "en": "peafowl",
+    "cientifico": "Pavo cristatus"
+  },
+  {
+    "es": "loro",
+    "en": "parrot",
+    "cientifico": "Psittaciformes"
+  },
+  {
+    "es": "guacamayo",
+    "en": "macaw",
+    "cientifico": "Ara"
+  },
+  {
+    "es": "cacatúa",
+    "en": "cockatoo",
+    "cientifico": "Cacatuidae"
+  },
+  {
+    "es": "tucán",
+    "en": "toucan",
+    "cientifico": "Ramphastidae"
+  },
+  {
+    "es": "pájaro carpintero",
+    "en": "woodpecker",
+    "cientifico": "Picidae"
+  },
+  {
+    "es": "martín pescador",
+    "en": "kingfisher",
+    "cientifico": "Alcedinidae"
+  },
+  {
+    "es": "halcón peregrino",
+    "en": "peregrine falcon",
+    "cientifico": "Falco peregrinus"
+  },
+  {
+    "es": "buitre",
+    "en": "vulture",
+    "cientifico": "Gyps fulvus"
+  },
+  {
+    "es": "cóndor",
+    "en": "andean condor",
+    "cientifico": "Vultur gryphus"
+  },
+  {
+    "es": "águila calva",
+    "en": "bald eagle",
+    "cientifico": "Haliaeetus leucocephalus"
+  },
+  {
+    "es": "cuervo",
+    "en": "raven",
+    "cientifico": "Corvus corax"
+  },
+  {
+    "es": "urraca",
+    "en": "magpie",
+    "cientifico": "Pica pica"
+  },
+  {
+    "es": "pelícano",
+    "en": "pelican",
+    "cientifico": "Pelecanus"
+  },
+  {
+    "es": "frailecillo",
+    "en": "puffin",
+    "cientifico": "Fratercula arctica"
+  },
+  {
+    "es": "albatros",
+    "en": "albatross",
+    "cientifico": "Diomedeidae"
+  },
+  {
+    "es": "cisne",
+    "en": "swan",
+    "cientifico": "Cygnus"
+  },
+  {
+    "es": "garza",
+    "en": "heron",
+    "cientifico": "Ardeidae"
+  },
+  {
+    "es": "cigüeña blanca",
+    "en": "white stork",
+    "cientifico": "Ciconia ciconia"
+  },
+  {
+    "es": "grulla",
+    "en": "crane bird",
+    "cientifico": "Gruidae"
+  },
+  {
+    "es": "ave lira",
+    "en": "lyrebird",
+    "cientifico": "Menura"
+  },
+  {
+    "es": "ave del paraíso",
+    "en": "bird of paradise",
+    "cientifico": "Paradisaeidae"
+  },
+  {
+    "es": "kiwi",
+    "en": "kiwi bird",
+    "cientifico": "Apteryx"
+  },
+  {
+    "es": "mariposa monarca",
+    "en": "monarch butterfly",
+    "cientifico": "Danaus plexippus"
+  },
+  {
+    "es": "mariposa",
+    "en": "butterfly",
+    "cientifico": "Lepidoptera"
+  },
+  {
+    "es": "polilla",
+    "en": "moth",
+    "cientifico": "Heterocera"
+  },
+  {
+    "es": "libélula",
+    "en": "dragonfly",
+    "cientifico": "Anisoptera"
+  },
+  {
+    "es": "mariquita",
+    "en": "ladybug",
+    "cientifico": "Coccinellidae"
+  },
+  {
+    "es": "escarabajo pelotero",
+    "en": "dung beetle",
+    "cientifico": "Scarabaeinae"
+  },
+  {
+    "es": "escarabajo rinoceronte",
+    "en": "rhinoceros beetle",
+    "cientifico": "Dynastinae"
+  },
+  {
+    "es": "luciérnaga",
+    "en": "firefly",
+    "cientifico": "Lampyridae"
+  },
+  {
+    "es": "saltamontes",
+    "en": "grasshopper",
+    "cientifico": "Caelifera"
+  },
+  {
+    "es": "insecto palo",
+    "en": "stick insect",
+    "cientifico": "Phasmatodea"
+  },
+  {
+    "es": "avispa",
+    "en": "wasp",
+    "cientifico": "Vespidae"
+  },
+  {
+    "es": "termita",
+    "en": "termite",
+    "cientifico": "Isoptera"
+  },
+  {
+    "es": "escorpión",
+    "en": "scorpion",
+    "cientifico": "Scorpiones"
+  },
+  {
+    "es": "tarántula",
+    "en": "tarantula",
+    "cientifico": "Theraphosidae"
+  },
+  {
+    "es": "caracol",
+    "en": "snail",
+    "cientifico": "Helix"
+  },
+  {
+    "es": "tardígrado",
+    "en": "tardigrade",
+    "cientifico": "Tardigrada"
+  },
+  {
+    "es": "lombriz de tierra",
+    "en": "earthworm",
+    "cientifico": "Lumbricus terrestris"
+  }
 ]

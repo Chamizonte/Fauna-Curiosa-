@@ -17,6 +17,9 @@ def linea(r):
     v = r.get("vision") or {}
     escenas = " ".join(f"{e['ini']:.0f}-{e['fin']:.0f}s" for e in (r.get("tecnico") or {}).get("escenas", [])[:6])
     probl = ",".join(v.get("problemas") or []) or "-"
+    if r.get("tipo") == "foto":
+        return (f"{r['clave']} | FOTO {r['ancho']}x{r['alto']} | cal={v.get('calidad_visual')} | "
+                f"{r.get('titulo', '')[:40]} | {v.get('descripcion', '')} | problemas: {probl}")
     return (f"{r['clave']} | {r['duracion']:.0f}s {r['ancho']}x{r['alto']} | cal={v.get('calidad_visual')} "
             f"mov={(r.get('tecnico') or {}).get('movimiento')} | escenas {escenas} | "
             f"{v.get('descripcion', '')} | destacado: {v.get('momento_destacado', '')} | problemas: {probl}")
@@ -34,7 +37,8 @@ def main():
                 print(linea(r))
     else:
         for animal, n in Counter(r["animal"] for r in regs).most_common():
-            print(f"{animal}: {n} clips")
+            fotos = sum(1 for r in regs if r["animal"] == animal and r.get("tipo") == "foto")
+            print(f"{animal}: {n - fotos} vídeos, {fotos} fotos")
 
 
 if __name__ == "__main__":
