@@ -1,0 +1,65 @@
+{
+  "id": "20261114-1-pulpo",
+  "formato": "comparativa",
+  "animal": "pulpo",
+  "gancho_pantalla": "Ojos contra piel de pulpo",
+  "guion": "Dos sensores de luz, un pulpo. Primero, sus ojos: ven el mundo y mandan la información al cerebro. Segundo, su piel. En el pulpo de dos manchas de California, trozos de piel separados del cuerpo reaccionan a la luz: sus células de color se expanden, sobre todo con luz azul. Sin ojos y sin cerebro. Sorpresa: la piel también detecta la luz. Y ahora, mira otra vez ese pulpo escondido.",
+  "datos": [
+    {
+      "afirmacion": "En Octopus bimaculoides (pulpo de dos manchas de California), la luz hace que los cromatóforos se expandan en trozos de piel aislada, sin ojos ni cerebro; la respuesta es más rápida con luz azul.",
+      "fuentes": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC4448664",
+        "https://www.sciencenews.org/article/octopuses-can-see-their-skin"
+      ],
+      "verificado": true,
+      "nota": "Dato de una sola especie y de piel aislada; no se afirma que la piel 'vea' con detalle ni que explique el camuflaje, solo que detecta luz."
+    }
+  ],
+  "planos": [
+    {
+      "clave": "pexels:31496835",
+      "desde": 0.0,
+      "hasta": 4.5,
+      "nota": "El plano más llamativo: pulpo mimetizado asomando entre el coral"
+    },
+    {
+      "clave": "pexels:17836505",
+      "desde": 0.0,
+      "hasta": 5.0,
+      "nota": "Detalle de tentáculos y ventosas mientras se habla de sus sensores"
+    },
+    {
+      "clave": "pixabay:1198",
+      "desde": 0.0,
+      "hasta": 4.0,
+      "nota": "Pulpo desplazándose por el fondo (escena 0-10 s)"
+    },
+    {
+      "clave": "pexels:17836505",
+      "desde": 8.0,
+      "hasta": 12.0,
+      "nota": "Otro tramo del cuerpo sobre la roca, para la piel"
+    },
+    {
+      "clave": "pexels:31496835",
+      "desde": 5.0,
+      "hasta": 9.0,
+      "nota": "Cierre en bucle: el pulpo escondido"
+    }
+  ],
+  "titulo": "Pulpo: su piel detecta la luz sin ojos ni cerebro",
+  "descripcion": "En el pulpo de dos manchas de California, la piel aislada reacciona a la luz, sobre todo a la azul, sin ayuda de los ojos.",
+  "etiquetas": [
+    "pulpo",
+    "animales",
+    "curiosidades",
+    "camuflaje",
+    "ciencia"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=PkzE0XmM0jM",
+    "fecha": "2026-11-14T16:58Z",
+    "con_voz": true,
+    "privacidad": "public"
+  }
+}
