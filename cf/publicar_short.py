@@ -21,7 +21,7 @@ from .util import DATOS, env, log
 
 PEND = DATOS / "shorts" / "pendientes"
 PUBL = DATOS / "shorts" / "publicados"
-PRIVACIDAD = env("PRIVACIDAD_YOUTUBE", "private")
+PRIVACIDAD = env("PRIVACIDAD_YOUTUBE", "public")
 CATEGORIA = "15"  # Mascotas y animales
 
 
