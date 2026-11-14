@@ -1,0 +1,85 @@
+name: Sala de redacción (Claude)
+# Claude elige momentos de la biblioteca, verifica los datos y escribe los guiones
+# de los Shorts. Usa la suscripción Pro (CLAUDE_CODE_OAUTH_TOKEN) de madrugada,
+# para no gastar la ventana de uso diurna.
+on:
+  push:                    # solo para probar en la rama v2
+    branches: [v2]
+    paths: [".github/workflows/sala-redaccion.yml"]
+  schedule:
+    - cron: "0 2 * * 0"   # domingos 02:00 UTC (03:00/04:00 en España)
+  workflow_dispatch:
+    inputs:
+      cantidad:
+        description: "Guiones a escribir"
+        default: "28"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: datos-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  redactar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      CANTIDAD: ${{ github.event.inputs.cantidad || (github.event_name == 'push' && '3') || '28' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}   # la punta de la rama, con los datos más recientes
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Contexto para Claude (resumen de la biblioteca y de lo ya escrito)
+        run: |
+          mkdir -p datos/shorts/pendientes datos/shorts/publicados
+          {
+            echo "# Biblioteca (clips aptos por animal)"; python -m cf.biblioteca --resumen
+            echo; echo "# Guiones pendientes"; ls datos/shorts/pendientes | grep -v '^prueba-' || true
+            echo; echo "# Publicados (últimos 60)"; ls datos/shorts/publicados | tail -60 || true
+          } > /tmp/contexto.txt
+          cat /tmp/contexto.txt
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            Eres la sala de redacción del canal de YouTube Curiosa Fauna. Fecha de hoy: ${{ github.run_started_at }}.
+
+            Tarea: escribe ${{ env.CANTIDAD }} guiones (briefs) de Shorts y guárdalos en datos/shorts/pendientes/.
+
+            Pasos:
+            1. Lee CLAUDE.md y las skills .claude/skills/guion-shorts-curiosa-fauna/SKILL.md y
+               .claude/skills/verificacion-fauna/SKILL.md, y sigue sus reglas al pie de la letra.
+            2. Lee /tmp/contexto.txt (qué hay en la biblioteca y qué está ya escrito o publicado).
+            3. Para cada animal que vayas a usar, ejecuta `python -m cf.biblioteca --animal NOMBRE`
+               y elige planos SOLO entre esas claves y dentro de sus escenas.
+            4. Reparte los formatos por_que, comparativa y mito en partes iguales (prueba A/B).
+               No repitas animal y ángulo de un guion pendiente o publicado.
+            5. Verifica cada dato con búsqueda web y abre las fuentes (WebFetch) para comprobar que
+               dicen lo que afirmas. Si no consigues 2 fuentes independientes, cambia de dato.
+            6. Nombra cada archivo AAAAMMDD-N-animal.json con la fecha de hoy y N correlativo.
+
+            No modifiques ningún archivo fuera de datos/shorts/pendientes/. No hagas commits: el
+            workflow valida y guarda los guiones después. Sé eficiente: no leas archivos que no necesites.
+          claude_args: |
+            --model claude-sonnet-5-5
+            --max-turns 120
+            --allowedTools Read,Write,Glob,Grep,WebSearch,WebFetch,Bash(python -m cf.biblioteca:*),Bash(ls:*)
+            --permission-mode default
+      - name: Control de calidad de los guiones
+        run: python -m cf.validar_briefs
+      - name: Guardar los guiones en el repositorio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add datos/shorts
+          git diff --cached --quiet && { echo "Sin guiones nuevos"; exit 0; }
+          git commit -m "Sala de redacción: nuevos guiones de Shorts"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push && break
+            sleep 5
+          done
