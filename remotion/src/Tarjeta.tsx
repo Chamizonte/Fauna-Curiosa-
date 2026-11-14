@@ -181,7 +181,7 @@ export const Tarjeta: React.FC<PropsTarjeta> = (props) => {
       </div>
 
       {/* Barra de progreso: indica cuánto queda de lectura */}
-      <div style={{ position: "absolute", bottom: 300, width: ANCHO_MEDIA, height: 8, borderRadius: 4, background: "rgba(255,255,255,0.12)" }}>
+      <div style={{ position: "absolute", bottom: 215, width: ANCHO_MEDIA, height: 8, borderRadius: 4, background: "rgba(255,255,255,0.12)" }}>
         <div style={{ width: `${progreso * 100}%`, height: "100%", borderRadius: 4, background: AMARILLO }} />
       </div>
 

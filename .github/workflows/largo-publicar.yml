@@ -7,9 +7,6 @@ name: Publicar vídeo largo
 on:
   schedule:
     - cron: "0 6 * * *"
-  push:   # TEMPORAL: prueba en la rama v2 (monta el brief de prueba 2099-01-01 sin subirlo)
-    branches: [v2]
-    paths: [".github/workflows/largo-publicar.yml"]
   workflow_dispatch:
     inputs:
       fecha:
@@ -38,7 +35,6 @@ jobs:
         id: toca
         run: |
           fecha="${{ github.event.inputs.fecha }}"
-          [ "${{ github.event_name }}" = "push" ] && fecha=2099-01-01
           [ -z "$fecha" ] && fecha=$(date -u -d tomorrow +%F)
           echo "fecha=$fecha" >> "$GITHUB_OUTPUT"
           if grep -l "\"fecha_publicacion\": \"$fecha\"" datos/largos/pendientes/*.json >/dev/null 2>&1; then
@@ -79,7 +75,6 @@ jobs:
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
         run: |
           modo="${{ github.event.inputs.modo || 'programar' }}"
-          [ "${{ github.event_name }}" = "push" ] && modo=prueba
           extra=""
           [ "$modo" = "ya" ] && extra="--ya"
           [ "$modo" = "prueba" ] && extra="--no-subir"
