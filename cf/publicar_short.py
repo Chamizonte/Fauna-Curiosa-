@@ -6,14 +6,15 @@
 - Mueve el brief a datos/shorts/publicados/ con la URL y los datos de la prueba A/B
   (formato, con o sin voz). El workflow hace el commit después.
 
-Si no queda ningún guion, termina sin error y lo avisa (el margen de dos semanas
-de la sala de redacción debería evitarlo).
+Si no queda ningún guion, sale con código 3 y el workflow publica con el
+generador v1 como respaldo (para no dejar un hueco en el canal).
 
 Uso: python -m cf.publicar_short [--no-subir]
 """
 import argparse
 import datetime as dt
 import json
+import sys
 from pathlib import Path
 
 from .montaje_short import biblioteca, montar
@@ -79,8 +80,8 @@ def main():
 
     f = siguiente_brief()
     if not f:
-        log("⚠️ No quedan guiones pendientes: hoy no se publica ningún short.")
-        return
+        log("⚠️ No quedan guiones pendientes: se usará el generador v1 de respaldo.")
+        sys.exit(3)
     brief = json.loads(f.read_text(encoding="utf-8"))
     log(f"Guion: {f.name} ({brief['formato']}, {brief['animal']})")
     mp4, con_voz = montar(f)

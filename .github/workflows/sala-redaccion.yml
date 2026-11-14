@@ -4,12 +4,12 @@ name: Sala de redacción (Claude)
 # para no gastar la ventana de uso diurna.
 on:
   schedule:
-    - cron: "0 2 * * 0"   # domingos 02:00 UTC (03:00/04:00 en España)
+    - cron: "30 2 * * *"   # cada noche 02:30 UTC, después del explorador
   workflow_dispatch:
     inputs:
       cantidad:
-        description: "Guiones a escribir"
-        default: "28"
+        description: "Guiones a escribir (vacío = rellenar hasta tener 12 pendientes)"
+        default: ""
 
 permissions:
   contents: write
@@ -22,8 +22,6 @@ jobs:
   redactar:
     runs-on: ubuntu-latest
     timeout-minutes: 120
-    env:
-      CANTIDAD: ${{ github.event.inputs.cantidad || '28' }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -49,7 +47,18 @@ jobs:
               open(f"trabajo/biblioteca/{a}.txt", "w", encoding="utf-8").write(out)
           PY
           cat trabajo/contexto.txt
+      - name: Cuántos guiones hacen falta
+        id: cuantos
+        run: |
+          # Se publican 4 al día: se mantiene un colchón de 12 guiones (3 días).
+          pend=$(ls datos/shorts/pendientes | grep -v '^prueba-' | wc -l)
+          n="${{ github.event.inputs.cantidad }}"
+          [ -z "$n" ] && n=$(( 12 - pend )) && [ "$n" -gt 8 ] && n=8
+          [ "$n" -lt 0 ] && n=0
+          echo "Pendientes: $pend -> escribir $n"
+          echo "n=$n" >> "$GITHUB_OUTPUT"
       - uses: anthropics/claude-code-action@v1
+        if: steps.cuantos.outputs.n != '0'
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           # Token propio del workflow: evita tener que instalar la app de Claude en GitHub.
@@ -58,7 +67,7 @@ jobs:
           prompt: |
             Eres la sala de redacción del canal de YouTube Curiosa Fauna. Fecha de hoy: ${{ github.run_started_at }}.
 
-            Tarea: escribe ${{ env.CANTIDAD }} guiones (briefs) de Shorts y guárdalos en datos/shorts/pendientes/.
+            Tarea: escribe ${{ steps.cuantos.outputs.n }} guiones (briefs) de Shorts y guárdalos en datos/shorts/pendientes/.
 
             Pasos:
             1. Lee CLAUDE.md y las skills .claude/skills/guion-shorts-curiosa-fauna/SKILL.md y

@@ -13,9 +13,14 @@ Este repositorio produce y publica automáticamente:
 5. **Claude solo en tareas de criterio.** La producción diaria (descarga, montaje, render, subida) es código determinista en GitHub Actions y no usa Claude.
 6. **Cambios de código por PR.** Los agentes pueden editar `playbook.yaml` y datos, pero los cambios de código se proponen en un PR para revisión humana. Nunca auto-merge.
 
-## Mapa del repositorio (v2, en construcción en la rama `v2`)
-- `generador_shorts.py`, `generador_video.py`: pipeline v1, en producción en `main` hasta que la v2 lo sustituya.
-- `spikes/`: pruebas de riesgo técnicas de la v2.
+## Mapa del repositorio
+- Shorts (v2, en producción): `explorador.yml` (00:30 UTC, llena `datos/biblioteca`) →
+  `sala-redaccion.yml` (02:30 UTC, Claude escribe guiones en `datos/shorts/pendientes`) →
+  `publicar-short.yml` (08, 12, 16 y 20 UTC; mueve el guion a `datos/shorts/publicados`).
+  Código en `cf/`, montaje en `remotion/`.
+- `generador_shorts.py`: v1, solo como respaldo si no hay guion v2. `generador_video.py`: vídeos largos (v1, aún en producción).
+- `spikes/`: pruebas de riesgo técnicas.
+- Material: no se usa YouTube (bloqueado desde Actions).
 
 ## Ahorro de tokens
 - Leer solo los ficheros necesarios; los datos grandes (biblioteca de momentos, métricas) se consultan con scripts que devuelven resúmenes.

@@ -1,10 +1,8 @@
 name: Explorador de material (v2)
-# Llena la biblioteca de momentos. En la rama v2 se lanza al subir cambios para
-# probarlo; cuando la v2 pase a main se activará la programación diaria.
+# Llena la biblioteca de momentos cada noche (00:30 UTC), antes de la sala de redacción.
 on:
-  push:                    # solo para probar en la rama v2
-    branches: [v2]
-    paths: [".github/workflows/explorador.yml"]
+  schedule:
+    - cron: "30 0 * * *"
   workflow_dispatch:
     inputs:
       animales:

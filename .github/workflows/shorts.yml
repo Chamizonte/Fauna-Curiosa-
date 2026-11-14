@@ -1,10 +1,6 @@
-name: Generar y subir short
+name: Generar y subir short (v1, solo manual)
+# Retirado: ahora publica "Publicar short" (v2), que usa el generador v1 como respaldo.
 on:
-  schedule:
-    - cron: '0 8 * * *'
-    - cron: '0 12 * * *'
-    - cron: '0 16 * * *'
-    - cron: '0 20 * * *'
   workflow_dispatch: {}
 jobs:
   generar-short:

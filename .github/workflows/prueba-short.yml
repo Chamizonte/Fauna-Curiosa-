@@ -1,9 +1,6 @@
 name: Prueba de montaje de short (v2)
 # Monta un short a partir de un guion y lo guarda como artefacto (NO lo sube a YouTube).
 on:
-  push:
-    branches: [v2]
-    paths: ["cf/montaje_short.py", "cf/voz.py", "remotion/**", "datos/shorts/pendientes/prueba-*.json", ".github/workflows/prueba-short.yml"]
   workflow_dispatch:
     inputs:
       brief:
