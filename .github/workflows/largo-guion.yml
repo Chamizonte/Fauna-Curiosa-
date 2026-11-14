@@ -1,0 +1,113 @@
+name: Guion de vídeo largo (Claude)
+# 5 días antes de cada publicación (1, 11 y 21), de madrugada, Claude escribe el guion.
+# Si falla, se reintenta las noches siguientes hasta tener guion.
+on:
+  schedule:
+    - cron: "0 3 26,27,28 * *"   # para el día 1
+    - cron: "0 3 6,7,8 * *"      # para el día 11
+    - cron: "0 3 16,17,18 * *"   # para el día 21
+  workflow_dispatch:
+    inputs:
+      fecha:
+        description: "Fecha de publicación AAAA-MM-DD (vacío = la próxima 1/11/21)"
+        default: ""
+      tema:
+        description: "Tema concreto (vacío = el siguiente de planes/ o elige Claude)"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: datos-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  guion:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Preparar el encargo
+        id: encargo
+        run: |
+          mkdir -p datos/largos/pendientes datos/largos/publicados trabajo
+          fecha="${{ github.event.inputs.fecha }}"
+          if [ -z "$fecha" ]; then
+            fecha=$(python - <<'PY'
+          import datetime as dt
+          d = dt.date.today()
+          while d.day not in (1, 11, 21) or d <= dt.date.today():
+              d += dt.timedelta(days=1)
+          print(d.isoformat())
+          PY
+          )
+          fi
+          echo "fecha=$fecha" >> "$GITHUB_OUTPUT"
+          if ls datos/largos/pendientes/ datos/largos/publicados/ | grep -q "^${fecha//-/}-"; then
+            echo "Ya hay guion para $fecha"; echo "hecho=1" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          {
+            echo "Fecha de publicación: $fecha"
+            tema="${{ github.event.inputs.tema }}"
+            if [ -n "$tema" ]; then echo "Tema pedido: $tema"
+            else
+              plan=$(ls planes/*.json 2>/dev/null | head -1)
+              if [ -n "$plan" ]; then
+                echo "plan=$plan" >> "$GITHUB_OUTPUT"
+                echo "Tema: el del borrador $plan (título y narración de la v1, úsalo como punto de partida, verifica todo)"
+              else echo "Tema: elígelo tú (fauna, con material visual fácil de encontrar)"; fi
+            fi
+            echo; echo "Vídeos largos ya publicados (no repetir):"
+            ls datos/largos/publicados planes/_hechos 2>/dev/null
+            echo; echo "Animales con material en la biblioteca de shorts:"
+            python -m cf.biblioteca --resumen
+          } > trabajo/encargo_largo.txt
+          cat trabajo/encargo_largo.txt
+      - uses: anthropics/claude-code-action@v1
+        if: steps.encargo.outputs.hecho != '1'
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          show_full_output: true
+          prompt: |
+            Eres el guionista de los vídeos largos del canal de YouTube Curiosa Fauna.
+
+            1. Lee CLAUDE.md y las skills .claude/skills/guion-largos-curiosa-fauna/SKILL.md y
+               .claude/skills/verificacion-fauna/SKILL.md, y sigue sus reglas al pie de la letra.
+            2. Lee trabajo/encargo_largo.txt (fecha, tema y lo ya publicado). Si el tema viene de un
+               borrador de planes/, léelo: es solo un punto de partida, reescríbelo con la estructura
+               de la skill y verifica cada dato.
+            3. Investiga con WebSearch y WebFetch. Cada dato, 2 fuentes independientes abiertas y leídas.
+            4. Escribe el brief en datos/largos/pendientes/AAAAMMDD-tema-corto.json (AAAAMMDD = la
+               fecha de publicación del encargo) con el formato exacto de la skill.
+
+            No modifiques nada fuera de datos/largos/pendientes/. No hagas commits.
+            Sé eficiente: no leas archivos que no necesites.
+          claude_args: |
+            --model claude-sonnet-5-5
+            --max-turns 150
+            --allowedTools Read,Write,Glob,Grep,WebSearch,WebFetch
+            --permission-mode default
+      - name: Control de calidad del guion
+        if: steps.encargo.outputs.hecho != '1'
+        run: python -m cf.validar_largo
+      - name: Guardar el guion
+        if: steps.encargo.outputs.hecho != '1'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add datos/largos
+          git diff --cached --quiet && { echo "::error::Claude no escribió el guion"; exit 1; }
+          plan="${{ steps.encargo.outputs.plan }}"
+          [ -n "$plan" ] && mkdir -p planes/_hechos && git mv "$plan" planes/_hechos/
+          git commit -m "Guion de vídeo largo para ${{ steps.encargo.outputs.fecha }}"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push && break
+            sleep 5
+          done

@@ -12,7 +12,7 @@ on:
       max_total:
         description: "Tope de clips a analizar con visión"
         required: false
-        default: "20"
+        default: "120"
 
 permissions:
   contents: write
@@ -36,6 +36,14 @@ jobs:
           cache-dependency-path: requirements-v2.txt
       - run: sudo apt-get update -y && sudo apt-get install -y ffmpeg
       - run: pip install -r requirements-v2.txt
+      - name: Material para el próximo vídeo largo
+        timeout-minutes: 30
+        continue-on-error: true
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python -m cf.material_largo --max-total 60
       - name: Explorar
         timeout-minutes: 75   # deja tiempo para guardar lo analizado aunque se corte
         env:
@@ -45,13 +53,13 @@ jobs:
         run: |
           python -m cf.explorador \
             --animales "${{ github.event.inputs.animales }}" \
-            --nuevos 4 --max-total "${{ github.event.inputs.max_total || '40' }}"
+            --nuevos 3 --fotos 2 --max-total "${{ github.event.inputs.max_total || '120' }}"
       - name: Guardar la biblioteca en el repositorio
         if: always()   # se guarda lo analizado aunque la exploración falle o se corte
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add datos/biblioteca
+          git add datos/biblioteca datos/largos
           git diff --cached --quiet && exit 0
           git commit -m "Biblioteca: nuevos momentos analizados"
           for i in 1 2 3 4 5; do

@@ -32,9 +32,31 @@ def _proxy(origen, destino):
          "-c:v", "libx264", "-preset", "ultrafast", "-crf", "28", str(destino)])
 
 
+def examinar_foto(c, animal, tmp, reg):
+    img = tmp / "foto.jpg"
+    descargar(c.url_escaneo or c.url, img, max_mb=30)
+    # normaliza a JPEG de 640 px (PNG, CMYK, etc.)
+    run(["ffmpeg", "-y", "-v", "error", "-i", str(img), "-vf", "scale='min(640,iw)':-2", str(tmp / "v.jpg")])
+    reg["tecnico"] = {"duracion": 0, "movimiento": 0, "escenas": []}
+    contexto = f"{c.titulo}. {' '.join(c.etiquetas)[:250]}"
+    v = vision.juzgar((tmp / "v.jpg").read_bytes(), 1, animal["es"], animal.get("cientifico", ""),
+                      contexto, foto=True)
+    reg["vision"] = v
+    return reg
+
+
 def examinar(c, animal, tmp):
     """Devuelve (registro, apto)."""
     reg = {**c.dict(), "animal": animal["es"], "fecha": time.strftime("%Y-%m-%d")}
+    if c.tipo == "foto":
+        reg = examinar_foto(c, animal, tmp, reg)
+        v = reg["vision"]
+        apto = bool(v.get("apto_para_short") and v.get("es_la_especie_buscada")
+                    and v.get("confianza", 0) >= 0.6 and v.get("calidad_visual", 0) >= 4)
+        if not apto:
+            reg["motivo"] = "visión: " + (", ".join(v.get("problemas") or []) or
+                                          f"especie={v.get('especie_vista')} cal={v.get('calidad_visual')}")
+        return reg, apto
     if c.tamano_mb and c.tamano_mb > MAX_MB:
         return {**reg, "motivo": "archivo demasiado grande"}, False
     original = tmp / "original"
@@ -63,7 +85,8 @@ def examinar(c, animal, tmp):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--animales", default="")
-    ap.add_argument("--nuevos", type=int, default=4, help="candidatos nuevos a examinar por animal")
+    ap.add_argument("--nuevos", type=int, default=4, help="vídeos nuevos a examinar por animal")
+    ap.add_argument("--fotos", type=int, default=2, help="fotos nuevas a examinar por animal")
     ap.add_argument("--max-total", type=int, default=20, help="tope de llamadas de visión por ejecución")
     a = ap.parse_args()
 
@@ -82,8 +105,10 @@ def main():
         if examinados >= a.max_total:
             break
         log(f"== {animal['es']} ({aptos[animal['es']]} momentos en biblioteca)")
-        cands = [c for c in fuentes.buscar(animal) if c.clave not in vistos]
-        for c in cands[: a.nuevos]:
+        cands = [c for c in fuentes.buscar(animal, fotos=a.fotos > 0) if c.clave not in vistos]
+        cands = ([c for c in cands if c.tipo == "video"][: a.nuevos] +
+                 [c for c in cands if c.tipo == "foto"][: a.fotos])
+        for c in cands:
             if examinados >= a.max_total:
                 break
             tmp = Path(tempfile.mkdtemp())
@@ -101,7 +126,7 @@ def main():
             vistos.add(c.clave)
             resumen["aptos" if apto else "descartados"] += 1
             v = reg.get("vision", {})
-            log(f"  {'✅' if apto else '❌'} {c.fuente} {c.titulo[:60]} | "
+            log(f"  {'✅' if apto else '❌'} {c.fuente}{' (foto)' if c.tipo == 'foto' else ''} {c.titulo[:60]} | "
                 f"mov={reg.get('tecnico', {}).get('movimiento')} | {v.get('descripcion', reg.get('motivo', ''))[:110]}")
     log(f"\nResumen: {dict(resumen)} | llamadas de visión: {examinados}")
 
