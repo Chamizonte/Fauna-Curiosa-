@@ -46,18 +46,33 @@ def get_json(url, params=None, headers=None, intentos=5, timeout=60):
     raise RuntimeError(f"Fallo al consultar {url.split('?')[0]}: {ultimo}")
 
 
-def descargar(url, destino, max_mb=400):
+_ultima_descarga = {}
+
+
+def descargar(url, destino, max_mb=400, intentos=5):
+    """Descarga respetando a los servidores: pausa entre descargas del mismo
+    dominio y espera creciente si responden 429 (Wikimedia lo hace)."""
     destino = Path(destino)
-    with requests.get(url, headers=UA, stream=True, timeout=120) as r:
-        r.raise_for_status()
-        total = 0
-        with open(destino, "wb") as f:
-            for trozo in r.iter_content(1 << 16):
-                total += len(trozo)
-                if total > max_mb * 1024 * 1024:
-                    raise RuntimeError(f"Archivo demasiado grande (> {max_mb} MB)")
-                f.write(trozo)
-    return destino
+    dominio = url.split("/")[2]
+    for i in range(intentos):
+        espera = 4 - (time.time() - _ultima_descarga.get(dominio, 0))
+        if espera > 0:
+            time.sleep(espera)
+        _ultima_descarga[dominio] = time.time()
+        with requests.get(url, headers=UA, stream=True, timeout=120) as r:
+            if r.status_code == 429 or r.status_code >= 500:
+                time.sleep(15 * (i + 1))
+                continue
+            r.raise_for_status()
+            total = 0
+            with open(destino, "wb") as f:
+                for trozo in r.iter_content(1 << 16):
+                    total += len(trozo)
+                    if total > max_mb * 1024 * 1024:
+                        raise RuntimeError(f"Archivo demasiado grande (> {max_mb} MB)")
+                    f.write(trozo)
+            return destino
+    raise RuntimeError(f"Descarga rechazada repetidamente por {dominio}")
 
 
 def run(cmd, timeout=1800):

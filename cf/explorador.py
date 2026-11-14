@@ -39,7 +39,7 @@ def examinar(c, animal, tmp):
         return {**reg, "motivo": "archivo demasiado grande"}, False
     original = tmp / "original"
     proxy = tmp / "proxy.mp4"
-    descargar(c.url, original, max_mb=MAX_MB)
+    descargar(c.url_escaneo or c.url, original, max_mb=MAX_MB)
     _proxy(original, proxy)
     tec = analisis.analizar(proxy)
     reg["tecnico"] = tec
@@ -82,9 +82,7 @@ def main():
         if examinados >= a.max_total:
             break
         log(f"== {animal['es']} ({aptos[animal['es']]} momentos en biblioteca)")
-        cands = [c for c in fuentes.buscar(animal["en"]) if c.clave not in vistos]
-        # Wikimedia primero (material documental), luego los clips más largos.
-        cands.sort(key=lambda c: (c.fuente != "wikimedia", -c.duracion))
+        cands = [c for c in fuentes.buscar(animal) if c.clave not in vistos]
         for c in cands[: a.nuevos]:
             if examinados >= a.max_total:
                 break
@@ -94,7 +92,9 @@ def main():
                 if "vision" in reg:
                     examinados += 1
             except Exception as e:
-                reg, apto = {**c.dict(), "animal": animal["es"], "motivo": f"error: {type(e).__name__}: {str(e)[:160]}"}, False
+                # Error transitorio (red, cuota): no se registra, se reintentará otro día.
+                log(f"  ⚠️ {c.fuente} {c.titulo[:60]} | {type(e).__name__}: {str(e)[:140]}")
+                continue
             finally:
                 shutil.rmtree(tmp, ignore_errors=True)
             anadir_jsonl(MOMENTOS if apto else DESCARTES, reg)

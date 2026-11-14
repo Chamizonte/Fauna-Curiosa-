@@ -27,6 +27,7 @@ class Candidato:
     alto: int
     tamano_mb: float = 0
     etiquetas: list = field(default_factory=list)
+    url_escaneo: str = ""   # versión ligera para analizar (Wikimedia ofrece 480p/360p)
 
     @property
     def clave(self):
@@ -64,13 +65,24 @@ def tipo_licencia(lic):
     return None
 
 
+def _derivado(p, alturas):
+    """URL del derivado transcodificado de Wikimedia con la primera altura disponible."""
+    ders = (p.get("videoinfo") or [{}])[0].get("derivatives") or []
+    for h in alturas:
+        for d in ders:
+            if d.get("height") == h and d.get("src"):
+                return d["src"]
+    return None
+
+
 def wikimedia(consulta, maximo=40):
     out, cont = [], {}
     while len(out) < maximo:
         r = get_json("https://commons.wikimedia.org/w/api.php", params={
             "action": "query", "format": "json", "generator": "search",
             "gsrsearch": f"{consulta} filetype:video", "gsrnamespace": 6, "gsrlimit": 50,
-            "prop": "imageinfo", "iiprop": "url|size|mime|extmetadata", **cont})
+            "prop": "imageinfo|videoinfo", "iiprop": "url|size|mime|extmetadata",
+            "viprop": "derivatives", **cont})
         for p in r.get("query", {}).get("pages", {}).values():
             ii = (p.get("imageinfo") or [{}])[0]
             meta = ii.get("extmetadata") or {}
@@ -79,7 +91,10 @@ def wikimedia(consulta, maximo=40):
                 continue
             titulo = p.get("title", "").removeprefix("File:")
             out.append(Candidato(
-                fuente="wikimedia", id=str(p.get("pageid")), url=ii.get("url"),
+                fuente="wikimedia", id=str(p.get("pageid")),
+                # para montar: 1080p transcodificado (pesa menos que el original)
+                url=_derivado(p, (1080, 1440, 2160)) or ii.get("url"),
+                url_escaneo=_derivado(p, (480, 360, 720)) or "",
                 pagina=ii.get("descriptionurl") or "", titulo=titulo,
                 autor=_sin_html(meta.get("Artist", {}).get("value")) or "autor desconocido",
                 licencia=lic, duracion=float(ii.get("duration") or 0),
@@ -136,12 +151,30 @@ def pexels(consulta, maximo=30):
     return out
 
 
-def buscar(consulta, por_fuente=20):
-    """Candidatos de todas las fuentes, priorizando Wikimedia (material documental)."""
-    todos = []
-    for fn in (wikimedia, pixabay, pexels):
+def _intercalar(listas):
+    out = []
+    for i in range(max((len(l) for l in listas), default=0)):
+        out += [l[i] for l in listas if i < len(l)]
+    return out
+
+
+def buscar(animal, por_fuente=20):
+    """Candidatos de todas las fuentes, intercalados (Wikimedia primero).
+
+    En Wikimedia se busca por nombre científico: el nombre común en inglés trae
+    ruido ("wolf" devuelve vídeos del gobernador Tom Wolf)."""
+    listas = []
+    consultas = {
+        wikimedia: f'"{animal["cientifico"]}"' if animal.get("cientifico") else animal["en"],
+        pixabay: animal["en"],
+        pexels: animal["en"],
+    }
+    vistos = set()
+    for fn, q in consultas.items():
         try:
-            todos += fn(consulta, por_fuente)
+            res = [c for c in fn(q, por_fuente) if c.clave not in vistos]
+            vistos.update(c.clave for c in res)
+            listas.append(res)
         except Exception as e:  # una fuente caída no debe parar el resto
             print(f"  [{fn.__name__}] no disponible: {e}", flush=True)
-    return todos
+    return _intercalar(listas)
