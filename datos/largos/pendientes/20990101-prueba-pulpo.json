@@ -1,0 +1,19 @@
+{
+  "id": "20990101-prueba-pulpo",
+  "fecha_publicacion": "2099-01-01",
+  "tema": "Prueba técnica del montaje de largos",
+  "titulo": "Prueba: el pulpo, maestro del camuflaje",
+  "descripcion": "Vídeo de prueba del sistema de montaje. No se publica.",
+  "etiquetas": ["pulpo", "prueba"],
+  "miniatura": {"texto": "MAESTRO DEL DISFRAZ", "busqueda": "octopus close up", "animal": "pulpo", "cientifico": "Octopoda"},
+  "capitulos": [{"titulo": "Introducción", "escena": 0}, {"titulo": "El camuflaje", "escena": 2}, {"titulo": "Tres corazones", "escena": 4}],
+  "escenas": [
+    {"narracion": "En el fondo del mar vive un animal capaz de desaparecer delante de tus ojos.", "visual": {"tipo": "video", "busqueda": "octopus coral reef", "describe": "pulpo sobre un arrecife", "animal": "pulpo", "cientifico": "Octopoda"}},
+    {"narracion": "No tiene huesos, tiene ocho brazos y una inteligencia sorprendente.", "visual": {"tipo": "video", "busqueda": "octopus swimming", "describe": "pulpo nadando o moviendo los brazos", "animal": "pulpo", "cientifico": "Octopoda"}, "rotulo": "Ocho brazos"},
+    {"narracion": "Su piel cambia de color y de textura en menos de un segundo.", "visual": {"tipo": "video", "busqueda": "octopus camouflage", "describe": "pulpo camuflado", "animal": "pulpo", "cientifico": "Octopoda"}},
+    {"narracion": "Lo consigue gracias a miles de células llenas de pigmento.", "visual": {"tipo": "texto", "describe": "Miles de cromatóforos"}, "rotulo": "Miles de cromatóforos"},
+    {"narracion": "Y por dentro guarda otra sorpresa: tiene tres corazones.", "visual": {"tipo": "foto", "busqueda": "octopus", "describe": "pulpo bien visible", "animal": "pulpo", "cientifico": "Octopoda"}, "rotulo": "Tres corazones"},
+    {"narracion": "Dos bombean sangre a las branquias y uno al resto del cuerpo.", "visual": {"tipo": "video", "busqueda": "octopus underwater", "describe": "pulpo bajo el agua", "animal": "pulpo", "cientifico": "Octopoda"}}
+  ],
+  "datos": []
+}
