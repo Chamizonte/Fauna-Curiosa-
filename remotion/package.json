@@ -1,0 +1,14 @@
+{
+  "name": "curiosa-fauna-remotion",
+  "private": true,
+  "scripts": {
+    "render-short": "remotion render src/index.ts Short"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.520",
+    "@remotion/google-fonts": "4.0.520",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.520"
+  }
+}

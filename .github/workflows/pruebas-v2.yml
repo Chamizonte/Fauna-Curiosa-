@@ -1,0 +1,19 @@
+name: Pruebas de riesgo v2
+# Solo se ejecuta al subir cambios en la rama v2 (no toca la producción de main).
+on:
+  push:
+    branches: [v2]
+    paths: ["spikes/**", ".github/workflows/pruebas-v2.yml"]
+  workflow_dispatch: {}
+
+jobs:
+  wikimedia:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - run: python spikes/test_wm_descarga.py

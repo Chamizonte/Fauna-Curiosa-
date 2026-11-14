@@ -1,0 +1,60 @@
+name: Explorador de material (v2)
+# Llena la biblioteca de momentos cada noche (00:30 UTC), antes de la sala de redacción.
+on:
+  schedule:
+    - cron: "30 0 * * *"
+  workflow_dispatch:
+    inputs:
+      animales:
+        description: "Animales separados por comas (vacío = los que tienen menos material)"
+        required: false
+        default: ""
+      max_total:
+        description: "Tope de clips a analizar con visión"
+        required: false
+        default: "20"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: datos-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  explorar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}   # la punta de la rama, con los datos más recientes
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements-v2.txt
+      - run: sudo apt-get update -y && sudo apt-get install -y ffmpeg
+      - run: pip install -r requirements-v2.txt
+      - name: Explorar
+        timeout-minutes: 75   # deja tiempo para guardar lo analizado aunque se corte
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python -m cf.explorador \
+            --animales "${{ github.event.inputs.animales }}" \
+            --nuevos 4 --max-total "${{ github.event.inputs.max_total || '40' }}"
+      - name: Guardar la biblioteca en el repositorio
+        if: always()   # se guarda lo analizado aunque la exploración falle o se corte
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add datos/biblioteca
+          git diff --cached --quiet && exit 0
+          git commit -m "Biblioteca: nuevos momentos analizados"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push && break
+            sleep 5
+          done

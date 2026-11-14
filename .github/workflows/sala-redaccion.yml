@@ -1,14 +1,103 @@
 name: Sala de redacción (Claude)
-# Copia mínima en main para poder lanzar a mano la versión de la rama v2
-# (gh workflow run sala-redaccion.yml --ref v2). Sin programación: no se ejecuta sola.
+# Claude elige momentos de la biblioteca, verifica los datos y escribe los guiones
+# de los Shorts. Usa la suscripción Pro (CLAUDE_CODE_OAUTH_TOKEN) de madrugada,
+# para no gastar la ventana de uso diurna.
 on:
+  schedule:
+    - cron: "30 2 * * *"   # cada noche 02:30 UTC, después del explorador
   workflow_dispatch:
     inputs:
       cantidad:
-        description: "Guiones a escribir"
-        default: "28"
+        description: "Guiones a escribir (vacío = rellenar hasta tener 12 pendientes)"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: datos-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
-  aviso:
+  redactar:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     steps:
-      - run: echo "Lanzar con --ref v2 mientras la v2 está en pruebas."
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}   # la punta de la rama, con los datos más recientes
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Contexto para Claude (resumen de la biblioteca y de lo ya escrito)
+        run: |
+          mkdir -p datos/shorts/pendientes datos/shorts/publicados trabajo
+          {
+            echo "# Biblioteca (clips aptos por animal)"; python -m cf.biblioteca --resumen
+            echo; echo "# Guiones pendientes"; ls datos/shorts/pendientes | grep -v '^prueba-' || true
+            echo; echo "# Publicados (últimos 60)"; ls datos/shorts/publicados | tail -60 || true
+          } > trabajo/contexto.txt
+          # Una ficha por animal con sus clips (Claude las lee sin ejecutar nada)
+          mkdir -p trabajo/biblioteca
+          python - <<'PY'
+          import json, subprocess
+          animales = {json.loads(l)["animal"] for l in open("datos/biblioteca/momentos.jsonl", encoding="utf-8") if l.strip()}
+          for a in sorted(animales):
+              out = subprocess.run(["python", "-m", "cf.biblioteca", "--animal", a], capture_output=True, text=True).stdout
+              open(f"trabajo/biblioteca/{a}.txt", "w", encoding="utf-8").write(out)
+          PY
+          cat trabajo/contexto.txt
+      - name: Cuántos guiones hacen falta
+        id: cuantos
+        run: |
+          # Se publican 4 al día: se mantiene un colchón de 12 guiones (3 días).
+          pend=$(ls datos/shorts/pendientes | grep -v '^prueba-' | wc -l)
+          n="${{ github.event.inputs.cantidad }}"
+          [ -z "$n" ] && n=$(( 12 - pend )) && [ "$n" -gt 8 ] && n=8
+          [ "$n" -lt 0 ] && n=0
+          echo "Pendientes: $pend -> escribir $n"
+          echo "n=$n" >> "$GITHUB_OUTPUT"
+      - uses: anthropics/claude-code-action@v1
+        if: steps.cuantos.outputs.n != '0'
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Token propio del workflow: evita tener que instalar la app de Claude en GitHub.
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          show_full_output: true   # registro completo para revisar qué hizo Claude
+          prompt: |
+            Eres la sala de redacción del canal de YouTube Curiosa Fauna. Fecha de hoy: ${{ github.run_started_at }}.
+
+            Tarea: escribe ${{ steps.cuantos.outputs.n }} guiones (briefs) de Shorts y guárdalos en datos/shorts/pendientes/.
+
+            Pasos:
+            1. Lee CLAUDE.md y las skills .claude/skills/guion-shorts-curiosa-fauna/SKILL.md y
+               .claude/skills/verificacion-fauna/SKILL.md, y sigue sus reglas al pie de la letra.
+            2. Lee trabajo/contexto.txt (qué hay en la biblioteca y qué está ya escrito o publicado).
+            3. Para cada animal que vayas a usar, lee trabajo/biblioteca/NOMBRE.txt (una línea por clip)
+               y elige planos SOLO entre esas claves y dentro de sus escenas.
+            4. Reparte los formatos por_que, comparativa y mito en partes iguales (prueba A/B).
+               No repitas animal y ángulo de un guion pendiente o publicado.
+            5. Verifica cada dato con búsqueda web y abre las fuentes (WebFetch) para comprobar que
+               dicen lo que afirmas. Si no consigues 2 fuentes independientes, cambia de dato.
+            6. Nombra cada archivo AAAAMMDD-N-animal.json con la fecha de hoy y N correlativo.
+
+            No modifiques ningún archivo fuera de datos/shorts/pendientes/. No hagas commits: el
+            workflow valida y guarda los guiones después. Sé eficiente: no leas archivos que no necesites.
+          claude_args: |
+            --model claude-sonnet-5-5
+            --max-turns 120
+            --allowedTools Read,Write,Glob,Grep,WebSearch,WebFetch
+            --permission-mode default
+      - name: Control de calidad de los guiones
+        run: python -m cf.validar_briefs
+      - name: Guardar los guiones en el repositorio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add datos/shorts
+          git diff --cached --quiet && { echo "Sin guiones nuevos"; exit 0; }
+          git commit -m "Sala de redacción: nuevos guiones de Shorts"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push && break
+            sleep 5
+          done

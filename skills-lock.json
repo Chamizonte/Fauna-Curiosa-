@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "skills": {
+    "fact-check-workflow": {
+      "source": "jamditis/claude-skills-journalism",
+      "sourceType": "github",
+      "skillPath": "journalism-core/skills/fact-check-workflow/SKILL.md",
+      "computedHash": "d257ca5469911116e3a9735061dfb83a2c2315fa97cb926689b505de4aad6a10",
+      "installMode": "copy"
+    },
+    "remotion-best-practices": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-best-practices/SKILL.md",
+      "computedHash": "55e6029eeafb7f64bfcaef013f7b9f569dfcc4db6554c6d6fb833ad141ec1494",
+      "installMode": "copy"
+    },
+    "youtube-scriptwriting": {
+      "source": "cdeistopened/skill-stack",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/youtube-scriptwriting/SKILL.md",
+      "computedHash": "e5097d45811b21ac8ba672ef3d8d99d6f6ae5e1d59e45d2c9ad5941a5426f0c2",
+      "installMode": "copy"
+    }
+  }
+}

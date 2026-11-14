@@ -1,0 +1,77 @@
+name: Publicar short
+# 4 shorts al día: 08:00, 12:00, 16:00 y 20:00 UTC
+# (09/13/17/21 h en España en invierno; 10/14/18/22 h en verano).
+# Monta el guion pendiente más antiguo de la v2 y lo sube en público.
+# Si no quedan guiones o el montaje falla, publica uno con el generador v1 para
+# no dejar hueco en el canal.
+on:
+  schedule:
+    - cron: "0 8 * * *"
+    - cron: "0 12 * * *"
+    - cron: "0 16 * * *"
+    - cron: "0 20 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicar-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: sudo apt-get update -y && sudo apt-get install -y ffmpeg
+      - run: pip install -r requirements-v2.txt
+      - run: npm install
+        working-directory: remotion
+      - name: Montar y subir (v2)
+        id: v2
+        continue-on-error: true
+        timeout-minutes: 25
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          PRIVACIDAD_YOUTUBE: public
+        run: python -m cf.publicar_short
+      - name: Respaldo con el generador v1
+        if: steps.v2.outcome == 'failure'
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          PRIVACIDAD_YOUTUBE: public
+        run: |
+          echo "::warning::La v2 no pudo publicar; se usa el generador v1"
+          pip install -r requirements.txt
+          python generador_shorts.py
+      - name: Guardar el registro de publicación
+        if: steps.v2.outcome == 'success'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A datos/shorts
+          git diff --cached --quiet && { echo "Nada que guardar"; exit 0; }
+          git commit -m "Short publicado"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push && break
+            sleep 5
+          done
