@@ -26,7 +26,7 @@ concurrency:
 jobs:
   explorar:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
         with:
@@ -39,6 +39,7 @@ jobs:
       - run: sudo apt-get update -y && sudo apt-get install -y ffmpeg
       - run: pip install -r requirements-v2.txt
       - name: Explorar
+        timeout-minutes: 75   # deja tiempo para guardar lo analizado aunque se corte
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
@@ -48,6 +49,7 @@ jobs:
             --animales "${{ github.event.inputs.animales }}" \
             --nuevos 4 --max-total "${{ github.event.inputs.max_total || '40' }}"
       - name: Guardar la biblioteca en el repositorio
+        if: always()   # se guarda lo analizado aunque la exploración falle o se corte
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

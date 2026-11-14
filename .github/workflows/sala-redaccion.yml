@@ -39,6 +39,15 @@ jobs:
             echo; echo "# Guiones pendientes"; ls datos/shorts/pendientes | grep -v '^prueba-' || true
             echo; echo "# Publicados (últimos 60)"; ls datos/shorts/publicados | tail -60 || true
           } > trabajo/contexto.txt
+          # Una ficha por animal con sus clips (Claude las lee sin ejecutar nada)
+          mkdir -p trabajo/biblioteca
+          python - <<'PY'
+          import json, subprocess
+          animales = {json.loads(l)["animal"] for l in open("datos/biblioteca/momentos.jsonl", encoding="utf-8") if l.strip()}
+          for a in sorted(animales):
+              out = subprocess.run(["python", "-m", "cf.biblioteca", "--animal", a], capture_output=True, text=True).stdout
+              open(f"trabajo/biblioteca/{a}.txt", "w", encoding="utf-8").write(out)
+          PY
           cat trabajo/contexto.txt
       - uses: anthropics/claude-code-action@v1
         with:
@@ -55,7 +64,7 @@ jobs:
             1. Lee CLAUDE.md y las skills .claude/skills/guion-shorts-curiosa-fauna/SKILL.md y
                .claude/skills/verificacion-fauna/SKILL.md, y sigue sus reglas al pie de la letra.
             2. Lee trabajo/contexto.txt (qué hay en la biblioteca y qué está ya escrito o publicado).
-            3. Para cada animal que vayas a usar, ejecuta `python -m cf.biblioteca --animal NOMBRE`
+            3. Para cada animal que vayas a usar, lee trabajo/biblioteca/NOMBRE.txt (una línea por clip)
                y elige planos SOLO entre esas claves y dentro de sus escenas.
             4. Reparte los formatos por_que, comparativa y mito en partes iguales (prueba A/B).
                No repitas animal y ángulo de un guion pendiente o publicado.
@@ -68,7 +77,7 @@ jobs:
           claude_args: |
             --model claude-sonnet-5-5
             --max-turns 120
-            --allowedTools Read,Write,Glob,Grep,WebSearch,WebFetch,Bash(python -m cf.biblioteca:*),Bash(ls:*)
+            --allowedTools Read,Write,Glob,Grep,WebSearch,WebFetch
             --permission-mode default
       - name: Control de calidad de los guiones
         run: python -m cf.validar_briefs
