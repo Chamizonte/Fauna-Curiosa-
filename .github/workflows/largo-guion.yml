@@ -83,7 +83,9 @@ jobs:
             2. Lee trabajo/encargo_largo.txt (fecha, tema y lo ya publicado). Si el tema viene de un
                borrador de planes/, léelo: es solo un punto de partida, reescríbelo con la estructura
                de la skill y verifica cada dato.
-            3. Investiga con WebSearch y WebFetch. Cada dato, 2 fuentes independientes abiertas y leídas.
+            3. Investiga con WebSearch y WebFetch. Cada dato, 2 fuentes independientes abiertas y leídas,
+               de DOMINIOS distintos (dos páginas de la misma web cuentan como una sola). Si un dato
+               solo tiene una fuente, no lo uses.
             4. Escribe el brief en datos/largos/pendientes/AAAAMMDD-tema-corto.json (AAAAMMDD = la
                fecha de publicación del encargo) con el formato exacto de la skill.
 
@@ -95,7 +97,34 @@ jobs:
             --allowedTools Read,Write,Glob,Grep,WebSearch,WebFetch
             --permission-mode default
       - name: Control de calidad del guion
+        id: control
         if: steps.encargo.outputs.hecho != '1'
+        continue-on-error: true
+        run: python -m cf.validar_largo | tee trabajo/control_largo.txt; exit ${PIPESTATUS[0]}
+        shell: bash
+      - uses: anthropics/claude-code-action@v1
+        name: Corregir el guion
+        if: steps.control.outcome == 'failure'
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          show_full_output: true
+          prompt: |
+            El guion de vídeo largo que hay en datos/largos/pendientes/ no ha pasado el control de calidad.
+            Lee trabajo/control_largo.txt (los fallos) y .claude/skills/verificacion-fauna/SKILL.md.
+            Corrige SOLO esos fallos editando el JSON:
+            - Dato con menos de 2 fuentes independientes: busca y abre una segunda fuente de OTRO dominio
+              que lo confirme y añádela. Si no la encuentras, quita el dato de "datos" y reescribe o
+              elimina la frase de la narración que lo afirma (y ajusta "capitulos" si cambian los índices).
+            - Otros fallos: corrígelos según la skill .claude/skills/guion-largos-curiosa-fauna/SKILL.md.
+            No toques nada más. No hagas commits.
+          claude_args: |
+            --model claude-sonnet-5-5
+            --max-turns 60
+            --allowedTools Read,Edit,Write,Glob,Grep,WebSearch,WebFetch
+            --permission-mode default
+      - name: Segundo control de calidad
+        if: steps.control.outcome == 'failure'
         run: python -m cf.validar_largo
       - name: Guardar el guion
         if: steps.encargo.outputs.hecho != '1'
