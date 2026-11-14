@@ -3,9 +3,6 @@ name: Sala de redacción (Claude)
 # de los Shorts. Usa la suscripción Pro (CLAUDE_CODE_OAUTH_TOKEN) de madrugada,
 # para no gastar la ventana de uso diurna.
 on:
-  push:                    # solo para probar en la rama v2
-    branches: [v2]
-    paths: [".github/workflows/sala-redaccion.yml"]
   schedule:
     - cron: "0 2 * * 0"   # domingos 02:00 UTC (03:00/04:00 en España)
   workflow_dispatch:
@@ -26,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
-      CANTIDAD: ${{ github.event.inputs.cantidad || (github.event_name == 'push' && '3') || '28' }}
+      CANTIDAD: ${{ github.event.inputs.cantidad || '28' }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -36,18 +33,19 @@ jobs:
           python-version: "3.11"
       - name: Contexto para Claude (resumen de la biblioteca y de lo ya escrito)
         run: |
-          mkdir -p datos/shorts/pendientes datos/shorts/publicados
+          mkdir -p datos/shorts/pendientes datos/shorts/publicados trabajo
           {
             echo "# Biblioteca (clips aptos por animal)"; python -m cf.biblioteca --resumen
             echo; echo "# Guiones pendientes"; ls datos/shorts/pendientes | grep -v '^prueba-' || true
             echo; echo "# Publicados (últimos 60)"; ls datos/shorts/publicados | tail -60 || true
-          } > /tmp/contexto.txt
-          cat /tmp/contexto.txt
+          } > trabajo/contexto.txt
+          cat trabajo/contexto.txt
       - uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           # Token propio del workflow: evita tener que instalar la app de Claude en GitHub.
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          show_full_output: true   # registro completo para revisar qué hizo Claude
           prompt: |
             Eres la sala de redacción del canal de YouTube Curiosa Fauna. Fecha de hoy: ${{ github.run_started_at }}.
 
@@ -56,7 +54,7 @@ jobs:
             Pasos:
             1. Lee CLAUDE.md y las skills .claude/skills/guion-shorts-curiosa-fauna/SKILL.md y
                .claude/skills/verificacion-fauna/SKILL.md, y sigue sus reglas al pie de la letra.
-            2. Lee /tmp/contexto.txt (qué hay en la biblioteca y qué está ya escrito o publicado).
+            2. Lee trabajo/contexto.txt (qué hay en la biblioteca y qué está ya escrito o publicado).
             3. Para cada animal que vayas a usar, ejecuta `python -m cf.biblioteca --animal NOMBRE`
                y elige planos SOLO entre esas claves y dentro de sus escenas.
             4. Reparte los formatos por_que, comparativa y mito en partes iguales (prueba A/B).
