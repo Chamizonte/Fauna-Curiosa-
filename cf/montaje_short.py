@@ -93,9 +93,12 @@ def montar(brief_path, sin_voz=False):
     except Exception as e:
         log(f"  sin música: {type(e).__name__}")
 
+    # El gancho en pantalla sustituye a los subtítulos de la primera frase.
+    fin_primera = next((p["fin"] for p in palabras if p["t"].endswith(("?", ".", "!", "…"))), 2.5)
     props = {
         "duracion": round(duracion, 3), "planos": planos, "palabras": palabras,
-        "gancho": brief["gancho_pantalla"], "voz": voz_rel, "musica": musica_rel,
+        "gancho": brief["gancho_pantalla"], "ganchoFin": round(max(2.0, fin_primera + 0.3), 2),
+        "voz": voz_rel, "musica": musica_rel,
         "volMusica": 0.10 if voz_rel else 0.35,
     }
     props_path = tmp / "props.json"

@@ -37,7 +37,7 @@ def estado_creditos():
 def largos_pendientes(hoy, hasta):
     """Vídeos largos (días 1, 11, 21) que quedan antes de la renovación de créditos."""
     n, d = 0, hoy + dt.timedelta(days=1)
-    while d < hasta:
+    while d <= hasta:  # el día de la renovación también cuenta (el largo sale por la mañana)
         if d.day in DIAS_LARGOS:
             n += 1
         d += dt.timedelta(days=1)

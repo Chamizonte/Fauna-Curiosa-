@@ -24,6 +24,7 @@ export type PropsShort = {
   planos: Plano[];
   palabras: Palabra[];
   gancho: string;
+  ganchoFin?: number; // segundo en que termina la primera frase (el gancho la sustituye)
   voz?: string;
   musica?: string;
   volMusica: number;
@@ -51,11 +52,11 @@ const PlanoVideo: React.FC<{ plano: Plano; frames: number; indice: number }> = (
 };
 
 // ---------- Gancho: texto grande los primeros segundos ----------
-const Gancho: React.FC<{ texto: string }> = ({ texto }) => {
+const Gancho: React.FC<{ texto: string; fin: number }> = ({ texto, fin }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const entrada = spring({ frame: f, fps, config: { damping: 14, stiffness: 160 } });
-  const salida = interpolate(f, [fps * 2.6, fps * 3], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const salida = interpolate(f, [fps * (fin - 0.3), fps * fin], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
     <AbsoluteFill style={{ justifyContent: "flex-start", alignItems: "center", paddingTop: 300 }}>
       <div
@@ -98,11 +99,12 @@ function agrupar(palabras: Palabra[], maxPorGrupo = 3): Palabra[][] {
   return grupos;
 }
 
-const Subtitulos: React.FC<{ palabras: Palabra[] }> = ({ palabras }) => {
+const Subtitulos: React.FC<{ palabras: Palabra[]; desde: number }> = ({ palabras, desde }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = f / fps;
-  const grupos = agrupar(palabras);
+  // mientras el gancho está en pantalla no se repite su frase en subtítulos
+  const grupos = agrupar(palabras.filter((p) => p.ini >= desde - 0.01));
   const grupo = grupos.find((g) => t >= g[0].ini - 0.05 && t < g[g.length - 1].fin + 0.25);
   if (!grupo) return null;
   return (
@@ -116,14 +118,15 @@ const Subtitulos: React.FC<{ palabras: Palabra[] }> = ({ palabras }) => {
               key={i}
               style={{
                 display: "inline-block",
-                margin: "0 12px",
+                margin: "0 22px",
+                transformOrigin: "center bottom",
                 fontFamily,
                 fontWeight: 900,
                 fontSize: 96,
                 color: activa ? AMARILLO : "white",
                 WebkitTextStroke: "3px black",
                 textShadow: "0 8px 24px rgba(0,0,0,0.85)",
-                transform: activa ? `scale(${1 + 0.12 * pop})` : "scale(1)",
+                transform: activa ? `scale(${1 + 0.07 * pop})` : "scale(1)",
                 textTransform: "uppercase",
               }}
             >
@@ -158,10 +161,10 @@ export const Short: React.FC<PropsShort> = (props) => {
             "linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.45) 75%, rgba(0,0,0,0.2) 100%)",
         }}
       />
-      <Sequence durationInFrames={Math.round(fps * 3)}>
-        <Gancho texto={props.gancho} />
+      <Sequence durationInFrames={Math.round(fps * (props.ganchoFin ?? 3))}>
+        <Gancho texto={props.gancho} fin={props.ganchoFin ?? 3} />
       </Sequence>
-      <Subtitulos palabras={props.palabras} />
+      <Subtitulos palabras={props.palabras} desde={props.ganchoFin ?? 0} />
       {props.voz ? <Audio src={staticFile(props.voz)} /> : null}
       {props.musica ? (
         <Audio
