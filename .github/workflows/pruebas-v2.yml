@@ -7,27 +7,7 @@ on:
   workflow_dispatch: {}
 
 jobs:
-  cobertura:
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-      - run: pip install requests
-      - run: python spikes/test_cobertura.py
-        env:
-          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
-          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: cobertura
-          path: spikes_out/
-          retention-days: 7
-
-  voz-flash:
+  wikimedia:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -36,12 +16,4 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install requests
-      - run: python spikes/test_voz_flash.py
-        env:
-          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: voz-flash
-          path: spikes_out/
-          retention-days: 7
+      - run: python spikes/test_wm_descarga.py
