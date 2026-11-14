@@ -2,9 +2,6 @@ name: Explorador de material (v2)
 # Llena la biblioteca de momentos. En la rama v2 se lanza al subir cambios para
 # probarlo; cuando la v2 pase a main se activará la programación diaria.
 on:
-  push:
-    branches: [v2]
-    paths: ["cf/**", "datos/animales.json", ".github/workflows/explorador.yml"]
   workflow_dispatch:
     inputs:
       animales:

@@ -1,0 +1,43 @@
+name: Prueba de montaje de short (v2)
+# Monta un short a partir de un guion y lo guarda como artefacto (NO lo sube a YouTube).
+on:
+  push:
+    branches: [v2]
+    paths: ["cf/montaje_short.py", "cf/voz.py", "remotion/**", "datos/shorts/pendientes/prueba-*.json", ".github/workflows/prueba-short.yml"]
+  workflow_dispatch:
+    inputs:
+      brief:
+        description: "Ruta del guion"
+        default: "datos/shorts/pendientes/prueba-pulpo.json"
+
+jobs:
+  montar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements-v2.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: sudo apt-get update -y && sudo apt-get install -y ffmpeg
+      - run: pip install -r requirements-v2.txt
+      - run: npm install
+        working-directory: remotion
+      - name: Montar
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+        run: python -m cf.montaje_short "${{ github.event.inputs.brief || 'datos/shorts/pendientes/prueba-pulpo.json' }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: short
+          path: out/*.mp4
+          retention-days: 7

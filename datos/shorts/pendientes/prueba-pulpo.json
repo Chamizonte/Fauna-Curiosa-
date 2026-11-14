@@ -1,0 +1,41 @@
+{
+  "id": "prueba-pulpo",
+  "formato": "por_que",
+  "animal": "pulpo",
+  "gancho_pantalla": "¿Cómo desaparece un pulpo?",
+  "guion": "¿Cómo desaparece un pulpo delante de tus ojos? Bajo su piel tiene miles de cromatóforos: pequeños sacos de pigmento que abre y cierra con músculos en menos de un segundo. Además, levanta su piel para copiar la textura de la roca. Y lo más increíble: casi con seguridad, no ve los colores.",
+  "datos": [
+    {
+      "afirmacion": "Los pulpos cambian de color mediante cromatóforos, sacos de pigmento controlados por músculos, en fracciones de segundo.",
+      "fuentes": [
+        "https://ocean.si.edu/ocean-life/invertebrates/how-octopuses-and-squids-change-color",
+        "https://www.britannica.com/science/chromatophore"
+      ]
+    },
+    {
+      "afirmacion": "Pueden cambiar la textura de la piel (papilas) para imitar el entorno.",
+      "fuentes": [
+        "https://ocean.si.edu/ocean-life/invertebrates/how-octopuses-and-squids-change-color",
+        "https://www.nature.com/articles/s41467-018-07165-6"
+      ]
+    },
+    {
+      "afirmacion": "La mayoría de los cefalópodos tienen un solo tipo de fotorreceptor y se consideran daltónicos.",
+      "fuentes": [
+        "https://www.pnas.org/doi/10.1073/pnas.1601390113",
+        "https://ocean.si.edu/ocean-life/invertebrates/how-octopuses-and-squids-change-color"
+      ]
+    }
+  ],
+  "planos": [
+    {"clave": "pexels:31496835", "desde": 3.0, "hasta": 8.5, "nota": "pulpo camuflado en el coral (gancho visual)"},
+    {"clave": "pexels:17836505", "desde": 1.0, "hasta": 5.5, "nota": "detalle de piel y ventosas"},
+    {"clave": "pixabay:1198", "desde": 13.0, "hasta": 17.0, "nota": "pulpo desplazándose"},
+    {"clave": "pexels:17836505", "desde": 9.0, "hasta": 13.0, "nota": "tentáculos en movimiento"},
+    {"clave": "pixabay:1198", "desde": 44.0, "hasta": 48.0, "nota": "pulpo sobre el fondo"},
+    {"clave": "pexels:31496835", "desde": 0.0, "hasta": 3.0, "nota": "cierre: vuelve a esconderse"}
+  ],
+  "titulo": "¿Cómo desaparece un pulpo delante de tus ojos? 🐙",
+  "descripcion": "Los pulpos cambian de color y de textura en menos de un segundo… y probablemente no ven los colores.",
+  "etiquetas": ["pulpo", "animales", "camuflaje", "curiosidades", "naturaleza"]
+}
