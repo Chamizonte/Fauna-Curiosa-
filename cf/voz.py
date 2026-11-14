@@ -26,7 +26,17 @@ def _h():
 
 
 def estado_creditos():
-    s = requests.get(f"{API}/user/subscription", headers=_h(), timeout=60).json()
+    """Créditos restantes y fecha de renovación, o None si ElevenLabs no responde."""
+    for i in range(3):
+        r = requests.get(f"{API}/user/subscription", headers=_h(), timeout=60)
+        if r.status_code == 200 and "character_limit" in r.text:
+            break
+        log(f"  ElevenLabs /user/subscription respondió HTTP {r.status_code}, reintento")
+        import time
+        time.sleep(5 * (i + 1))
+    else:
+        return None
+    s = r.json()
     reset = s.get("next_character_count_reset_unix")
     return {
         "restantes": (s.get("character_limit") or 0) - (s.get("character_count") or 0),
@@ -46,6 +56,11 @@ def largos_pendientes(hoy, hasta):
 
 def hay_presupuesto_short(texto):
     est = estado_creditos()
+    if est is None:
+        # Sin datos de cuota: se intenta generar; si ElevenLabs rechaza por falta
+        # de créditos, el montador cae a la versión sin voz.
+        log("  créditos ElevenLabs: desconocidos, se intenta generar la voz")
+        return True
     reserva = largos_pendientes(dt.date.today(), est["renovacion"]) * RESERVA_POR_LARGO
     coste = len(texto) * CREDITOS_POR_CARACTER[MODELO_SHORTS]
     ok = est["restantes"] - coste >= reserva

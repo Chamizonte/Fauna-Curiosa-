@@ -57,8 +57,12 @@ def montar(brief_path, sin_voz=False):
     texto = brief["guion"]
     voz_rel = None
     if not sin_voz and voz.hay_presupuesto_short(texto):
-        palabras = voz.generar(texto, PUBLICO / "voz.mp3")
-        voz_rel = "render/voz.mp3"
+        try:
+            palabras = voz.generar(texto, PUBLICO / "voz.mp3")
+            voz_rel = "render/voz.mp3"
+        except Exception as e:
+            log(f"  la voz falló ({e}); se monta sin voz")
+    if voz_rel:
         duracion = palabras[-1]["fin"] + 0.9
     else:
         palabras = voz.palabras_sin_voz(texto)
