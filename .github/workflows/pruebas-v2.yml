@@ -1,0 +1,69 @@
+name: Pruebas de riesgo v2
+# Solo se ejecuta al subir cambios en la rama v2 (no toca la producción de main).
+on:
+  push:
+    branches: [v2]
+    paths: ["spikes/**", ".github/workflows/pruebas-v2.yml"]
+  workflow_dispatch: {}
+
+jobs:
+  fuentes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: sudo apt-get update -y && sudo apt-get install -y ffmpeg
+      - run: pip install -U yt-dlp requests
+      - run: python spikes/test_fuentes.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fuentes
+          path: spikes_out/
+          retention-days: 7
+
+  voz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install chatterbox-tts==0.1.7 requests
+      - run: python spikes/test_voz.py
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: voz
+          path: spikes_out/
+          retention-days: 7
+
+  remotion:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: spikes/remotion
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm install
+      - name: Renderizar 20 s de short (medir tiempo)
+        run: |
+          START=$(date +%s)
+          npx remotion render src/index.ts PruebaShort out/prueba.mp4
+          echo "SEGUNDOS_RENDER=$(( $(date +%s) - START ))" | tee out/tiempo.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: remotion
+          path: spikes/remotion/out/
+          retention-days: 7
