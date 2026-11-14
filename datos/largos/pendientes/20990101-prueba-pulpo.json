@@ -4,16 +4,167 @@
   "tema": "Prueba técnica del montaje de largos",
   "titulo": "Prueba: el pulpo, maestro del camuflaje",
   "descripcion": "Vídeo de prueba del sistema de montaje. No se publica.",
-  "etiquetas": ["pulpo", "prueba"],
-  "miniatura": {"texto": "MAESTRO DEL DISFRAZ", "busqueda": "octopus close up", "animal": "pulpo", "cientifico": "Octopoda"},
-  "capitulos": [{"titulo": "Introducción", "escena": 0}, {"titulo": "El camuflaje", "escena": 2}, {"titulo": "Tres corazones", "escena": 4}],
+  "etiquetas": [
+    "pulpo",
+    "prueba"
+  ],
+  "miniatura": {
+    "texto": "MAESTRO DEL DISFRAZ",
+    "busqueda": "octopus close up",
+    "animal": "pulpo",
+    "cientifico": "Octopoda",
+    "plano": {
+      "clave": "wikimedia:10277195",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Velodona_togata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "tipo": "foto",
+      "atribucion": "«Velodona togata.jpg», dominio público, vía Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Velodona_togata.jpg)",
+      "desde": 0.0,
+      "hasta": 0.0,
+      "duracion_clip": 0,
+      "posicion_x": 0.5,
+      "descripcion": "Ilustración científica detallada de un pulpo de la especie Velodona togata sobre fondo blanco."
+    }
+  },
+  "capitulos": [
+    {
+      "titulo": "Introducción",
+      "escena": 0
+    },
+    {
+      "titulo": "El camuflaje",
+      "escena": 2
+    },
+    {
+      "titulo": "Tres corazones",
+      "escena": 4
+    }
+  ],
   "escenas": [
-    {"narracion": "En el fondo del mar vive un animal capaz de desaparecer delante de tus ojos.", "visual": {"tipo": "video", "busqueda": "octopus coral reef", "describe": "pulpo sobre un arrecife", "animal": "pulpo", "cientifico": "Octopoda"}},
-    {"narracion": "No tiene huesos, tiene ocho brazos y una inteligencia sorprendente.", "visual": {"tipo": "video", "busqueda": "octopus swimming", "describe": "pulpo nadando o moviendo los brazos", "animal": "pulpo", "cientifico": "Octopoda"}, "rotulo": "Ocho brazos"},
-    {"narracion": "Su piel cambia de color y de textura en menos de un segundo.", "visual": {"tipo": "video", "busqueda": "octopus camouflage", "describe": "pulpo camuflado", "animal": "pulpo", "cientifico": "Octopoda"}},
-    {"narracion": "Lo consigue gracias a miles de células llenas de pigmento.", "visual": {"tipo": "texto", "describe": "Miles de cromatóforos"}, "rotulo": "Miles de cromatóforos"},
-    {"narracion": "Y por dentro guarda otra sorpresa: tiene tres corazones.", "visual": {"tipo": "foto", "busqueda": "octopus", "describe": "pulpo bien visible", "animal": "pulpo", "cientifico": "Octopoda"}, "rotulo": "Tres corazones"},
-    {"narracion": "Dos bombean sangre a las branquias y uno al resto del cuerpo.", "visual": {"tipo": "video", "busqueda": "octopus underwater", "describe": "pulpo bajo el agua", "animal": "pulpo", "cientifico": "Octopoda"}}
+    {
+      "narracion": "En el fondo del mar vive un animal capaz de desaparecer delante de tus ojos.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "octopus coral reef",
+        "describe": "pulpo sobre un arrecife",
+        "animal": "pulpo",
+        "cientifico": "Octopoda"
+      },
+      "planos": [
+        {
+          "clave": "pexels:34958893",
+          "url": "https://videos.pexels.com/video-files/34958893/14808747_1920_1080_60fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de JUN HO LEE en Pexels (https://www.pexels.com/video/octopus-camouflaged-on-vibrant-coral-reef-34958893/)",
+          "desde": 0.0,
+          "hasta": 8.11,
+          "duracion_clip": 8.0,
+          "posicion_x": 0.55,
+          "descripcion": "Un pulpo está camuflado sobre un arrecife de coral, manteniendo una postura estática mientras observa el entorno."
+        }
+      ]
+    },
+    {
+      "narracion": "No tiene huesos, tiene ocho brazos y una inteligencia sorprendente.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "octopus swimming",
+        "describe": "pulpo nadando o moviendo los brazos",
+        "animal": "pulpo",
+        "cientifico": "Octopoda"
+      },
+      "rotulo": "Ocho brazos",
+      "planos": [
+        {
+          "clave": "pexels:15623348",
+          "url": "https://videos.pexels.com/video-files/15623348/15623348-hd_1920_1080_25fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Jozef Papp en Pexels (https://www.pexels.com/video/underwater-footage-of-an-octopus-swimming-in-the-sea-15623348/)",
+          "desde": 14.88,
+          "hasta": 22.36,
+          "duracion_clip": 22.0,
+          "posicion_x": 0.35,
+          "descripcion": "Se observa un pulpo posado sobre rocas submarinas en los primeros fotogramas y desplazándose por el fondo marino en los siguientes."
+        }
+      ]
+    },
+    {
+      "narracion": "Su piel cambia de color y de textura en menos de un segundo.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "octopus camouflage",
+        "describe": "pulpo camuflado",
+        "animal": "pulpo",
+        "cientifico": "Octopoda"
+      },
+      "planos": [
+        {
+          "clave": "pexels:34494118",
+          "url": "https://videos.pexels.com/video-files/34494118/14615373_1920_1080_60fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de JUN HO LEE en Pexels (https://www.pexels.com/video/underwater-camouflaged-octopus-on-coral-reef-34494118/)",
+          "desde": 0.0,
+          "hasta": 6.09,
+          "duracion_clip": 6.0,
+          "posicion_x": 0.6,
+          "descripcion": "Un pulpo está camuflado en el fondo marino rocoso y luego se desplaza nadando brevemente."
+        }
+      ]
+    },
+    {
+      "narracion": "Lo consigue gracias a miles de células llenas de pigmento.",
+      "visual": {
+        "tipo": "texto",
+        "describe": "Miles de cromatóforos"
+      },
+      "rotulo": "Miles de cromatóforos"
+    },
+    {
+      "narracion": "Y por dentro guarda otra sorpresa: tiene tres corazones.",
+      "visual": {
+        "tipo": "foto",
+        "busqueda": "octopus",
+        "describe": "pulpo bien visible",
+        "animal": "pulpo",
+        "cientifico": "Octopoda"
+      },
+      "rotulo": "Tres corazones",
+      "planos": [
+        {
+          "clave": "wikimedia:10277195",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Velodona_togata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "tipo": "foto",
+          "atribucion": "«Velodona togata.jpg», dominio público, vía Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Velodona_togata.jpg)",
+          "desde": 0.0,
+          "hasta": 0.0,
+          "duracion_clip": 0,
+          "posicion_x": 0.5,
+          "descripcion": "Ilustración científica antigua de un pulpo de la especie Velodona togata sobre fondo blanco."
+        }
+      ]
+    },
+    {
+      "narracion": "Dos bombean sangre a las branquias y uno al resto del cuerpo.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "octopus underwater",
+        "describe": "pulpo bajo el agua",
+        "animal": "pulpo",
+        "cientifico": "Octopoda"
+      },
+      "planos": [
+        {
+          "clave": "pexels:31496835",
+          "url": "https://videos.pexels.com/video-files/31496835/13429005_1920_1080_60fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de JUN HO LEE en Pexels (https://www.pexels.com/video/octopus-camouflages-in-coral-reef-31496835/)",
+          "desde": 0.0,
+          "hasta": 9.81,
+          "duracion_clip": 9.0,
+          "posicion_x": 0.6,
+          "descripcion": "Un pulpo está camuflado y mimetizado entre los corales en el fondo marino."
+        }
+      ]
+    }
   ],
   "datos": []
 }
