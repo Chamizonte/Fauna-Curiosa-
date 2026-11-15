@@ -4,6 +4,7 @@
    entonación que escena a escena) con tiempos por palabra.
 2. Reparte el tiempo entre escenas y prepara cada plano a 1920x1080.
    Escenas sin material reutilizan el plano anterior (otro tramo) o una cartela.
+   Escenas "esquema" se dibujan con Explainroo (cf.esquemas) sobre nuestra misma voz.
 3. Renderiza con Remotion (composición "Largo") y la miniatura (still "Miniatura").
 4. Volumen a -14 LUFS.
 
@@ -16,7 +17,7 @@ import subprocess
 import tempfile
 from pathlib import Path
 
-from . import voz
+from . import esquemas, voz
 from .montaje_short import PUBLICO, REMOTION, SALIDA, musica, recortar_plano
 from .util import descargar, log, run, sondear
 
@@ -91,9 +92,16 @@ def subtitulos(palabras, max_palabras=9):
     return out
 
 
-def planos(b, limites, tmp):
-    descargados, out, ultimo = {}, [], None
+def planos(b, limites, tmp, dibujados=None):
+    dibujados = dibujados or {}
+    descargados, out, ultimo, saltar_hasta = {}, [], None, -1
     for i, (s, (ini, fin)) in enumerate(zip(b["escenas"], limites)):
+        if i <= saltar_hasta:
+            continue  # escena cubierta por un esquema animado
+        if i in dibujados:
+            mp4, saltar_hasta, dur = dibujados[i]
+            out.append({"src": f"render/{mp4.name}", "duracion": round(dur, 3)})
+            continue
         dur = max(0.5, fin - ini)
         p = (s.get("planos") or [None])[0] or ultimo
         if not p:  # primera escena sin material: busca el primer plano disponible
@@ -164,13 +172,17 @@ def montar(brief_path):
     voz_mp3, limites, palabras = locucion(b, tmp)
     duracion = round(limites[-1][1], 2)
     log(f"  duración: {duracion / 60:.1f} min")
-    lista_planos = planos(b, limites, tmp)
+    dibujados = esquemas.renderizar(b, voz_mp3, limites, PUBLICO, tmp)
+    lista_planos = planos(b, limites, tmp, dibujados)
+    cubiertas = {j for a, (_, z, _) in dibujados.items() for j in range(a, z + 1)}
 
     capitulos = [{"titulo": c["titulo"], "ini": round(limites[c["escena"]][0] + (0.3 if k else 0), 2), "numero": k}
                  for k, c in enumerate(sorted(b["capitulos"], key=lambda c: c["escena"]))]
     rotulos, cartelas = [], []
-    for s, (ini, fin) in zip(b["escenas"], limites):
+    for j, (s, (ini, fin)) in enumerate(zip(b["escenas"], limites)):
         tipo = (s.get("visual") or {}).get("tipo", "video")
+        if j in cubiertas:
+            continue  # el esquema ya lleva sus propios rótulos arriba
         if tipo in ("mapa", "texto"):
             cartelas.append({"texto": s.get("rotulo") or (s.get("visual") or {}).get("describe", ""),
                              "ini": ini, "fin": fin})

@@ -1,0 +1,221 @@
+{
+  "id": "20261121-elefantes-guerra",
+  "fecha_publicacion": "2026-11-21",
+  "tema": "Elefantes de guerra en la Antigüedad: Hidaspes, Pirro, Aníbal y Zama",
+  "titulo": "Elefantes de guerra: ¿tanque o apuesta arriesgada?",
+  "descripcion": "Seguimos a los elefantes de guerra en cuatro episodios reales de la Antigüedad: el río Hidaspes, la victoria pírrica de Pirro, el cruce de los Alpes de Aníbal y la batalla de Zama. Descubre por qué un arma tan impresionante podía volverse contra quien la usaba, y qué truco sencillo la anuló.",
+  "etiquetas": [
+    "elefantes de guerra",
+    "Aníbal",
+    "Alejandro Magno",
+    "Pirro",
+    "batalla de Zama",
+    "Escipión",
+    "historia antigua",
+    "elefantes",
+    "animales e historia",
+    "Cartago"
+  ],
+  "miniatura": {
+    "texto": "EL PUNTO DÉBIL",
+    "busqueda": "elephant portrait close up",
+    "animal": "elefante"
+  },
+  "capitulos": [
+    {
+      "titulo": "Prueba de esquema",
+      "escena": 0
+    }
+  ],
+  "escenas": [
+    {
+      "narracion": "Los elefantes habían ayudado a ganar, pero no salvaron a Pirro de su propia ruina. Eran poderosos, sí. Pero ¿invencibles?",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant portrait tusks",
+        "describe": "retrato de elefante con colmillos",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "wikimedia:201254509",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f1/A_herd_of_elephant_of_Hoollongapar_Gibbon_Sanctuary%2C_Jorhat_-_Assam.webm/A_herd_of_elephant_of_Hoollongapar_Gibbon_Sanctuary%2C_Jorhat_-_Assam.webm.1080p.vp9.webm",
+          "tipo": "video",
+          "atribucion": "«A herd of elephant of Hoollongapar Gibbon Sanctuary, Jorhat - Assam.webm» de কুমুদ ঘোষ, CC BY 4.0, vía Wikimedia Commons (https://commons.wikimedia.org/wiki/File:A_herd_of_elephant_of_Hoollongapar_Gibbon_Sanctuary,_Jorhat_-_Assam.webm)",
+          "desde": 0.0,
+          "hasta": 31.68,
+          "duracion_clip": 46.008,
+          "posicion_x": 0.5,
+          "descripcion": "Una manada de elefantes asiáticos con crías cruza una carretera asfaltada rodeada de vegetación y personas observando a lo lejos."
+        }
+      ]
+    },
+    {
+      "narracion": "Para comprobarlo, hay que viajar unos sesenta años más tarde, a los Alpes, con el general más famoso de Cartago.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "snowy alps peaks",
+        "describe": "picos nevados de los Alpes"
+      },
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:40895498",
+          "url": "https://videos.pexels.com/video-files/40895498/17482825_1920_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Francesco Sommacal en Pexels (https://www.pexels.com/video/aerial-view-of-snowy-italian-alps-peaks-40895498/)",
+          "desde": 0.0,
+          "hasta": 13.43,
+          "duracion_clip": 13.0,
+          "posicion_x": 0.5,
+          "descripcion": "Vista aérea de picos nevados en una zona montañosa bajo un cielo parcialmente nublado."
+        }
+      ]
+    },
+    {
+      "narracion": "En vez de colocar las unidades en tablero de ajedrez, las puso en fila, una justo detrás de otra, dejando pasillos abiertos entre ellas.",
+      "visual": {
+        "tipo": "esquema",
+        "busqueda": "soldiers marching formation",
+        "describe": "soldados en formación ordenada",
+        "esquema": "pasillos"
+      }
+    },
+    {
+      "narracion": "Si un elefante cargaba, no chocaría contra un muro: podía seguir de largo por esos pasillos, sin llevarse a nadie por delante.",
+      "visual": {
+        "tipo": "esquema",
+        "busqueda": "empty corridor lane",
+        "describe": "pasillo largo y vacío",
+        "esquema": "pasillos"
+      }
+    },
+    {
+      "narracion": "Delante, y dentro de esos huecos, puso a la infantería ligera, los vélites, armados con jabalinas.",
+      "visual": {
+        "tipo": "esquema",
+        "busqueda": "javelin throwing",
+        "describe": "persona lanzando una jabalina",
+        "esquema": "pasillos"
+      }
+    },
+    {
+      "narracion": "Según Livio, su misión era molestar a los elefantes y, cuando cargaran, replegarse detrás de las líneas o apartarse a los lados.",
+      "visual": {
+        "tipo": "esquema",
+        "busqueda": "athlete running field",
+        "describe": "persona corriendo por un campo",
+        "esquema": "pasillos"
+      }
+    },
+    {
+      "narracion": "Así los elefantes quedarían expuestos a los proyectiles desde ambos lados mientras avanzaban por el pasillo.",
+      "visual": {
+        "tipo": "esquema",
+        "busqueda": "elephant running field",
+        "describe": "elefante corriendo por un campo abierto",
+        "animal": "elefante",
+        "cientifico": "Elephantidae",
+        "esquema": "pasillos"
+      }
+    },
+    {
+      "narracion": "Año 218 antes de Cristo. Aníbal, general de Cartago, decide atacar a Roma por donde nadie lo espera: cruzando los Alpes.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "alpine mountain trail",
+        "describe": "sendero de montaña alpino con nieve"
+      },
+      "rotulo": "218 a. C.",
+      "planos": [
+        {
+          "clave": "pixabay:222084",
+          "url": "https://cdn.pixabay.com/video/2024/07/20/222084_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de adege en Pixabay (https://pixabay.com/videos/id-222084/)",
+          "desde": 0.0,
+          "hasta": 32.44,
+          "duracion_clip": 32.0,
+          "posicion_x": 0.5,
+          "descripcion": "Paisaje alpino con vistas a un valle y un lago azul, con flores rojas en primer plano en una ladera."
+        }
+      ]
+    }
+  ],
+  "datos": [
+    {
+      "afirmacion": "Batalla del Hidaspes en 326 a. C.: Alejandro Magno venció al rey Poros, que contaba con elefantes de guerra, y Poros terminó herido y prisionero.",
+      "fuentes": [
+        "https://www.livius.org/articles/battle/hydaspes/",
+        "https://brewminate.com/the-battle-of-hydaspes-alexander-the-great-meets-indian-king-porus/"
+      ],
+      "verificado": true,
+      "nota": "Las fuentes discrepan sobre el número de elefantes de Poros, por eso el guion no da cifra."
+    },
+    {
+      "afirmacion": "En 280 a. C. Pirro desembarcó en Italia con unos veinte elefantes de guerra; en Heraclea, los elefantes y la caballería ayudaron a romper la línea romana y los romanos nunca se habían enfrentado a elefantes.",
+      "fuentes": [
+        "https://warhistory.org/2018/03/19/heraclea-280-bc/",
+        "https://www.thecollector.com/what-is-a-pyrrhic-victory/",
+        "https://www.worldatlas.com/ancient-world/who-was-pyrrhus-and-what-is-a-pyrrhic-victory.html"
+      ],
+      "verificado": true,
+      "nota": "Pérdidas exactas inciertas (las cifras varían), no se citan."
+    },
+    {
+      "afirmacion": "Pirro venció de nuevo en Asculum (279 a. C.) con grandes pérdidas entre sus veteranos; según Plutarco dijo que otra victoria así lo arruinaría; de ahí «victoria pírrica».",
+      "fuentes": [
+        "https://www.thecollector.com/what-is-a-pyrrhic-victory/",
+        "https://www.worldatlas.com/ancient-world/who-was-pyrrhus-and-what-is-a-pyrrhic-victory.html"
+      ],
+      "verificado": true,
+      "nota": "La frase es tradición atribuida por Plutarco; se presenta como «según cuenta Plutarco». No se afirma que los elefantes fueran decisivos en Asculum (las fuentes no coinciden)."
+    },
+    {
+      "afirmacion": "Aníbal cruzó los Alpes en 218 a. C. con 37 elefantes de guerra.",
+      "fuentes": [
+        "https://www.sciencefocus.com/science/hannibal-elephant-alp-crossing",
+        "https://www.popsci.com/science/hannibal-cross-alps-elephants-energy/",
+        "https://www.bio.uni-jena.de/en/29040/how-did-hannibal-get-his-elephants-across-the-alps"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Un estudio en PNAS (Berti y Vollrath) estima que la ruta por el Col de la Traversette fue la más eficiente; el modelo indica que los elefantes perderían ~4 % de sus reservas de grasa y que muchos, quizá la mayoría, sobrevivieron al cruce.",
+      "fuentes": [
+        "https://www.popsci.com/science/hannibal-cross-alps-elephants-energy/",
+        "https://www.bio.uni-jena.de/en/29040/how-did-hannibal-get-his-elephants-across-the-alps",
+        "https://www.sciencefocus.com/science/hannibal-elephant-alp-crossing"
+      ],
+      "verificado": true,
+      "nota": "Es una estimación modelada con datos de elefantes africanos actuales; el guion lo dice. No se afirma cuántos murieron después porque no hay doble fuente leída."
+    },
+    {
+      "afirmacion": "En Zama (202 a. C.) Aníbal alineó 80 elefantes (Livio; Polibio dice más de 80).",
+      "fuentes": [
+        "https://johndclare.net/AncientHistory/Hannibal_Sources8.html",
+        "https://historynet.com/conquer-die-hannibal-vs-scipio/"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Escipión dejó pasillos abiertos entre sus unidades y colocó vélites (infantería ligera) delante y en los huecos para que los elefantes siguieran de largo expuestos a proyectiles.",
+      "fuentes": [
+        "https://johndclare.net/AncientHistory/Hannibal_Sources8.html",
+        "https://historynet.com/conquer-die-hannibal-vs-scipio/"
+      ],
+      "verificado": true,
+      "nota": "Detalle de que los vélites se replegaban o apartaban a los lados: Livio (johndclare); el guion lo atribuye a Livio."
+    },
+    {
+      "afirmacion": "Los cuernos y trompetas romanos asustaron a muchos elefantes, que se volvieron contra sus propias tropas (caballería númida de la izquierda); otros pasaron por los pasillos y el resto huyó por el ala derecha; Masinisa y Lelio aprovecharon el caos; Roma ganó.",
+      "fuentes": [
+        "https://johndclare.net/AncientHistory/Hannibal_Sources8.html",
+        "https://historynet.com/conquer-die-hannibal-vs-scipio/"
+      ],
+      "verificado": true
+    }
+  ]
+}

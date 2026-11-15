@@ -36,6 +36,19 @@ cuéntalas con la voz y pide un plano que acompañe («elephant walking dust slo
 - `rotulo` (opcional): texto corto en pantalla (máx. 6 palabras) para cifras o nombres.
 - Varía los planos: general, medio, detalle. No pidas el mismo plano dos escenas seguidas.
 
+## Esquemas animados (solo donde hagan falta)
+Algunas ideas no se entienden con material de archivo: una táctica, una ruta, un proceso
+(cómo funciona la ecolocalización, cómo se forma una perla…), una comparación de tamaños.
+Para eso hay **esquemas animados** que se dibujan con Explainroo sobre nuestra misma locución.
+- Úsalos **solo** cuando un esquema explique mejor que cualquier vídeo real. Lo normal es
+  0–2 por vídeo (máximo 4). Nunca para decorar, ni en el gancho, ni para animales "en acción".
+- Marca las escenas con `"visual": {"tipo": "esquema", "esquema": "nombre", "busqueda": "...",
+  "describe": "..."}`. Escenas **seguidas** con el mismo `esquema` forman un solo esquema
+  (1–8 escenas, unos 10–45 s). `busqueda`/`describe` son el material de respaldo si el
+  esquema fallara: escríbelos como en cualquier escena de vídeo.
+- Crea `datos/largos/esquemas/<id del brief>/<nombre>/script.md` y `scenes.js` siguiendo
+  [esquemas.md](esquemas.md) y el ejemplo `datos/largos/esquemas/20261121-elefantes-guerra/pasillos/`.
+
 ## Estilo
 Español de España, tono de documental cercano (tuteo), frases cortas y concretas.
 Prohibido: relleno («increíble», «asombroso» sin dato), sufrimiento animal gratuito,
@@ -72,3 +85,4 @@ El sistema añade después `planos` a cada escena, los créditos y la locución:
 - [ ] Cada afirmación verificable está en `datos` con 2 fuentes independientes.
 - [ ] Cada `busqueda` es realista para un banco de vídeo gratuito.
 - [ ] El gancho funciona sin contexto y el cierre responde a su pregunta.
+- [ ] Cada esquema tiene su script.md (mismo texto que la narración de sus escenas) y scenes.js.

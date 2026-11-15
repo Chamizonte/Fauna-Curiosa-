@@ -735,49 +735,49 @@
     {
       "narracion": "En vez de colocar las unidades en tablero de ajedrez, las puso en fila, una justo detrás de otra, dejando pasillos abiertos entre ellas.",
       "visual": {
-        "tipo": "video",
+        "tipo": "esquema",
         "busqueda": "soldiers marching formation",
-        "describe": "soldados en formación ordenada"
-      },
-      "rotulo": "PASILLOS"
+        "describe": "soldados en formación ordenada",
+        "esquema": "pasillos"
+      }
     },
     {
       "narracion": "Si un elefante cargaba, no chocaría contra un muro: podía seguir de largo por esos pasillos, sin llevarse a nadie por delante.",
       "visual": {
-        "tipo": "video",
+        "tipo": "esquema",
         "busqueda": "empty corridor lane",
-        "describe": "pasillo largo y vacío"
-      },
-      "rotulo": ""
+        "describe": "pasillo largo y vacío",
+        "esquema": "pasillos"
+      }
     },
     {
       "narracion": "Delante, y dentro de esos huecos, puso a la infantería ligera, los vélites, armados con jabalinas.",
       "visual": {
-        "tipo": "video",
+        "tipo": "esquema",
         "busqueda": "javelin throwing",
-        "describe": "persona lanzando una jabalina"
-      },
-      "rotulo": ""
+        "describe": "persona lanzando una jabalina",
+        "esquema": "pasillos"
+      }
     },
     {
       "narracion": "Según Livio, su misión era molestar a los elefantes y, cuando cargaran, replegarse detrás de las líneas o apartarse a los lados.",
       "visual": {
-        "tipo": "video",
+        "tipo": "esquema",
         "busqueda": "athlete running field",
-        "describe": "persona corriendo por un campo"
-      },
-      "rotulo": ""
+        "describe": "persona corriendo por un campo",
+        "esquema": "pasillos"
+      }
     },
     {
       "narracion": "Así los elefantes quedarían expuestos a los proyectiles desde ambos lados mientras avanzaban por el pasillo.",
       "visual": {
-        "tipo": "video",
+        "tipo": "esquema",
         "busqueda": "elephant running field",
         "describe": "elefante corriendo por un campo abierto",
         "animal": "elefante",
-        "cientifico": "Elephantidae"
-      },
-      "rotulo": ""
+        "cientifico": "Elephantidae",
+        "esquema": "pasillos"
+      }
     },
     {
       "narracion": "Empezó la batalla. Y antes de que los elefantes llegaran, los romanos hicieron algo muy sencillo: hacer sonar sus cuernos y trompetas.",
