@@ -81,6 +81,10 @@ jobs:
                dicen lo que afirmas. Si no consigues 2 fuentes independientes, cambia de dato.
             6. Nombra cada archivo AAAAMMDD-N-animal.json con la fecha de hoy y N correlativo.
 
+            IMPORTANTE: no tienes Bash ni puedes ejecutar scripts o comandos (se bloquean).
+            Guarda cada guion con la herramienta Write, un archivo JSON por guion, en cuanto lo tengas
+            verificado; no esperes a tenerlos todos.
+
             No modifiques ningún archivo fuera de datos/shorts/pendientes/. No hagas commits: el
             workflow valida y guarda los guiones después. Sé eficiente: no leas archivos que no necesites.
           claude_args: |
@@ -90,6 +94,15 @@ jobs:
             --permission-mode default
       - name: Control de calidad de los guiones
         run: python -m cf.validar_briefs
+      - name: ¿Ha escrito guiones?
+        if: steps.cuantos.outputs.n != '0'
+        run: |
+          nuevos=$(git status --porcelain datos/shorts/pendientes | grep -c '^??' || true)
+          echo "Guiones nuevos: $nuevos"
+          if [ "$nuevos" -eq 0 ]; then
+            echo "::error::Claude no ha guardado ningún guion; revisa el registro de este paso"
+            exit 1
+          fi
       - name: Guardar los guiones en el repositorio
         run: |
           git config user.name "github-actions[bot]"

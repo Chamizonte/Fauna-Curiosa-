@@ -89,6 +89,7 @@ jobs:
             4. Escribe el brief en datos/largos/pendientes/AAAAMMDD-tema-corto.json (AAAAMMDD = la
                fecha de publicación del encargo) con el formato exacto de la skill.
 
+            No tienes Bash ni puedes ejecutar scripts: guarda el guion con la herramienta Write.
             No modifiques nada fuera de datos/largos/pendientes/. No hagas commits.
             Sé eficiente: no leas archivos que no necesites.
           claude_args: |

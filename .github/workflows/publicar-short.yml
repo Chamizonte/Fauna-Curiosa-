@@ -1,16 +1,20 @@
 name: Publicar short
-# 4 shorts al día: 08:00, 12:00, 16:00 y 20:00 UTC
+# 4 shorts al día, en los turnos de las 08, 12, 16 y 20 UTC
 # (09/13/17/21 h en España en invierno; 10/14/18/22 h en verano).
-# Monta el guion pendiente más antiguo de la v2 y lo sube en público.
-# Si no quedan guiones o el montaje falla, publica uno con el generador v1 para
-# no dejar hueco en el canal.
+# GitHub retrasa o se salta a veces los workflows programados, así que este se lanza
+# cada hora y cf.turno decide si toca: recupera un turno perdido en la siguiente
+# pasada, dejando al menos 2 h 30 min entre shorts.
+# Monta el guion pendiente más antiguo de la v2 y lo sube en público. Si no quedan
+# guiones o el montaje falla, publica uno con el generador v1 para no dejar hueco.
 on:
   schedule:
-    - cron: "0 8 * * *"
-    - cron: "0 12 * * *"
-    - cron: "0 16 * * *"
-    - cron: "0 20 * * *"
+    - cron: "17 8-23 * * *"
   workflow_dispatch:
+    inputs:
+      forzar:
+        description: "Publicar ahora aunque no toque turno"
+        type: boolean
+        default: true
 
 permissions:
   contents: write
@@ -30,15 +34,27 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: ¿Toca publicar?
+        id: turno
+        run: |
+          if [ "${{ github.event.inputs.forzar }}" = "true" ]; then
+            echo "toca=si" >> "$GITHUB_OUTPUT"; echo "Publicación manual"
+          else
+            python -m cf.turno
+          fi
       - uses: actions/setup-node@v4
+        if: steps.turno.outputs.toca == 'si'
         with:
           node-version: "22"
-      - run: sudo apt-get update -y && sudo apt-get install -y ffmpeg
-      - run: pip install -r requirements-v2.txt
-      - run: npm install
-        working-directory: remotion
+      - name: Instalar
+        if: steps.turno.outputs.toca == 'si'
+        run: |
+          sudo apt-get update -y && sudo apt-get install -y ffmpeg
+          pip install -r requirements-v2.txt
+          cd remotion && npm install
       - name: Montar y subir (v2)
         id: v2
+        if: steps.turno.outputs.toca == 'si'
         continue-on-error: true
         timeout-minutes: 25
         env:
@@ -50,6 +66,7 @@ jobs:
           PRIVACIDAD_YOUTUBE: public
         run: python -m cf.publicar_short
       - name: Respaldo con el generador v1
+        id: v1
         if: steps.v2.outcome == 'failure'
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
@@ -63,8 +80,9 @@ jobs:
           echo "::warning::La v2 no pudo publicar; se usa el generador v1"
           pip install -r requirements.txt
           python generador_shorts.py
+          python -m cf.turno --anotar
       - name: Guardar el registro de publicación
-        if: steps.v2.outcome == 'success'
+        if: steps.v2.outcome == 'success' || steps.v1.outcome == 'success'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
