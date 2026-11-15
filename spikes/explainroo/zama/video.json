@@ -1,0 +1,12 @@
+{
+  "title": "Zama: el truco de los pasillos",
+  "theme": "midnight",
+  "size": "youtube",
+  "language": "es",
+  "voice": { "provider": "recording", "src": "assets/narration/" },
+  "music": false,
+  "sfx": "minimal",
+  "captions": false,
+  "watermark": false,
+  "transition": "cut"
+}
