@@ -76,7 +76,7 @@ function elefanteEn(s, x, y, at, o = {}) {
 
 export default {
   tablero(s) {
-    s.camera([{ at: 0, x: 990, y: 600, zoom: 1.08 }, { at: '#pasillos', x: 990, y: 640, zoom: 1.18, dur: 2.5 }]);
+    s.camera([]);
     marco(s);
     // Lo habitual: la fila central tapa los huecos de la primera.
     legiones(s, 190 * (1 - s.p('#fila', 1.6, 'inOut')));
@@ -87,7 +87,7 @@ export default {
   },
 
   carga(s) {
-    s.camera([{ at: 0, x: 990, y: 600, zoom: 1.0 }]);
+    s.camera([]);
     marco(s);
     legiones(s);
     bandasPasillo(s, -1);
@@ -102,8 +102,8 @@ export default {
   },
 
   velites(s) {
-    s.camera([{ at: 0, x: 990, y: 600, zoom: 1.0 },
-              { at: '#expuestos', x: 990, y: 600, zoom: 1.35, dur: 2.2 }]);
+    s.camera([{ at: 0, x: 960, y: 540, zoom: 1.0 },
+              { at: '#expuestos', x: 990, y: 640, zoom: 1.4, dur: 2.2 }]);
     marco(s);
     legiones(s);
     bandasPasillo(s, -1, 0.1);
@@ -141,6 +141,6 @@ export default {
         ctx.beginPath(); ctx.moveTo(x - lado * 14, y - 2); ctx.lineTo(x + lado * 4, y - 7); ctx.lineTo(x + lado * 4, y + 5); ctx.fill();
       });
     }
-    rotulo(s, 'Atacado desde *ambos lados*', '#expuestos');
+    // Sin rótulo aquí: la cámara se acerca al elefante y lo dejaría cortado.
   },
 };
