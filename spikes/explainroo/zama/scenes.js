@@ -1,24 +1,27 @@
 // Zama, 202 a. C., visto desde arriba: Cartago arriba, Roma abajo.
-// Las unidades y los elefantes se dibujan a mano en el canvas (sin el trazo
-// tembloroso de los looks dibujados) y se mueven con s.p(), fotograma a fotograma.
-const C = { roma: '#c8463a', romaBorde: '#7e221a', elef: '#9b968c', elefBorde: '#4b4740',
-            velite: '#5b9bd5', pasillo: '#f4c430', texto: '#f1ece2', suave: '#a9a397' };
+// Las unidades y los elefantes se dibujan a mano en el canvas y se mueven con
+// s.p(), fotograma a fotograma. Los rótulos van ARRIBA porque en el vídeo largo
+// nuestros subtítulos ocupan la parte de abajo.
+const C = { roma: '#c8463a', romaBorde: '#7e221a', elef: '#a8a399', elefBorde: '#4b4740',
+            velite: '#5b9bd5', pasillo: '#f4c430', texto: '#f1ece2', suave: '#b4aea2' };
 const quiet = { sfx: false };
 
-const COLS = [480, 780, 1080, 1380];        // centro de cada columna de manípulos
-const FILAS = [560, 700, 840];              // hastati, príncipes, triarios
-const PASILLOS = [630, 930, 1230];          // centro de cada pasillo
-const MW = 170, MH = 60;
+const COLS = [420, 800, 1180, 1560];        // centro de cada columna de manípulos
+const FILAS = [480, 640, 800];              // hastati, príncipes, triarios
+const PASILLOS = [610, 990, 1370];          // centro de cada pasillo
+const MW = 220, MH = 80, ESC = 1.3;         // tamaño del manípulo y escala del elefante
+const Y_TITULO = 112, Y_ELEF = 270, Y_DETRAS = 905;
 
 function manipulo(ctx) {
-  ctx.fillStyle = C.roma; ctx.strokeStyle = C.romaBorde; ctx.lineWidth = 4;
-  ctx.beginPath(); ctx.roundRect(-MW / 2, -MH / 2, MW, MH, 8); ctx.fill(); ctx.stroke();
+  ctx.fillStyle = C.roma; ctx.strokeStyle = C.romaBorde; ctx.lineWidth = 5;
+  ctx.beginPath(); ctx.roundRect(-MW / 2, -MH / 2, MW, MH, 10); ctx.fill(); ctx.stroke();
   ctx.fillStyle = 'rgba(255,255,255,0.28)';           // escudos en fila
-  for (let i = 0; i < 6; i++) { ctx.beginPath(); ctx.ellipse(-62 + i * 25, 0, 8, 18, 0, 0, Math.PI * 2); ctx.fill(); }
+  for (let i = 0; i < 7; i++) { ctx.beginPath(); ctx.ellipse(-84 + i * 28, 0, 9, 24, 0, 0, Math.PI * 2); ctx.fill(); }
 }
 
 // Elefante visto desde arriba, mirando hacia abajo (hacia Roma).
 function elefante(ctx) {
+  ctx.scale(ESC, ESC);
   ctx.fillStyle = C.elef; ctx.strokeStyle = C.elefBorde; ctx.lineWidth = 3;
   ctx.beginPath(); ctx.ellipse(0, -30, 38, 55, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
   ctx.beginPath(); ctx.ellipse(-34, 20, 26, 20, -0.5, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
@@ -34,108 +37,110 @@ function elefante(ctx) {
 
 function velite(ctx) {
   ctx.fillStyle = C.velite; ctx.strokeStyle = '#1f4e7a'; ctx.lineWidth = 3;
-  ctx.beginPath(); ctx.arc(0, 0, 13, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.arc(0, 0, 16, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
 }
 
-// Cabecera y bandos, iguales en las tres escenas.
-function marco(s, first) {
-  const at = first ? 0 : -1, enter = first ? 'fade' : 'none';
-  s.text('ZAMA · 202 a. C.', { x: 140, y: 90, align: 'left', size: 40, color: C.suave, at, enter, ...quiet });
-  s.text('Elefantes de Aníbal', { x: 1780, y: 90, align: 'right', size: 40, color: C.elef, at, enter, ...quiet });
-  s.text('Hastati', { x: 140, y: FILAS[0], align: 'left', size: 38, color: C.suave, at, enter, ...quiet });
-  s.text('Príncipes', { x: 140, y: FILAS[1], align: 'left', size: 38, color: C.suave, at, enter, ...quiet });
-  s.text('Triarios', { x: 140, y: FILAS[2], align: 'left', size: 38, color: C.suave, at, enter, ...quiet });
-  s.text('Legiones de Escipión', { x: 1780, y: 990, align: 'right', size: 40, color: C.roma, at, enter, ...quiet });
+// Cabecera y nombres de las filas, iguales en las tres escenas.
+function marco(s) {
+  const o = { at: -1, ...quiet };
+  s.text('ZAMA · 202 a. C.', { x: 110, y: Y_TITULO, align: 'left', size: 38, color: C.suave, ...o });
+  s.text('Hastati', { x: 110, y: FILAS[0], align: 'left', size: 34, color: C.suave, ...o });
+  s.text('Príncipes', { x: 110, y: FILAS[1], align: 'left', size: 34, color: C.suave, ...o });
+  s.text('Triarios', { x: 110, y: FILAS[2], align: 'left', size: 34, color: C.suave, ...o });
 }
 
-// offset: cuánto se desplaza la fila central (150 = tablero de ajedrez, 0 = en fila).
-function legiones(s, offset, at, enter = 'none') {
-  FILAS.forEach((y, f) => COLS.forEach((x, c) => {
+// Rótulo central de arriba. `hasta` hace que se vaya sin fundido cuando entra el siguiente.
+function rotulo(s, texto, at, hasta, o = {}) {
+  s.text(texto, { x: 960, y: Y_TITULO, size: 56, font: 'display', mark: C.pasillo, color: C.texto,
+                  at, out: hasta, exit: hasta ? 'none' : 'fade', ...quiet, ...o });
+}
+
+// offset: cuánto se desplaza la fila central (190 = tablero de ajedrez, 0 = en fila).
+function legiones(s, offset = 0) {
+  FILAS.forEach((y, f) => COLS.forEach((x) => {
     const dx = f === 1 ? offset : 0;
-    s.draw({ x: x + dx, y, at, enter, box: { x: 0, y: 0, w: MW, h: MH }, ...quiet }, manipulo);
+    s.draw({ x: x + dx, y, at: -1, box: { x: 0, y: 0, w: MW, h: MH }, ...quiet }, manipulo);
   }));
 }
 
-function bandasPasillo(s, at, alpha = 0.18) {
-  s.draw({ at, enter: 'fade', dur: 0.8, ...quiet }, (ctx) => {
+function bandasPasillo(s, at, alpha = 0.16) {
+  s.draw({ at, enter: at === -1 ? 'none' : 'fade', dur: 0.8, ...quiet }, (ctx) => {
     ctx.fillStyle = C.pasillo; ctx.globalAlpha *= alpha;
-    PASILLOS.forEach((x) => ctx.fillRect(x - 60, 500, 120, 400));
+    PASILLOS.forEach((x) => ctx.fillRect(x - 80, FILAS[0] - 70, 160, FILAS[2] - FILAS[0] + 140));
   });
 }
 
-function elefanteEn(s, x, y, at) {
-  s.draw({ x, y, at, enter: 'fade', box: { x: 0, y: 0, w: 120, h: 190 }, ...quiet }, elefante);
+function elefanteEn(s, x, y, at, o = {}) {
+  s.draw({ x, y, at, enter: 'fade', box: { x: 0, y: 0, w: 120 * ESC, h: 190 * ESC }, overlap: true, ...quiet, ...o }, elefante);
 }
 
 export default {
   tablero(s) {
-    s.camera([]);
-    marco(s, true);
+    s.camera([{ at: 0, x: 990, y: 600, zoom: 1.08 }, { at: '#pasillos', x: 990, y: 640, zoom: 1.18, dur: 2.5 }]);
+    marco(s);
     // Lo habitual: la fila central tapa los huecos de la primera.
-    const p = s.p('#fila', 1.6, 'inOut');
-    legiones(s, 150 * (1 - p), 0, 'fade');
-    s.text('Lo habitual: tablero de ajedrez', { x: 960, y: 330, size: 52, color: C.texto, at: '#habitual', out: '#fila', ...quiet });
-    s.text('Escipión: en fila', { x: 960, y: 330, size: 52, color: C.texto, at: '#fila', out: '#pasillos', ...quiet });
+    legiones(s, 190 * (1 - s.p('#fila', 1.6, 'inOut')));
+    rotulo(s, 'Lo habitual: en tablero de ajedrez', '#habitual', '#fila');
+    rotulo(s, 'Escipión: una detrás de otra', '#fila', '#pasillos');
     bandasPasillo(s, '#pasillos');
-    s.text('*Pasillos* abiertos', { x: 960, y: 330, size: 60, font: 'display', mark: C.pasillo, color: C.texto, at: '#pasillos', ...quiet });
-    PASILLOS.forEach((x) => s.arrow([x, 395], [x, 485], { at: '#pasillos', color: C.pasillo, width: 5, headSize: 18, ...quiet }));
+    rotulo(s, '*Pasillos* abiertos', '#pasillos');
   },
 
   carga(s) {
-    s.camera([]);
-    marco(s, false);
-    legiones(s, 0, -1);
+    s.camera([{ at: 0, x: 990, y: 600, zoom: 1.0 }]);
+    marco(s);
+    legiones(s);
     bandasPasillo(s, -1);
     // Tres elefantes bajan por los pasillos y salen por detrás sin tocar a nadie.
     const t0 = s.time('#carga');
     PASILLOS.forEach((x, i) => {
-      const q = s.clamp((s.t - t0 - i * 0.35) / 5.2, 0, 1);
-      elefanteEn(s, x, 210 + 980 * s.ease.inOut(q), '#carga');
+      const q = s.clamp((s.t - t0 - i * 0.4) / 5.5, 0, 1);
+      elefanteEn(s, x, Y_ELEF + 1000 * s.ease.inOut(q), '#carga');
     });
-    s.text('¿Un muro?', { x: 960, y: 330, size: 52, color: C.texto, at: 'muro', out: '#largo', ...quiet });
-    s.text('No: un *pasillo*', { x: 960, y: 330, size: 60, font: 'display', mark: C.pasillo, color: C.texto, at: '#largo', ...quiet });
+    rotulo(s, '¿Un muro?', 'muro', '#largo');
+    rotulo(s, 'No: un *pasillo*', '#largo');
   },
 
   velites(s) {
-    s.camera([]);
-    marco(s, false);
-    legiones(s, 0, -1);
-    bandasPasillo(s, -1, 0.12);
-    s.text('Vélites con jabalinas', { x: 960, y: 330, size: 52, color: C.velite, at: '#velites', out: '#expuestos', ...quiet });
+    s.camera([{ at: 0, x: 990, y: 600, zoom: 1.0 },
+              { at: '#expuestos', x: 990, y: 600, zoom: 1.35, dur: 2.2 }]);
+    marco(s);
+    legiones(s);
+    bandasPasillo(s, -1, 0.1);
+    rotulo(s, '*Vélites*: infantería ligera con jabalinas', '#velites', '#expuestos');
 
     // Vélites: una línea delante y dos en cada pasillo. Al cargar, se repliegan detrás.
-    const r = s.p('#repliegue', 1.8, 'inOut');
-    const delante = [330, 480, 630, 780, 930, 1080, 1230, 1380, 1530];
+    const r = s.p('#repliegue', 2.0, 'inOut');
+    const delante = [230, 420, 610, 800, 990, 1180, 1370, 1560, 1750];
     delante.forEach((x, i) => {
-      const y = s.lerp(460, 940, r);
-      s.draw({ x: x + (i % 2 ? 8 : -8) * r, y, at: '#velites', enter: 'pop', ...quiet }, velite);
+      s.draw({ x: x + (i % 2 ? 10 : -10) * r, y: s.lerp(385, Y_DETRAS, r), at: '#velites', enter: 'pop', ...quiet }, velite);
     });
-    PASILLOS.forEach((x) => [610, 770].forEach((y0, k) => {
+    PASILLOS.forEach((x) => [560, 720].forEach((y0, k) => {
       const lado = k ? 1 : -1;  // uno se aparta a cada lado del pasillo
-      const xa = s.lerp(x, x + lado * 44, s.p('#repliegue', 0.8));
-      s.draw({ x: xa, y: s.lerp(y0, 940, r), at: 'huecos', enter: 'pop', ...quiet }, velite);
+      const xa = s.lerp(x, x + lado * 58, s.p('#repliegue', 0.8));
+      s.draw({ x: xa, y: s.lerp(y0, Y_DETRAS + 30, r), at: 'huecos', enter: 'pop', ...quiet }, velite);
     }));
 
     // Un elefante carga por el pasillo central y queda entre dos fuegos.
     const tc = s.time('#cargan');
-    const q = s.clamp((s.t - tc) / 6, 0, 1);
-    elefanteEn(s, PASILLOS[1], 200 + 500 * s.ease.out(q), '#cargan');
+    const avance = (t) => Y_ELEF + 360 * s.ease.out(s.clamp((t - tc) / 6.5, 0, 1));
+    elefanteEn(s, PASILLOS[1], avance(s.t), '#cargan');
 
     // Jabalinas desde ambos lados mientras avanza.
     const te = s.time('#expuestos');
-    const ey = 200 + 500 * s.ease.out(s.clamp((te + 1 - tc) / 6, 0, 1));
-    for (let k = 0; k < 8; k++) {
+    for (let k = 0; k < 10; k++) {
       const lado = k % 2 ? 1 : -1;
-      const ts = te + 0.25 + k * 0.42;
-      s.draw({ at: ts, out: ts + 0.75, exit: 'fade', outDur: 0.2, ...quiet }, (ctx, life) => {
-        const u = s.clamp(life.local / 0.5, 0, 1);
-        const y = ey - 60 + (k % 4) * 40;
-        const x0 = PASILLOS[1] + lado * 260, x1 = PASILLOS[1] + lado * 40;
-        const x = s.lerp(x0, x1, u);
-        ctx.strokeStyle = '#e8dcc0'; ctx.lineWidth = 4; ctx.lineCap = 'round';
-        ctx.beginPath(); ctx.moveTo(x + lado * 46, y + 6); ctx.lineTo(x, y); ctx.stroke();
+      const ts = te + 0.3 + k * 0.38;
+      s.draw({ at: ts, out: ts + 0.7, exit: 'fade', outDur: 0.15, ...quiet }, (ctx, life) => {
+        const u = s.ease.out(s.clamp(life.local / 0.45, 0, 1));
+        const y = avance(ts) - 70 + (k % 5) * 38;
+        const x = s.lerp(PASILLOS[1] + lado * 330, PASILLOS[1] + lado * 62, u);
+        ctx.strokeStyle = '#efe4c8'; ctx.lineWidth = 6; ctx.lineCap = 'round';
+        ctx.beginPath(); ctx.moveTo(x + lado * 80, y + 10); ctx.lineTo(x, y); ctx.stroke();
+        ctx.fillStyle = '#cfd6dd';
+        ctx.beginPath(); ctx.moveTo(x - lado * 14, y - 2); ctx.lineTo(x + lado * 4, y - 7); ctx.lineTo(x + lado * 4, y + 5); ctx.fill();
       });
     }
-    s.text('Fuego desde *ambos lados*', { x: 960, y: 330, size: 60, font: 'display', mark: C.pasillo, color: C.texto, at: '#expuestos', ...quiet });
+    rotulo(s, 'Atacado desde *ambos lados*', '#expuestos');
   },
 };

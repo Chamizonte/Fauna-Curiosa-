@@ -29,7 +29,7 @@ jobs:
       - name: Renderizar en dos looks
         run: |
           mkdir -p salida
-          for look in midnight chalk; do
+          for look in midnight; do
             rm -rf "videos/zama-$look"; mkdir -p videos
             cp -r spikes/explainroo/zama "videos/zama-$look"
             npx --yes explainroo@0.6.0 set "videos/zama-$look" theme "$look"
