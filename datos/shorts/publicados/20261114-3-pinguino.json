@@ -1,0 +1,72 @@
+{
+  "id": "20261114-3-pinguino",
+  "formato": "mito",
+  "animal": "pingüino",
+  "gancho_pantalla": "¿Mito? Pingüinos solo en el hielo",
+  "guion": "¿Mito o realidad? Todos los pingüinos viven entre hielo y nieve. Falso. Mira a estos dos, caminando por una playa de arena al atardecer. Son pingüinos africanos, y viven en Namibia y Sudáfrica, en islas rocosas y costas del sur del continente. Es, de hecho, el único pingüino de África. Así que no: no todos los pingüinos viven en el hielo.",
+  "datos": [
+    {
+      "afirmacion": "El pingüino africano (Spheniscus demersus) vive en las costas e islas rocosas de Sudáfrica y Namibia.",
+      "fuentes": [
+        "https://animaldiversity.org/accounts/Spheniscus_demersus/",
+        "https://ielc.libguides.com/sdzg/factsheets/africanpenguin"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Es la única especie de pingüino del continente africano (endémica de África).",
+      "fuentes": [
+        "https://animaldiversity.org/accounts/Spheniscus_demersus/",
+        "https://ielc.libguides.com/sdzg/factsheets/africanpenguin"
+      ],
+      "verificado": true
+    }
+  ],
+  "planos": [
+    {
+      "clave": "pixabay:327101",
+      "desde": 0.0,
+      "hasta": 3.5,
+      "nota": "Pingüino papúa en paisaje nevado: la creencia popular"
+    },
+    {
+      "clave": "pexels:9116140",
+      "desde": 4.0,
+      "hasta": 8.0,
+      "nota": "Pingüinos africanos en la playa: la refutación"
+    },
+    {
+      "clave": "pexels:9116140",
+      "desde": 8.0,
+      "hasta": 11.5,
+      "nota": "Siguen caminando por la orilla"
+    },
+    {
+      "clave": "pexels:9116140",
+      "desde": 11.5,
+      "hasta": 15.0,
+      "nota": "Plano final de la playa al atardecer"
+    },
+    {
+      "clave": "pixabay:327101",
+      "desde": 7.0,
+      "hasta": 10.5,
+      "nota": "Cierre en bucle con el hielo"
+    }
+  ],
+  "titulo": "Pingüinos: no todos viven en el hielo (mito)",
+  "descripcion": "El pingüino africano vive en costas e islas de Sudáfrica y Namibia y es el único pingüino de África.",
+  "etiquetas": [
+    "pingüino",
+    "animales",
+    "mitos",
+    "curiosidades",
+    "aves"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=CZ9__7MFy-4",
+    "fecha": "2026-11-15T15:15Z",
+    "con_voz": true,
+    "privacidad": "public"
+  }
+}
