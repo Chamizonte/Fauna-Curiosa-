@@ -4,92 +4,1000 @@
   "tema": "Elefantes de guerra en la Antigüedad: Hidaspes, Pirro, Aníbal y Zama",
   "titulo": "Elefantes de guerra: ¿tanque o apuesta arriesgada?",
   "descripcion": "Seguimos a los elefantes de guerra en cuatro episodios reales de la Antigüedad: el río Hidaspes, la victoria pírrica de Pirro, el cruce de los Alpes de Aníbal y la batalla de Zama. Descubre por qué un arma tan impresionante podía volverse contra quien la usaba, y qué truco sencillo la anuló.",
-  "etiquetas": ["elefantes de guerra", "Aníbal", "Alejandro Magno", "Pirro", "batalla de Zama", "Escipión", "historia antigua", "elefantes", "animales e historia", "Cartago"],
-  "miniatura": {"texto": "EL PUNTO DÉBIL", "busqueda": "elephant portrait close up", "animal": "elefante"},
+  "etiquetas": [
+    "elefantes de guerra",
+    "Aníbal",
+    "Alejandro Magno",
+    "Pirro",
+    "batalla de Zama",
+    "Escipión",
+    "historia antigua",
+    "elefantes",
+    "animales e historia",
+    "Cartago"
+  ],
+  "miniatura": {
+    "texto": "EL PUNTO DÉBIL",
+    "busqueda": "elephant portrait close up",
+    "animal": "elefante"
+  },
   "capitulos": [
-    {"titulo": "Introducción", "escena": 0},
-    {"titulo": "El río Hidaspes", "escena": 6},
-    {"titulo": "Pirro y la victoria pírrica", "escena": 14},
-    {"titulo": "Aníbal y los Alpes", "escena": 24},
-    {"titulo": "Zama: el truco de los pasillos", "escena": 36},
-    {"titulo": "La lección del elefante", "escena": 52}
+    {
+      "titulo": "Introducción",
+      "escena": 0
+    },
+    {
+      "titulo": "El río Hidaspes",
+      "escena": 6
+    },
+    {
+      "titulo": "Pirro y la victoria pírrica",
+      "escena": 14
+    },
+    {
+      "titulo": "Aníbal y los Alpes",
+      "escena": 24
+    },
+    {
+      "titulo": "Zama: el truco de los pasillos",
+      "escena": 36
+    },
+    {
+      "titulo": "La lección del elefante",
+      "escena": 52
+    }
   ],
   "escenas": [
-    {"narracion": "Año 326 antes de Cristo. El ejército de Alejandro Magno se detiene a orillas de un río de la India, el Hidaspes. Al otro lado, alguien lo está esperando.", "visual": {"tipo": "video", "busqueda": "river india landscape", "describe": "río ancho en un paisaje de la India"}, "rotulo": "326 a. C."},
-    {"narracion": "Es el rey Poros, y no viene solo. En su ejército hay elefantes de guerra: animales enormes convertidos en arma.", "visual": {"tipo": "video", "busqueda": "elephant walking savanna", "describe": "elefante adulto caminando despacio", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Varios ejércitos de la Antigüedad los llevaron al combate, y algunos generales famosos se jugaron batallas enteras con ellos.", "visual": {"tipo": "video", "busqueda": "elephant herd walking", "describe": "manada de elefantes caminando", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "¿Eran de verdad un tanque viviente o una apuesta que podía salir muy mal? Para responder, vamos a seguirlos en cuatro episodios reales.", "visual": {"tipo": "video", "busqueda": "elephant portrait close up", "describe": "primer plano de un elefante mirando a cámara", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Un río en la India, una victoria que arruinó a un rey, unos Alpes helados y un campo de batalla donde un truco sencillo cambió el resultado.", "visual": {"tipo": "video", "busqueda": "alps snow mountains", "describe": "cordillera nevada"}, "rotulo": "4 episodios"},
-    {"narracion": "Y te adelanto algo: el arma más temida tenía un punto débil. Quien lo aprovechó no usó un invento, sino unos simples pasillos.", "visual": {"tipo": "video", "busqueda": "elephant eye close up", "describe": "ojo de elefante en primer plano", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-
-    {"narracion": "Empecemos por el Hidaspes, en el año 326 antes de Cristo. Alejandro Magno había llegado hasta el noroeste de la India con su ejército macedonio.", "visual": {"tipo": "foto", "busqueda": "alexander the great bust", "describe": "busto o estatua antigua de Alejandro Magno"}, "rotulo": "Hidaspes"},
-    {"narracion": "Frente a él estaba Poros, un rey local, con su ejército y sus elefantes de guerra.", "visual": {"tipo": "video", "busqueda": "asian elephant standing", "describe": "elefante asiático de pie", "animal": "elefante asiático", "cientifico": "Elephas maximus"}, "rotulo": ""},
-    {"narracion": "Un elefante asiático adulto es un animal enorme. Imagina a un soldado que nunca ha visto uno de cerca, viendo a varios avanzar hacia él.", "visual": {"tipo": "video", "busqueda": "asian elephant close up", "describe": "elefante asiático de cerca", "animal": "elefante asiático", "cientifico": "Elephas maximus"}, "rotulo": ""},
-    {"narracion": "Aun así, la batalla no la ganó el rey con elefantes. La ganó Alejandro, y Poros terminó herido y prisionero.", "visual": {"tipo": "video", "busqueda": "open plain landscape dawn", "describe": "llanura abierta al amanecer"}, "rotulo": ""},
-    {"narracion": "Las fuentes antiguas discrepan sobre cuántos elefantes tenía Poros, así que no te daré una cifra. Lo que sí sabemos es que no bastaron.", "visual": {"tipo": "video", "busqueda": "elephant trunk detail", "describe": "trompa de elefante en detalle", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Fíjate en el detalle: un arma enorme no garantiza la victoria si el enemigo sabe cómo enfrentarse a ella.", "visual": {"tipo": "video", "busqueda": "elephants savanna wide", "describe": "elefantes en la sabana, plano general", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Pero otros ejércitos tardarían todavía en aprender esa lección, y lo harían por las malas.", "visual": {"tipo": "video", "busqueda": "elephant silhouette sunset", "describe": "elefante a contraluz al atardecer", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Casi medio siglo después, un rey griego cruzó el mar para atacar a Roma. Y llevaba elefantes. ¿Cómo reaccionaría el ejército romano?", "visual": {"tipo": "video", "busqueda": "mediterranean sea ship", "describe": "mar Mediterráneo con un barco"}, "rotulo": ""},
-
-    {"narracion": "Se llamaba Pirro y gobernaba el Épiro, en Grecia. En el año 280 antes de Cristo desembarcó en Italia con un ejército y unos veinte elefantes de guerra.", "visual": {"tipo": "video", "busqueda": "greek coast landscape", "describe": "costa mediterránea con colinas"}, "rotulo": "280 a. C."},
-    {"narracion": "Los romanos nunca se habían enfrentado a elefantes en una batalla. Verlos avanzar hacia sus filas fue un golpe para su ejército.", "visual": {"tipo": "video", "busqueda": "elephant walking dust", "describe": "elefante avanzando entre polvo", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "La batalla de Heraclea fue larga y muy igualada. Al final, los elefantes y la caballería de Pirro ayudaron a romper la línea romana.", "visual": {"tipo": "video", "busqueda": "ancient ruins greece", "describe": "ruinas antiguas griegas"}, "rotulo": "Heraclea"},
-    {"narracion": "Pirro ganó. Pero había perdido a muchos de sus mejores soldados, y esos no se reponían de un día para otro lejos de casa.", "visual": {"tipo": "foto", "busqueda": "ancient soldier statue", "describe": "estatua de un soldado antiguo"}, "rotulo": ""},
-    {"narracion": "Al año siguiente, en Asculum, volvió a vencer a los romanos.", "visual": {"tipo": "video", "busqueda": "ancient ruins sunset", "describe": "ruinas antiguas al atardecer"}, "rotulo": "Asculum"},
-    {"narracion": "Pero otra vez el precio fue altísimo. Según cuenta Plutarco, alguien lo felicitó, y Pirro respondió con una frase que ha llegado hasta nosotros.", "visual": {"tipo": "video", "busqueda": "ancient manuscript pages", "describe": "páginas de un manuscrito antiguo"}, "rotulo": ""},
-    {"narracion": "Dijo que otra victoria como aquella lo destruiría por completo. Roma podía reponer soldados; él, no.", "visual": {"tipo": "video", "busqueda": "roman forum ruins", "describe": "ruinas del foro romano"}, "rotulo": ""},
-    {"narracion": "De ahí viene la expresión «victoria pírrica»: ganar una batalla, pero a un coste tan alto que casi equivale a perderla.", "visual": {"tipo": "texto", "busqueda": "old book open", "describe": "rótulo sobre fondo oscuro"}, "rotulo": "VICTORIA PÍRRICA"},
-    {"narracion": "Los elefantes habían ayudado a ganar, pero no salvaron a Pirro de su propia ruina. Eran poderosos, sí. Pero ¿invencibles?", "visual": {"tipo": "video", "busqueda": "elephant portrait tusks", "describe": "retrato de elefante con colmillos", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Para comprobarlo, hay que viajar unos sesenta años más tarde, a los Alpes, con el general más famoso de Cartago.", "visual": {"tipo": "video", "busqueda": "snowy alps peaks", "describe": "picos nevados de los Alpes"}, "rotulo": ""},
-
-    {"narracion": "Año 218 antes de Cristo. Aníbal, general de Cartago, decide atacar a Roma por donde nadie lo espera: cruzando los Alpes.", "visual": {"tipo": "video", "busqueda": "alpine mountain trail", "describe": "sendero de montaña alpino con nieve"}, "rotulo": "218 a. C."},
-    {"narracion": "Con su ejército lleva treinta y siete elefantes de guerra.", "visual": {"tipo": "video", "busqueda": "elephants walking line", "describe": "elefantes caminando en fila", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": "37 elefantes"},
-    {"narracion": "Piensa en lo que significa: animales que viven en la sabana y la selva, subiendo por pasos de montaña helados.", "visual": {"tipo": "video", "busqueda": "elephant snow", "describe": "elefante en un entorno frío o nevado", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Durante generaciones, los historiadores han discutido por qué paso exacto cruzó Aníbal. Todavía hoy no hay una respuesta cerrada.", "visual": {"tipo": "video", "busqueda": "mountain pass snow", "describe": "paso de montaña con nieve"}, "rotulo": ""},
-    {"narracion": "Un estudio publicado en la revista PNAS calculó el gasto de energía de varias rutas posibles para un ejército como aquel.", "visual": {"tipo": "video", "busqueda": "scientist laptop data", "describe": "persona analizando datos en un ordenador"}, "rotulo": "PNAS"},
-    {"narracion": "Su conclusión: el paso de la Traversette, en la frontera entre Francia e Italia, sería el más eficiente de los que compararon.", "visual": {"tipo": "video", "busqueda": "high mountain pass", "describe": "paso de alta montaña"}, "rotulo": "Col de la Traversette"},
-    {"narracion": "Y los elefantes salían bien parados en el modelo: perderían solo un cuatro por ciento de sus reservas de grasa.", "visual": {"tipo": "video", "busqueda": "elephant walking slow", "describe": "elefante caminando despacio", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": "4 % de grasa"},
-    {"narracion": "Por eso los autores creen que muchos de ellos, quizá la mayoría, sobrevivieron al cruce. Ojo: es una estimación de un modelo, no un recuento.", "visual": {"tipo": "video", "busqueda": "elephant herd savanna walking", "describe": "manada de elefantes caminando", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Y otro matiz: el estudio parte de datos de elefantes africanos actuales, y no elimina toda la duda sobre la ruta.", "visual": {"tipo": "video", "busqueda": "african elephant walking", "describe": "elefante africano caminando", "animal": "elefante africano", "cientifico": "Loxodonta africana"}, "rotulo": ""},
-    {"narracion": "Lo que no admite discusión es la audacia: un ejército cruzando los Alpes con elefantes era algo que Roma no esperaba.", "visual": {"tipo": "foto", "busqueda": "roman statue marble", "describe": "estatua romana de mármol"}, "rotulo": ""},
-    {"narracion": "Pero los elefantes impresionaban, y para servir de algo necesitaban un campo de batalla donde pudieran cargar.", "visual": {"tipo": "video", "busqueda": "elephant ears flapping", "describe": "elefante moviendo las orejas", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Ese campo de batalla llegaría años después, cuando Aníbal se enfrentó a un rival que lo conocía muy bien: Escipión.", "visual": {"tipo": "video", "busqueda": "dry plain landscape", "describe": "llanura seca al atardecer"}, "rotulo": ""},
-    {"narracion": "¿Qué tenía Escipión en la cabeza? Para entenderlo, vamos a Zama.", "visual": {"tipo": "video", "busqueda": "elephant dust walking", "describe": "elefante caminando entre polvo", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Y ojo con esa batalla, porque en ella el arma estrella de Cartago iba a jugar su última carta.", "visual": {"tipo": "video", "busqueda": "elephant close up tusks", "describe": "colmillos de elefante de cerca", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-
-    {"narracion": "Año 202 antes de Cristo. Aníbal y Escipión se encuentran en la batalla de Zama, la que decidiría la guerra entre Roma y Cartago.", "visual": {"tipo": "video", "busqueda": "dry plains landscape", "describe": "llanura seca del norte de África"}, "rotulo": "202 a. C."},
-    {"narracion": "Según Tito Livio, Aníbal alineó ochenta elefantes de guerra. Polibio habla de más de ochenta.", "visual": {"tipo": "video", "busqueda": "elephant herd line", "describe": "elefantes en fila", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": "80 elefantes"},
-    {"narracion": "Era su gran apuesta: lanzarlos contra las primeras filas romanas para romperlas antes del choque de la infantería.", "visual": {"tipo": "video", "busqueda": "elephant charging dust", "describe": "elefante corriendo levantando polvo", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Escipión sabía lo que le esperaba. Y preparó algo distinto a lo habitual en las legiones romanas.", "visual": {"tipo": "video", "busqueda": "roman soldiers reenactment", "describe": "recreación de soldados romanos"}, "rotulo": ""},
-    {"narracion": "En vez de colocar las unidades en tablero de ajedrez, las puso en fila, una justo detrás de otra, dejando pasillos abiertos entre ellas.", "visual": {"tipo": "video", "busqueda": "soldiers marching formation", "describe": "soldados en formación ordenada"}, "rotulo": "PASILLOS"},
-    {"narracion": "Si un elefante cargaba, no chocaría contra un muro: podía seguir de largo por esos pasillos, sin llevarse a nadie por delante.", "visual": {"tipo": "video", "busqueda": "empty corridor lane", "describe": "pasillo largo y vacío"}, "rotulo": ""},
-    {"narracion": "Delante, y dentro de esos huecos, puso a la infantería ligera, los vélites, armados con jabalinas.", "visual": {"tipo": "video", "busqueda": "javelin throwing", "describe": "persona lanzando una jabalina"}, "rotulo": ""},
-    {"narracion": "Según Livio, su misión era molestar a los elefantes y, cuando cargaran, replegarse detrás de las líneas o apartarse a los lados.", "visual": {"tipo": "video", "busqueda": "athlete running field", "describe": "persona corriendo por un campo"}, "rotulo": ""},
-    {"narracion": "Así los elefantes quedarían expuestos a los proyectiles desde ambos lados mientras avanzaban por el pasillo.", "visual": {"tipo": "video", "busqueda": "elephant running field", "describe": "elefante corriendo por un campo abierto", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Empezó la batalla. Y antes de que los elefantes llegaran, los romanos hicieron algo muy sencillo: hacer sonar sus cuernos y trompetas.", "visual": {"tipo": "video", "busqueda": "trumpet horn sound", "describe": "persona tocando un cuerno o una trompeta"}, "rotulo": ""},
-    {"narracion": "El estruendo asustó a muchos elefantes, que dieron media vuelta y se lanzaron contra sus propias tropas.", "visual": {"tipo": "video", "busqueda": "elephant frightened running", "describe": "elefante asustado corriendo", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Algunos se lanzaron contra la caballería númida de Aníbal, en su ala izquierda. El caos fue enorme.", "visual": {"tipo": "video", "busqueda": "horses galloping dust", "describe": "caballos galopando entre polvo"}, "rotulo": ""},
-    {"narracion": "Otros siguieron de largo por los pasillos romanos sin hacer daño, según cuentan los textos antiguos.", "visual": {"tipo": "video", "busqueda": "elephant tusks dust", "describe": "elefante con colmillos entre polvo", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Y los demás huyeron hacia el ala derecha cartaginesa, donde los proyectiles de la caballería los expulsaron del campo.", "visual": {"tipo": "video", "busqueda": "elephant leaving field", "describe": "elefante alejándose por un campo", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Con la caballería cartaginesa desorganizada por sus propios elefantes, Masinisa y Lelio aprovecharon para atacar.", "visual": {"tipo": "video", "busqueda": "horse rider galloping", "describe": "jinete a caballo galopando"}, "rotulo": ""},
-    {"narracion": "Al final, Escipión ganó la batalla. Aníbal, el hombre que había cruzado los Alpes con elefantes, salía derrotado.", "visual": {"tipo": "video", "busqueda": "sunset battlefield silhouette", "describe": "atardecer sobre una llanura"}, "rotulo": "Escipión gana"},
-
-    {"narracion": "Fíjate en la lección de Zama: el arma más espectacular de Aníbal se volvió contra él.", "visual": {"tipo": "video", "busqueda": "elephant eye portrait", "describe": "ojo y rostro de elefante", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Un elefante de guerra no era una máquina. Era un animal: si se asustaba, podía convertirse en un peligro para su propio bando.", "visual": {"tipo": "video", "busqueda": "elephant head raised", "describe": "elefante con la cabeza alzada", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Escipión no necesitó un invento: le bastó entender cómo reaccionan estos animales ante el ruido y ante los obstáculos.", "visual": {"tipo": "video", "busqueda": "elephant calm portrait", "describe": "retrato de un elefante tranquilo", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Pasillos, jabalinas y trompetas. Tres ideas sencillas que anularon a ochenta elefantes.", "visual": {"tipo": "video", "busqueda": "elephants walking savanna", "describe": "elefantes caminando por la sabana", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Así que, ¿tanque o apuesta arriesgada? Fueron las dos cosas: un arma capaz de romper una línea y, a la vez, capaz de arruinar a quien la usaba.", "visual": {"tipo": "video", "busqueda": "elephant walking sunset", "describe": "elefante caminando al atardecer", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Y recuerda: ellos no eligieron estar allí. Eran animales arrastrados a las guerras de los hombres.", "visual": {"tipo": "video", "busqueda": "elephant gentle close", "describe": "elefante tranquilo de cerca", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""},
-    {"narracion": "Si te ha sorprendido esta historia, suscríbete: en Curiosa Fauna seguimos contando cómo los animales se cruzan con la historia.", "visual": {"tipo": "video", "busqueda": "elephant family walking", "describe": "familia de elefantes caminando", "animal": "elefante", "cientifico": "Elephantidae"}, "rotulo": ""}
+    {
+      "narracion": "Año 326 antes de Cristo. El ejército de Alejandro Magno se detiene a orillas de un río de la India, el Hidaspes. Al otro lado, alguien lo está esperando.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "river india landscape",
+        "describe": "río ancho en un paisaje de la India"
+      },
+      "rotulo": "326 a. C.",
+      "planos": [
+        {
+          "clave": "pixabay:302807",
+          "url": "https://cdn.pixabay.com/video/2025/09/09/302807_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Swkclicks en Pixabay (https://pixabay.com/videos/id-302807/)",
+          "desde": 0.0,
+          "hasta": 14.46,
+          "duracion_clip": 14.0,
+          "posicion_x": 0.5,
+          "descripcion": "Vista panorámica de un río caudaloso que fluye a través de un valle montañoso rodeado de pinos y vegetación."
+        }
+      ]
+    },
+    {
+      "narracion": "Es el rey Poros, y no viene solo. En su ejército hay elefantes de guerra: animales enormes convertidos en arma.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant walking savanna",
+        "describe": "elefante adulto caminando despacio",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pixabay:126215",
+          "url": "https://cdn.pixabay.com/video/2022/07/31/126215-735676475_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de gavinllo en Pixabay (https://pixabay.com/videos/id-126215/)",
+          "desde": 0.0,
+          "hasta": 9.36,
+          "duracion_clip": 9.0,
+          "posicion_x": 0.5,
+          "descripcion": "Una manada de elefantes africanos, integrada por adultos y crías, camina unida a través de un terreno árido y abierto."
+        }
+      ]
+    },
+    {
+      "narracion": "Varios ejércitos de la Antigüedad los llevaron al combate, y algunos generales famosos se jugaron batallas enteras con ellos.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant herd walking",
+        "describe": "manada de elefantes caminando",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:12596712",
+          "url": "https://videos.pexels.com/video-files/12596712/12596712-hd_1920_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Rihan Bezuidenhout en Pexels (https://www.pexels.com/video/elephant-herd-in-a-savanna-12596712/)",
+          "desde": 0.0,
+          "hasta": 22.29,
+          "duracion_clip": 22.0,
+          "posicion_x": 0.45,
+          "descripcion": "Una manada de elefantes, incluyendo adultos y crías, camina a través de un terreno árido de sabana."
+        }
+      ]
+    },
+    {
+      "narracion": "¿Eran de verdad un tanque viviente o una apuesta que podía salir muy mal? Para responder, vamos a seguirlos en cuatro episodios reales.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant portrait close up",
+        "describe": "primer plano de un elefante mirando a cámara",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:17199606",
+          "url": "https://videos.pexels.com/video-files/17199606/17199606-hd_1920_1080_50fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Denys Gromov en Pexels (https://www.pexels.com/video/an-elephant-with-tusks-standing-in-the-grass-17199606/)",
+          "desde": 0.0,
+          "hasta": 10.1,
+          "duracion_clip": 10.0,
+          "posicion_x": 0.6,
+          "descripcion": "Primer plano de la cabeza y trompa de un elefante en cautividad."
+        }
+      ]
+    },
+    {
+      "narracion": "Un río en la India, una victoria que arruinó a un rey, unos Alpes helados y un campo de batalla donde un truco sencillo cambió el resultado.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "alps snow mountains",
+        "describe": "cordillera nevada"
+      },
+      "rotulo": "4 episodios",
+      "planos": [
+        {
+          "clave": "pexels:28638515",
+          "url": "https://videos.pexels.com/video-files/28638515/12438508_1920_1080_24fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de K en Pexels (https://www.pexels.com/video/stunning-aerial-view-of-snowy-mountains-28638515/)",
+          "desde": 0.0,
+          "hasta": 13.1,
+          "duracion_clip": 13.0,
+          "posicion_x": 0.5,
+          "descripcion": "Una vista panorámica de una cordillera con cumbres nevadas y bosques en las laderas."
+        }
+      ]
+    },
+    {
+      "narracion": "Y te adelanto algo: el arma más temida tenía un punto débil. Quien lo aprovechó no usó un invento, sino unos simples pasillos.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant eye close up",
+        "describe": "ojo de elefante en primer plano",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:17842218",
+          "url": "https://videos.pexels.com/video-files/17842218/17842218-hd_1920_1080_25fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Maksim Romashkin en Pexels (https://www.pexels.com/video/elephant-of-thailand-17842218/)",
+          "desde": 0.0,
+          "hasta": 9.6,
+          "duracion_clip": 15.0,
+          "posicion_x": 0.5,
+          "descripcion": "Se muestra la trompa y la parte inferior de un elefante interactuando con la hierba alta en varios fotogramas."
+        }
+      ]
+    },
+    {
+      "narracion": "Empecemos por el Hidaspes, en el año 326 antes de Cristo. Alejandro Magno había llegado hasta el noroeste de la India con su ejército macedonio.",
+      "visual": {
+        "tipo": "foto",
+        "busqueda": "alexander the great bust",
+        "describe": "busto o estatua antigua de Alejandro Magno"
+      },
+      "rotulo": "Hidaspes",
+      "sin_material": true
+    },
+    {
+      "narracion": "Frente a él estaba Poros, un rey local, con su ejército y sus elefantes de guerra.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "asian elephant standing",
+        "describe": "elefante asiático de pie",
+        "animal": "elefante asiático",
+        "cientifico": "Elephas maximus"
+      },
+      "rotulo": "",
+      "sin_material": true
+    },
+    {
+      "narracion": "Un elefante asiático adulto es un animal enorme. Imagina a un soldado que nunca ha visto uno de cerca, viendo a varios avanzar hacia él.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "asian elephant close up",
+        "describe": "elefante asiático de cerca",
+        "animal": "elefante asiático",
+        "cientifico": "Elephas maximus"
+      },
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:34786012",
+          "url": "https://videos.pexels.com/video-files/34786012/14748284_1920_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Joolsmagools  ®️ en Pexels (https://www.pexels.com/video/close-up-of-asian-elephant-at-werribee-zoo-34786012/)",
+          "desde": 0.0,
+          "hasta": 11.73,
+          "duracion_clip": 11.0,
+          "posicion_x": 0.5,
+          "descripcion": "Primer plano de un elefante asiático en un recinto interior con arena y estructuras de hormigón."
+        }
+      ]
+    },
+    {
+      "narracion": "Aun así, la batalla no la ganó el rey con elefantes. La ganó Alejandro, y Poros terminó herido y prisionero.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "open plain landscape dawn",
+        "describe": "llanura abierta al amanecer"
+      },
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:5830784",
+          "url": "https://videos.pexels.com/video-files/5830784/5830784-hd_1920_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Matthias Groeneveld en Pexels (https://www.pexels.com/video/a-single-tree-in-plain-fields-during-the-sunset-5830784/)",
+          "desde": 0.0,
+          "hasta": 31.53,
+          "duracion_clip": 32.0,
+          "posicion_x": 0.5,
+          "descripcion": "Un árbol solitario en una llanura abierta durante la puesta de sol con el sol brillando entre las ramas."
+        }
+      ]
+    },
+    {
+      "narracion": "Las fuentes antiguas discrepan sobre cuántos elefantes tenía Poros, así que no te daré una cifra. Lo que sí sabemos es que no bastaron.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant trunk detail",
+        "describe": "trompa de elefante en detalle",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pixabay:123027",
+          "url": "https://cdn.pixabay.com/video/2022/07/03/123027-726548100_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de jersnav en Pixabay (https://pixabay.com/videos/id-123027/)",
+          "desde": 0.0,
+          "hasta": 21.52,
+          "duracion_clip": 22.0,
+          "posicion_x": 0.6,
+          "descripcion": "Un elefante en un recinto de zoológico mueve y curva la trompa cerca de un tronco seco."
+        }
+      ]
+    },
+    {
+      "narracion": "Fíjate en el detalle: un arma enorme no garantiza la victoria si el enemigo sabe cómo enfrentarse a ella.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephants savanna wide",
+        "describe": "elefantes en la sabana, plano general",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:7499056",
+          "url": "https://videos.pexels.com/video-files/7499056/7499056-hd_1920_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de nine lives  films en Pexels (https://www.pexels.com/video/a-grassland-with-elephants-7499056/)",
+          "desde": 0.27,
+          "hasta": 16.87,
+          "duracion_clip": 17.0,
+          "posicion_x": 0.5,
+          "descripcion": "Un elefante adulto y una cría caminan juntos por la sabana herbosa africana en un plano general."
+        }
+      ]
+    },
+    {
+      "narracion": "Pero otros ejércitos tardarían todavía en aprender esa lección, y lo harían por las malas.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant silhouette sunset",
+        "describe": "elefante a contraluz al atardecer",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:11434040",
+          "url": "https://videos.pexels.com/video-files/11434040/11434040-hd_1920_1080_60fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de lifeofhicham Globetrotter Culture en Pexels (https://www.pexels.com/video/elephants-on-field-11434040/)",
+          "desde": 0.0,
+          "hasta": 27.35,
+          "duracion_clip": 27.0,
+          "posicion_x": 0.5,
+          "descripcion": "Un grupo de elefantes camina por la sabana africana a contraluz durante un atardecer."
+        }
+      ]
+    },
+    {
+      "narracion": "Casi medio siglo después, un rey griego cruzó el mar para atacar a Roma. Y llevaba elefantes. ¿Cómo reaccionaría el ejército romano?",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "mediterranean sea ship",
+        "describe": "mar Mediterráneo con un barco"
+      },
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:37858027",
+          "url": "https://videos.pexels.com/video-files/37858027/16060840_1920_1080_24fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de K en Pexels (https://www.pexels.com/video/cargo-ship-sailing-in-thessaloniki-bay-37858027/)",
+          "desde": 0.0,
+          "hasta": 13.14,
+          "duracion_clip": 13.0,
+          "posicion_x": 0.5,
+          "descripcion": "Un barco de carga navega lentamente por la bahía con una ciudad costera al fondo."
+        }
+      ]
+    },
+    {
+      "narracion": "Se llamaba Pirro y gobernaba el Épiro, en Grecia. En el año 280 antes de Cristo desembarcó en Italia con un ejército y unos veinte elefantes de guerra.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "greek coast landscape",
+        "describe": "costa mediterránea con colinas"
+      },
+      "rotulo": "280 a. C.",
+      "planos": [
+        {
+          "clave": "pixabay:175442",
+          "url": "https://cdn.pixabay.com/video/2023/08/10/175442-853593452_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Blimeycharlie en Pixabay (https://pixabay.com/videos/id-175442/)",
+          "desde": 0.0,
+          "hasta": 46.21,
+          "duracion_clip": 46.0,
+          "posicion_x": 0.5,
+          "descripcion": "Vista aérea de dron de una costa mediterránea con olas rompiendo en las rocas y colinas con vegetación al fondo."
+        }
+      ]
+    },
+    {
+      "narracion": "Los romanos nunca se habían enfrentado a elefantes en una batalla. Verlos avanzar hacia sus filas fue un golpe para su ejército.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant walking dust",
+        "describe": "elefante avanzando entre polvo",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:16266296",
+          "url": "https://videos.pexels.com/video-files/16266296/16266296-hd_1920_1080_60fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Abhay Kumar en Pexels (https://www.pexels.com/video/an-elephant-walking-down-a-dirt-road-near-a-road-16266296/)",
+          "desde": 0.0,
+          "hasta": 12.8,
+          "duracion_clip": 12.0,
+          "posicion_x": 0.5,
+          "descripcion": "Un elefante camina por un camino de tierra en un entorno natural seco bajo un cielo despejado."
+        }
+      ]
+    },
+    {
+      "narracion": "La batalla de Heraclea fue larga y muy igualada. Al final, los elefantes y la caballería de Pirro ayudaron a romper la línea romana.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "ancient ruins greece",
+        "describe": "ruinas antiguas griegas"
+      },
+      "rotulo": "Heraclea",
+      "planos": [
+        {
+          "clave": "pexels:35759332",
+          "url": "https://videos.pexels.com/video-files/35759332/15159285_1920_1080_24fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Satvinder Ghotra en Pexels (https://www.pexels.com/video/majestic-parthenon-under-clear-blue-sky-35759332/)",
+          "desde": 0.0,
+          "hasta": 17.56,
+          "duracion_clip": 17.0,
+          "posicion_x": 0.5,
+          "descripcion": "Vista en contrapicado de la estructura y columnas del Partenón de Atenas bajo un cielo azul con nubes dispersas."
+        }
+      ]
+    },
+    {
+      "narracion": "Pirro ganó. Pero había perdido a muchos de sus mejores soldados, y esos no se reponían de un día para otro lejos de casa.",
+      "visual": {
+        "tipo": "foto",
+        "busqueda": "ancient soldier statue",
+        "describe": "estatua de un soldado antiguo"
+      },
+      "rotulo": "",
+      "sin_material": true
+    },
+    {
+      "narracion": "Al año siguiente, en Asculum, volvió a vencer a los romanos.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "ancient ruins sunset",
+        "describe": "ruinas antiguas al atardecer"
+      },
+      "rotulo": "Asculum",
+      "planos": [
+        {
+          "clave": "pexels:35686422",
+          "url": "https://videos.pexels.com/video-files/35686422/15124499_1920_1080_60fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Ahmed ؜ en Pexels (https://www.pexels.com/video/man-exploring-ancient-ruins-at-sunset-35686422/)",
+          "desde": 0.0,
+          "hasta": 11.17,
+          "duracion_clip": 11.0,
+          "posicion_x": 0.52,
+          "descripcion": "Se muestra a un hombre caminando y permaneciendo de pie entre ruinas arqueológicas de piedra al atardecer."
+        }
+      ]
+    },
+    {
+      "narracion": "Pero otra vez el precio fue altísimo. Según cuenta Plutarco, alguien lo felicitó, y Pirro respondió con una frase que ha llegado hasta nosotros.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "ancient manuscript pages",
+        "describe": "páginas de un manuscrito antiguo"
+      },
+      "rotulo": "",
+      "sin_material": true
+    },
+    {
+      "narracion": "Dijo que otra victoria como aquella lo destruiría por completo. Roma podía reponer soldados; él, no.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "roman forum ruins",
+        "describe": "ruinas del foro romano"
+      },
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:36579386",
+          "url": "https://videos.pexels.com/video-files/36579386/15509031_1920_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Florian Delée en Pexels (https://www.pexels.com/video/explore-the-majestic-roman-forum-in-rome-36579386/)",
+          "desde": 0.0,
+          "hasta": 11.21,
+          "duracion_clip": 14.0,
+          "posicion_x": 0.5,
+          "descripcion": "Panorámica de las ruinas del Foro Romano con el Templo de Vespasiano y Tito en primer plano y el Altare della Patria al fondo."
+        }
+      ]
+    },
+    {
+      "narracion": "De ahí viene la expresión «victoria pírrica»: ganar una batalla, pero a un coste tan alto que casi equivale a perderla.",
+      "visual": {
+        "tipo": "texto",
+        "busqueda": "old book open",
+        "describe": "rótulo sobre fondo oscuro"
+      },
+      "rotulo": "VICTORIA PÍRRICA"
+    },
+    {
+      "narracion": "Los elefantes habían ayudado a ganar, pero no salvaron a Pirro de su propia ruina. Eran poderosos, sí. Pero ¿invencibles?",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant portrait tusks",
+        "describe": "retrato de elefante con colmillos",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "wikimedia:201254509",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f1/A_herd_of_elephant_of_Hoollongapar_Gibbon_Sanctuary%2C_Jorhat_-_Assam.webm/A_herd_of_elephant_of_Hoollongapar_Gibbon_Sanctuary%2C_Jorhat_-_Assam.webm.1080p.vp9.webm",
+          "tipo": "video",
+          "atribucion": "«A herd of elephant of Hoollongapar Gibbon Sanctuary, Jorhat - Assam.webm» de কুমুদ ঘোষ, CC BY 4.0, vía Wikimedia Commons (https://commons.wikimedia.org/wiki/File:A_herd_of_elephant_of_Hoollongapar_Gibbon_Sanctuary,_Jorhat_-_Assam.webm)",
+          "desde": 0.0,
+          "hasta": 31.68,
+          "duracion_clip": 46.008,
+          "posicion_x": 0.5,
+          "descripcion": "Una manada de elefantes asiáticos con crías cruza una carretera asfaltada rodeada de vegetación y personas observando a lo lejos."
+        }
+      ]
+    },
+    {
+      "narracion": "Para comprobarlo, hay que viajar unos sesenta años más tarde, a los Alpes, con el general más famoso de Cartago.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "snowy alps peaks",
+        "describe": "picos nevados de los Alpes"
+      },
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:40895498",
+          "url": "https://videos.pexels.com/video-files/40895498/17482825_1920_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Francesco Sommacal en Pexels (https://www.pexels.com/video/aerial-view-of-snowy-italian-alps-peaks-40895498/)",
+          "desde": 0.0,
+          "hasta": 13.43,
+          "duracion_clip": 13.0,
+          "posicion_x": 0.5,
+          "descripcion": "Vista aérea de picos nevados en una zona montañosa bajo un cielo parcialmente nublado."
+        }
+      ]
+    },
+    {
+      "narracion": "Año 218 antes de Cristo. Aníbal, general de Cartago, decide atacar a Roma por donde nadie lo espera: cruzando los Alpes.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "alpine mountain trail",
+        "describe": "sendero de montaña alpino con nieve"
+      },
+      "rotulo": "218 a. C.",
+      "planos": [
+        {
+          "clave": "pixabay:222084",
+          "url": "https://cdn.pixabay.com/video/2024/07/20/222084_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de adege en Pixabay (https://pixabay.com/videos/id-222084/)",
+          "desde": 0.0,
+          "hasta": 32.44,
+          "duracion_clip": 32.0,
+          "posicion_x": 0.5,
+          "descripcion": "Paisaje alpino con vistas a un valle y un lago azul, con flores rojas en primer plano en una ladera."
+        }
+      ]
+    },
+    {
+      "narracion": "Con su ejército lleva treinta y siete elefantes de guerra.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephants walking line",
+        "describe": "elefantes caminando en fila",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": "37 elefantes"
+    },
+    {
+      "narracion": "Piensa en lo que significa: animales que viven en la sabana y la selva, subiendo por pasos de montaña helados.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant snow",
+        "describe": "elefante en un entorno frío o nevado",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Durante generaciones, los historiadores han discutido por qué paso exacto cruzó Aníbal. Todavía hoy no hay una respuesta cerrada.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "mountain pass snow",
+        "describe": "paso de montaña con nieve"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Un estudio publicado en la revista PNAS calculó el gasto de energía de varias rutas posibles para un ejército como aquel.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "scientist laptop data",
+        "describe": "persona analizando datos en un ordenador"
+      },
+      "rotulo": "PNAS"
+    },
+    {
+      "narracion": "Su conclusión: el paso de la Traversette, en la frontera entre Francia e Italia, sería el más eficiente de los que compararon.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "high mountain pass",
+        "describe": "paso de alta montaña"
+      },
+      "rotulo": "Col de la Traversette"
+    },
+    {
+      "narracion": "Y los elefantes salían bien parados en el modelo: perderían solo un cuatro por ciento de sus reservas de grasa.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant walking slow",
+        "describe": "elefante caminando despacio",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": "4 % de grasa"
+    },
+    {
+      "narracion": "Por eso los autores creen que muchos de ellos, quizá la mayoría, sobrevivieron al cruce. Ojo: es una estimación de un modelo, no un recuento.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant herd savanna walking",
+        "describe": "manada de elefantes caminando",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Y otro matiz: el estudio parte de datos de elefantes africanos actuales, y no elimina toda la duda sobre la ruta.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "african elephant walking",
+        "describe": "elefante africano caminando",
+        "animal": "elefante africano",
+        "cientifico": "Loxodonta africana"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Lo que no admite discusión es la audacia: un ejército cruzando los Alpes con elefantes era algo que Roma no esperaba.",
+      "visual": {
+        "tipo": "foto",
+        "busqueda": "roman statue marble",
+        "describe": "estatua romana de mármol"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Pero los elefantes impresionaban, y para servir de algo necesitaban un campo de batalla donde pudieran cargar.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant ears flapping",
+        "describe": "elefante moviendo las orejas",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Ese campo de batalla llegaría años después, cuando Aníbal se enfrentó a un rival que lo conocía muy bien: Escipión.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "dry plain landscape",
+        "describe": "llanura seca al atardecer"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "¿Qué tenía Escipión en la cabeza? Para entenderlo, vamos a Zama.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant dust walking",
+        "describe": "elefante caminando entre polvo",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Y ojo con esa batalla, porque en ella el arma estrella de Cartago iba a jugar su última carta.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant close up tusks",
+        "describe": "colmillos de elefante de cerca",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Año 202 antes de Cristo. Aníbal y Escipión se encuentran en la batalla de Zama, la que decidiría la guerra entre Roma y Cartago.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "dry plains landscape",
+        "describe": "llanura seca del norte de África"
+      },
+      "rotulo": "202 a. C."
+    },
+    {
+      "narracion": "Según Tito Livio, Aníbal alineó ochenta elefantes de guerra. Polibio habla de más de ochenta.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant herd line",
+        "describe": "elefantes en fila",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": "80 elefantes"
+    },
+    {
+      "narracion": "Era su gran apuesta: lanzarlos contra las primeras filas romanas para romperlas antes del choque de la infantería.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant charging dust",
+        "describe": "elefante corriendo levantando polvo",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Escipión sabía lo que le esperaba. Y preparó algo distinto a lo habitual en las legiones romanas.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "roman soldiers reenactment",
+        "describe": "recreación de soldados romanos"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "En vez de colocar las unidades en tablero de ajedrez, las puso en fila, una justo detrás de otra, dejando pasillos abiertos entre ellas.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "soldiers marching formation",
+        "describe": "soldados en formación ordenada"
+      },
+      "rotulo": "PASILLOS"
+    },
+    {
+      "narracion": "Si un elefante cargaba, no chocaría contra un muro: podía seguir de largo por esos pasillos, sin llevarse a nadie por delante.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "empty corridor lane",
+        "describe": "pasillo largo y vacío"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Delante, y dentro de esos huecos, puso a la infantería ligera, los vélites, armados con jabalinas.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "javelin throwing",
+        "describe": "persona lanzando una jabalina"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Según Livio, su misión era molestar a los elefantes y, cuando cargaran, replegarse detrás de las líneas o apartarse a los lados.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "athlete running field",
+        "describe": "persona corriendo por un campo"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Así los elefantes quedarían expuestos a los proyectiles desde ambos lados mientras avanzaban por el pasillo.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant running field",
+        "describe": "elefante corriendo por un campo abierto",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Empezó la batalla. Y antes de que los elefantes llegaran, los romanos hicieron algo muy sencillo: hacer sonar sus cuernos y trompetas.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "trumpet horn sound",
+        "describe": "persona tocando un cuerno o una trompeta"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "El estruendo asustó a muchos elefantes, que dieron media vuelta y se lanzaron contra sus propias tropas.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant frightened running",
+        "describe": "elefante asustado corriendo",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Algunos se lanzaron contra la caballería númida de Aníbal, en su ala izquierda. El caos fue enorme.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "horses galloping dust",
+        "describe": "caballos galopando entre polvo"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Otros siguieron de largo por los pasillos romanos sin hacer daño, según cuentan los textos antiguos.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant tusks dust",
+        "describe": "elefante con colmillos entre polvo",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Y los demás huyeron hacia el ala derecha cartaginesa, donde los proyectiles de la caballería los expulsaron del campo.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant leaving field",
+        "describe": "elefante alejándose por un campo",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Con la caballería cartaginesa desorganizada por sus propios elefantes, Masinisa y Lelio aprovecharon para atacar.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "horse rider galloping",
+        "describe": "jinete a caballo galopando"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Al final, Escipión ganó la batalla. Aníbal, el hombre que había cruzado los Alpes con elefantes, salía derrotado.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "sunset battlefield silhouette",
+        "describe": "atardecer sobre una llanura"
+      },
+      "rotulo": "Escipión gana"
+    },
+    {
+      "narracion": "Fíjate en la lección de Zama: el arma más espectacular de Aníbal se volvió contra él.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant eye portrait",
+        "describe": "ojo y rostro de elefante",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Un elefante de guerra no era una máquina. Era un animal: si se asustaba, podía convertirse en un peligro para su propio bando.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant head raised",
+        "describe": "elefante con la cabeza alzada",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Escipión no necesitó un invento: le bastó entender cómo reaccionan estos animales ante el ruido y ante los obstáculos.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant calm portrait",
+        "describe": "retrato de un elefante tranquilo",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Pasillos, jabalinas y trompetas. Tres ideas sencillas que anularon a ochenta elefantes.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephants walking savanna",
+        "describe": "elefantes caminando por la sabana",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Así que, ¿tanque o apuesta arriesgada? Fueron las dos cosas: un arma capaz de romper una línea y, a la vez, capaz de arruinar a quien la usaba.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant walking sunset",
+        "describe": "elefante caminando al atardecer",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Y recuerda: ellos no eligieron estar allí. Eran animales arrastrados a las guerras de los hombres.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant gentle close",
+        "describe": "elefante tranquilo de cerca",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": ""
+    },
+    {
+      "narracion": "Si te ha sorprendido esta historia, suscríbete: en Curiosa Fauna seguimos contando cómo los animales se cruzan con la historia.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "elephant family walking",
+        "describe": "familia de elefantes caminando",
+        "animal": "elefante",
+        "cientifico": "Elephantidae"
+      },
+      "rotulo": ""
+    }
   ],
   "datos": [
-    {"afirmacion": "Batalla del Hidaspes en 326 a. C.: Alejandro Magno venció al rey Poros, que contaba con elefantes de guerra, y Poros terminó herido y prisionero.", "fuentes": ["https://www.livius.org/articles/battle/hydaspes/", "https://brewminate.com/the-battle-of-hydaspes-alexander-the-great-meets-indian-king-porus/"], "verificado": true, "nota": "Las fuentes discrepan sobre el número de elefantes de Poros, por eso el guion no da cifra."},
-    {"afirmacion": "En 280 a. C. Pirro desembarcó en Italia con unos veinte elefantes de guerra; en Heraclea, los elefantes y la caballería ayudaron a romper la línea romana y los romanos nunca se habían enfrentado a elefantes.", "fuentes": ["https://warhistory.org/2018/03/19/heraclea-280-bc/", "https://www.thecollector.com/what-is-a-pyrrhic-victory/", "https://www.worldatlas.com/ancient-world/who-was-pyrrhus-and-what-is-a-pyrrhic-victory.html"], "verificado": true, "nota": "Pérdidas exactas inciertas (las cifras varían), no se citan."},
-    {"afirmacion": "Pirro venció de nuevo en Asculum (279 a. C.) con grandes pérdidas entre sus veteranos; según Plutarco dijo que otra victoria así lo arruinaría; de ahí «victoria pírrica».", "fuentes": ["https://www.thecollector.com/what-is-a-pyrrhic-victory/", "https://www.worldatlas.com/ancient-world/who-was-pyrrhus-and-what-is-a-pyrrhic-victory.html"], "verificado": true, "nota": "La frase es tradición atribuida por Plutarco; se presenta como «según cuenta Plutarco». No se afirma que los elefantes fueran decisivos en Asculum (las fuentes no coinciden)."},
-    {"afirmacion": "Aníbal cruzó los Alpes en 218 a. C. con 37 elefantes de guerra.", "fuentes": ["https://www.sciencefocus.com/science/hannibal-elephant-alp-crossing", "https://www.popsci.com/science/hannibal-cross-alps-elephants-energy/", "https://www.bio.uni-jena.de/en/29040/how-did-hannibal-get-his-elephants-across-the-alps"], "verificado": true},
-    {"afirmacion": "Un estudio en PNAS (Berti y Vollrath) estima que la ruta por el Col de la Traversette fue la más eficiente; el modelo indica que los elefantes perderían ~4 % de sus reservas de grasa y que muchos, quizá la mayoría, sobrevivieron al cruce.", "fuentes": ["https://www.popsci.com/science/hannibal-cross-alps-elephants-energy/", "https://www.bio.uni-jena.de/en/29040/how-did-hannibal-get-his-elephants-across-the-alps", "https://www.sciencefocus.com/science/hannibal-elephant-alp-crossing"], "verificado": true, "nota": "Es una estimación modelada con datos de elefantes africanos actuales; el guion lo dice. No se afirma cuántos murieron después porque no hay doble fuente leída."},
-    {"afirmacion": "En Zama (202 a. C.) Aníbal alineó 80 elefantes (Livio; Polibio dice más de 80).", "fuentes": ["https://johndclare.net/AncientHistory/Hannibal_Sources8.html", "https://historynet.com/conquer-die-hannibal-vs-scipio/"], "verificado": true},
-    {"afirmacion": "Escipión dejó pasillos abiertos entre sus unidades y colocó vélites (infantería ligera) delante y en los huecos para que los elefantes siguieran de largo expuestos a proyectiles.", "fuentes": ["https://johndclare.net/AncientHistory/Hannibal_Sources8.html", "https://historynet.com/conquer-die-hannibal-vs-scipio/"], "verificado": true, "nota": "Detalle de que los vélites se replegaban o apartaban a los lados: Livio (johndclare); el guion lo atribuye a Livio."},
-    {"afirmacion": "Los cuernos y trompetas romanos asustaron a muchos elefantes, que se volvieron contra sus propias tropas (caballería númida de la izquierda); otros pasaron por los pasillos y el resto huyó por el ala derecha; Masinisa y Lelio aprovecharon el caos; Roma ganó.", "fuentes": ["https://johndclare.net/AncientHistory/Hannibal_Sources8.html", "https://historynet.com/conquer-die-hannibal-vs-scipio/"], "verificado": true}
+    {
+      "afirmacion": "Batalla del Hidaspes en 326 a. C.: Alejandro Magno venció al rey Poros, que contaba con elefantes de guerra, y Poros terminó herido y prisionero.",
+      "fuentes": [
+        "https://www.livius.org/articles/battle/hydaspes/",
+        "https://brewminate.com/the-battle-of-hydaspes-alexander-the-great-meets-indian-king-porus/"
+      ],
+      "verificado": true,
+      "nota": "Las fuentes discrepan sobre el número de elefantes de Poros, por eso el guion no da cifra."
+    },
+    {
+      "afirmacion": "En 280 a. C. Pirro desembarcó en Italia con unos veinte elefantes de guerra; en Heraclea, los elefantes y la caballería ayudaron a romper la línea romana y los romanos nunca se habían enfrentado a elefantes.",
+      "fuentes": [
+        "https://warhistory.org/2018/03/19/heraclea-280-bc/",
+        "https://www.thecollector.com/what-is-a-pyrrhic-victory/",
+        "https://www.worldatlas.com/ancient-world/who-was-pyrrhus-and-what-is-a-pyrrhic-victory.html"
+      ],
+      "verificado": true,
+      "nota": "Pérdidas exactas inciertas (las cifras varían), no se citan."
+    },
+    {
+      "afirmacion": "Pirro venció de nuevo en Asculum (279 a. C.) con grandes pérdidas entre sus veteranos; según Plutarco dijo que otra victoria así lo arruinaría; de ahí «victoria pírrica».",
+      "fuentes": [
+        "https://www.thecollector.com/what-is-a-pyrrhic-victory/",
+        "https://www.worldatlas.com/ancient-world/who-was-pyrrhus-and-what-is-a-pyrrhic-victory.html"
+      ],
+      "verificado": true,
+      "nota": "La frase es tradición atribuida por Plutarco; se presenta como «según cuenta Plutarco». No se afirma que los elefantes fueran decisivos en Asculum (las fuentes no coinciden)."
+    },
+    {
+      "afirmacion": "Aníbal cruzó los Alpes en 218 a. C. con 37 elefantes de guerra.",
+      "fuentes": [
+        "https://www.sciencefocus.com/science/hannibal-elephant-alp-crossing",
+        "https://www.popsci.com/science/hannibal-cross-alps-elephants-energy/",
+        "https://www.bio.uni-jena.de/en/29040/how-did-hannibal-get-his-elephants-across-the-alps"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Un estudio en PNAS (Berti y Vollrath) estima que la ruta por el Col de la Traversette fue la más eficiente; el modelo indica que los elefantes perderían ~4 % de sus reservas de grasa y que muchos, quizá la mayoría, sobrevivieron al cruce.",
+      "fuentes": [
+        "https://www.popsci.com/science/hannibal-cross-alps-elephants-energy/",
+        "https://www.bio.uni-jena.de/en/29040/how-did-hannibal-get-his-elephants-across-the-alps",
+        "https://www.sciencefocus.com/science/hannibal-elephant-alp-crossing"
+      ],
+      "verificado": true,
+      "nota": "Es una estimación modelada con datos de elefantes africanos actuales; el guion lo dice. No se afirma cuántos murieron después porque no hay doble fuente leída."
+    },
+    {
+      "afirmacion": "En Zama (202 a. C.) Aníbal alineó 80 elefantes (Livio; Polibio dice más de 80).",
+      "fuentes": [
+        "https://johndclare.net/AncientHistory/Hannibal_Sources8.html",
+        "https://historynet.com/conquer-die-hannibal-vs-scipio/"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Escipión dejó pasillos abiertos entre sus unidades y colocó vélites (infantería ligera) delante y en los huecos para que los elefantes siguieran de largo expuestos a proyectiles.",
+      "fuentes": [
+        "https://johndclare.net/AncientHistory/Hannibal_Sources8.html",
+        "https://historynet.com/conquer-die-hannibal-vs-scipio/"
+      ],
+      "verificado": true,
+      "nota": "Detalle de que los vélites se replegaban o apartaban a los lados: Livio (johndclare); el guion lo atribuye a Livio."
+    },
+    {
+      "afirmacion": "Los cuernos y trompetas romanos asustaron a muchos elefantes, que se volvieron contra sus propias tropas (caballería númida de la izquierda); otros pasaron por los pasillos y el resto huyó por el ala derecha; Masinisa y Lelio aprovecharon el caos; Roma ganó.",
+      "fuentes": [
+        "https://johndclare.net/AncientHistory/Hannibal_Sources8.html",
+        "https://historynet.com/conquer-die-hannibal-vs-scipio/"
+      ],
+      "verificado": true
+    }
   ]
 }
