@@ -24,7 +24,7 @@ concurrency:
 jobs:
   explorar:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 100
     steps:
       - uses: actions/checkout@v4
         with:
@@ -37,7 +37,7 @@ jobs:
       - run: sudo apt-get update -y && sudo apt-get install -y ffmpeg
       - run: pip install -r requirements-v2.txt
       - name: Material para el próximo vídeo largo
-        timeout-minutes: 30
+        timeout-minutes: 25
         continue-on-error: true
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
@@ -45,7 +45,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python -m cf.material_largo --max-total 60
       - name: Explorar
-        timeout-minutes: 75   # deja tiempo para guardar lo analizado aunque se corte
+        timeout-minutes: 60   # deja tiempo para guardar lo analizado aunque se corte
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}

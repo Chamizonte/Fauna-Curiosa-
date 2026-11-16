@@ -19,6 +19,10 @@ Este repositorio produce y publica automáticamente:
   `publicar-short.yml` (08, 12, 16 y 20 UTC; mueve el guion a `datos/shorts/publicados`).
   Código en `cf/`, montaje en `remotion/`.
 - `generador_shorts.py`: v1, solo como respaldo si no hay guion v2. `generador_video.py`: vídeos largos (v1, aún en producción).
+- Vídeos largos (v2): `largo-guion.yml` (Claude escribe el guion 5 días antes) →
+  material en el explorador nocturno → `largo-publicar.yml` (víspera, sube programado).
+  Escenas `esquema`: dibujos animados con Explainroo (`cf/esquemas.py`,
+  `datos/largos/esquemas/<id>/<nombre>/`), solo donde hay que explicar algo.
 - `spikes/`: pruebas de riesgo técnicas.
 - Material: no se usa YouTube (bloqueado desde Actions).
 

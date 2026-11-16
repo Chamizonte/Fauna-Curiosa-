@@ -1,0 +1,43 @@
+{
+  "id": "20261115-1-koala",
+  "formato": "tarjeta",
+  "animal": "koala",
+  "gancho_pantalla": "¿Sabías que…?",
+  "texto_tarjeta": "Los koalas comen casi solo **hojas de eucalipto**, que son tóxicas para la mayoría de animales. Les aportan tan poca energía que pasan **hasta 20 horas al día** durmiendo o descansando. Y sus crías, antes de comer hojas, toman una papilla especial de su madre que les da las **bacterias necesarias** para digerirlas.",
+  "datos": [
+    {
+      "afirmacion": "prueba",
+      "fuentes": [
+        "https://australianmuseum.net.au/learn/animals/mammals/koala/",
+        "https://www.savethekoala.com/about-koalas/"
+      ],
+      "verificado": true
+    }
+  ],
+  "planos": [
+    {
+      "clave": "inaturalist:334142508",
+      "desde": 0,
+      "hasta": 9,
+      "nota": "madre con cría"
+    },
+    {
+      "clave": "pixabay:304418",
+      "desde": 0,
+      "hasta": 8,
+      "nota": "comiendo eucalipto"
+    },
+    {
+      "clave": "wikimedia:12624945",
+      "desde": 0,
+      "hasta": 7,
+      "nota": "primer plano"
+    }
+  ],
+  "titulo": "Koala: por qué duerme 20 horas al día",
+  "descripcion": "El koala se alimenta casi solo de hojas de eucalipto, tóxicas para la mayoría de animales y muy pobres en energía. Por eso pasa hasta 20 horas al día durmiendo o descansando. ¿Lo sabías?",
+  "etiquetas": [
+    "koala",
+    "animales"
+  ]
+}

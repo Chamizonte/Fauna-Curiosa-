@@ -95,6 +95,10 @@ def procesar(path, max_total):
     objetivos += [(i, s["visual"]) for i, s in enumerate(b["escenas"])
                   if s.get("visual", {}).get("tipo", "video") in ("video", "foto")
                   and not s.get("planos") and not s.get("sin_material")]
+    # los esquemas animados solo necesitan material de respaldo: se buscan al final
+    objetivos += [(i, {**s["visual"], "tipo": "video"}) for i, s in enumerate(b["escenas"])
+                  if s.get("visual", {}).get("tipo") == "esquema" and s["visual"].get("busqueda")
+                  and not s.get("planos") and not s.get("sin_material")]
     log(f"{path.name}: {len(objetivos)} escenas sin material")
     for i, visual in objetivos:
         if examinados >= max_total:

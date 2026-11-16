@@ -8,12 +8,13 @@ import re
 import sys
 from pathlib import Path
 
+from . import esquemas
 from .util import DATOS, log
 
 PEND = DATOS / "largos" / "pendientes"
 CAMPOS = ["id", "fecha_publicacion", "tema", "titulo", "descripcion", "etiquetas",
           "miniatura", "capitulos", "escenas", "datos"]
-TIPOS = {"video", "foto", "mapa", "texto"}
+TIPOS = {"video", "foto", "mapa", "texto", "esquema"}
 
 
 def errores(b):
@@ -37,8 +38,8 @@ def errores(b):
         v = s.get("visual") or {}
         if v.get("tipo", "video") not in TIPOS:
             e.append(f"escena {i}: tipo visual desconocido {v.get('tipo')}")
-        if v.get("tipo", "video") in ("video", "foto") and not v.get("busqueda"):
-            e.append(f"escena {i}: falta visual.busqueda")
+        if v.get("tipo", "video") in ("video", "foto", "esquema") and not v.get("busqueda"):
+            e.append(f"escena {i}: falta visual.busqueda (en un esquema, es el material de respaldo)")
     caps = b["capitulos"]
     if not 3 <= len(caps) <= 8 or caps[0].get("escena") != 0:
         e.append("capítulos: entre 3 y 8 y el primero en la escena 0")
@@ -48,6 +49,7 @@ def errores(b):
         dominios = {u.split("/")[2].removeprefix("www.") for u in d.get("fuentes", []) if re.match(r"https?://", u)}
         if len(dominios) < 2:
             e.append(f"dato con menos de 2 fuentes independientes: {d.get('afirmacion', '')[:60]}")
+    e += esquemas.errores(b)
     if not (b["miniatura"].get("texto") and b["miniatura"].get("busqueda")):
         e.append("miniatura sin texto o sin busqueda")
     return e

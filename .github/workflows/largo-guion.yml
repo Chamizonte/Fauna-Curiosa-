@@ -88,8 +88,12 @@ jobs:
                solo tiene una fuente, no lo uses.
             4. Escribe el brief en datos/largos/pendientes/AAAAMMDD-tema-corto.json (AAAAMMDD = la
                fecha de publicación del encargo) con el formato exacto de la skill.
+            5. Si alguna idea se explica mucho mejor con un esquema animado (táctica, ruta, proceso),
+               añade como mucho 2 esquemas siguiendo la sección "Esquemas animados" de la skill y
+               .claude/skills/guion-largos-curiosa-fauna/esquemas.md. Si no hace falta, no pongas ninguno.
 
-            No modifiques nada fuera de datos/largos/pendientes/. No hagas commits.
+            No tienes Bash ni puedes ejecutar scripts: guarda el guion con la herramienta Write.
+            No modifiques nada fuera de datos/largos/pendientes/ y datos/largos/esquemas/. No hagas commits.
             Sé eficiente: no leas archivos que no necesites.
           claude_args: |
             --model claude-sonnet-5-5
@@ -117,6 +121,8 @@ jobs:
               que lo confirme y añádela. Si no la encuentras, quita el dato de "datos" y reescribe o
               elimina la frase de la narración que lo afirma (y ajusta "capitulos" si cambian los índices).
             - Otros fallos: corrígelos según la skill .claude/skills/guion-largos-curiosa-fauna/SKILL.md.
+            - Fallos de un esquema: corrige sus archivos en datos/largos/esquemas/, o quita el esquema
+              (pon esas escenas como "tipo": "video") si no sabes arreglarlo.
             No toques nada más. No hagas commits.
           claude_args: |
             --model claude-sonnet-5-5

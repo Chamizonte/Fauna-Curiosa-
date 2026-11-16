@@ -7,6 +7,8 @@ name: Publicar vídeo largo
 on:
   schedule:
     - cron: "0 6 * * *"
+    - cron: "0 12 * * *"   # repescas por si GitHub se salta la de las 06:00
+    - cron: "0 18 * * *"
   workflow_dispatch:
     inputs:
       fecha:
