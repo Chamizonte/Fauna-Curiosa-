@@ -5,22 +5,21 @@ va cargado. Por eso publicar-short.yml se lanza cada hora y este script decide:
 toca publicar si hoy (UTC) se han publicado menos shorts que turnos ya pasados
 (08, 12, 16 y 20 UTC) y han pasado al menos 2 h 30 min desde el último.
 Así un turno perdido se recupera en la siguiente pasada, sin ráfagas.
+Si no quedan guiones, no toca (aviso en el run) y se espera a la sala de redacción.
 
 Uso:
   python -m cf.turno            escribe toca=si|no en $GITHUB_OUTPUT (y en pantalla)
-  python -m cf.turno --anotar   apunta una publicación del generador v1 (que no deja brief)
 """
-import argparse
 import datetime as dt
 import json
 import os
 
-from .util import DATOS, anadir_jsonl, leer_jsonl, log
+from .util import DATOS, log
 
 TURNOS = [8, 12, 16, 20]
 HUECO = dt.timedelta(hours=2, minutes=30)
 PUBL = DATOS / "shorts" / "publicados"
-REGISTRO = DATOS / "shorts" / "registro_v1.jsonl"
+PEND = DATOS / "shorts" / "pendientes"
 
 
 def _fecha(txt):
@@ -33,8 +32,6 @@ def publicaciones():
         p = json.loads(f.read_text(encoding="utf-8")).get("publicacion") or {}
         if p.get("fecha"):
             fechas.append(_fecha(p["fecha"]))
-    if REGISTRO.exists():
-        fechas += [_fecha(r["fecha"]) for r in leer_jsonl(REGISTRO)]
     return sorted(fechas)
 
 
@@ -51,14 +48,10 @@ def toca(ahora=None):
 
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--anotar", action="store_true")
-    a = ap.parse_args()
-    if a.anotar:
-        anadir_jsonl(REGISTRO, {"fecha": dt.datetime.utcnow().isoformat(timespec="minutes") + "Z", "via": "v1"})
-        log("Publicación v1 anotada.")
-        return
     si, motivo = toca()
+    if si and not any(not f.name.startswith("prueba-") for f in PEND.glob("*.json")):
+        si, motivo = False, "no quedan guiones pendientes (la sala escribe más a las 02:30 UTC)"
+        print(f"::warning::Turno sin short: {motivo}")
     log(("✅ Toca publicar: " if si else "⏸️ No toca: ") + motivo)
     salida = os.environ.get("GITHUB_OUTPUT")
     if salida:

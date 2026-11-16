@@ -4,8 +4,8 @@ name: Publicar short
 # GitHub retrasa o se salta a veces los workflows programados, así que este se lanza
 # cada hora y cf.turno decide si toca: recupera un turno perdido en la siguiente
 # pasada, dejando al menos 2 h 30 min entre shorts.
-# Monta el guion pendiente más antiguo de la v2 y lo sube en público. Si no quedan
-# guiones o el montaje falla, publica uno con el generador v1 para no dejar hueco.
+# Monta el guion pendiente más antiguo y lo sube en público. Si no quedan guiones
+# o el montaje falla, el run sale en rojo y ese turno se recupera en la siguiente pasada.
 on:
   schedule:
     - cron: "17 8-23 * * *"
@@ -52,10 +52,9 @@ jobs:
           sudo apt-get update -y && sudo apt-get install -y ffmpeg
           pip install -r requirements-v2.txt
           cd remotion && npm install
-      - name: Montar y subir (v2)
+      - name: Montar y subir
         id: v2
         if: steps.turno.outputs.toca == 'si'
-        continue-on-error: true
         timeout-minutes: 25
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
@@ -65,24 +64,8 @@ jobs:
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
           PRIVACIDAD_YOUTUBE: public
         run: python -m cf.publicar_short
-      - name: Respaldo con el generador v1
-        id: v1
-        if: steps.v2.outcome == 'failure'
-        env:
-          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
-          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
-          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
-          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
-          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
-          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
-          PRIVACIDAD_YOUTUBE: public
-        run: |
-          echo "::warning::La v2 no pudo publicar; se usa el generador v1"
-          pip install -r requirements.txt
-          python generador_shorts.py
-          python -m cf.turno --anotar
       - name: Guardar el registro de publicación
-        if: steps.v2.outcome == 'success' || steps.v1.outcome == 'success'
+        if: steps.v2.outcome == 'success'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

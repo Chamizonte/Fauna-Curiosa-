@@ -16,9 +16,11 @@ Este repositorio produce y publica automáticamente:
 ## Mapa del repositorio
 - Shorts (v2, en producción): `explorador.yml` (00:30 UTC, llena `datos/biblioteca`) →
   `sala-redaccion.yml` (02:30 UTC, Claude escribe guiones en `datos/shorts/pendientes`) →
-  `publicar-short.yml` (08, 12, 16 y 20 UTC; mueve el guion a `datos/shorts/publicados`).
+  `publicar-short.yml` (cada hora, `cf/turno.py` decide; turnos 08, 12, 16 y 20 UTC; mueve el guion a `datos/shorts/publicados`).
   Código en `cf/`, montaje en `remotion/`.
-- `generador_shorts.py`: v1, solo como respaldo si no hay guion v2. `generador_video.py`: vídeos largos (v1, aún en producción).
+- La v1 (`generador_shorts.py`, `generador_video.py`) se retiró el 2026-11-16: no hay respaldo.
+  Si no quedan guiones, ese turno se queda sin short (aviso en el run).
+- `planes/`: borradores de temas para vídeos largos (los usa `largo-guion.yml`).
 - Vídeos largos (v2): `largo-guion.yml` (Claude escribe el guion 5 días antes) →
   material en el explorador nocturno → `largo-publicar.yml` (víspera, sube programado).
   Escenas `esquema`: dibujos animados con Explainroo (`cf/esquemas.py`,
