@@ -568,7 +568,20 @@
         "animal": "elefante",
         "cientifico": "Elephantidae"
       },
-      "rotulo": "37 elefantes"
+      "rotulo": "37 elefantes",
+      "planos": [
+        {
+          "clave": "pixabay:126210",
+          "url": "https://cdn.pixabay.com/video/2022/07/31/126210-735676459_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de gavinllo en Pixabay (https://pixabay.com/videos/id-126210/)",
+          "desde": 0.0,
+          "hasta": 13.83,
+          "duracion_clip": 13.0,
+          "posicion_x": 0.52,
+          "descripcion": "Un elefante africano camina solitario a través de un paisaje árido de matorrales bajo un cielo despejado."
+        }
+      ]
     },
     {
       "narracion": "Piensa en lo que significa: animales que viven en la sabana y la selva, subiendo por pasos de montaña helados.",
@@ -579,7 +592,20 @@
         "animal": "elefante",
         "cientifico": "Elephantidae"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:11760747",
+          "url": "https://videos.pexels.com/video-files/11760747/11760747-hd_2048_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de ROMAN ODINTSOV en Pexels (https://www.pexels.com/video/an-elephant-covered-in-mud-standing-by-a-fallen-tree-11760747/)",
+          "desde": 0.0,
+          "hasta": 44.94,
+          "duracion_clip": 45.0,
+          "posicion_x": 0.52,
+          "descripcion": "Un elefante cubierto de barro permanece de pie junto a las ramas de un árbol caído en un terreno seco."
+        }
+      ]
     },
     {
       "narracion": "Durante generaciones, los historiadores han discutido por qué paso exacto cruzó Aníbal. Todavía hoy no hay una respuesta cerrada.",
@@ -588,7 +614,20 @@
         "busqueda": "mountain pass snow",
         "describe": "paso de montaña con nieve"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pixabay:2780",
+          "url": "https://cdn.pixabay.com/video/2016/04/11/2780-162499711_medium.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de geichin en Pixabay (https://pixabay.com/videos/id-2780/)",
+          "desde": 0.0,
+          "hasta": 50.62,
+          "duracion_clip": 51.0,
+          "posicion_x": 0.5,
+          "descripcion": "Un arroyo o cascada de montaña fluye intensamente entre grandes rocas cubiertas de nieve en un entorno invernal."
+        }
+      ]
     },
     {
       "narracion": "Un estudio publicado en la revista PNAS calculó el gasto de energía de varias rutas posibles para un ejército como aquel.",
@@ -597,7 +636,20 @@
         "busqueda": "scientist laptop data",
         "describe": "persona analizando datos en un ordenador"
       },
-      "rotulo": "PNAS"
+      "rotulo": "PNAS",
+      "planos": [
+        {
+          "clave": "pexels:8327074",
+          "url": "https://videos.pexels.com/video-files/8327074/8327074-hd_1920_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Kindel Media en Pexels (https://www.pexels.com/video/a-man-recording-his-scientific-observation-8327074/)",
+          "desde": 0.0,
+          "hasta": 12.77,
+          "duracion_clip": 13.0,
+          "posicion_x": 0.6,
+          "descripcion": "Un científico trabajando con un ordenador portátil y un microscopio en un laboratorio."
+        }
+      ]
     },
     {
       "narracion": "Su conclusión: el paso de la Traversette, en la frontera entre Francia e Italia, sería el más eficiente de los que compararon.",
@@ -606,7 +658,20 @@
         "busqueda": "high mountain pass",
         "describe": "paso de alta montaña"
       },
-      "rotulo": "Col de la Traversette"
+      "rotulo": "Col de la Traversette",
+      "planos": [
+        {
+          "clave": "pixabay:375711",
+          "url": "https://cdn.pixabay.com/video/2026/09/11/375711_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de baranova_n en Pixabay (https://pixabay.com/videos/id-375711/)",
+          "desde": 0.0,
+          "hasta": 25.87,
+          "duracion_clip": 25.0,
+          "posicion_x": 0.5,
+          "descripcion": "Paisaje de alta montaña con rocas, glaciares y nubes moviéndose entre las cumbres."
+        }
+      ]
     },
     {
       "narracion": "Y los elefantes salían bien parados en el modelo: perderían solo un cuatro por ciento de sus reservas de grasa.",
@@ -617,7 +682,20 @@
         "animal": "elefante",
         "cientifico": "Elephantidae"
       },
-      "rotulo": "4 % de grasa"
+      "rotulo": "4 % de grasa",
+      "planos": [
+        {
+          "clave": "pexels:11760745",
+          "url": "https://videos.pexels.com/video-files/11760745/11760745-hd_2048_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de ROMAN ODINTSOV en Pexels (https://www.pexels.com/video/an-african-elephant-covered-in-mud-11760745/)",
+          "desde": 0.0,
+          "hasta": 42.44,
+          "duracion_clip": 42.0,
+          "posicion_x": 0.5,
+          "descripcion": "Un elefante africano cubierto de barro camina despacio por una llanura seca cerca de unos árboles caídos."
+        }
+      ]
     },
     {
       "narracion": "Por eso los autores creen que muchos de ellos, quizá la mayoría, sobrevivieron al cruce. Ojo: es una estimación de un modelo, no un recuento.",
@@ -628,7 +706,20 @@
         "animal": "elefante",
         "cientifico": "Elephantidae"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:17848790",
+          "url": "https://videos.pexels.com/video-files/17848790/17848790-hd_1920_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Roger Brown en Pexels (https://www.pexels.com/video/elephant-herd-17848790/)",
+          "desde": 0.0,
+          "hasta": 12.37,
+          "duracion_clip": 12.0,
+          "posicion_x": 0.5,
+          "descripcion": "Una pequeña manada de elefantes camina en fila a través de un paisaje seco con acacias al fondo."
+        }
+      ]
     },
     {
       "narracion": "Y otro matiz: el estudio parte de datos de elefantes africanos actuales, y no elimina toda la duda sobre la ruta.",
@@ -639,7 +730,20 @@
         "animal": "elefante africano",
         "cientifico": "Loxodonta africana"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "wikimedia:54806863",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/58/A_young_African_elephant_resting.webm/A_young_African_elephant_resting.webm.1080p.vp9.webm",
+          "tipo": "video",
+          "atribucion": "«A young African elephant resting.webm» de Regina Hart, CC BY 2.0, vía Wikimedia Commons (https://commons.wikimedia.org/wiki/File:A_young_African_elephant_resting.webm)",
+          "desde": 0.0,
+          "hasta": 46.41,
+          "duracion_clip": 46.489000000000004,
+          "posicion_x": 0.5,
+          "descripcion": "Un elefante africano joven descansa tumbado en el suelo de tierra roja en los primeros fotogramas y luego se levanta."
+        }
+      ]
     },
     {
       "narracion": "Lo que no admite discusión es la audacia: un ejército cruzando los Alpes con elefantes era algo que Roma no esperaba.",
@@ -648,7 +752,8 @@
         "busqueda": "roman statue marble",
         "describe": "estatua romana de mármol"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "sin_material": true
     },
     {
       "narracion": "Pero los elefantes impresionaban, y para servir de algo necesitaban un campo de batalla donde pudieran cargar.",
@@ -659,7 +764,20 @@
         "animal": "elefante",
         "cientifico": "Elephantidae"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:35023065",
+          "url": "https://videos.pexels.com/video-files/35023065/14837101_1920_1080_25fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Magda Ehlers en Pexels (https://www.pexels.com/video/african-elephants-in-natural-habitat-resting-35023065/)",
+          "desde": 8.88,
+          "hasta": 30.4,
+          "duracion_clip": 30.0,
+          "posicion_x": 0.65,
+          "descripcion": "Un elefante en un recinto con barrotes de fondo, moviendo las orejas y la trompa."
+        }
+      ]
     },
     {
       "narracion": "Ese campo de batalla llegaría años después, cuando Aníbal se enfrentó a un rival que lo conocía muy bien: Escipión.",
@@ -668,7 +786,20 @@
         "busqueda": "dry plain landscape",
         "describe": "llanura seca al atardecer"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:33660358",
+          "url": "https://videos.pexels.com/video-files/33660358/14301883_1920_1080_24fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de K en Pexels (https://www.pexels.com/video/aerial-view-of-expansive-african-savannah-33660358/)",
+          "desde": 0.0,
+          "hasta": 12.22,
+          "duracion_clip": 12.0,
+          "posicion_x": 0.5,
+          "descripcion": "Vista aérea panorámica de una llanura seca y árida con vegetación baja y algunas formaciones rocosas al fondo."
+        }
+      ]
     },
     {
       "narracion": "¿Qué tenía Escipión en la cabeza? Para entenderlo, vamos a Zama.",
@@ -679,7 +810,8 @@
         "animal": "elefante",
         "cientifico": "Elephantidae"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "sin_material": true
     },
     {
       "narracion": "Y ojo con esa batalla, porque en ella el arma estrella de Cartago iba a jugar su última carta.",
