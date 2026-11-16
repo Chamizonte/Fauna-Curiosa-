@@ -2,8 +2,7 @@ name: Publicar vídeo largo
 # La víspera de los días 1, 11 y 21 monta el vídeo largo y lo sube PROGRAMADO para
 # las 09:00 UTC del día siguiente (queda unas horas privado para poder revisarlo).
 # Se ejecuta a diario a las 06:00 UTC: si mañana no toca vídeo largo, termina enseguida.
-# Si no hay guion v2 o el montaje falla, el workflow v1 "Generar y subir vídeo largo"
-# publica al día siguiente como respaldo.
+# Si no hay guion o el montaje falla, el run sale en rojo (no hay respaldo).
 on:
   schedule:
     - cron: "0 6 * * *"
