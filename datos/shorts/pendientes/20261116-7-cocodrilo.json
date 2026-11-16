@@ -1,0 +1,36 @@
+{
+  "id": "20261116-7-cocodrilo",
+  "formato": "mito",
+  "animal": "cocodrilo",
+  "gancho_pantalla": "¿Mito o realidad? Lágrimas de cocodrilo",
+  "guion": "Dicen que los cocodrilos lloran de mentira para engañar a su presa. Pues ni es mentira ni es engaño. Un estudio de la Universidad de Florida grabó a caimanes y caimanes de anteojos comiendo en tierra, y cinco de siete animales lloraron mientras comían. Pero no es pena ni teatro: probablemente sea fisiología, por el aire que resopla por los senos nasales al comer. La causa exacta aún no está clara. Las lágrimas existen; la tristeza, no.",
+  "datos": [
+    {
+      "afirmacion": "En un estudio de la Universidad de Florida (St. Augustine Alligator Farm), cinco de siete animales, caimanes y caimanes americanos (aligátores), lloraron mientras comían en tierra.",
+      "fuentes": [
+        "https://archive.news.ufl.edu/articles/2007/10/researchers-no-faking-it-crocodile-tears-are-real.html",
+        "https://bioone.org/doi/full/10.1641/B570711"
+      ],
+      "verificado": true,
+      "nota": "El estudio fue con cuatro caimanes y tres aligátores, no con cocodrilos; en el guion se dice «cocodrilianos»/caimanes. La ficha de BioOne confirma que son las primeras pruebas claras de lágrimas durante la comida."
+    },
+    {
+      "afirmacion": "Las lágrimas se consideran fisiológicas, no emocionales; se sospecha que se deben al resoplido al comer, y la causa exacta no está clara.",
+      "fuentes": [
+        "https://archive.news.ufl.edu/articles/2007/10/researchers-no-faking-it-crocodile-tears-are-real.html",
+        "https://bioone.org/doi/full/10.1641/B570711"
+      ],
+      "verificado": true,
+      "nota": "Reformulado con prudencia («probablemente»); el mecanismo no está demostrado. BioOne solo accesible el resumen."
+    }
+  ],
+  "planos": [
+    {"clave": "wikimedia:34897923", "desde": 0.0, "hasta": 5.0, "nota": "Foto de cabeza de caimán con ojo y dientes en detalle, gancho"},
+    {"clave": "pixabay:173059", "desde": 0.0, "hasta": 4.0, "nota": "Cocodrilo en la orilla"},
+    {"clave": "pixabay:173059", "desde": 4.0, "hasta": 7.5, "nota": "Salto al agua, ritmo"},
+    {"clave": "wikimedia:34897923", "desde": 0.0, "hasta": 4.0, "nota": "Vuelve al ojo para el cierre en bucle"}
+  ],
+  "titulo": "Lágrimas de cocodrilo: ¿mito o realidad?",
+  "descripcion": "Los cocodrilianos sí lloran al comer, pero no es emoción: un estudio de la Universidad de Florida (2007) lo documentó en caimanes y aligátores.",
+  "etiquetas": ["cocodrilo", "mito", "caimán", "animales", "curiosidades"]
+}

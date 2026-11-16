@@ -1,0 +1,36 @@
+{
+  "id": "20261116-6-camaleon",
+  "formato": "por_que",
+  "animal": "camaleón",
+  "gancho_pantalla": "¿Cómo mira un camaleón?",
+  "guion": "Fíjate en este ojo. Se mueve solo, sin que el otro le haga caso. Un camaleón puede explorar casi todo lo que le rodea sin girar la cabeza, mirando en dos direcciones a la vez. El secreto está detrás de cada ojo: un nervio óptico largo y enrollado, como el cable de un teléfono. Ese cable sobrante da holgura para girar el ojo sin tirones. Y cuando detecta una presa, los dos ojos se coordinan y apuntan al mismo sitio. Un ojo para explorar, dos para disparar.",
+  "datos": [
+    {
+      "afirmacion": "Los camaleones mueven los ojos de forma independiente al explorar su entorno y, al detectar una presa, los coordinan hacia el mismo punto.",
+      "fuentes": [
+        "https://news.ufl.edu/2025/11/chameleons-telephone-cord-like-optic-nerves/",
+        "https://sciencedaily.com/releases/2025/11/251118220056.htm"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Sus nervios ópticos son largos y están enrollados (no descrito en otros lagartos), lo que da holgura para girar los ojos ampliamente sin mover el cuello (Scientific Reports, 2025, DOI 10.1038/s41598-025-20357-3).",
+      "fuentes": [
+        "https://news.ufl.edu/2025/11/chameleons-telephone-cord-like-optic-nerves/",
+        "https://sciencedaily.com/releases/2025/11/251118220056.htm"
+      ],
+      "verificado": true,
+      "nota": "Las dos fuentes resumen el mismo estudio; el DOI es la fuente primaria. Se evita cifrar los grados de visión."
+    }
+  ],
+  "planos": [
+    {"clave": "pixabay:233037", "desde": 0.0, "hasta": 6.0, "nota": "Primer plano extremo del ojo moviéndose: es el gancho"},
+    {"clave": "pexels:3191354", "desde": 0.0, "hasta": 6.0, "nota": "Camaleón en rama con los ojos mirando en distintas direcciones"},
+    {"clave": "pixabay:233037", "desde": 12.0, "hasta": 17.0, "nota": "Otro tramo del ojo en movimiento"},
+    {"clave": "pexels:3191354", "desde": 12.0, "hasta": 17.0, "nota": "Cuerpo y cabeza del camaleón en reposo"},
+    {"clave": "wikimedia:47912511", "desde": 2.0, "hasta": 7.0, "nota": "El camaleón avanza por la hoja para cerrar"}
+  ],
+  "titulo": "Camaleón: el truco de sus ojos independientes",
+  "descripcion": "Los camaleones tienen nervios ópticos enrollados que les permiten mover cada ojo por separado. Estudio en Scientific Reports (2025).",
+  "etiquetas": ["camaleón", "ojos", "animales", "curiosidades", "reptiles"]
+}

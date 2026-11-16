@@ -1,0 +1,34 @@
+{
+  "id": "20261116-9-tortuga-marina",
+  "formato": "tarjeta",
+  "animal": "tortuga marina",
+  "gancho_pantalla": "Esto NO es una medusa",
+  "texto_tarjeta": "Lo que come esta tortuga **no es una medusa**: es una **carabela portuguesa**, famosa por su picadura dolorosa. La tortuga boba la incluye en su menú, junto a **medusas**, cangrejos, moluscos y peces. Para los científicos, tolerable... y además **sabrosa**.",
+  "datos": [
+    {
+      "afirmacion": "La tortuga boba (Caretta caretta) come carabelas portuguesas, además de cangrejos, moluscos, medusas y peces.",
+      "fuentes": [
+        "https://home.nps.gov/pais/learn/nature/loggerhead.htm",
+        "https://turtlehospital.org/news/loggerhead-turtles-feed-offshore/"
+      ],
+      "verificado": true,
+      "nota": "No se afirma inmunidad: NPS dice que no se cree inmune y Turtle Hospital dice que no les afecta; hay desacuerdo. «Tolerable pero sabrosa» es la expresión del NPS."
+    },
+    {
+      "afirmacion": "La carabela portuguesa tiene una picadura dolorosa.",
+      "fuentes": [
+        "https://turtlehospital.org/news/loggerhead-turtles-feed-offshore/",
+        "https://home.nps.gov/pais/learn/nature/loggerhead.htm"
+      ],
+      "verificado": true,
+      "nota": "El NPS la cataloga entre las criaturas con aguijón; el Turtle Hospital describe su picadura como dolorosa."
+    }
+  ],
+  "planos": [
+    {"clave": "inaturalist:183028111", "desde": 0.0, "hasta": 8.0, "nota": "Foto de Caretta caretta comiendo carabelas: gancho"},
+    {"clave": "inaturalist:183028089", "desde": 0.0, "hasta": 8.0, "nota": "Foto de la tortuga emergiendo con la carabela"}
+  ],
+  "titulo": "Tortuga boba: la presa que pica y se la come",
+  "descripcion": "La tortuga boba come carabelas portuguesas, además de medusas, cangrejos y peces. Fotos de iNaturalist.",
+  "etiquetas": ["tortuga marina", "tortuga boba", "carabela portuguesa", "animales", "curiosidades"]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "20261116-8-jirafa",
+  "formato": "tarjeta",
+  "animal": "jirafa",
+  "gancho_pantalla": "¿Sabías que…?",
+  "texto_tarjeta": "La lengua de una jirafa **no es rosa**. Mide unos **45 a 50 centímetros**, casi como un antebrazo, y la parte que asoma al comer es de un color **azul oscuro** casi negro por la melanina. La teoría más extendida dice que la protege del **sol**, pero los científicos aún no lo han confirmado.",
+  "datos": [
+    {
+      "afirmacion": "La lengua de la jirafa mide unos 45–50 cm y su parte expuesta es oscura (azul-negro-púrpura) por melanina; la base es rosa.",
+      "fuentes": [
+        "https://giraffeconservation.org/facts-about-giraffe/how-long-is-a-giraffes-tongue-what-color-is-it/",
+        "https://www.sciencefocus.com/nature/why-do-giraffes-have-purple-tongues"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "La protección solar es la teoría principal pero no hay una explicación definitiva.",
+      "fuentes": [
+        "https://giraffeconservation.org/facts-about-giraffe/how-long-is-a-giraffes-tongue-what-color-is-it/",
+        "https://www.sciencefocus.com/nature/why-do-giraffes-have-purple-tongues"
+      ],
+      "verificado": true,
+      "nota": "Reformulado con prudencia: ambas fuentes lo presentan como teoría no confirmada."
+    }
+  ],
+  "planos": [
+    {"clave": "wikimedia:81733900", "desde": 0.0, "hasta": 8.0, "nota": "Foto de la jirafa sacando la lengua: es el motivo de la tarjeta"},
+    {"clave": "wikimedia:149963196", "desde": 2.0, "hasta": 8.0, "nota": "Primer plano de la cara y el cuello"}
+  ],
+  "titulo": "Jirafa: el color secreto de su lengua",
+  "descripcion": "La lengua de la jirafa mide 45–50 cm y es oscura en la punta. La teoría del sol aún no está confirmada.",
+  "etiquetas": ["jirafa", "lengua", "animales", "curiosidades"]
+}
