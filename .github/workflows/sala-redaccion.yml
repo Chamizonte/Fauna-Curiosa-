@@ -5,6 +5,10 @@ name: Sala de redacción (Claude)
 on:
   schedule:
     - cron: "30 2 * * *"   # cada noche 02:30 UTC, después del explorador
+    # Repescas por si GitHub se salta la de las 02:30: si la sala ya escribió hoy
+    # (hay guiones con la fecha de hoy), no hacen nada.
+    - cron: "15 4 * * *"
+    - cron: "0 6 * * *"
   workflow_dispatch:
     inputs:
       cantidad:
@@ -55,8 +59,21 @@ jobs:
           n="${{ github.event.inputs.cantidad }}"
           [ -z "$n" ] && n=$(( 12 - pend )) && [ "$n" -gt 8 ] && n=8
           [ "$n" -lt 0 ] && n=0
+          if [ "${{ github.event_name }}" = "schedule" ] && ls datos/shorts/pendientes datos/shorts/publicados | grep -q "^$(date -u +%Y%m%d)-"; then
+            echo "La sala ya escribió hoy: no hace falta repetir"; n=0
+          fi
           echo "Pendientes: $pend -> escribir $n"
           echo "n=$n" >> "$GITHUB_OUTPUT"
+      - name: Reparto de formatos según las visitas
+        if: steps.cuantos.outputs.n != '0'
+        env:
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          pip install -q requests google-auth google-api-python-client
+          python -m cf.rendimiento ${{ steps.cuantos.outputs.n }} | tee trabajo/reparto.txt || true
       - uses: anthropics/claude-code-action@v1
         if: steps.cuantos.outputs.n != '0'
         with:
@@ -75,7 +92,9 @@ jobs:
             2. Lee trabajo/contexto.txt (qué hay en la biblioteca y qué está ya escrito o publicado).
             3. Para cada animal que vayas a usar, lee trabajo/biblioteca/NOMBRE.txt (una línea por clip)
                y elige planos SOLO entre esas claves y dentro de sus escenas.
-            4. Reparte los formatos por_que, comparativa, mito y tarjeta en partes iguales (prueba A/B).
+            4. Escribe exactamente cuántos guiones de cada formato (por_que, comparativa, mito, tarjeta)
+               dice trabajo/reparto.txt: se calcula con las visitas de los shorts ya publicados.
+               Si ese archivo no existe o está vacío, repártelos a partes iguales.
                No repitas animal y ángulo de un guion pendiente o publicado.
             5. Verifica cada dato con búsqueda web y abre las fuentes (WebFetch) para comprobar que
                dicen lo que afirmas. Si no consigues 2 fuentes independientes, cambia de dato.
@@ -93,7 +112,48 @@ jobs:
             --allowedTools Read,Write,Glob,Grep,WebSearch,WebFetch
             --permission-mode default
       - name: Control de calidad de los guiones
-        run: python -m cf.validar_briefs
+        id: control
+        run: |
+          python -m cf.validar_briefs
+          # guiones de esta noche que no han pasado: Claude intenta corregirlos
+          git status --porcelain --untracked-files=all datos/shorts/rechazados | grep '^??' | sed 's/^?? //' | grep '.json$' > trabajo/rechazados.txt || true
+          cat trabajo/rechazados.txt
+          [ -s trabajo/rechazados.txt ] && echo "hay=1" >> "$GITHUB_OUTPUT" || true
+      - uses: anthropics/claude-code-action@v1
+        name: Corregir los guiones rechazados
+        if: steps.control.outputs.hay == '1'
+        continue-on-error: true
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          show_full_output: true
+          prompt: |
+            Algunos guiones de Shorts de esta noche no han pasado el control de calidad.
+            La lista está en trabajo/rechazados.txt. Para cada uno:
+            1. Lee el guion y su motivo (mismo nombre terminado en .motivo.txt, en datos/shorts/rechazados/).
+            2. Corrige SOLO esos fallos siguiendo .claude/skills/guion-shorts-curiosa-fauna/SKILL.md.
+               Si el fallo es de un clip, mira trabajo/biblioteca/ANIMAL.txt y usa tramos que existan.
+               Si falta una fuente, busca y abre una segunda de OTRO dominio que lo confirme
+               (.claude/skills/verificacion-fauna/SKILL.md); si no la encuentras, cambia el dato.
+            3. Guarda el guion corregido con Write en datos/shorts/pendientes/ con el MISMO nombre de archivo.
+            Si uno no tiene arreglo, déjalo. No tienes Bash. No toques nada más. No hagas commits.
+          claude_args: |
+            --model claude-sonnet-5-5
+            --max-turns 60
+            --allowedTools Read,Write,Glob,Grep,WebSearch,WebFetch
+            --permission-mode default
+      - name: Segundo control de calidad
+        if: steps.control.outputs.hay == '1'
+        run: |
+          python -m cf.validar_briefs
+          # los que ya pasan dejan de estar en rechazados
+          while read -r f; do
+            n=$(basename "$f" .json)
+            if [ -f "datos/shorts/pendientes/$n.json" ]; then
+              rm -f "datos/shorts/rechazados/$n.json" "datos/shorts/rechazados/$n.motivo.txt"
+              echo "✅ recuperado: $n"
+            fi
+          done < trabajo/rechazados.txt
       - name: ¿Ha escrito guiones?
         if: steps.cuantos.outputs.n != '0'
         run: |

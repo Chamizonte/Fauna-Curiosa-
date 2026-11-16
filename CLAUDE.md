@@ -15,7 +15,8 @@ Este repositorio produce y publica automáticamente:
 
 ## Mapa del repositorio
 - Shorts (v2, en producción): `explorador.yml` (00:30 UTC, llena `datos/biblioteca`) →
-  `sala-redaccion.yml` (02:30 UTC, Claude escribe guiones en `datos/shorts/pendientes`) →
+  `sala-redaccion.yml` (02:30 UTC con repescas a las 04:15 y 06:00; Claude escribe guiones en
+  `datos/shorts/pendientes`, con el reparto de formatos que da `cf/rendimiento.py` según las visitas) →
   `publicar-short.yml` (cada hora, `cf/turno.py` decide; turnos 08, 12, 16 y 20 UTC; mueve el guion a `datos/shorts/publicados`).
   Código en `cf/`, montaje en `remotion/`.
 - La v1 (`generador_shorts.py`, `generador_video.py`) se retiró el 2026-11-16: no hay respaldo.
