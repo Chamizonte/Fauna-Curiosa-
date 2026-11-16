@@ -112,7 +112,48 @@ jobs:
             --allowedTools Read,Write,Glob,Grep,WebSearch,WebFetch
             --permission-mode default
       - name: Control de calidad de los guiones
-        run: python -m cf.validar_briefs
+        id: control
+        run: |
+          python -m cf.validar_briefs
+          # guiones de esta noche que no han pasado: Claude intenta corregirlos
+          git status --porcelain --untracked-files=all datos/shorts/rechazados | grep '^??' | sed 's/^?? //' | grep '.json$' > trabajo/rechazados.txt || true
+          cat trabajo/rechazados.txt
+          [ -s trabajo/rechazados.txt ] && echo "hay=1" >> "$GITHUB_OUTPUT" || true
+      - uses: anthropics/claude-code-action@v1
+        name: Corregir los guiones rechazados
+        if: steps.control.outputs.hay == '1'
+        continue-on-error: true
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          show_full_output: true
+          prompt: |
+            Algunos guiones de Shorts de esta noche no han pasado el control de calidad.
+            La lista está en trabajo/rechazados.txt. Para cada uno:
+            1. Lee el guion y su motivo (mismo nombre terminado en .motivo.txt, en datos/shorts/rechazados/).
+            2. Corrige SOLO esos fallos siguiendo .claude/skills/guion-shorts-curiosa-fauna/SKILL.md.
+               Si el fallo es de un clip, mira trabajo/biblioteca/ANIMAL.txt y usa tramos que existan.
+               Si falta una fuente, busca y abre una segunda de OTRO dominio que lo confirme
+               (.claude/skills/verificacion-fauna/SKILL.md); si no la encuentras, cambia el dato.
+            3. Guarda el guion corregido con Write en datos/shorts/pendientes/ con el MISMO nombre de archivo.
+            Si uno no tiene arreglo, déjalo. No tienes Bash. No toques nada más. No hagas commits.
+          claude_args: |
+            --model claude-sonnet-5-5
+            --max-turns 60
+            --allowedTools Read,Write,Glob,Grep,WebSearch,WebFetch
+            --permission-mode default
+      - name: Segundo control de calidad
+        if: steps.control.outputs.hay == '1'
+        run: |
+          python -m cf.validar_briefs
+          # los que ya pasan dejan de estar en rechazados
+          while read -r f; do
+            n=$(basename "$f" .json)
+            if [ -f "datos/shorts/pendientes/$n.json" ]; then
+              rm -f "datos/shorts/rechazados/$n.json" "datos/shorts/rechazados/$n.motivo.txt"
+              echo "✅ recuperado: $n"
+            fi
+          done < trabajo/rechazados.txt
       - name: ¿Ha escrito guiones?
         if: steps.cuantos.outputs.n != '0'
         run: |
