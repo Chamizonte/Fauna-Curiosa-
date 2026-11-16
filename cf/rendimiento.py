@@ -2,7 +2,7 @@
 
 Lee las visitas de los shorts publicados (datos/shorts/publicados/*.json) en YouTube y
 decide cuántos guiones de cada formato escribe la sala esta noche:
-- Solo cuentan los shorts con al menos 48 h (antes las visitas aún no dicen nada).
+- Solo cuentan los shorts con al menos una semana (antes las visitas aún no dicen nada).
 - Mientras algún formato tenga menos de 3 shorts medidos, reparto a partes iguales.
 - Después, cada formato recibe al menos 1 guion (para seguir aprendiendo) y el resto
   se reparte en proporción a la mediana de visitas de cada formato.
@@ -23,7 +23,7 @@ from .util import DATOS
 
 FORMATOS = ["por_que", "comparativa", "mito", "tarjeta"]
 PUBL = DATOS / "shorts" / "publicados"
-EDAD = dt.timedelta(hours=48)
+EDAD = dt.timedelta(days=7)
 MIN_MEDIDOS = 3
 API = "https://www.googleapis.com/youtube/v3/videos"
 
@@ -68,7 +68,7 @@ def visitas(ids):
 
 
 def medidos(ahora=None):
-    """{formato: [visitas de cada short con más de 48 h]}"""
+    """{formato: [visitas de cada short con más de una semana]}"""
     ahora = ahora or dt.datetime.utcnow()
     shorts = []
     for f in PUBL.glob("*.json"):
@@ -108,7 +108,7 @@ def reparto(n, datos):
     for f in sorted(FORMATOS, key=lambda f: cuotas[f] - int(cuotas[f]), reverse=True)[:n - sum(out.values())]:
         out[f] += 1
     det = ", ".join(f"{f} {int(med[f])}" for f in sorted(FORMATOS, key=med.get, reverse=True))
-    return out, f"mediana de visitas a las 48 h+: {det}"
+    return out, f"mediana de visitas a la semana o más: {det}"
 
 
 def main():
