@@ -6,9 +6,16 @@ name: Publicar short
 # pasada, dejando al menos 2 h 30 min entre shorts.
 # Monta el guion pendiente más antiguo y lo sube en público. Si no quedan guiones
 # o el montaje falla, el run sale en rojo y ese turno se recupera en la siguiente pasada.
+# Como GitHub a veces no lanza ninguna de las programadas durante horas, también se
+# comprueba al terminar cualquier otro workflow del canal (cf.turno decide si toca).
 on:
   schedule:
     - cron: "17 8-23 * * *"
+    - cron: "47 8-23 * * *"
+  workflow_run:
+    workflows: ["Sala de redacción (Claude)", "Explorador de material (v2)", "Publicar vídeo largo",
+                "Guion de vídeo largo (Claude)"]
+    types: [completed]
   workflow_dispatch:
     inputs:
       forzar:
