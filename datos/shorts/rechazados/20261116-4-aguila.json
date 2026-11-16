@@ -1,0 +1,33 @@
+{
+  "id": "20261116-4-aguila",
+  "formato": "tarjeta",
+  "animal": "águila",
+  "gancho_pantalla": "El mayor nido del mundo",
+  "texto_tarjeta": "Esta ave construyó el **mayor nido** jamás registrado. Era de un águila calva en Florida: **2,9 metros** de ancho y **6 metros** de profundidad. Cuando lo examinaron, en 1963, se estimó que pesaba **más de dos toneladas**.",
+  "datos": [
+    {
+      "afirmacion": "El mayor nido de ave registrado lo construyó una pareja de águilas calvas cerca de St. Petersburg (Florida): unos 2,9 m de ancho y 6 m de profundidad.",
+      "fuentes": [
+        "https://www.guinnessworldrecords.com/world-records/largest-birds-nest",
+        "https://www.discoverwildlife.com/animal-facts/birds/biggest-bird-nest-in-the-world"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Examinado en 1963, se estimó que pesaba más de dos toneladas.",
+      "fuentes": [
+        "https://www.guinnessworldrecords.com/world-records/largest-birds-nest",
+        "https://www.discoverwildlife.com/animal-facts/birds/biggest-bird-nest-in-the-world"
+      ],
+      "verificado": true,
+      "nota": "Es una estimación, por eso el texto dice 'se estimó'."
+    }
+  ],
+  "planos": [
+    {"clave": "pixabay:222030", "desde": 0.0, "hasta": 5.5, "nota": "cabeza de águila calva, plano fuerte"},
+    {"clave": "pixabay:222030", "desde": 5.5, "hasta": 11.0, "nota": "giro de cabeza de perfil"}
+  ],
+  "titulo": "Águila calva: el mayor nido del mundo, 2,9 metros",
+  "descripcion": "Una pareja de águilas calvas construyó en Florida el mayor nido de ave registrado: 2,9 m de ancho y más de dos toneladas estimadas.",
+  "etiquetas": ["águila calva", "animales", "curiosidades", "nidos", "aves"]
+}

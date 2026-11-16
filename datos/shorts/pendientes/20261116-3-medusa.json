@@ -1,0 +1,35 @@
+{
+  "id": "20261116-3-medusa",
+  "formato": "por_que",
+  "animal": "medusa",
+  "gancho_pantalla": "¿Cómo vive sin cerebro?",
+  "guion": "¿Cómo vive una medusa sin cerebro? Porque no lo necesita. No tiene ni cerebro ni corazón. En su lugar tiene una red de nervios repartida por el cuerpo, un sistema nervioso muy sencillo. Con ella detecta la luz, los olores y otros estímulos del agua, y reacciona. Es simple, pero le basta para llevar vida de medusa.",
+  "datos": [
+    {
+      "afirmacion": "Las medusas no tienen cerebro ni corazón.",
+      "fuentes": [
+        "https://oceanservice.noaa.gov/facts/jellyfish.html",
+        "https://oceanconservancy.org/?p=69868"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "En lugar de cerebro tienen una red nerviosa que les permite detectar luz, olores y otros estímulos y responder.",
+      "fuentes": [
+        "https://oceanservice.noaa.gov/facts/jellyfish.html",
+        "https://oceanconservancy.org/?p=69868"
+      ],
+      "verificado": true
+    }
+  ],
+  "planos": [
+    {"clave": "pixabay:213616", "desde": 0.0, "hasta": 3.5, "nota": "medusas con luz rosa: plano más llamativo"},
+    {"clave": "pixabay:213616", "desde": 4.0, "hasta": 7.5, "nota": "nadando elegantes"},
+    {"clave": "pexels:28156785", "desde": 2.0, "hasta": 6.0, "nota": "gran grupo bajo luz azul, mientras dice que reaccionan al entorno (posible texto en pantalla: revisar)"},
+    {"clave": "pixabay:213616", "desde": 8.0, "hasta": 11.5, "nota": "detalle de las medusas"},
+    {"clave": "pixabay:213616", "desde": 11.5, "hasta": 14.5, "nota": "cierre"}
+  ],
+  "titulo": "Medusa: cómo vive sin cerebro ni corazón",
+  "descripcion": "Las medusas no tienen cerebro ni corazón: usan una red nerviosa para detectar la luz, los olores y otros estímulos.",
+  "etiquetas": ["medusa", "animales", "curiosidades", "oceano", "sin cerebro"]
+}

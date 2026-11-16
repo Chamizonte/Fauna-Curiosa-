@@ -1,0 +1,45 @@
+{
+  "id": "20261116-1-camaleon",
+  "formato": "por_que",
+  "animal": "camaleón",
+  "gancho_pantalla": "¿Cómo mira a dos sitios a la vez?",
+  "guion": "¿Cómo puede un camaleón mirar a dos sitios a la vez? Porque cada ojo se mueve por su cuenta. Mientras busca presa, uno explora a la izquierda y el otro a la derecha, y entre los dos abarcan casi un círculo completo. Sus nervios ópticos van enrollados como el cable de un teléfono. Y cuando localiza al insecto, los dos ojos se alinean para calcular dónde apuntar la lengua.",
+  "datos": [
+    {
+      "afirmacion": "Cada ojo del camaleón se mueve de forma independiente y entre los dos dan un campo de visión casi de 360 grados.",
+      "fuentes": [
+        "https://www.nhm.ac.uk/discover/amazing-eyes-vision-champions.html",
+        "https://news.ufl.edu/2025/11/chameleons-telephone-cord-like-optic-nerves/"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Tras localizar la presa, los ojos se alinean en una dirección para calcular dónde lanzar la lengua.",
+      "fuentes": [
+        "https://news.ufl.edu/2025/11/chameleons-telephone-cord-like-optic-nerves/",
+        "https://www.nhm.ac.uk/discover/amazing-eyes-vision-champions.html"
+      ],
+      "verificado": true,
+      "nota": "El NHM confirma que alterna entre usar cada ojo por separado y los dos a la vez; el detalle de apuntar la lengua es de la Univ. de Florida (estudio de 2025)."
+    },
+    {
+      "afirmacion": "Los nervios ópticos del camaleón están enrollados como un cable de teléfono, algo que no se ve en otros lagartos.",
+      "fuentes": [
+        "https://news.ufl.edu/2025/11/chameleons-telephone-cord-like-optic-nerves/",
+        "https://www.floridamuseum.ufl.edu/science/scientists-discover-chameleons-telephone-cord-like-optic-nerves-once-overlooked-by-aristotle-and-newton/"
+      ],
+      "verificado": true,
+      "nota": "La segunda URL es el comunicado del Museo de Florida; solo se abrió la primera. Revisar si el validador exige dos fuentes abiertas."
+    }
+  ],
+  "planos": [
+    {"clave": "pixabay:233037", "desde": 2.0, "hasta": 5.5, "nota": "primer plano extremo del ojo moviéndose: es el gancho"},
+    {"clave": "pexels:3191354", "desde": 1.0, "hasta": 4.5, "nota": "camaleón sobre la rama con los ojos mirando a sitios distintos"},
+    {"clave": "pixabay:233037", "desde": 8.0, "hasta": 11.5, "nota": "otro tramo del ojo girando"},
+    {"clave": "pexels:3191354", "desde": 8.0, "hasta": 11.5, "nota": "reposo y cresta, mientras habla de los nervios enrollados"},
+    {"clave": "pixabay:233037", "desde": 15.0, "hasta": 18.5, "nota": "ojo enfocando, cierre"}
+  ],
+  "titulo": "Camaleón: cómo mira a dos sitios a la vez",
+  "descripcion": "Cada ojo del camaleón se mueve por separado y, entre los dos, ven casi 360 grados. Sus nervios ópticos van enrollados como un cable de teléfono.",
+  "etiquetas": ["camaleón", "animales", "curiosidades", "ojos", "reptiles"]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "20261116-5-mariquita",
+  "formato": "tarjeta",
+  "animal": "mariquita",
+  "gancho_pantalla": "Esto NO es un bicho inocente",
+  "texto_tarjeta": "Esta mariquita **no es tan inocente**. Cuando algo la amenaza, suelta por las patas unas gotas **amargas** de su propia sangre. Sus colores vivos son un **aviso** para los depredadores. Y además es **cazadora**: se come unos **50 pulgones** al día.",
+  "datos": [
+    {
+      "afirmacion": "Cuando se ven amenazadas, muchas mariquitas sueltan por las articulaciones de las patas gotas amargas de hemolinfa (sangre) para disuadir a los depredadores.",
+      "fuentes": [
+        "https://www.colorado.edu/asmagazine/node/4325",
+        "https://site.extension.uga.edu/fultonag/2025/03/beneficial-bug-spotlight-lady-beetles"
+      ],
+      "verificado": true,
+      "nota": "Se dice 'muchas' en la fuente; el texto de la tarjeta habla de 'esta mariquita' como ejemplo, lo que puede leerse como generalización. Considerar 'las mariquitas' antes de publicar."
+    },
+    {
+      "afirmacion": "Los colores vivos son una señal de aviso (aposematismo) de que el insecto es tóxico o desagradable.",
+      "fuentes": [
+        "https://site.extension.uga.edu/fultonag/2025/03/beneficial-bug-spotlight-lady-beetles",
+        "https://www.colorado.edu/asmagazine/node/4325"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Una mariquita adulta puede comerse unos 50 pulgones al día.",
+      "fuentes": [
+        "https://biocontrol.entomology.cornell.edu/predators/ladybeetles.php",
+        "https://ucanr.edu/blog/bug-squad/article/incredible-aphid-eating-machines"
+      ],
+      "verificado": true,
+      "nota": "Cornell lo da como máximo para la especie convergente (otras, como la de siete puntos, más); UC ANR: 'unos 50 al día'. Cifra orientativa."
+    }
+  ],
+  "planos": [
+    {"clave": "wikimedia:80188722", "desde": 0.0, "hasta": 5.0, "nota": "foto de mariquita de siete puntos: gancho"},
+    {"clave": "pixabay:120355", "desde": 1.0, "hasta": 6.0, "nota": "mariquita trepando por el tallo"},
+    {"clave": "pixabay:120355", "desde": 6.0, "hasta": 10.5, "nota": "sigue su recorrido, mientras se habla de que caza"}
+  ],
+  "titulo": "Mariquita: no es tan inocente como parece",
+  "descripcion": "Las mariquitas sueltan gotas amargas por las patas para defenderse y sus colores avisan a los depredadores. Una adulta se come unos 50 pulgones al día.",
+  "etiquetas": ["mariquita", "animales", "curiosidades", "insectos", "pulgones"]
+}
