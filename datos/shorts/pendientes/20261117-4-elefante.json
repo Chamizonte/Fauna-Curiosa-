@@ -1,0 +1,20 @@
+{
+  "id": "20261117-4-elefante",
+  "formato": "por_que",
+  "animal": "elefante",
+  "gancho_pantalla": "¿Cuánto espera una elefanta?",
+  "guion": "Mira a esta madre protegiendo a su cría entre las patas. Antes de verla caminar, tuvo que esperar muchísimo. La elefanta africana gesta durante unos veintidós meses, casi dos años. Es la gestación más larga de todos los mamíferos terrestres. Y cuando por fin nace, la cría se une a una manada que la rodea y la cuida. Casi dos años de espera para este primer paseo.",
+  "datos": [
+    {"afirmacion": "La gestación de la elefanta africana dura unos 22 meses, la más larga entre los mamíferos terrestres.", "fuentes": ["https://animaldiversity.org/accounts/Loxodonta_africana/", "https://www.nationalgeographic.com/animals/mammals/facts/african-savanna-elephant"], "verificado": true},
+    {"afirmacion": "Las crías de elefante africano viven en manadas de hembras emparentadas que las protegen.", "fuentes": ["https://animaldiversity.org/accounts/Loxodonta_africana/", "https://www.nationalgeographic.com/animals/mammals/facts/african-savanna-elephant"], "verificado": true}
+  ],
+  "planos": [
+    {"clave": "pexels:11760786", "desde": 0.0, "hasta": 6.0, "nota": "elefanta protegiendo a su cría: arranque fuerte"},
+    {"clave": "pixabay:219323", "desde": 0.0, "hasta": 4.5, "nota": "manada de elefantes con crías"},
+    {"clave": "pexels:11760786", "desde": 8.0, "hasta": 13.0, "nota": "vuelta a la madre y la cría"},
+    {"clave": "pixabay:219323", "desde": 4.5, "hasta": 9.0, "nota": "cierre con la manada caminando"}
+  ],
+  "titulo": "Elefante: la gestación más larga de los mamíferos terrestres",
+  "descripcion": "La elefanta africana gesta unos 22 meses, casi dos años. Es la gestación más larga entre los mamíferos terrestres.",
+  "etiquetas": ["elefante", "animales", "curiosidades", "sabana", "gestación"]
+}
