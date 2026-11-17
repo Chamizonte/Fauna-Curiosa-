@@ -42,6 +42,15 @@ def errores(b, bib):
         n = len(b["guion"].split())
         if not 45 <= n <= 85:
             e.append(f"el guion tiene {n} palabras (45-85)")
+    if b["formato"] == "mito":
+        # pregunta abierta: el vídeo no responde; la respuesta va en la descripción
+        if "respuesta" not in b["descripcion"].lower():
+            e.append("mito: la descripción debe incluir «Respuesta: …»")
+        if "comentario" not in b["guion"].lower():
+            e.append("mito: el guion debe cerrar pidiendo el voto en comentarios")
+        delata = re.search(r"\b(falso|mito|en realidad|la verdad es)\b", b["guion"].lower())
+        if delata:
+            e.append(f"mito: el guion delata la respuesta («{delata.group(1)}»)")
     if len(b["gancho_pantalla"].split()) > 7:
         e.append("gancho en pantalla de más de 7 palabras")
     if len(b["titulo"]) > 100:
