@@ -57,5 +57,13 @@
     "curiosidades",
     "mitos",
     "aves"
-  ]
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=wIxH1Jyq5q0",
+    "fecha": "2026-11-17T16:00Z",
+    "subido": "2026-11-17T13:39Z",
+    "programado": true,
+    "con_voz": true,
+    "privacidad": "public"
+  }
 }
