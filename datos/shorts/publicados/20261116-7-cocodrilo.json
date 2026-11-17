@@ -58,5 +58,13 @@
     "caimán",
     "animales",
     "curiosidades"
-  ]
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=Fn5RPps-bBM",
+    "fecha": "2026-11-18T12:00Z",
+    "subido": "2026-11-17T13:54Z",
+    "programado": true,
+    "con_voz": true,
+    "privacidad": "public"
+  }
 }
