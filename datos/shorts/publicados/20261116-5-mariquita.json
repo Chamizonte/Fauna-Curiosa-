@@ -33,11 +33,40 @@
     }
   ],
   "planos": [
-    {"clave": "wikimedia:80188722", "desde": 0.0, "hasta": 5.0, "nota": "foto de mariquita de siete puntos: gancho"},
-    {"clave": "pixabay:120355", "desde": 1.0, "hasta": 6.0, "nota": "mariquita trepando por el tallo"},
-    {"clave": "pixabay:120355", "desde": 6.0, "hasta": 10.5, "nota": "sigue su recorrido, mientras se habla de que caza"}
+    {
+      "clave": "wikimedia:80188722",
+      "desde": 0.0,
+      "hasta": 5.0,
+      "nota": "foto de mariquita de siete puntos: gancho"
+    },
+    {
+      "clave": "pixabay:120355",
+      "desde": 1.0,
+      "hasta": 6.0,
+      "nota": "mariquita trepando por el tallo"
+    },
+    {
+      "clave": "pixabay:120355",
+      "desde": 6.0,
+      "hasta": 10.5,
+      "nota": "sigue su recorrido, mientras se habla de que caza"
+    }
   ],
   "titulo": "Mariquita: no es tan inocente como parece",
   "descripcion": "Las mariquitas sueltan gotas amargas por las patas para defenderse y sus colores avisan a los depredadores. Una adulta se come unos 50 pulgones al día.",
-  "etiquetas": ["mariquita", "animales", "curiosidades", "insectos", "pulgones"]
+  "etiquetas": [
+    "mariquita",
+    "animales",
+    "curiosidades",
+    "insectos",
+    "pulgones"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=mJswk-vgjX0",
+    "fecha": "2026-11-18T08:00Z",
+    "subido": "2026-11-17T13:48Z",
+    "programado": true,
+    "con_voz": false,
+    "privacidad": "public"
+  }
 }
