@@ -124,7 +124,10 @@ const Subtitulos: React.FC<{ palabras: Palabra[]; desde: number }> = ({ palabras
                 fontWeight: 900,
                 fontSize: 96,
                 color: activa ? AMARILLO : "white",
-                WebkitTextStroke: "3px black",
+                // El trazo va DETRÁS del relleno: si no, Montserrat (contornos solapados)
+                // enseña rayas negras dentro de las letras.
+                WebkitTextStroke: "12px black",
+                paintOrder: "stroke fill",
                 textShadow: "0 8px 24px rgba(0,0,0,0.85)",
                 transform: activa ? `scale(${1 + 0.07 * pop})` : "scale(1)",
                 textTransform: "uppercase",
