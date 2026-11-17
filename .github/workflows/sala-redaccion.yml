@@ -9,6 +9,10 @@ on:
     # (hay guiones con la fecha de hoy), no hacen nada.
     - cron: "15 4 * * *"
     - cron: "0 6 * * *"
+    - cron: "30 7 * * *"
+  workflow_run:   # también al terminar el explorador (que GitHub suele lanzar tarde)
+    workflows: ["Explorador de material (v2)"]
+    types: [completed]
   workflow_dispatch:
     inputs:
       cantidad:
@@ -59,7 +63,7 @@ jobs:
           n="${{ github.event.inputs.cantidad }}"
           [ -z "$n" ] && n=$(( 12 - pend )) && [ "$n" -gt 8 ] && n=8
           [ "$n" -lt 0 ] && n=0
-          if [ "${{ github.event_name }}" = "schedule" ] && ls datos/shorts/pendientes datos/shorts/publicados | grep -q "^$(date -u +%Y%m%d)-"; then
+          if [ "${{ github.event_name }}" != "workflow_dispatch" ] && ls datos/shorts/pendientes datos/shorts/publicados | grep -q "^$(date -u +%Y%m%d)-"; then
             echo "La sala ya escribió hoy: no hace falta repetir"; n=0
           fi
           echo "Pendientes: $pend -> escribir $n"
