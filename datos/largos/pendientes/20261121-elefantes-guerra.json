@@ -822,7 +822,20 @@
         "animal": "elefante",
         "cientifico": "Elephantidae"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:40323416",
+          "url": "https://videos.pexels.com/video-files/40323416/17225280_1920_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Ahmet Yüksek ✪ en Pexels (https://www.pexels.com/video/african-elephants-in-captivity-at-zoo-enclosure-40323416/)",
+          "desde": 0.0,
+          "hasta": 27.06,
+          "duracion_clip": 27.0,
+          "posicion_x": 0.65,
+          "descripcion": "Un elefante africano en cautividad cerca de una estructura de madera con barrotes, con flores amarillas desenfocadas en primer plano."
+        }
+      ]
     },
     {
       "narracion": "Año 202 antes de Cristo. Aníbal y Escipión se encuentran en la batalla de Zama, la que decidiría la guerra entre Roma y Cartago.",
@@ -831,7 +844,20 @@
         "busqueda": "dry plains landscape",
         "describe": "llanura seca del norte de África"
       },
-      "rotulo": "202 a. C."
+      "rotulo": "202 a. C.",
+      "planos": [
+        {
+          "clave": "pixabay:275593",
+          "url": "https://cdn.pixabay.com/video/2025/04/29/275593_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Ian5152 en Pixabay (https://pixabay.com/videos/id-275593/)",
+          "desde": 0.0,
+          "hasta": 12.05,
+          "duracion_clip": 12.0,
+          "posicion_x": 0.5,
+          "descripcion": "Vista aérea cenital de un camino de tierra que bordea la orilla salina de una masa de agua, rodeado de vegetación baja y suelo árido."
+        }
+      ]
     },
     {
       "narracion": "Según Tito Livio, Aníbal alineó ochenta elefantes de guerra. Polibio habla de más de ochenta.",
@@ -842,7 +868,20 @@
         "animal": "elefante",
         "cientifico": "Elephantidae"
       },
-      "rotulo": "80 elefantes"
+      "rotulo": "80 elefantes",
+      "planos": [
+        {
+          "clave": "pixabay:219323",
+          "url": "https://cdn.pixabay.com/video/2024/07/03/219323_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de u_134iwnc6v7 en Pixabay (https://pixabay.com/videos/id-219323/)",
+          "desde": 0.0,
+          "hasta": 9.36,
+          "duracion_clip": 9.0,
+          "posicion_x": 0.5,
+          "descripcion": "Una manada de elefantes africanos con adultos y crías camina junta en formación a través de una llanura árida."
+        }
+      ]
     },
     {
       "narracion": "Era su gran apuesta: lanzarlos contra las primeras filas romanas para romperlas antes del choque de la infantería.",
@@ -853,7 +892,20 @@
         "animal": "elefante",
         "cientifico": "Elephantidae"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:31223126",
+          "url": "https://videos.pexels.com/video-files/31223126/13336210_1920_1080_60fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Simone Dinoia en Pexels (https://www.pexels.com/video/african-elephant-walking-through-savanna-landscape-31223126/)",
+          "desde": 0.0,
+          "hasta": 56.06,
+          "duracion_clip": 56.0,
+          "posicion_x": 0.52,
+          "descripcion": "Un elefante africano camina a paso vivo por un camino de tierra en la sabana, levantando una ligera polvareda a su paso."
+        }
+      ]
     },
     {
       "narracion": "Escipión sabía lo que le esperaba. Y preparó algo distinto a lo habitual en las legiones romanas.",
@@ -862,7 +914,20 @@
         "busqueda": "roman soldiers reenactment",
         "describe": "recreación de soldados romanos"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:38103933",
+          "url": "https://videos.pexels.com/video-files/38103933/16178360_1920_1440_60fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de SHOX ART en Pexels (https://www.pexels.com/video/roman-soldiers-reenactment-at-historical-event-38103933/)",
+          "desde": 0.0,
+          "hasta": 22.52,
+          "duracion_clip": 22.0,
+          "posicion_x": 0.5,
+          "descripcion": "Grupo de recreadores históricos caracterizados como soldados legionarios romanos realizando maniobras y levantando sus escudos."
+        }
+      ]
     },
     {
       "narracion": "En vez de colocar las unidades en tablero de ajedrez, las puso en fila, una justo detrás de otra, dejando pasillos abiertos entre ellas.",
@@ -871,7 +936,20 @@
         "busqueda": "soldiers marching formation",
         "describe": "soldados en formación ordenada",
         "esquema": "pasillos"
-      }
+      },
+      "planos": [
+        {
+          "clave": "pexels:28593802",
+          "url": "https://videos.pexels.com/video-files/28593802/12428867_1920_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Anya  Juárez Tenorio en Pexels (https://www.pexels.com/video/vibrant-military-parade-in-urban-setting-28593802/)",
+          "desde": 11.2,
+          "hasta": 14.53,
+          "duracion_clip": 14.0,
+          "posicion_x": 0.5,
+          "descripcion": "Soldados en formación militar desfilando en un entorno urbano con espectadores al fondo."
+        }
+      ]
     },
     {
       "narracion": "Si un elefante cargaba, no chocaría contra un muro: podía seguir de largo por esos pasillos, sin llevarse a nadie por delante.",
@@ -880,7 +958,20 @@
         "busqueda": "empty corridor lane",
         "describe": "pasillo largo y vacío",
         "esquema": "pasillos"
-      }
+      },
+      "planos": [
+        {
+          "clave": "pexels:10577776",
+          "url": "https://videos.pexels.com/video-files/10577776/10577776-hd_1920_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Vincuk Konan en Pexels (https://www.pexels.com/video/narrow-corridor-under-lights-10577776/)",
+          "desde": 0.0,
+          "hasta": 43.21,
+          "duracion_clip": 44.0,
+          "posicion_x": 0.5,
+          "descripcion": "Un pasillo largo, estrecho y vacío con paredes de piedra y luces en el techo en diferentes momentos del clip."
+        }
+      ]
     },
     {
       "narracion": "Delante, y dentro de esos huecos, puso a la infantería ligera, los vélites, armados con jabalinas.",
@@ -889,7 +980,20 @@
         "busqueda": "javelin throwing",
         "describe": "persona lanzando una jabalina",
         "esquema": "pasillos"
-      }
+      },
+      "planos": [
+        {
+          "clave": "pixabay:27833",
+          "url": "https://cdn.pixabay.com/video/2019/10/12/27833-366185174_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de MabelAmber en Pixabay (https://pixabay.com/videos/id-27833/)",
+          "desde": 0.0,
+          "hasta": 12.8,
+          "duracion_clip": 13.0,
+          "posicion_x": 0.5,
+          "descripcion": "Se muestra la superficie de un estanque con agua verde donde caen objetos creando ondas y salpicaduras."
+        }
+      ]
     },
     {
       "narracion": "Según Livio, su misión era molestar a los elefantes y, cuando cargaran, replegarse detrás de las líneas o apartarse a los lados.",
@@ -898,7 +1002,20 @@
         "busqueda": "athlete running field",
         "describe": "persona corriendo por un campo",
         "esquema": "pasillos"
-      }
+      },
+      "planos": [
+        {
+          "clave": "pexels:37612704",
+          "url": "https://videos.pexels.com/video-files/37612704/15941823_1920_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Allan González en Pexels (https://www.pexels.com/video/aerial-view-of-track-and-field-event-in-mexico-37612704/)",
+          "desde": 0.0,
+          "hasta": 30.0,
+          "duracion_clip": 30.0,
+          "posicion_x": 0.5,
+          "descripcion": "Vista aérea de una pista de atletismo con una persona corriendo en un estadio."
+        }
+      ]
     },
     {
       "narracion": "Así los elefantes quedarían expuestos a los proyectiles desde ambos lados mientras avanzaban por el pasillo.",
@@ -918,7 +1035,20 @@
         "busqueda": "trumpet horn sound",
         "describe": "persona tocando un cuerno o una trompeta"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:8103877",
+          "url": "https://videos.pexels.com/video-files/8103877/8103877-hd_2048_1080_25fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de MART  PRODUCTION en Pexels (https://www.pexels.com/video/man-playing-the-trumpet-8103877/)",
+          "desde": 0.0,
+          "hasta": 18.88,
+          "duracion_clip": 19.0,
+          "posicion_x": 0.5,
+          "descripcion": "Un hombre con sombrero, gafas y traje claro toca la trompeta al aire libre en un entorno urbano histórico."
+        }
+      ]
     },
     {
       "narracion": "El estruendo asustó a muchos elefantes, que dieron media vuelta y se lanzaron contra sus propias tropas.",
@@ -929,7 +1059,20 @@
         "animal": "elefante",
         "cientifico": "Elephantidae"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:17842221",
+          "url": "https://videos.pexels.com/video-files/17842221/17842221-hd_1920_1080_25fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Maksim Romashkin en Pexels (https://www.pexels.com/video/elephant-of-thailand-17842221/)",
+          "desde": 0.0,
+          "hasta": 15.0,
+          "duracion_clip": 15.0,
+          "posicion_x": 0.65,
+          "descripcion": "Un elefante camina por una pradera con árboles al fondo, se da la vuelta y se aleja, filmado a través de hierba en primer plano."
+        }
+      ]
     },
     {
       "narracion": "Algunos se lanzaron contra la caballería númida de Aníbal, en su ala izquierda. El caos fue enorme.",
@@ -938,7 +1081,20 @@
         "busqueda": "horses galloping dust",
         "describe": "caballos galopando entre polvo"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:27979821",
+          "url": "https://videos.pexels.com/video-files/27979821/12280495_1920_1080_25fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Zeynep Sude  Emek en Pexels (https://www.pexels.com/video/a-group-of-horses-running-in-the-desert-at-sunset-27979821/)",
+          "desde": 0.0,
+          "hasta": 12.72,
+          "duracion_clip": 14.0,
+          "posicion_x": 0.5,
+          "descripcion": "Una manada de caballos galopa a través de una llanura polvorienta a contraluz durante el atardecer."
+        }
+      ]
     },
     {
       "narracion": "Otros siguieron de largo por los pasillos romanos sin hacer daño, según cuentan los textos antiguos.",
@@ -949,7 +1105,20 @@
         "animal": "elefante",
         "cientifico": "Elephantidae"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:13683090",
+          "url": "https://videos.pexels.com/video-files/13683090/13683090-hd_1920_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Jon Olson en Pexels (https://www.pexels.com/video/an-african-elephant-spraying-dirt-over-its-body-13683090/)",
+          "desde": 0.0,
+          "hasta": 129.9,
+          "duracion_clip": 129.0,
+          "posicion_x": 0.5,
+          "descripcion": "Un elefante africano con colmillos visibles se encuentra en un entorno de sabana verde, moviéndose ligeramente entre los fotogramas."
+        }
+      ]
     },
     {
       "narracion": "Y los demás huyeron hacia el ala derecha cartaginesa, donde los proyectiles de la caballería los expulsaron del campo.",
@@ -960,7 +1129,20 @@
         "animal": "elefante",
         "cientifico": "Elephantidae"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:1171808",
+          "url": "https://videos.pexels.com/video-files/1171808/1171808-hd_1280_720_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Filippo Scorza en Pexels (https://www.pexels.com/video/elephants-1171808/)",
+          "desde": 0.0,
+          "hasta": 19.93,
+          "duracion_clip": 20.0,
+          "posicion_x": 0.45,
+          "descripcion": "Un gran elefante africano camina directamente hacia la cámara y pasa justo por delante de ella en una llanura, mientras otros miembros de la manada se aprecian a lo lejos."
+        }
+      ]
     },
     {
       "narracion": "Con la caballería cartaginesa desorganizada por sus propios elefantes, Masinisa y Lelio aprovecharon para atacar.",
@@ -969,7 +1151,20 @@
         "busqueda": "horse rider galloping",
         "describe": "jinete a caballo galopando"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:35921276",
+          "url": "https://videos.pexels.com/video-files/35921276/15239571_1920_1080_25fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Usman AbdulrasheedGambo en Pexels (https://www.pexels.com/video/dynamic-horse-racing-at-sunset-35921276/)",
+          "desde": 0.0,
+          "hasta": 14.16,
+          "duracion_clip": 14.0,
+          "posicion_x": 0.62,
+          "descripcion": "Un jinete monta a caballo a galope tendido a través de una pista de tierra y hierba, levantando nubes de polvo al atardecer."
+        }
+      ]
     },
     {
       "narracion": "Al final, Escipión ganó la batalla. Aníbal, el hombre que había cruzado los Alpes con elefantes, salía derrotado.",
@@ -978,7 +1173,20 @@
         "busqueda": "sunset battlefield silhouette",
         "describe": "atardecer sobre una llanura"
       },
-      "rotulo": "Escipión gana"
+      "rotulo": "Escipión gana",
+      "planos": [
+        {
+          "clave": "pixabay:223459",
+          "url": "https://cdn.pixabay.com/video/2024/07/27/223459_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de TonyDias7 en Pixabay (https://pixabay.com/videos/id-223459/)",
+          "desde": 0.0,
+          "hasta": 25.16,
+          "duracion_clip": 25.0,
+          "posicion_x": 0.7,
+          "descripcion": "Se muestra un atardecer sobre el mar con nubes densas y un barco navegando en el horizonte."
+        }
+      ]
     },
     {
       "narracion": "Fíjate en la lección de Zama: el arma más espectacular de Aníbal se volvió contra él.",
@@ -989,7 +1197,20 @@
         "animal": "elefante",
         "cientifico": "Elephantidae"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pixabay:126216",
+          "url": "https://cdn.pixabay.com/video/2022/07/31/126216-735676477_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de gavinllo en Pixabay (https://pixabay.com/videos/id-126216/)",
+          "desde": 0.0,
+          "hasta": 9.84,
+          "duracion_clip": 9.0,
+          "posicion_x": 0.52,
+          "descripcion": "Un grupo de elefantes africanos, que incluye un adulto, un juvenil y una cría diminuta, camina a paso tranquilo por un terreno despejado."
+        }
+      ]
     },
     {
       "narracion": "Un elefante de guerra no era una máquina. Era un animal: si se asustaba, podía convertirse en un peligro para su propio bando.",
@@ -1000,7 +1221,20 @@
         "animal": "elefante",
         "cientifico": "Elephantidae"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:33782519",
+          "url": "https://videos.pexels.com/video-files/33782519/14339693_1920_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Joolsmagools  ®️ en Pexels (https://www.pexels.com/video/asian-elephant-strolling-in-zoo-habitat-33782519/)",
+          "desde": 0.0,
+          "hasta": 24.66,
+          "duracion_clip": 24.0,
+          "posicion_x": 0.5,
+          "descripcion": "Un elefante asiático camina junto a un estanque en un recinto al aire libre y levanta la trompa hacia adelante."
+        }
+      ]
     },
     {
       "narracion": "Escipión no necesitó un invento: le bastó entender cómo reaccionan estos animales ante el ruido y ante los obstáculos.",
@@ -1011,7 +1245,20 @@
         "animal": "elefante",
         "cientifico": "Elephantidae"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "wikimedia:199969344",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/38/Baby_elephant_drinking_water_-_Latest_Wildlife_Videos.webm/Baby_elephant_drinking_water_-_Latest_Wildlife_Videos.webm.1080p.vp9.webm",
+          "tipo": "video",
+          "atribucion": "«Baby elephant drinking water - Latest Wildlife Videos.webm» de Africa Travel Channel, CC BY 3.0, vía Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Baby_elephant_drinking_water_-_Latest_Wildlife_Videos.webm)",
+          "desde": 0.24,
+          "hasta": 22.34,
+          "duracion_clip": 22.348,
+          "posicion_x": 0.5,
+          "descripcion": "Un joven elefante camina y se mueve entre la hierba alta en un entorno natural."
+        }
+      ]
     },
     {
       "narracion": "Pasillos, jabalinas y trompetas. Tres ideas sencillas que anularon a ochenta elefantes.",
@@ -1022,7 +1269,20 @@
         "animal": "elefante",
         "cientifico": "Elephantidae"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pixabay:258583",
+          "url": "https://cdn.pixabay.com/video/2025/02/16/258583_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de BlenderTimer en Pixabay (https://pixabay.com/videos/id-258583/)",
+          "desde": 0.0,
+          "hasta": 18.4,
+          "duracion_clip": 18.0,
+          "posicion_x": 0.5,
+          "descripcion": "Una manada de elefantes africanos con varias crías camina en fila levantando polvo sobre un terreno árido."
+        }
+      ]
     },
     {
       "narracion": "Así que, ¿tanque o apuesta arriesgada? Fueron las dos cosas: un arma capaz de romper una línea y, a la vez, capaz de arruinar a quien la usaba.",
@@ -1033,7 +1293,20 @@
         "animal": "elefante",
         "cientifico": "Elephantidae"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pexels:9983862",
+          "url": "https://videos.pexels.com/video-files/9983862/9983862-hd_1920_1080_25fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de 素材王国 Footage Kingdom en Pexels (https://www.pexels.com/video/nature-footage-of-group-of-elephants-9983862/)",
+          "desde": 0.0,
+          "hasta": 17.68,
+          "duracion_clip": 18.0,
+          "posicion_x": 0.5,
+          "descripcion": "Un grupo de elefantes camina en un recinto abierto que simula su hábitat natural bajo un cielo nublado."
+        }
+      ]
     },
     {
       "narracion": "Y recuerda: ellos no eligieron estar allí. Eran animales arrastrados a las guerras de los hombres.",
@@ -1044,7 +1317,20 @@
         "animal": "elefante",
         "cientifico": "Elephantidae"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "wikimedia:199969323",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Baby_elephant_1_week_old%2C_Gaowgalong_-_Elephantstay.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "tipo": "video",
+          "atribucion": "«Baby elephant 1 week old, Gaowgalong - Elephantstay.webm» de Elephantstay, CC BY 3.0, vía Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Baby_elephant_1_week_old,_Gaowgalong_-_Elephantstay.webm)",
+          "desde": 50.93,
+          "hasta": 80.53,
+          "duracion_clip": 181.808,
+          "posicion_x": 0.5,
+          "descripcion": "Un cría de elefante pequeño descansa y juega entre ramas y hojas en el suelo."
+        }
+      ]
     },
     {
       "narracion": "Si te ha sorprendido esta historia, suscríbete: en Curiosa Fauna seguimos contando cómo los animales se cruzan con la historia.",
@@ -1055,7 +1341,20 @@
         "animal": "elefante",
         "cientifico": "Elephantidae"
       },
-      "rotulo": ""
+      "rotulo": "",
+      "planos": [
+        {
+          "clave": "pixabay:215845",
+          "url": "https://cdn.pixabay.com/video/2024/06/08/215845_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de KunalKapoor7 en Pixabay (https://pixabay.com/videos/id-215845/)",
+          "desde": 3.2,
+          "hasta": 14.0,
+          "duracion_clip": 13.0,
+          "posicion_x": 0.5,
+          "descripcion": "Una manada de elefantes cruzando un río en un entorno natural."
+        }
+      ]
     }
   ],
   "datos": [
