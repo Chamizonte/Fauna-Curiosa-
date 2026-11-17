@@ -2,8 +2,8 @@
   "id": "20261117-5-oso-polar",
   "formato": "mito",
   "animal": "oso polar",
-  "gancho_pantalla": "¿Mito o realidad? Oso blanco",
-  "guion": "¿Los osos polares son blancos? Mito. Su piel es negra. Y su pelo tampoco tiene color: cada pelo es transparente y hueco por dentro. Lo que ves como blanco es luz que se dispersa y se refleja en esos pelos. Debajo, la piel oscura absorbe el calor del sol. Así que este oso, de blanco, solo tiene la apariencia.",
+  "gancho_pantalla": "Los osos polares son blancos",
+  "guion": "Los osos polares son blancos. ¿Seguro? Fíjate bien. Cada pelo no tiene ningún pigmento y es hueco por dentro, transparente. Aun así, la luz se dispersa en ellos y se refleja. Y debajo del pelaje, la piel es negra y absorbe el calor del sol. ¿Verdad o mentira? Escríbelo en comentarios: ¿es blanco el oso polar?",
   "datos": [
     {"afirmacion": "Cada pelo del oso polar carece de pigmento, es transparente y de núcleo hueco, y dispersa y refleja la luz visible, lo que lo hace parecer blanco.", "fuentes": ["https://polarbearsinternational.org/polar-bears/polar-bear-facts/adaptations-characteristics/", "https://churchillpolarbears.org/2015/02/polar-bear-skin-is-black/"], "verificado": true},
     {"afirmacion": "La piel del oso polar es negra y absorbe el calor del sol.", "fuentes": ["https://polarbearsinternational.org/polar-bears/polar-bear-facts/adaptations-characteristics/", "https://churchillpolarbears.org/2015/02/polar-bear-skin-is-black/"], "verificado": true, "nota": "Se evita la teoría de la 'fibra óptica' (discutida); solo se afirma dispersión de la luz."}
@@ -14,7 +14,7 @@
     {"clave": "wikimedia:90991371", "desde": 41.0, "hasta": 46.0, "nota": "movimiento del pelaje de los dos osos"},
     {"clave": "wikimedia:90991371", "desde": 36.0, "hasta": 39.0, "nota": "cierre sobre el oso"}
   ],
-  "titulo": "¿Es blanco el oso polar? Mito: su piel es negra",
-  "descripcion": "El pelo del oso polar es transparente y hueco; parece blanco por cómo dispersa la luz. Debajo, la piel es negra.",
+  "titulo": "¿Es blanco el oso polar? Vota en comentarios",
+  "descripcion": "👇 Vota en comentarios antes de leer.\n\nRespuesta: no del todo. Cada pelo del oso polar no tiene pigmento, es transparente y hueco, y parece blanco porque dispersa y refleja la luz. Debajo, la piel es negra y absorbe el calor del sol.",
   "etiquetas": ["oso polar", "animales", "mitos", "curiosidades", "ártico"]
 }
