@@ -23,13 +23,52 @@
     }
   ],
   "planos": [
-    {"clave": "pixabay:213616", "desde": 0.0, "hasta": 3.5, "nota": "medusas con luz rosa: plano más llamativo"},
-    {"clave": "pixabay:213616", "desde": 4.0, "hasta": 7.5, "nota": "nadando elegantes"},
-    {"clave": "pexels:28156785", "desde": 2.0, "hasta": 6.0, "nota": "gran grupo bajo luz azul, mientras dice que reaccionan al entorno (posible texto en pantalla: revisar)"},
-    {"clave": "pixabay:213616", "desde": 8.0, "hasta": 11.5, "nota": "detalle de las medusas"},
-    {"clave": "pixabay:213616", "desde": 11.5, "hasta": 14.5, "nota": "cierre"}
+    {
+      "clave": "pixabay:213616",
+      "desde": 0.0,
+      "hasta": 3.5,
+      "nota": "medusas con luz rosa: plano más llamativo"
+    },
+    {
+      "clave": "pixabay:213616",
+      "desde": 4.0,
+      "hasta": 7.5,
+      "nota": "nadando elegantes"
+    },
+    {
+      "clave": "pexels:28156785",
+      "desde": 2.0,
+      "hasta": 6.0,
+      "nota": "gran grupo bajo luz azul, mientras dice que reaccionan al entorno (posible texto en pantalla: revisar)"
+    },
+    {
+      "clave": "pixabay:213616",
+      "desde": 8.0,
+      "hasta": 11.5,
+      "nota": "detalle de las medusas"
+    },
+    {
+      "clave": "pixabay:213616",
+      "desde": 11.5,
+      "hasta": 14.5,
+      "nota": "cierre"
+    }
   ],
   "titulo": "Medusa: cómo vive sin cerebro ni corazón",
   "descripcion": "Las medusas no tienen cerebro ni corazón: usan una red nerviosa para detectar la luz, los olores y otros estímulos.",
-  "etiquetas": ["medusa", "animales", "curiosidades", "oceano", "sin cerebro"]
+  "etiquetas": [
+    "medusa",
+    "animales",
+    "curiosidades",
+    "oceano",
+    "sin cerebro"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=KcLBWcD58EE",
+    "fecha": "2026-11-17T20:00Z",
+    "subido": "2026-11-17T13:45Z",
+    "programado": true,
+    "con_voz": true,
+    "privacidad": "public"
+  }
 }
