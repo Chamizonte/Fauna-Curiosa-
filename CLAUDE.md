@@ -17,10 +17,13 @@ Este repositorio produce y publica automáticamente:
 - Shorts (v2, en producción): `explorador.yml` (00:30 UTC, llena `datos/biblioteca`) →
   `sala-redaccion.yml` (02:30 UTC con repescas a las 04:15 y 06:00; Claude escribe guiones en
   `datos/shorts/pendientes`, con el reparto de formatos que da `cf/rendimiento.py` según las visitas) →
-  `publicar-short.yml` (cada hora, `cf/turno.py` decide; turnos 08, 12, 16 y 20 UTC; mueve el guion a `datos/shorts/publicados`).
+  `programar-shorts.yml` (varias veces al día y al acabar la sala; `cf/programar_shorts.py` sube a YouTube
+  PROGRAMADOS los shorts de las próximas 28 h, 09/13/17/21 h de España; mueve el guion a `datos/shorts/publicados`).
+  `publicar-short.yml` solo manual (publica ya).
   Código en `cf/`, montaje en `remotion/`.
 - La v1 (`generador_shorts.py`, `generador_video.py`) se retiró el 2026-11-16: no hay respaldo.
-  Si no quedan guiones, ese turno se queda sin short (aviso en el run).
+  Si no quedan guiones, ese turno se queda sin short (aviso en el run). Un guion que no se puede montar
+  pasa a `rechazados/` y se usa el siguiente.
 - `planes/`: borradores de temas para vídeos largos (los usa `largo-guion.yml`).
 - Vídeos largos (v2): `largo-guion.yml` (Claude escribe el guion 5 días antes) →
   material en el explorador nocturno → `largo-publicar.yml` (víspera, sube programado).

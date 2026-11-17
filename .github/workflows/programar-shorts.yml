@@ -1,0 +1,75 @@
+name: Programar shorts
+# Monta los shorts de los próximos turnos y los sube a YouTube PROGRAMADOS: YouTube los
+# publica a las 09:00, 13:00, 17:00 y 21:00 hora de España aunque GitHub llegue tarde.
+# Basta con que una de estas ejecuciones arranque cada día; las demás no hacen nada
+# si ya está todo programado (cf.programar_shorts decide en segundos).
+on:
+  schedule:
+    - cron: "40 3 * * *"
+    - cron: "10 5 * * *"
+    - cron: "40 6 * * *"
+    - cron: "10 10 * * *"
+    - cron: "10 14 * * *"
+    - cron: "10 18 * * *"
+    - cron: "40 21 * * *"
+  workflow_run:   # en cuanto la sala termina, con los guiones nuevos
+    workflows: ["Sala de redacción (Claude)"]
+    types: [completed]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicar-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  programar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main   # la punta de main, con los guiones y lo ya programado
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: ¿Faltan shorts por programar?
+        id: falta
+        run: python -m cf.programar_shorts --comprobar
+      - uses: actions/setup-node@v4
+        if: steps.falta.outputs.falta == 'si'
+        with:
+          node-version: "22"
+      - name: Instalar
+        if: steps.falta.outputs.falta == 'si'
+        run: |
+          sudo apt-get update -y && sudo apt-get install -y ffmpeg
+          pip install -r requirements-v2.txt
+          cd remotion && npm install
+      - name: Montar y programar (máx. 4)
+        if: steps.falta.outputs.falta == 'si'
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          hechos=0
+          for i in 1 2 3 4; do
+            set +e; python -m cf.programar_shorts --uno; r=$?; set -e
+            # se guarda tras cada subida: si algo se corta, no se programa dos veces el mismo turno
+            git add -A datos/shorts
+            if ! git diff --cached --quiet; then
+              git commit -q -m "Short programado"
+              for k in 1 2 3 4 5; do git pull -q --rebase origin main && git push -q && break; sleep 5; done
+            fi
+            [ "$r" -eq 0 ] && hechos=$((hechos + 1)) && continue
+            [ "$r" -eq 4 ] && break
+            echo "::error::Fallo al programar un short (código $r)"; exit "$r"
+          done
+          echo "Shorts programados en esta ejecución: $hechos"

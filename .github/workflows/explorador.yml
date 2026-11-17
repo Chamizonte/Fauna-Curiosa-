@@ -46,6 +46,7 @@ jobs:
         run: python -m cf.material_largo --max-total 60
       - name: Explorar
         timeout-minutes: 60   # deja tiempo para guardar lo analizado aunque se corte
+        continue-on-error: true   # si se corta por tiempo, lo analizado se guarda igual (no es un fallo)
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}

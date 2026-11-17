@@ -52,7 +52,8 @@ def descripcion(brief, bib):
     return "\n".join(lineas)[:4900]
 
 
-def subir(mp4, titulo, desc, etiquetas):
+def subir(mp4, titulo, desc, etiquetas, publicar_en=None):
+    """Sube el short. Con publicar_en (datetime UTC) queda programado: YouTube lo publica a esa hora."""
     from googleapiclient.discovery import build
     from googleapiclient.http import MediaFileUpload
 
@@ -65,6 +66,8 @@ def subir(mp4, titulo, desc, etiquetas):
                     "categoryId": CATEGORIA, "defaultLanguage": "es", "defaultAudioLanguage": "es"},
         "status": {"privacyStatus": PRIVACIDAD, "selfDeclaredMadeForKids": False},
     }
+    if publicar_en:
+        body["status"] |= {"privacyStatus": "private", "publishAt": publicar_en.strftime("%Y-%m-%dT%H:%M:%SZ")}
     req = yt.videos().insert(part="snippet,status", body=body,
                              media_body=MediaFileUpload(str(mp4), mimetype="video/mp4", resumable=True))
     resp = None

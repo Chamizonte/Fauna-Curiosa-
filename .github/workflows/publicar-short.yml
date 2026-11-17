@@ -1,14 +1,7 @@
-name: Publicar short
-# 4 shorts al día, en los turnos de las 08, 12, 16 y 20 UTC
-# (09/13/17/21 h en España en invierno; 10/14/18/22 h en verano).
-# GitHub retrasa o se salta a veces los workflows programados, así que este se lanza
-# cada hora y cf.turno decide si toca: recupera un turno perdido en la siguiente
-# pasada, dejando al menos 2 h 30 min entre shorts.
-# Monta el guion pendiente más antiguo y lo sube en público. Si no quedan guiones
-# o el montaje falla, el run sale en rojo y ese turno se recupera en la siguiente pasada.
+name: Publicar short (manual)
+# Publica YA el siguiente guion, a mano. Lo normal es "Programar shorts", que los sube
+# programados con antelación para que YouTube los publique a su hora.
 on:
-  schedule:
-    - cron: "17 8-23 * * *"
   workflow_dispatch:
     inputs:
       forzar:
