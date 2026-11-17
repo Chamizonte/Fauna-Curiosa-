@@ -18,7 +18,8 @@ Si el dato es fantástico pero ningún clip lo muestra, no sirve para un short.
 1. **0–2 s, no deslizar.** El primer plano es el más impactante del material y el
    gancho en pantalla se lee sin sonido. Objetivo: que más del 70 % se quede.
 2. **Una sola idea**, ritmo constante, un plano nuevo cada 3–4 s.
-3. **Recompensa** al final: el dato más sorprendente se guarda para el cierre.
+3. **Recompensa** al final: el dato más sorprendente se guarda para el cierre
+   (en `mito`, la recompensa es la duda: se responde en comentarios y en la descripción).
 4. **Bucle**: la última frase conecta con la primera para invitar a volver a verlo.
 
 ## Los cuatro formatos (prueba A/B: rotar en partes iguales)
@@ -26,8 +27,25 @@ Si el dato es fantástico pero ningún clip lo muestra, no sirve para un short.
 |---|---|---|---|
 | `por_que` | ¿Sabías que…? con voz | «¿Por qué…?» / «¿Cómo…?» sobre algo que se VE | pregunta → explicación en 2 pasos → giro final |
 | `comparativa` | Comparativa | «X contra Y» / «3 animales que…» | presentación rápida → criterio concreto → ganador sorprendente |
-| `mito` | ¿Verdad o mentira? | «¿Mito o realidad?» + creencia popular | creencia → qué dice la ciencia → matiz inesperado |
+| `mito` | ¿Verdad o mentira? (pregunta abierta) | la afirmación como reto, sin decir «mito» | afirmación → pistas a favor y en contra → pregunta al espectador SIN respuesta |
 | `tarjeta` | ¿Sabías que…? en tarjeta (sin voz) | titular corto, p. ej. «¿Sabías que…?» o «Esto NO es una avispa» | texto que se lee en pantalla sobre un vídeo o foto horizontal |
+
+### Formato `mito` (pregunta abierta, para comentarios)
+El vídeo **no da la respuesta**: deja la duda y pide el voto en comentarios. La respuesta
+verificada va en la descripción. Si el vídeo responde, no hay gancho ni comentarios.
+- **Afirmación que divida a la gente**: algo que suena falso y es verdad, o una creencia que
+  todo el mundo da por cierta y no lo es (o solo a medias). Nunca algo obvio.
+- **0–2 s**: `gancho_pantalla` = la afirmación como reto, sin la palabra «mito»:
+  «Un búho gira la cabeza entera», «Los cocodrilos lloran de verdad».
+- **Voz**: (1) la afirmación, con seguridad; (2) 2–3 pistas verificadas que tiran hacia los
+  dos lados, ligadas a lo que se ve; (3) cierre que devuelve la pregunta y pide el voto:
+  «¿Verdad o mentira? Escríbelo en comentarios.» La última frase termina en «?» o pide el
+  comentario, y debe conectar con la primera (bucle).
+- **Prohibido delatar la respuesta**: nada de «falso», «mito», «en realidad», «pero no»,
+  «la verdad es que…». Las pistas son ciertas, pero ninguna sola resuelve la duda.
+- `titulo`: la pregunta, sin spoiler («¿Puede un búho girar la cabeza 360 grados?»).
+- `descripcion`: empieza por «👇 Vota en comentarios antes de leer.», una línea en blanco y
+  «Respuesta: …» con la explicación (2–3 frases). Todo lo que diga va en `datos` con fuentes.
 
 ### Formato `tarjeta`
 - Sin voz: se LEE. Va el campo `texto_tarjeta` (30–60 palabras) en lugar de `guion`.

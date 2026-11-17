@@ -2,8 +2,8 @@
   "id": "20261116-2-buho",
   "formato": "mito",
   "animal": "búho",
-  "gancho_pantalla": "¿Mito o realidad? Búho de 360°",
-  "guion": "¿Puede un búho girar la cabeza 360 grados? Mito. Gira hasta unos 270 grados hacia cada lado, que ya es mucho. El truco está en su cuello: tiene catorce vértebras, el doble que el tuyo. Así que la próxima vez que veas girar a un búho, recuerda que no da la vuelta entera, aunque casi.",
+  "gancho_pantalla": "Un búho gira la cabeza entera",
+  "guion": "Este búho puede girar la cabeza trescientos sesenta grados. Fíjate en cómo la mueve sin mover el cuerpo. Su cuello tiene catorce vértebras, el doble que el tuyo, y por eso llega muchísimo más lejos que cualquier persona. ¿Da la vuelta completa o se queda corto? Míralo otra vez y dime: ¿verdad o mentira? Escríbelo en comentarios.",
   "datos": [
     {
       "afirmacion": "Los búhos pueden girar la cabeza unos 270 grados en cada dirección, no 360.",
@@ -24,12 +24,38 @@
     }
   ],
   "planos": [
-    {"clave": "pixabay:18244", "desde": 0.0, "hasta": 3.5, "nota": "mirada fija a cámara: gancho"},
-    {"clave": "pixabay:18244", "desde": 4.0, "hasta": 7.5, "nota": "giro de cabeza"},
-    {"clave": "pixabay:18244", "desde": 9.0, "hasta": 12.5, "nota": "giro de cabeza mientras se habla del cuello"},
-    {"clave": "pixabay:18244", "desde": 14.0, "hasta": 18.0, "nota": "cierre"}
+    {
+      "clave": "pixabay:18244",
+      "desde": 0.0,
+      "hasta": 3.5,
+      "nota": "mirada fija a cámara: gancho"
+    },
+    {
+      "clave": "pixabay:18244",
+      "desde": 4.0,
+      "hasta": 7.5,
+      "nota": "giro de cabeza"
+    },
+    {
+      "clave": "pixabay:18244",
+      "desde": 9.0,
+      "hasta": 12.5,
+      "nota": "giro de cabeza mientras se habla del cuello"
+    },
+    {
+      "clave": "pixabay:18244",
+      "desde": 14.0,
+      "hasta": 18.0,
+      "nota": "cierre"
+    }
   ],
-  "titulo": "Búho: ¿gira la cabeza 360 grados? Mito",
-  "descripcion": "Un búho no gira la cabeza 360 grados: llega a unos 270 en cada dirección gracias a sus 14 vértebras cervicales.",
-  "etiquetas": ["búho", "animales", "curiosidades", "mitos", "aves"]
+  "titulo": "¿Puede un búho girar la cabeza 360 grados?",
+  "descripcion": "👇 Vota en comentarios antes de leer.\n\nRespuesta: mentira. Un búho gira la cabeza unos 270 grados hacia cada lado, no una vuelta completa. Lo consigue gracias a sus 14 vértebras cervicales, el doble que las 7 de una persona.",
+  "etiquetas": [
+    "búho",
+    "animales",
+    "curiosidades",
+    "mitos",
+    "aves"
+  ]
 }

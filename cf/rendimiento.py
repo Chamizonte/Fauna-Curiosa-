@@ -25,6 +25,7 @@ FORMATOS = ["por_que", "comparativa", "mito", "tarjeta"]
 PUBL = DATOS / "shorts" / "publicados"
 EDAD = dt.timedelta(days=7)
 MIN_MEDIDOS = 3
+NUEVO_MITO = dt.datetime(2026, 11, 18)
 API = "https://www.googleapis.com/youtube/v3/videos"
 
 
@@ -78,6 +79,8 @@ def medidos(ahora=None):
         if not vid or not p.get("fecha") or b.get("formato") not in FORMATOS:
             continue
         fecha = dt.datetime.fromisoformat(p["fecha"].replace("Z", ""))
+        if b["formato"] == "mito" and fecha < NUEVO_MITO:
+            continue   # el formato mito cambió (pregunta abierta): no se mezclan los antiguos
         if ahora - fecha >= EDAD:
             shorts.append((b["formato"], vid))
     v = visitas([vid for _, vid in shorts])
