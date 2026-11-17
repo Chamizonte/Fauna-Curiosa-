@@ -24,10 +24,33 @@
     }
   ],
   "planos": [
-    {"clave": "wikimedia:81733900", "desde": 0.0, "hasta": 8.0, "nota": "Foto de la jirafa sacando la lengua: es el motivo de la tarjeta"},
-    {"clave": "wikimedia:149963196", "desde": 2.0, "hasta": 8.0, "nota": "Primer plano de la cara y el cuello"}
+    {
+      "clave": "wikimedia:81733900",
+      "desde": 0.0,
+      "hasta": 8.0,
+      "nota": "Foto de la jirafa sacando la lengua: es el motivo de la tarjeta"
+    },
+    {
+      "clave": "wikimedia:149963196",
+      "desde": 2.0,
+      "hasta": 8.0,
+      "nota": "Primer plano de la cara y el cuello"
+    }
   ],
   "titulo": "Jirafa: el color secreto de su lengua",
   "descripcion": "La lengua de la jirafa mide 45–50 cm y es oscura en la punta. La teoría del sol aún no está confirmada.",
-  "etiquetas": ["jirafa", "lengua", "animales", "curiosidades"]
+  "etiquetas": [
+    "jirafa",
+    "lengua",
+    "animales",
+    "curiosidades"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=HSDAjhT_z1M",
+    "fecha": "2026-11-18T16:00Z",
+    "subido": "2026-11-17T15:51Z",
+    "programado": true,
+    "con_voz": false,
+    "privacidad": "public"
+  }
 }
