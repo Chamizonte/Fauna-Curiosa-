@@ -1,0 +1,69 @@
+{
+  "id": "20261117-2-camaleon",
+  "formato": "por_que",
+  "animal": "camaleón",
+  "gancho_pantalla": "¿Cómo ve un camaleón?",
+  "guion": "¿Hacia dónde mira este camaleón? Hacia todas partes. Cada ojo se mueve por separado, así que mientras uno mira a un lado, el otro vigila el opuesto. Eso le da una visión casi circular. Pero cuando localiza un insecto, cambia de modo: dirige los dos ojos al mismo punto, como unos prismáticos, y calcula a qué distancia está. Primero lo ve todo; después, solo ve su cena.",
+  "datos": [
+    {
+      "afirmacion": "Los camaleones pueden mover cada ojo de forma independiente, lo que les da un campo de visión casi circular.",
+      "fuentes": [
+        "https://www.nhm.ac.uk/discover/amazing-eyes-vision-champions.html",
+        "https://www.sciencedaily.com/releases/2016/06/160621115647.htm"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Al detectar una presa, usan los dos ojos para enfocar un mismo punto y calcular la distancia.",
+      "fuentes": [
+        "https://nationalzoo.si.edu/animals/news/new-zoo-meet-mellers-chameleon",
+        "https://www.nhm.ac.uk/discover/amazing-eyes-vision-champions.html"
+      ],
+      "verificado": true,
+      "nota": "Se dice 'casi circular' en vez de 360° exactos, cifra popular no medida con precisión."
+    }
+  ],
+  "planos": [
+    {
+      "clave": "pixabay:233037",
+      "desde": 0.0,
+      "hasta": 5.0,
+      "nota": "primer plano extremo del ojo moviéndose: gancho"
+    },
+    {
+      "clave": "pexels:3191354",
+      "desde": 0.0,
+      "hasta": 5.0,
+      "nota": "camaleón en la rama con los ojos en direcciones distintas"
+    },
+    {
+      "clave": "pixabay:233037",
+      "desde": 12.0,
+      "hasta": 17.0,
+      "nota": "movimiento del ojo, cierre del giro"
+    },
+    {
+      "clave": "pexels:3191354",
+      "desde": 12.0,
+      "hasta": 17.0,
+      "nota": "camaleón quieto, cierre"
+    }
+  ],
+  "titulo": "Cómo ve un camaleón: ojos que miran a la vez a dos sitios",
+  "descripcion": "Cada ojo del camaleón se mueve por su cuenta, pero ante una presa los dos apuntan al mismo punto.",
+  "etiquetas": [
+    "camaleón",
+    "animales",
+    "curiosidades",
+    "reptiles",
+    "visión"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=bO3QgaVzecQ",
+    "fecha": "2026-11-19T12:00Z",
+    "subido": "2026-11-18T09:09Z",
+    "programado": true,
+    "con_voz": true,
+    "privacidad": "public"
+  }
+}
