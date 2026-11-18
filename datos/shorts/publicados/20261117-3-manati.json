@@ -1,0 +1,61 @@
+{
+  "id": "20261117-3-manati",
+  "formato": "por_que",
+  "animal": "manatí",
+  "gancho_pantalla": "¿Con quién se parece un manatí?",
+  "guion": "Mira cómo se desliza un manatí. Parece un animal solo del mar, pero su familia sorprende. Los manatíes pertenecen a los paenungulados, un grupo de mamíferos que comparten con los damanes y con los elefantes. Es decir: entre los parientes vivos más cercanos de esta vaca marina hay gigantes que caminan por la sabana. Sí, el elefante es su primo lejano, aunque nade tan despacio.",
+  "datos": [
+    {
+      "afirmacion": "Los parientes vivos más cercanos de los manatíes son los elefantes y los damanes (hyrax); forman con ellos el grupo de los paenungulados.",
+      "fuentes": [
+        "https://journeynorth.org/tm/manatee/AdaptationsEvol.html",
+        "https://www.nationalgeographic.com/science/article/south-african-wildlife-rock-hyrax"
+      ],
+      "verificado": true,
+      "nota": "Journey North cita elefante e hyrax (y el oricteropo); National Geographic indica que algunos científicos sitúan a los sirenios más cerca del elefante que el hyrax. Se evita afirmar un orden exacto: se dice 'entre los más cercanos'."
+    }
+  ],
+  "planos": [
+    {
+      "clave": "pexels:36365298",
+      "desde": 0.0,
+      "hasta": 5.0,
+      "nota": "manatíes nadando en agua cristalina"
+    },
+    {
+      "clave": "pexels:36365298",
+      "desde": 5.0,
+      "hasta": 9.0,
+      "nota": "siguen deslizándose por el agua"
+    },
+    {
+      "clave": "pexels:36365298",
+      "desde": 10.0,
+      "hasta": 14.0,
+      "nota": "vuelta al manatí para el parentesco"
+    },
+    {
+      "clave": "pexels:36365298",
+      "desde": 15.0,
+      "hasta": 20.0,
+      "nota": "cierre con los manatíes nadando despacio"
+    }
+  ],
+  "titulo": "Manatí: su pariente vivo más cercano es el elefante",
+  "descripcion": "Los parientes vivos más cercanos del manatí no están en el mar: son los elefantes y los damanes.",
+  "etiquetas": [
+    "manatí",
+    "elefante",
+    "animales",
+    "curiosidades",
+    "evolución"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=DRkI5jTuHqc",
+    "fecha": "2026-11-19T16:00Z",
+    "subido": "2026-11-18T12:19Z",
+    "programado": true,
+    "con_voz": true,
+    "privacidad": "public"
+  }
+}
