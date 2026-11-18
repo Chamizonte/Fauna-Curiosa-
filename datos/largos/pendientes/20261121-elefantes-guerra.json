@@ -1026,7 +1026,8 @@
         "animal": "elefante",
         "cientifico": "Elephantidae",
         "esquema": "pasillos"
-      }
+      },
+      "sin_material": true
     },
     {
       "narracion": "Empezó la batalla. Y antes de que los elefantes llegaran, los romanos hicieron algo muy sencillo: hacer sonar sus cuernos y trompetas.",
