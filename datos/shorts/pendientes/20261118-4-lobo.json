@@ -1,0 +1,22 @@
+{
+  "id": "20261118-4-lobo",
+  "formato": "mito",
+  "animal": "lobo",
+  "gancho_pantalla": "Los lobos aúllan a la luna",
+  "guion": "Los lobos aúllan a la luna. Lo hemos visto en mil películas. Fíjate en este: mira al cielo y la noche es su hora. Pero los científicos que los estudian también los oyen aullar de día y varias veces al día, por motivos tan cotidianos como que llegue su cuidador. Y un aullido se oye a kilómetros, así que sirve para llamar a la manada. ¿Verdad o mentira? Escríbelo en comentarios.",
+  "datos": [
+    {"afirmacion": "Los lobos no dirigen el aullido a la luna; es una llamada social, territorial o de caza, audible a varios kilómetros.", "fuentes": ["https://nationalzoo.si.edu/node/10397", "https://www.wolfscience.at/en/news/is-there-a-full-moon-already/"], "verificado": true},
+    {"afirmacion": "Los lobos aúllan de día y varias veces al día, no solo con luna llena.", "fuentes": ["https://www.wolfscience.at/en/news/is-there-a-full-moon-already/", "https://nationalzoo.si.edu/node/10397"], "verificado": true},
+    {"afirmacion": "Aúllan de noche y la noche de luna llena permite cazar y ser más activos (origen probable del mito).", "fuentes": ["https://www.wolfscience.at/en/news/is-there-a-full-moon-already/", "https://nationalzoo.si.edu/node/10397"], "verificado": true}
+  ],
+  "planos": [
+    {"clave": "pixabay:27400", "desde": 0.0, "hasta": 4.0, "nota": "lobo con mirada intensa (aviso: texto en pantalla según biblioteca; tramo inicial)"},
+    {"clave": "pixabay:100593", "desde": 0.0, "hasta": 5.0, "nota": "lobo vigilante en alto"},
+    {"clave": "pixabay:27400", "desde": 8.0, "hasta": 12.0, "nota": "gira la cabeza"},
+    {"clave": "pixabay:100593", "desde": 8.0, "hasta": 13.0, "nota": "observa a la izquierda"},
+    {"clave": "pixabay:27400", "desde": 16.0, "hasta": 20.0, "nota": "cierre"}
+  ],
+  "titulo": "¿Aúllan los lobos a la luna?",
+  "descripcion": "👇 Vota en comentarios antes de leer.\n\nRespuesta: no, es un mito. El aullido no va dirigido a la luna: es una llamada social, territorial o para cazar que se oye a kilómetros. Los lobos aúllan también de día y no más con luna llena; la confusión viene de que son más activos de noche.",
+  "etiquetas": ["lobo", "animales", "mitos", "curiosidades"]
+}
