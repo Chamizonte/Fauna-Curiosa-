@@ -14,6 +14,15 @@ Se escribe **sobre lo que se ve**. Primero eliges momentos de la biblioteca
 (`python -m cf.biblioteca --resumen`), después buscas el dato que explica ESO.
 Si el dato es fantástico pero ningún clip lo muestra, no sirve para un short.
 
+**Nunca señales lo que no se ve.** Frases como «mira cómo come», «fíjate cómo salta»,
+«aquí lo ves cazando» o «en pantalla…» solo se pueden decir si en ESE plano se ve esa
+acción (compruébalo en `descripcion`, `acciones` y `momento_destacado` de la biblioteca).
+Si el dato habla de algo que el clip no enseña, cuéntalo sin señalar la imagen, sin perder
+fuerza: no «Mira cómo come este» sobre un cocodrilo tumbado, sino «Cuando comen, les caen
+lágrimas» mientras se ve su ojo. El control de calidad rechaza el guion si la voz señala
+una acción (comer, cazar, saltar, volar, nadar, dormir, pelear, llorar…) que no aparece en
+los planos elegidos.
+
 ## Lo que decide si un Short vive
 1. **0–2 s, no deslizar.** El primer plano es el más impactante del material y el
    gancho en pantalla se lee sin sonido. Objetivo: que más del 70 % se quede.
@@ -94,6 +103,7 @@ Los créditos de los clips los añade el publicador a partir de la biblioteca: n
 ## Lista de comprobación antes de guardar
 - [ ] Cada afirmación del guion está en `datos` con 2 fuentes independientes.
 - [ ] El primer plano es el visualmente más fuerte y coincide con el gancho.
-- [ ] Lo que dice la voz se corresponde con lo que se ve en cada plano.
+- [ ] Lo que dice la voz se corresponde con lo que se ve en cada plano, y nunca dice
+      «mira / fíjate / aquí…» sobre algo que no sale en la imagen.
 - [ ] 55–75 palabras (tarjeta: 30–60); el gancho se entiende sin sonido.
 - [ ] Formato asignado según la rotación de la semana.
