@@ -25,10 +25,34 @@
     }
   ],
   "planos": [
-    {"clave": "inaturalist:183028111", "desde": 0.0, "hasta": 8.0, "nota": "Foto de Caretta caretta comiendo carabelas: gancho"},
-    {"clave": "inaturalist:183028089", "desde": 0.0, "hasta": 8.0, "nota": "Foto de la tortuga emergiendo con la carabela"}
+    {
+      "clave": "inaturalist:183028111",
+      "desde": 0.0,
+      "hasta": 8.0,
+      "nota": "Foto de Caretta caretta comiendo carabelas: gancho"
+    },
+    {
+      "clave": "inaturalist:183028089",
+      "desde": 0.0,
+      "hasta": 8.0,
+      "nota": "Foto de la tortuga emergiendo con la carabela"
+    }
   ],
   "titulo": "Tortuga boba: la presa que pica y se la come",
   "descripcion": "La tortuga boba come carabelas portuguesas, además de medusas, cangrejos y peces. Fotos de iNaturalist.",
-  "etiquetas": ["tortuga marina", "tortuga boba", "carabela portuguesa", "animales", "curiosidades"]
+  "etiquetas": [
+    "tortuga marina",
+    "tortuga boba",
+    "carabela portuguesa",
+    "animales",
+    "curiosidades"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=Ff5jkK2Sn2c",
+    "fecha": "2026-11-18T20:00Z",
+    "subido": "2026-11-18T08:56Z",
+    "programado": true,
+    "con_voz": false,
+    "privacidad": "public"
+  }
 }
