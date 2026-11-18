@@ -24,6 +24,44 @@ def texto_plano(t):
     return re.sub(r"\*\*", "", t or "")
 
 
+# La voz no puede señalar algo que no sale en la imagen («Mira cómo come…» sobre un
+# cocodrilo tumbado). En las frases que señalan la imagen, cada acción nombrada tiene que
+# estar en lo que la visión describió de los planos del short.
+SENALA = re.compile(r"\b(mira|mirad|fíjate|fijaos|observa|observad|ves|veis|aquí|ahí)\b|en (pantalla|la imagen|este vídeo)")
+ACCIONES = {  # acción: (cómo la dice el guion, raíces aceptadas en la descripción de la visión)
+    "comer": (r"\b(come|comen|comiendo|devora\w*|engull\w*|mastica\w*|se zampa\w*)\b",
+              ["come", "comer", "comiendo", "alimenta", "devor", "engull", "mastic"]),
+    "cazar": (r"\b(caza|cazan|cazando|ataca\w*|atrapa\w*|captura\w*)\b", ["caz", "atac", "atrap", "captur", "presa"]),
+    "saltar": (r"\bsalt(a|an|ando|o)\b", ["salt"]),
+    "volar": (r"\b(vuela|vuelan|volando|planea\w*)\b", ["vuel", "volar", "volando", "plane"]),
+    "nadar": (r"\b(nadan|nadando|bucea\w*)\b", ["nad", "bucea", "sumerg"]),
+    "correr": (r"\b(corre|corren|corriendo)\b", ["corr", "carrera"]),
+    "dormir": (r"\b(duerme|duermen|durmiendo)\b", ["duerm", "dorm"]),
+    "pelear": (r"\b(pelea\w*|lucha\w*)\b", ["pele", "luch", "combat"]),
+    "llorar": (r"\b(llora\w*|lágrima\w*)\b", ["llor", "lágrim"]),
+    "beber": (r"\b(bebe|beben|bebiendo)\b", ["beb"]),
+    "cambiar de color": (r"cambia\w* de color", ["color"]),
+}
+
+
+def senala_lo_que_no_se_ve(b, bib):
+    vision = " ".join(
+        " ".join([v.get("descripcion", ""), v.get("momento_destacado", ""), " ".join(v.get("acciones", []))])
+        for v in ((bib.get(p.get("clave")) or {}).get("vision") or {} for p in b.get("planos", []))
+    ).lower()
+    texto = " ".join(texto_plano(b.get(c, "")) for c in ("guion", "texto_tarjeta", "gancho_pantalla"))
+    e = []
+    for frase in re.split(r"(?<=[.!?¿¡…])\s+", texto):
+        f = frase.lower()
+        if not SENALA.search(f):
+            continue
+        for accion, (dice, raices) in ACCIONES.items():
+            if re.search(dice, f) and not any(r in vision for r in raices):
+                e.append(f"la voz señala la imagen («{frase.strip()[:70]}») pero en los planos no se ve "
+                         f"{accion}: o se elige un plano donde se vea, o se cuenta el dato sin señalar")
+    return e
+
+
 def errores(b, bib):
     tarjeta = b.get("formato") == "tarjeta"
     campos = CAMPOS + (["texto_tarjeta"] if tarjeta else ["guion"])
@@ -63,6 +101,7 @@ def errores(b, bib):
     lo, hi = (1, 4) if tarjeta else (3, 8)
     if not lo <= len(b["planos"]) <= hi:
         e.append(f"{len(b['planos'])} planos ({lo}-{hi})")
+    e += senala_lo_que_no_se_ve(b, bib)
     for p in b["planos"]:
         m = bib.get(p.get("clave"))
         if not m:
