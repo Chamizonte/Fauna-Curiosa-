@@ -15,6 +15,7 @@ import tempfile
 from pathlib import Path
 
 from . import voz
+from .encuadre import caja_animal
 from .util import DATOS, RAIZ, descargar, env, leer_jsonl, log, run, sondear
 
 REMOTION = RAIZ / "remotion"
@@ -29,25 +30,59 @@ def biblioteca():
     return {r["clave"]: r for r in leer_jsonl(DATOS / "biblioteca" / "momentos.jsonl")}
 
 
-def recortar_plano(src, desde, disponible, necesario, posx, destino, w=1080, h=1920, foto=False):
-    """Recorta un tramo a w x h (vertical 1080x1920 por defecto), centrando el
-    encuadre en posx. Vídeo: si el tramo es más corto de lo necesario, lo ralentiza
-    (hasta 1,6x); si es más largo, lo corta. Foto: barrido lento (efecto Ken Burns)."""
-    if foto:
-        # se escala un 12 % de más y el encuadre se desliza despacio alrededor de posx
+MARGEN_CAJA = 1.2      # aire alrededor del animal
+MAX_ANCHO = 0.5        # como mucho se enseña la mitad del ancho del original (término medio
+                       # entre llenar la pantalla y ver el animal entero con mucho fondo desenfocado)
+
+
+def ventana(iw, ih, w, h, caja, posx):
+    """Qué parte del ancho del original se enseña (fracción), dónde se centra y si llena la pantalla.
+    Animal estrecho: recorte que llena la pantalla centrado en él. Animal ancho: se abre el
+    encuadre hasta MAX_ANCHO y el hueco de arriba y abajo se rellena con el plano desenfocado."""
+    llena = min(1.0, (w / h) / (iw / ih))   # fracción del ancho que llena la pantalla sin bandas
+    if caja:
+        centro, ancho = (caja[0] + caja[1]) / 2, (caja[1] - caja[0]) * MARGEN_CAJA
+    else:
+        centro, ancho = posx, MAX_ANCHO
+    ancho = min(max(llena, MAX_ANCHO), max(llena, ancho))
+    centro = min(max(centro, ancho / 2), 1 - ancho / 2)
+    return ancho, centro, ancho <= llena * 1.05
+
+
+def recortar_plano(src, desde, disponible, necesario, posx, destino, w=1080, h=1920, foto=False, caja=None):
+    """Recorta un tramo a w x h (vertical 1080x1920 por defecto) sin cortar al animal.
+    - Si el animal cabe, recorte que llena la pantalla centrado en él.
+    - Si no cabe (primer plano, animal grande), se abre el encuadre (hasta la mitad del
+      ancho) sobre un fondo desenfocado del mismo plano.
+    Vídeo: si el tramo es más corto de lo necesario, lo ralentiza (hasta 1,6x).
+    Foto: barrido lento (efecto Ken Burns) cuando llena la pantalla."""
+    info = sondear(src)
+    iw, ih = info["ancho"] or 1920, info["alto"] or 1080
+    ancho, centro, llena = ventana(iw, ih, w, h, caja, posx)
+    velocidad = "" if foto else f"setpts={min(CAMARA_LENTA_MAX, max(1.0, necesario / max(disponible, 0.1))):.3f}*PTS,"
+    if llena and foto:
         vf = (f"scale={int(w * 1.12)}:{int(h * 1.12)}:force_original_aspect_ratio=increase,"
-              f"crop={w}:{h}:'min(max(iw*{posx:.3f}-{w / 2}+(t/{necesario:.2f}-0.5)*{w * 0.1:.0f},0),iw-{w})'"
+              f"crop={w}:{h}:'min(max(iw*{centro:.3f}-{w / 2}+(t/{necesario:.2f}-0.5)*{w * 0.1:.0f},0),iw-{w})'"
               f":'(ih-{h})/2',fps={FPS},format=yuv420p")
+    elif llena:
+        vf = (f"{velocidad}scale={w}:{h}:force_original_aspect_ratio=increase,"
+              f"crop={w}:{h}:'min(max(iw*{centro:.3f}-{w / 2},0),iw-{w})':'(ih-{h})/2',"
+              f"fps={FPS},format=yuv420p")
+    else:
+        x0 = (centro - ancho / 2)
+        vf = (f"{velocidad}split[a][b];"
+              f"[a]scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},"
+              f"boxblur=30:2,eq=brightness=-0.12[fondo];"
+              f"[b]crop=iw*{ancho:.4f}:ih:iw*{x0:.4f}:0,scale={w}:-2[frente];"
+              f"[fondo][frente]overlay=(W-w)/2:(H-h)/2,fps={FPS},format=yuv420p")
+    if foto:
         entrada = ["-loop", "1", "-t", f"{necesario:.2f}", "-i", str(src)]
     else:
-        factor = min(CAMARA_LENTA_MAX, max(1.0, necesario / max(disponible, 0.1)))
-        vf = (f"setpts={factor:.3f}*PTS,"
-              f"scale={w}:{h}:force_original_aspect_ratio=increase,"
-              f"crop={w}:{h}:'min(max(iw*{posx:.3f}-{w / 2},0),iw-{w})':'(ih-{h})/2',"
-              f"fps={FPS},format=yuv420p")
         entrada = ["-ss", f"{desde:.2f}", "-t", f"{disponible:.2f}", "-i", str(src)]
-    run(["ffmpeg", "-y", "-v", "error", *entrada, "-vf", vf, "-an", "-t", f"{necesario:.2f}",
-         "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", str(destino)])
+    modo = "pantalla llena" if llena else f"entero sobre fondo ({ancho:.0%} del ancho)"
+    log(f"    encuadre: {modo}, centro {centro:.2f}" + ("" if caja else " (sin caja del animal)"))
+    run(["ffmpeg", "-y", "-v", "error", *entrada, "-filter_complex" if not llena else "-vf", vf, "-an",
+         "-t", f"{necesario:.2f}", "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", str(destino)])
     return sondear(destino)["duracion"]
 
 
@@ -66,8 +101,10 @@ def preparar_planos(brief, bib, duracion, tmp, w=1080, h=1920):
             descargados[p["clave"]] = dst
         necesario = tramo * escala
         posx = p.get("posicion_x", (m.get("vision") or {}).get("posicion_x", 0.5))
+        foto = m.get("tipo") == "foto"
+        caja = caja_animal(descargados[p["clave"]], p["desde"], tramo, m.get("animal") or brief["animal"], foto)
         real = recortar_plano(descargados[p["clave"]], p["desde"], tramo, necesario, posx,
-                              PUBLICO / f"p{i}.mp4", w, h, foto=m.get("tipo") == "foto")
+                              PUBLICO / f"p{i}.mp4", w, h, foto=foto, caja=caja)
         planos.append({"src": f"render/p{i}.mp4", "duracion": round(min(real, necesario), 3)})
     # el último plano cubre cualquier diferencia de redondeo
     falta = duracion - sum(p["duracion"] for p in planos)
