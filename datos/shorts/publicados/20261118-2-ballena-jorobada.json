@@ -1,0 +1,77 @@
+{
+  "id": "20261118-2-ballena-jorobada",
+  "formato": "por_que",
+  "animal": "ballena jorobada",
+  "gancho_pantalla": "¿Por qué canta esta ballena?",
+  "guion": "Esta ballena jorobada es un macho cantor. Son ellos quienes cantan, no ellas. Y su canción no es fija: cambia con los años. Lo curioso es que las ballenas de otras zonas la aprenden. Un estudio comparó las de Australia oriental con las de Nueva Caledonia, y las segundas copiaron los sonidos exactos, sin simplificar nada. Una canción que viaja de océano en océano. ¿Quién se la enseña?",
+  "datos": [
+    {
+      "afirmacion": "Los machos de jorobada cantan; el estudio analizó cantos de machos de Nueva Caledonia y Australia oriental (2009-2015).",
+      "fuentes": [
+        "https://phys.org/news/2022-07-whales-songs-cultural-deep.html",
+        "https://link.springer.com/10.1038/s41598-022-12784-3"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Las ballenas de Nueva Caledonia aprendieron con precisión los cantos de las de Australia oriental, sin simplificarlos.",
+      "fuentes": [
+        "https://phys.org/news/2022-07-whales-songs-cultural-deep.html",
+        "https://link.springer.com/10.1038/s41598-022-12784-3"
+      ],
+      "verificado": true,
+      "nota": "Segunda fuente (Scientific Reports 2022) vista en resultados de búsqueda, resumen coherente con phys.org."
+    },
+    {
+      "afirmacion": "Los cantos se transmiten entre poblaciones; el mecanismo exacto (zonas de alimentación/rutas migratorias) se debate, por eso el guion no lo afirma.",
+      "fuentes": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6281946/",
+        "https://link.springer.com/10.1038/s41598-022-12784-3"
+      ],
+      "verificado": true,
+      "nota": "Cierre formulado como pregunta por prudencia."
+    }
+  ],
+  "planos": [
+    {
+      "clave": "pixabay:244188",
+      "desde": 0.0,
+      "hasta": 4.0,
+      "nota": "plano frontal cercano, el más fuerte"
+    },
+    {
+      "clave": "pexels:11279748",
+      "desde": 0.0,
+      "hasta": 3.5,
+      "nota": "vista aérea madre y cría"
+    },
+    {
+      "clave": "wikimedia:2803881",
+      "desde": 0.0,
+      "hasta": 3.0,
+      "nota": "FOTO del salto"
+    },
+    {
+      "clave": "pixabay:244188",
+      "desde": 4.0,
+      "hasta": 8.0,
+      "nota": "cierre"
+    }
+  ],
+  "titulo": "Ballena jorobada: ¿por qué canta y quién le enseña?",
+  "descripcion": "Los machos de ballena jorobada cantan y sus canciones pasan de una población a otra: las de Nueva Caledonia aprendieron con exactitud las de Australia oriental.",
+  "etiquetas": [
+    "ballena jorobada",
+    "animales",
+    "curiosidades",
+    "océano"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=fSai2UrOLe8",
+    "fecha": "2026-11-20T12:00Z",
+    "subido": "2026-11-19T10:00Z",
+    "programado": true,
+    "con_voz": true,
+    "privacidad": "public"
+  }
+}
