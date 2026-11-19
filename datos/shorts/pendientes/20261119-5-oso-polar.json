@@ -1,0 +1,21 @@
+{
+  "id": "20261119-5-oso-polar",
+  "formato": "mito",
+  "animal": "oso polar",
+  "gancho_pantalla": "El oso polar es blanco",
+  "guion": "Un oso polar es blanco. Sobre la nieve, desde luego lo parece. Pero cada pelo suyo es hueco y no tiene pigmento. Esos pelos dispersan y reflejan la luz del sol. Y debajo del pelaje, su piel es negra. Entonces, ¿de qué color es de verdad un oso polar? ¿Verdad o mentira? Piénsalo bien y escríbelo en comentarios.",
+  "datos": [
+    {"afirmacion": "Los pelos del oso polar no tienen pigmento, son huecos y dispersan la luz, por eso parecen blancos.", "fuentes": ["https://churchillpolarbears.org/2015/02/polar-bear-skin-is-black/", "https://www.aquazoo.nl/en/more-over-ice-bear/skin-of-a-ice-bear"], "verificado": true, "nota": "Aquazoo habla de pelo translúcido; Churchill de hueco y sin pigmento."},
+    {"afirmacion": "La piel bajo el pelo es negra.", "fuentes": ["https://churchillpolarbears.org/2015/02/polar-bear-skin-is-black/", "https://www.aquazoo.nl/en/more-over-ice-bear/skin-of-a-ice-bear"], "verificado": true}
+  ],
+  "planos": [
+    {"clave": "wikimedia:90991371", "desde": 13.0, "hasta": 19.0, "nota": "dos osos polares, uno mira a cámara"},
+    {"clave": "pexels:35371254", "desde": 0.0, "hasta": 6.0, "nota": "oso polar tumbado en la nieve"},
+    {"clave": "wikimedia:90991371", "desde": 25.0, "hasta": 31.0, "nota": "osos en la orilla"},
+    {"clave": "pexels:35371254", "desde": 20.0, "hasta": 26.0, "nota": "oso polar sobre la nieve"},
+    {"clave": "wikimedia:90991371", "desde": 41.0, "hasta": 47.0, "nota": "cierre con oso mirando"}
+  ],
+  "titulo": "¿Es blanco el oso polar?",
+  "descripcion": "👇 Vota en comentarios antes de leer.\n\nRespuesta: no del todo. Los pelos del oso polar no tienen pigmento (son huecos y translúcidos) y dispersan la luz, por eso lo vemos blanco; la piel de debajo es negra.",
+  "etiquetas": ["oso polar", "animales", "mito", "curiosidades"]
+}

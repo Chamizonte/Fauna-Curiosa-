@@ -1,0 +1,21 @@
+{
+  "id": "20261119-2-zorro-artico",
+  "formato": "por_que",
+  "animal": "zorro ártico",
+  "gancho_pantalla": "¿Cómo cambia de color?",
+  "guion": "¿Cómo cambia de color un zorro ártico? Este luce el abrigo blanco de invierno. En verano, el pelo se vuelve una mezcla moteada de pardo y negro. Cambia de ropa con la estación. Los de zonas más al norte suelen ser blancos en invierno, y algunos del sur llevan un abrigo más oscuro. Dos abrigos, un solo zorro: blanco en invierno, pardo en verano.",
+  "datos": [
+    {"afirmacion": "El zorro ártico es blanco en invierno y en verano su pelaje es una mezcla de pardo y negro.", "fuentes": ["https://www.nps.gov/kova/learn/nature/arctic-fox.htm", "https://newsrelease.adfg.alaska.gov/static/education/wns/arctic_fox.pdf"], "verificado": true, "nota": "NPS abierta y confirmada. ADFG: el PDF no se pudo leer en la comprobación; su contenido (muda de pelo blanco a pardo entre abril y junio) consta en el resumen de búsqueda. Revisar si hay dudas."},
+    {"afirmacion": "Las poblaciones del norte suelen ser blancas en invierno y las del sur pueden tener un abrigo más oscuro.", "fuentes": ["https://www.nps.gov/kova/learn/nature/arctic-fox.htm", "https://www.gi.alaska.edu/alaska-science-forum/white-creatures-changing-season"], "verificado": true, "nota": "Se formula con 'suelen' y 'algunos'; el Geophysical Institute de Alaska confirma que los de North Slope se vuelven blancos y que en las Aleutianas hay fase 'azul'."}
+  ],
+  "planos": [
+    {"clave": "pexels:12427830", "desde": 0.0, "hasta": 6.0, "nota": "zorro de pelaje blanco invernal sobre una roca"},
+    {"clave": "wikimedia:173604454", "desde": 0.0, "hasta": 4.0, "nota": "foto con pelaje de verano"},
+    {"clave": "pexels:12427830", "desde": 6.0, "hasta": 12.0, "nota": "vuelve al abrigo blanco"},
+    {"clave": "inaturalist:9202", "desde": 0.0, "hasta": 4.0, "nota": "foto con pelaje de verano sentado en la tundra"},
+    {"clave": "pexels:12427830", "desde": 12.0, "hasta": 18.0, "nota": "cierre con el abrigo blanco"}
+  ],
+  "titulo": "Zorro ártico: cómo cambia de color con las estaciones",
+  "descripcion": "El zorro ártico es blanco en invierno y pardo moteado en verano. Los del norte suelen ser blancos en invierno; algunos del sur tienen un abrigo más oscuro.",
+  "etiquetas": ["zorro ártico", "animales", "curiosidades", "camuflaje"]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "20261119-7-nutria-gigante",
+  "formato": "tarjeta",
+  "animal": "nutria",
+  "gancho_pantalla": "Esto no es una nutria cualquiera",
+  "texto_tarjeta": "Esto **no es** una nutria cualquiera. La nutria gigante pesa de media unos **veinticuatro kilos**. Vive en familias de **cinco a ocho** miembros. Y está **en peligro** de extinción según la UICN.",
+  "datos": [
+    {"afirmacion": "La nutria gigante pesa de media unos 24 kg y hasta 34 kg.", "fuentes": ["https://animaldiversity.org/accounts/Pteronura_brasiliensis/", "https://www.worldlandtrust.org/species/giant-otter/"], "verificado": true},
+    {"afirmacion": "Vive en familias de 5 a 8 individuos.", "fuentes": ["https://animaldiversity.org/accounts/Pteronura_brasiliensis/", "https://www.worldlandtrust.org/species/giant-otter/"], "verificado": true},
+    {"afirmacion": "Está catalogada En Peligro por la UICN.", "fuentes": ["https://animaldiversity.org/accounts/Pteronura_brasiliensis/", "https://www.worldlandtrust.org/species/giant-otter/"], "verificado": true}
+  ],
+  "planos": [
+    {"clave": "pixabay:251835", "desde": 0.0, "hasta": 5.0, "nota": "nutrias gigantes en el agua"},
+    {"clave": "pixabay:251835", "desde": 5.0, "hasta": 10.0, "nota": "acicalamiento mutuo junto a la orilla"}
+  ],
+  "titulo": "Nutria gigante: familias de hasta ocho y en peligro",
+  "descripcion": "La nutria gigante pesa de media unos 24 kg, vive en familias de 5 a 8 miembros y está catalogada En Peligro por la UICN.",
+  "etiquetas": ["nutria gigante", "animales", "curiosidades", "en peligro"]
+}
