@@ -1,0 +1,77 @@
+{
+  "id": "20261118-3-guepardo-leopardo",
+  "formato": "comparativa",
+  "animal": "guepardo",
+  "gancho_pantalla": "Guepardo contra leopardo",
+  "guion": "Guepardo contra leopardo: dos felinos manchados, pero solo uno no puede esconder las garras. Mira al guepardo: sus garras son romas y semirretráctiles, y quedan siempre algo al descubierto. El leopardo, como un gato doméstico, las guarda del todo. Funcionan como los clavos de un corredor y le dan agarre al correr. ¿Cuál de los dos gana en la carrera?",
+  "datos": [
+    {
+      "afirmacion": "Los guepardos tienen garras romas y semirretráctiles.",
+      "fuentes": [
+        "https://nationalzoo.si.edu/node/10504",
+        "https://www.sciencefocus.com/nature/do-big-cats-have-retractable-claws"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Leones, tigres y leopardos tienen garras totalmente retráctiles, como los gatos domésticos.",
+      "fuentes": [
+        "https://www.sciencefocus.com/nature/do-big-cats-have-retractable-claws",
+        "https://nationalzoo.si.edu/node/10504"
+      ],
+      "verificado": true,
+      "nota": "Smithsonian confirma las garras del guepardo; la comparación con los otros grandes felinos viene de BBC Science Focus y de la búsqueda de la sección de garras."
+    },
+    {
+      "afirmacion": "Las garras del guepardo actúan como clavos de atleta para el agarre al correr.",
+      "fuentes": [
+        "https://www.sciencefocus.com/nature/do-big-cats-have-retractable-claws",
+        "https://sciencedaily.com/releases/2013/06/130614082900.htm"
+      ],
+      "verificado": true,
+      "nota": "ScienceDaily: agarre y maniobrabilidad clave en la caza."
+    }
+  ],
+  "planos": [
+    {
+      "clave": "pixabay:202278",
+      "desde": 0.0,
+      "hasta": 4.0,
+      "nota": "dos guepardos mirando a cámara"
+    },
+    {
+      "clave": "wikimedia:159888913",
+      "desde": 0.0,
+      "hasta": 3.5,
+      "nota": "FOTO guepardo caminando"
+    },
+    {
+      "clave": "pixabay:202278",
+      "desde": 5.0,
+      "hasta": 8.5,
+      "nota": "guepardos atentos"
+    },
+    {
+      "clave": "pixabay:202278",
+      "desde": 10.0,
+      "hasta": 14.0,
+      "nota": "cierre"
+    }
+  ],
+  "titulo": "Guepardo contra leopardo: la diferencia en sus garras",
+  "descripcion": "El leopardo tiene garras totalmente retráctiles; las del guepardo son semirretráctiles y le dan agarre al correr.",
+  "etiquetas": [
+    "guepardo",
+    "leopardo",
+    "animales",
+    "curiosidades"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=RiD_c1NJX3k",
+    "fecha": "2026-11-20T16:00Z",
+    "subido": "2026-11-19T12:35Z",
+    "programado": true,
+    "con_voz": true,
+    "privacidad": "public"
+  }
+}
