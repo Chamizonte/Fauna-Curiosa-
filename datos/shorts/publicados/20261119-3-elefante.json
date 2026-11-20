@@ -1,0 +1,60 @@
+{
+  "id": "20261119-3-elefante",
+  "formato": "por_que",
+  "animal": "elefante",
+  "gancho_pantalla": "¿Cuánto pesa una cría de elefante?",
+  "guion": "¿Cuánto pesa una cría de elefante al nacer? Unos cien kilos. Cien kilos desde el primer día de vida. Aquí la ves, resguardada entre las patas de su madre, mientras la manada avanza por la sabana. Y esos cien kilos son un dato medio: las crías nacen entre noventa y ciento veinte kilos. ¿Te imaginabas una cría tan pesada?",
+  "datos": [
+    {
+      "afirmacion": "Una cría de elefante africano pesa al nacer unos 100 kg (90-120 kg).",
+      "fuentes": [
+        "https://animaldiversity.org/accounts/Loxodonta_africana/",
+        "https://tsavotrust.org/how-long-is-an-elephant-pregnant-for/"
+      ],
+      "verificado": true,
+      "nota": "Tsavo Trust da 90,7 kg; ADW media de 100 kg. Se dice 'unos cien kilos'."
+    }
+  ],
+  "planos": [
+    {
+      "clave": "pexels:11760786",
+      "desde": 0.0,
+      "hasta": 6.0,
+      "nota": "hembra con su cría pequeña"
+    },
+    {
+      "clave": "pixabay:219323",
+      "desde": 0.0,
+      "hasta": 5.0,
+      "nota": "manada de elefantes con crías"
+    },
+    {
+      "clave": "pexels:11760786",
+      "desde": 6.0,
+      "hasta": 12.0,
+      "nota": "la cría resguardada bajo la madre"
+    },
+    {
+      "clave": "pixabay:219323",
+      "desde": 5.0,
+      "hasta": 9.0,
+      "nota": "cierre con la manada"
+    }
+  ],
+  "titulo": "Cría de elefante: cuánto pesa al nacer",
+  "descripcion": "Una cría de elefante africano pesa al nacer unos 100 kg.",
+  "etiquetas": [
+    "elefante",
+    "crías",
+    "curiosidades",
+    "animales"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=d-082WJL2hg",
+    "fecha": "2026-11-21T20:00Z",
+    "subido": "2026-11-20T16:54Z",
+    "programado": true,
+    "con_voz": true,
+    "privacidad": "public"
+  }
+}
