@@ -1,0 +1,64 @@
+{
+  "id": "20261118-5-guepardo",
+  "formato": "tarjeta",
+  "animal": "guepardo",
+  "gancho_pantalla": "¿Sabías que…?",
+  "texto_tarjeta": "El guepardo **no caza a toda velocidad**. Con collares GPS en Botsuana, el récord fue de **93 km/h**, pero casi todas las persecuciones fueron a ritmo moderado. Lo que decide la caza es el **agarre** y la maniobrabilidad, no la velocidad punta. Más que correr, **acelera y gira** mejor.",
+  "datos": [
+    {
+      "afirmacion": "Récord medido en guepardos salvajes con collares GPS en Botsuana: 93 km/h (25,9 m/s).",
+      "fuentes": [
+        "https://www.nationalgeographic.com/animals/article/130612-cheetah-speed-hunting-big-cats-animal-science",
+        "https://sciencedaily.com/releases/2013/06/130614082900.htm"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "La mayoría de las persecuciones fueron a velocidades modestas.",
+      "fuentes": [
+        "https://www.nationalgeographic.com/animals/article/130612-cheetah-speed-hunting-big-cats-animal-science",
+        "https://ui.adsabs.harvard.edu/abs/2013Natur.498..185W"
+      ],
+      "verificado": true,
+      "nota": "Nature 2013 (Wilson et al.); sin media numérica por prudencia."
+    },
+    {
+      "afirmacion": "El éxito de caza depende del agarre, la maniobrabilidad y la aceleración más que de la velocidad punta.",
+      "fuentes": [
+        "https://sciencedaily.com/releases/2013/06/130614082900.htm",
+        "https://www.nationalgeographic.com/animals/article/130612-cheetah-speed-hunting-big-cats-animal-science"
+      ],
+      "verificado": true
+    }
+  ],
+  "planos": [
+    {
+      "clave": "wikimedia:159888913",
+      "desde": 0.0,
+      "hasta": 6.0,
+      "nota": "FOTO guepardo atento en la sabana"
+    },
+    {
+      "clave": "pixabay:202278",
+      "desde": 2.0,
+      "hasta": 12.0,
+      "nota": "vídeo tranquilo de dos guepardos"
+    }
+  ],
+  "titulo": "Guepardo: no caza a toda velocidad",
+  "descripcion": "En un estudio con guepardos salvajes en Botsuana (Nature, 2013) el récord fue 93 km/h, pero la caza dependió más de agarre y agilidad que de velocidad punta.",
+  "etiquetas": [
+    "guepardo",
+    "animales",
+    "curiosidades",
+    "velocidad"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=1fCWwQqbSFs",
+    "fecha": "2026-11-21T08:00Z",
+    "subido": "2026-11-20T08:46Z",
+    "programado": true,
+    "con_voz": false,
+    "privacidad": "public"
+  }
+}
