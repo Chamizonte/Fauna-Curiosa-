@@ -1,0 +1,74 @@
+{
+  "id": "20261119-1-suricata",
+  "formato": "por_que",
+  "animal": "suricata",
+  "gancho_pantalla": "¿Por qué se pone de pie?",
+  "guion": "¿Por qué una suricata se pone de pie así? Es el centinela. Mientras el resto del grupo busca comida, uno sube a un punto alto, como una roca, y vigila de pie, sobre las patas traseras. Si ve un depredador, avisa al grupo. Se turnan para vigilar. ¿Por qué se pone de pie una suricata? Porque alguien tiene que vigilar.",
+  "datos": [
+    {
+      "afirmacion": "Mientras el grupo forrajea, un miembro hace de centinela: sube a un punto alto (roca, montículo), se pone de pie sobre las patas traseras y avisa si ve un depredador.",
+      "fuentes": [
+        "https://animals.sandiegozoo.org/node/106",
+        "https://animaldiversity.org/accounts/Suricata_suricatta/"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "El puesto de centinela lo comparten (se turnan) los miembros del grupo.",
+      "fuentes": [
+        "https://animals.sandiegozoo.org/node/106",
+        "https://animaldiversity.org/accounts/Suricata_suricatta/"
+      ],
+      "verificado": true,
+      "nota": "ADW indica que el papel es compartido y que suelen verse más los machos subordinados mayores; se dice solo 'se turnan'."
+    }
+  ],
+  "planos": [
+    {
+      "clave": "wikimedia:150004673",
+      "desde": 0.0,
+      "hasta": 5.0,
+      "nota": "suricata erguida en postura de centinela, plano más llamativo"
+    },
+    {
+      "clave": "wikimedia:150004673",
+      "desde": 11.0,
+      "hasta": 17.0,
+      "nota": "grupo moviéndose mientras alguna vigila"
+    },
+    {
+      "clave": "pixabay:120511",
+      "desde": 0.0,
+      "hasta": 6.0,
+      "nota": "grupo agrupado en el suelo"
+    },
+    {
+      "clave": "wikimedia:150004673",
+      "desde": 17.0,
+      "hasta": 24.0,
+      "nota": "cierre con la vigilancia"
+    },
+    {
+      "clave": "inaturalist:10943972",
+      "desde": 0.0,
+      "hasta": 3.0,
+      "nota": "foto de tres suricatas, una de pie mirando a cámara"
+    }
+  ],
+  "titulo": "Suricata: por qué se pone de pie (el centinela)",
+  "descripcion": "Mientras el grupo busca comida, una suricata sube a un punto alto y vigila de pie. Si ve un depredador, avisa al grupo, y se turnan para hacerlo.",
+  "etiquetas": [
+    "suricata",
+    "animales",
+    "curiosidades",
+    "centinela"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=7grSMOJvGGc",
+    "fecha": "2026-11-21T12:00Z",
+    "subido": "2026-11-20T09:20Z",
+    "programado": true,
+    "con_voz": true,
+    "privacidad": "public"
+  }
+}
