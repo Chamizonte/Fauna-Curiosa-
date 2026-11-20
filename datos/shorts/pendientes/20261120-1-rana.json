@@ -1,0 +1,30 @@
+{
+  "id": "20261120-1-rana",
+  "formato": "por_que",
+  "animal": "rana",
+  "gancho_pantalla": "¿Cómo bebe una rana?",
+  "guion": "¿Cómo bebe una rana? Casi nunca como tú. La mayoría de ranas y sapos que viven en tierra no beben con la boca: absorben el agua a través de la piel. Su piel de la parte baja del cuerpo tiene canales especiales para el agua, y con ellos se hidratan al tocar una superficie húmeda. ¿Cómo bebe una rana? Sin abrir la boca.",
+  "datos": [
+    {
+      "afirmacion": "La mayoría de anfibios terrestres (ranas y sapos) absorben agua por la piel en lugar de beber.",
+      "fuentes": ["https://www.sciencedaily.com/releases/2002/08/020827062602.htm", "https://www.bioone.org/doi/full/10.2108/zsj.28.664"],
+      "verificado": true,
+      "nota": "Los estudios se hicieron sobre todo en sapos del género Bufo y otros; se dice 'la mayoría' y no 'todas'."
+    },
+    {
+      "afirmacion": "Una zona de la piel pélvica (parche pélvico) contiene canales de agua (acuaporinas) que facilitan la rehidratación.",
+      "fuentes": ["https://www.bioone.org/doi/full/10.2108/zsj.28.664", "https://www.sciencedaily.com/releases/2002/08/020827062602.htm"],
+      "verificado": true
+    }
+  ],
+  "planos": [
+    {"clave": "wikimedia:121736555", "desde": 0.0, "hasta": 4.0, "nota": "sapo flotando en el agua, mirando a cámara"},
+    {"clave": "pexels:32880082", "desde": 0.0, "hasta": 4.0, "nota": "rana parcialmente sumergida en el estanque"},
+    {"clave": "pixabay:113403", "desde": 0.0, "hasta": 4.0, "nota": "rana verde inmóvil sobre un tallo"},
+    {"clave": "wikimedia:121736555", "desde": 8.0, "hasta": 12.0, "nota": "sapo flotando entre plantas acuáticas"},
+    {"clave": "pexels:32880082", "desde": 7.0, "hasta": 11.0, "nota": "rana en reposo en el agua"}
+  ],
+  "titulo": "¿Cómo bebe una rana? No lo hace con la boca",
+  "descripcion": "La mayoría de ranas y sapos terrestres no beben con la boca: absorben el agua a través de la piel, gracias a una zona especializada con canales de agua.",
+  "etiquetas": ["rana", "sapo", "anfibios", "animales", "curiosidades"]
+}

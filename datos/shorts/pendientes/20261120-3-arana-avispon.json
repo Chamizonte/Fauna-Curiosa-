@@ -1,0 +1,37 @@
+{
+  "id": "20261120-3-arana-avispon",
+  "formato": "tarjeta",
+  "animal": "araña",
+  "gancho_pantalla": "Esto no es una avispa",
+  "texto_tarjeta": "Esto **no es una avispa**. Es una **araña**. Sus rayas amarillas y negras imitan a las de una avispa y ayudan a protegerla de los depredadores, aunque es inofensiva para las personas. El **zigzag** blanco que teje en su tela aún tiene una función poco clara, y la especie se está expandiendo hacia el **norte**.",
+  "datos": [
+    {
+      "afirmacion": "La araña avispa (Argiope bruennichi) tiene rayas amarillas, negras y blancas como una avispa; es un mimetismo que la protege de depredadores aunque no es peligrosa.",
+      "fuentes": ["https://wildlifetrusts.org/node/741", "https://britishspiders.org.uk/node/26525"],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Es inofensiva: muy improbable que haga daño a una persona.",
+      "fuentes": ["https://britishspiders.org.uk/node/26525", "https://wildlifetrusts.org/node/741"],
+      "verificado": true
+    },
+    {
+      "afirmacion": "El zigzag blanco central de su tela (estabilimento) tiene una función poco clara.",
+      "fuentes": ["https://wildlifetrusts.org/node/741", "https://www.iflscience.com/what-are-those-zigzags-you-see-in-spiders-webs-study-finds-they-could-be-a-kind-of-alarm-system-81372"],
+      "verificado": true,
+      "nota": "Segunda fuente solo vista en resultados de búsqueda; función debatida, por eso se dice 'poco clara'."
+    },
+    {
+      "afirmacion": "La especie se expande hacia el norte en Reino Unido.",
+      "fuentes": ["https://britishspiders.org.uk/node/26525", "https://wildlifewatch.org.uk/wildlife-explorer/invertebrates/spiders/wasp-spider"],
+      "verificado": true,
+      "nota": "La frase del texto se refiere a su expansión hacia el norte (observada en Reino Unido)."
+    }
+  ],
+  "planos": [
+    {"clave": "wikimedia:11051727", "desde": 0.0, "hasta": 12.0, "nota": "foto de araña avispón (Argiope) envolviendo en seda a un caballito del diablo"}
+  ],
+  "titulo": "Esto NO es una avispa: es una araña",
+  "descripcion": "La araña avispa imita las rayas de una avispa para protegerse, pero es inofensiva para las personas. Su zigzag blanco en la tela aún tiene una función poco clara.",
+  "etiquetas": ["araña avispa", "arañas", "mimetismo", "animales", "curiosidades"]
+}
