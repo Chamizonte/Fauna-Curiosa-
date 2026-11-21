@@ -1,0 +1,83 @@
+{
+  "id": "20261119-6-lince-iberico",
+  "formato": "mito",
+  "animal": "lince ibérico",
+  "gancho_pantalla": "El lince ya está a salvo",
+  "guion": "El lince ibérico ya no está en peligro de extinción. En 2001 quedaban sesenta y dos adultos. En 2022 ya eran seiscientos cuarenta y ocho. La Lista Roja de la UICN lo cambió de categoría en 2024. Y su alimento principal, el conejo, sigue expuesto a brotes de enfermedad. ¿Verdad o mentira? Vota en comentarios: ¿el lince ibérico ya está a salvo?",
+  "datos": [
+    {
+      "afirmacion": "Los individuos maduros de lince ibérico pasaron de 62 en 2001 a 648 en 2022.",
+      "fuentes": [
+        "https://www.iucn.org/es/comunicado-de-prensa/202406/el-lince-iberico-se-recupera-gracias-medidas-de-conservacion-lista-roja",
+        "https://www.agenciasinc.es/Noticias/El-lince-iberico-ya-no-esta-en-peligro-de-extincion"
+      ],
+      "verificado": true,
+      "nota": "UICN y Agencia SINC (abierta y leída) coinciden."
+    },
+    {
+      "afirmacion": "En 2024 la UICN pasó al lince de 'En Peligro' a 'Vulnerable'.",
+      "fuentes": [
+        "https://www.iucn.org/es/comunicado-de-prensa/202406/el-lince-iberico-se-recupera-gracias-medidas-de-conservacion-lista-roja",
+        "https://www.atlantico.net/sociedad/lince-iberico-deja-ser-especie-peligro-extincion_1_20240620-1124356.html"
+      ],
+      "verificado": true,
+      "nota": "SINC confirma el cambio de categoría pero no el año; el año 2024 (20 de junio) lo da el comunicado de la UICN (URL 202406) y Atlántico (URL 20240620)."
+    },
+    {
+      "afirmacion": "Sigue amenazado por posibles caídas de la población de conejo europeo ante nuevos brotes de virus, además de enfermedades, atropellos y otras causas.",
+      "fuentes": [
+        "https://www.iucn.org/es/noticias/202407/recuperacion-del-lince-iberico-un-exito-de-conservacion-en-espana",
+        "https://www.agenciasinc.es/Noticias/El-lince-iberico-ya-no-esta-en-peligro-de-extincion"
+      ],
+      "verificado": true
+    }
+  ],
+  "planos": [
+    {
+      "clave": "pexels:28167731",
+      "desde": 0.0,
+      "hasta": 6.0,
+      "nota": "lince bebiendo, mirada penetrante"
+    },
+    {
+      "clave": "inaturalist:187857126",
+      "desde": 0.0,
+      "hasta": 4.0,
+      "nota": "primer plano de la cabeza"
+    },
+    {
+      "clave": "pexels:28167731",
+      "desde": 6.0,
+      "hasta": 11.0,
+      "nota": "reflejo en el agua"
+    },
+    {
+      "clave": "inaturalist:187857135",
+      "desde": 0.0,
+      "hasta": 4.0,
+      "nota": "pinceles de las orejas y pelaje moteado"
+    },
+    {
+      "clave": "pexels:28167731",
+      "desde": 11.0,
+      "hasta": 15.0,
+      "nota": "cierre con la mirada fija"
+    }
+  ],
+  "titulo": "¿Está a salvo el lince ibérico?",
+  "descripcion": "👇 Vota en comentarios antes de leer.\n\nRespuesta: a medias. En 2024 la UICN lo pasó de «En Peligro» a «Vulnerable» (adultos: de 62 en 2001 a 648 en 2022), pero sigue amenazado por posibles caídas del conejo ante nuevos brotes de virus, enfermedades y otros factores.",
+  "etiquetas": [
+    "lince ibérico",
+    "animales",
+    "conservación",
+    "mito"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=WQzPfGeRqgg",
+    "fecha": "2026-11-22T16:00Z",
+    "subido": "2026-11-21T13:09Z",
+    "programado": true,
+    "con_voz": true,
+    "privacidad": "public"
+  }
+}
