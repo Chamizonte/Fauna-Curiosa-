@@ -1,0 +1,21 @@
+{
+  "id": "20261121-3-wombat",
+  "formato": "mito",
+  "animal": "wombat",
+  "gancho_pantalla": "Un wombat hace cacas cuadradas",
+  "guion": "Un wombat hace cacas cuadradas. Las piezas se forman dentro del intestino, en su último tramo, no al salir. Allí hay partes rígidas y partes elásticas que se contraen a distinta velocidad. Eso marca las esquinas. Pero ¿puede un intestino moldear un cubo? Piénsalo bien. ¿Verdad o mentira? Escríbelo en comentarios.",
+  "datos": [
+    {"afirmacion": "Las heces del wombat tienen forma de cubo; se moldean dentro del intestino, en su último tramo, no al salir.", "fuentes": ["https://www.rsc.org/news-events/articles/2021/jan/wombat-poo/", "https://www.smithsonianmag.com/smart-news/scientists-have-solved-mystery-how-wombats-poop-cubes-180976898/"], "verificado": true},
+    {"afirmacion": "Partes rígidas y elásticas del intestino se contraen a distinta velocidad, lo que crea las esquinas (estudio de Soft Matter, 2021).", "fuentes": ["https://www.rsc.org/news-events/articles/2021/jan/wombat-poo/", "https://www.smithsonianmag.com/smart-news/scientists-have-solved-mystery-how-wombats-poop-cubes-180976898/"], "verificado": true}
+  ],
+  "planos": [
+    {"clave": "pexels:20616586", "desde": 0.0, "hasta": 4.0, "nota": "wombat en el borde de un camino, vertical"},
+    {"clave": "pixabay:317566", "desde": 0.0, "hasta": 4.0, "nota": "wombat común sobre la hierba"},
+    {"clave": "inaturalist:91360051", "desde": 0.0, "hasta": 3.5, "nota": "foto: wombat de hocico peludo mirando a cámara"},
+    {"clave": "pexels:20616586", "desde": 6.0, "hasta": 10.0, "nota": "otro tramo del mismo clip"},
+    {"clave": "inaturalist:78106083", "desde": 0.0, "hasta": 3.5, "nota": "foto: wombat en terreno árido"}
+  ],
+  "titulo": "¿Hace un wombat cacas cuadradas de verdad?",
+  "descripcion": "👇 Vota en comentarios antes de leer.\n\nRespuesta: Es verdad. Los wombats producen heces en forma de cubo, y un estudio de Soft Matter (2021) mostró que se moldean dentro del último tramo del intestino, cuyas zonas rígidas y elásticas se contraen a distinta velocidad.",
+  "etiquetas": ["wombat", "animales", "curiosidades", "verdad o mentira", "Australia"]
+}
