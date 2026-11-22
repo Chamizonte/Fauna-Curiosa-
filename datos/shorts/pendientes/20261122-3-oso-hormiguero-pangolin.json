@@ -1,0 +1,21 @@
+{
+  "id": "20261122-3-oso-hormiguero-pangolin",
+  "formato": "comparativa",
+  "animal": "oso hormiguero",
+  "gancho_pantalla": "Oso hormiguero contra pangolín",
+  "guion": "Oso hormiguero contra pangolín: ¿quién tiene la lengua más larga? Los dos viven de insectos. El oso hormiguero gigante tiene una lengua de unos sesenta centímetros, que mueve hasta ciento cincuenta veces por minuto, y ni siquiera tiene dientes. El pangolín gigante supera los cuarenta centímetros. Gana el oso hormiguero, aunque algunas fuentes dan al pangolín hasta setenta.",
+  "datos": [
+    {"afirmacion": "El oso hormiguero gigante no tiene dientes, tiene una lengua de unos 60 cm (2 pies) y la mueve hasta 150 veces por minuto.", "fuentes": ["https://nationalzoo.si.edu/animals/giant-anteater", "https://animals.sandiegozoo.org/node/174"], "verificado": true},
+    {"afirmacion": "El pangolín gigante tiene una lengua de más de 40 cm; las fuentes divergen y algunas dan hasta 70 cm.", "fuentes": ["https://www.discoverwildlife.com/animal-facts/mammals/facts-about-pangolins/", "https://encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/pholidota-pangolins"], "verificado": true, "nota": "Cifras discrepantes entre fuentes (40-70 cm): se redacta con prudencia y el ganador se matiza."},
+    {"afirmacion": "Ambos se alimentan de insectos (hormigas y termitas).", "fuentes": ["https://nationalzoo.si.edu/animals/giant-anteater", "https://www.discoverwildlife.com/animal-facts/mammals/facts-about-pangolins/"], "verificado": true}
+  ],
+  "planos": [
+    {"clave": "pexels:26866391", "desde": 0.0, "hasta": 5.0, "nota": "oso hormiguero gigante junto a un termitero"},
+    {"clave": "pexels:26866391", "desde": 7.0, "hasta": 11.0, "nota": "oso hormiguero husmeando el suelo"},
+    {"clave": "pexels:26866391", "desde": 12.0, "hasta": 17.0, "nota": "oso hormiguero explorando el suelo"},
+    {"clave": "pexels:26866391", "desde": 22.0, "hasta": 27.0, "nota": "cierre con el ganador"}
+  ],
+  "titulo": "Oso hormiguero vs pangolín: ¿quién tiene la lengua más larga?",
+  "descripcion": "El oso hormiguero gigante tiene una lengua de unos 60 cm; el pangolín gigante supera los 40 cm y, según algunas fuentes, llega a 70. Fuentes: Smithsonian's National Zoo, San Diego Zoo, Discover Wildlife, Encyclopedia.com.",
+  "etiquetas": ["oso hormiguero", "pangolín", "animales", "comparativa", "curiosidades"]
+}

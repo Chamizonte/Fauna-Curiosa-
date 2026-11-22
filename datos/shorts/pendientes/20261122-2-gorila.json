@@ -1,0 +1,20 @@
+{
+  "id": "20261122-2-gorila",
+  "formato": "por_que",
+  "animal": "gorila",
+  "gancho_pantalla": "¿Por qué se golpea el pecho?",
+  "guion": "¿Por qué se golpea el pecho un gorila macho? No solo para asustar. En un estudio con gorilas de montaña de Ruanda, los científicos registraron más de quinientos golpes. Y descubrieron que cuanto más grande es el macho, más grave suena su pecho. Parece una forma de medirse sin tocarse. Por eso se golpea el pecho: para decir cuánto pesa.",
+  "datos": [
+    {"afirmacion": "Estudio de 2021 con gorilas de montaña en Ruanda: más de 500 golpes de pecho registrados de unos 25 machos.", "fuentes": ["https://www.nationalgeographic.com/animals/article/why-do-gorillas-beat-their-chests", "https://www.nature.com/articles/s41598-021-86261-8"], "verificado": true},
+    {"afirmacion": "Los machos más grandes producen golpes de frecuencia más baja (más graves); los autores lo describen como señal honesta de capacidad competitiva y puede ayudar a evitar el contacto físico.", "fuentes": ["https://www.nature.com/articles/s41598-021-86261-8", "https://www.nationalgeographic.com/animals/article/why-do-gorillas-beat-their-chests"], "verificado": true, "nota": "Estudio solo de gorilas de montaña; función de evitar contacto presentada con prudencia («parece»)."}
+  ],
+  "planos": [
+    {"clave": "pexels:20624465", "desde": 0.0, "hasta": 5.0, "nota": "macho de espalda plateada sentado, plano más imponente"},
+    {"clave": "pixabay:164517", "desde": 0.0, "hasta": 5.0, "nota": "gorila grande en el prado"},
+    {"clave": "pexels:20624465", "desde": 15.0, "hasta": 20.0, "nota": "macho adulto de cerca"},
+    {"clave": "pixabay:164517", "desde": 10.0, "hasta": 15.0, "nota": "cierre con el gorila"}
+  ],
+  "titulo": "¿Por qué se golpea el pecho un gorila? La ciencia responde",
+  "descripcion": "Un estudio con gorilas de montaña de Ruanda (Scientific Reports, 2021) halló que los machos más grandes producen golpes de pecho más graves, una señal de tamaño que podría ayudar a evitar el contacto físico.",
+  "etiquetas": ["gorila", "animales", "curiosidades", "primates", "ciencia"]
+}
