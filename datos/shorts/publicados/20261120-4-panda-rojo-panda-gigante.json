@@ -1,0 +1,101 @@
+{
+  "id": "20261120-4-panda-rojo-panda-gigante",
+  "formato": "comparativa",
+  "animal": "panda rojo",
+  "gancho_pantalla": "Panda rojo contra panda gigante",
+  "guion": "Dos pandas, un mismo nombre. El rojo pesa entre cuatro y siete kilos; el gigante puede pasar de cien. Los dos viven sobre todo del bambú, y el gigante le dedica más de diez horas al día. Pero ahí acaba el parecido. El gigante es un oso. El rojo no: tiene una familia propia, y es su único miembro vivo. Dos pandas, un nombre, y ningún parentesco cercano.",
+  "datos": [
+    {
+      "afirmacion": "El panda rojo pesa unos 3,6–7,7 kg; el panda gigante puede superar los 100 kg.",
+      "fuentes": [
+        "https://animaldiversity.org/accounts/Ailurus_fulgens/",
+        "https://nationalzoo.si.edu/animals/red-panda",
+        "https://animaldiversity.org/accounts/Ailuropoda_melanoleuca/",
+        "https://nationalzoo.si.edu/animals/giant-panda"
+      ],
+      "verificado": true,
+      "nota": "Rangos: ADW 3,7–6,2 kg y NZP 3,6–7,7 kg; gigante 80–125 kg (ADW), machos hasta 113 kg (NZP). Se redondea a 'entre cuatro y siete' y 'puede pasar de cien'."
+    },
+    {
+      "afirmacion": "Ambos se alimentan sobre todo de bambú; el panda gigante dedica 10 o más horas al día a comer.",
+      "fuentes": [
+        "https://animaldiversity.org/accounts/Ailuropoda_melanoleuca/",
+        "https://nationalzoo.si.edu/animals/giant-panda",
+        "https://nationalzoo.si.edu/animals/red-panda",
+        "https://animaldiversity.org/accounts/Ailurus_fulgens/"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "El panda gigante pertenece a la familia de los osos (Ursidae).",
+      "fuentes": [
+        "https://animaldiversity.org/accounts/Ailuropoda_melanoleuca/",
+        "https://nationalzoo.si.edu/animals/giant-panda"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "El panda rojo tiene su propia familia (Ailuridae), de la que es el único miembro vivo, y no está estrechamente emparentado con el panda gigante.",
+      "fuentes": [
+        "https://animaldiversity.org/accounts/Ailurus_fulgens/",
+        "https://nationalzoo.si.edu/animals/red-panda"
+      ],
+      "verificado": true
+    }
+  ],
+  "planos": [
+    {
+      "clave": "pixabay:85698",
+      "desde": 0.0,
+      "hasta": 4.0,
+      "nota": "panda rojo en una rama comiendo"
+    },
+    {
+      "clave": "pexels:19477927",
+      "desde": 0.0,
+      "hasta": 4.0,
+      "nota": "panda rojo sentado en la rama"
+    },
+    {
+      "clave": "pixabay:85698",
+      "desde": 8.0,
+      "hasta": 12.0,
+      "nota": "panda rojo comiendo, tramo distinto"
+    },
+    {
+      "clave": "pexels:19477927",
+      "desde": 7.0,
+      "hasta": 10.5,
+      "nota": "panda rojo caminando por la rama"
+    },
+    {
+      "clave": "pixabay:85698",
+      "desde": 16.0,
+      "hasta": 20.0,
+      "nota": "panda rojo entre las hojas, tercer tramo"
+    },
+    {
+      "clave": "wikimedia:3003747",
+      "desde": 0.0,
+      "hasta": 3.0,
+      "nota": "foto de cara de panda rojo"
+    }
+  ],
+  "titulo": "Panda rojo contra panda gigante: ¿son familia?",
+  "descripcion": "El panda gigante es un oso; el panda rojo pertenece a su propia familia, Ailuridae. Comparten nombre y dieta de bambú, pero no un parentesco cercano.",
+  "etiquetas": [
+    "panda rojo",
+    "panda gigante",
+    "comparativa",
+    "animales",
+    "curiosidades"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=_8rOSkZVuzU",
+    "fecha": "2026-11-23T20:00Z",
+    "subido": "2026-11-22T18:22Z",
+    "programado": true,
+    "con_voz": true,
+    "privacidad": "public"
+  }
+}
