@@ -21,7 +21,7 @@ import requests
 
 from .util import DATOS
 
-FORMATOS = ["por_que", "comparativa", "mito", "tarjeta"]
+FORMATOS = ["momento", "por_que", "comparativa", "mito", "tarjeta"]
 PUBL = DATOS / "shorts" / "publicados"
 EDAD = dt.timedelta(days=7)
 MIN_MEDIDOS = 3
@@ -94,16 +94,16 @@ def medidos(ahora=None):
 
 
 def reparto(n, datos):
-    iguales = {f: n // 4 + (1 if i < n % 4 else 0) for i, f in enumerate(FORMATOS)}
+    iguales = {f: n // len(FORMATOS) + (1 if i < n % len(FORMATOS) else 0) for i, f in enumerate(FORMATOS)}
     if datos is None:
         return iguales, "no se pudieron leer las visitas: reparto a partes iguales"
     if any(len(datos[f]) < MIN_MEDIDOS for f in FORMATOS):
         cuenta = ", ".join(f"{f} {len(datos[f])}" for f in FORMATOS)
         return iguales, f"aún pocos datos (shorts medidos: {cuenta}; hacen falta {MIN_MEDIDOS} de cada): partes iguales"
     med = {f: statistics.median(datos[f]) for f in FORMATOS}
-    base = 1 if n >= 4 else 0
+    base = 1 if n >= len(FORMATOS) else 0
     out = {f: base for f in FORMATOS}
-    resto = n - base * 4
+    resto = n - base * len(FORMATOS)
     total = sum(med.values()) or 1
     cuotas = {f: resto * med[f] / total for f in FORMATOS}
     for f in FORMATOS:

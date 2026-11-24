@@ -35,9 +35,17 @@ ESQUEMA = {
                       "description": "marca de agua, texto en pantalla, personas, logotipo, barrotes o cristal de zoo, desenfocado, animal muy pequeño, animal muerto o herido"},
         "posicion_x": {"type": "NUMBER", "description": "Posición horizontal media del animal, 0 izquierda a 1 derecha"},
         "apto_para_short": {"type": "BOOLEAN"},
+        "espectacularidad": {"type": "INTEGER", "description":
+            "1 a 10: ¿haría parar el dedo a alguien que desliza Shorts? 9-10: pasa algo impactante "
+            "(caza, ataque, nacimiento, pelea, salto, rescate, algo nunca visto). 6-8: acción clara o "
+            "comportamiento curioso. 3-5: el animal se mueve sin más. 1-2: animal quieto o paisaje."},
+        "que_pasa": {"type": "STRING", "description":
+            "Lo que pasa en el clip como titular corto en español (máx. 8 palabras), p. ej. "
+            "«La garza se traga un pez entero». Vacío si no pasa nada."},
     },
     "required": ["especie_vista", "es_la_especie_buscada", "confianza", "descripcion", "acciones",
-                 "calidad_visual", "problemas", "posicion_x", "apto_para_short", "mejores_fotogramas"],
+                 "calidad_visual", "problemas", "posicion_x", "apto_para_short", "mejores_fotogramas",
+                 "espectacularidad", "que_pasa"],
 }
 
 PROMPT = """Eres el editor de imagen de un canal de documentales de fauna.

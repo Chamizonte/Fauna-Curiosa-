@@ -12,7 +12,7 @@ on:
       max_total:
         description: "Tope de clips a analizar con visión"
         required: false
-        default: "120"
+        default: "60"
 
 permissions:
   contents: write
@@ -44,8 +44,14 @@ jobs:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python -m cf.material_largo --max-total 60
+      - name: Nota de espectacularidad a los clips antiguos
+        timeout-minutes: 10
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python -m cf.espectacularidad
       - name: Explorar
-        timeout-minutes: 60   # deja tiempo para guardar lo analizado aunque se corte
+        timeout-minutes: 40   # deja tiempo para guardar lo analizado aunque se corte
         continue-on-error: true   # si se corta por tiempo, lo analizado se guarda igual (no es un fallo)
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
@@ -54,7 +60,7 @@ jobs:
         run: |
           python -m cf.explorador \
             --animales "${{ github.event.inputs.animales }}" \
-            --nuevos 3 --fotos 2 --max-total "${{ github.event.inputs.max_total || '120' }}"
+            --nuevos 3 --fotos 1 --max-total "${{ github.event.inputs.max_total || '60' }}"
       - name: Guardar la biblioteca en el repositorio
         if: always()   # se guarda lo analizado aunque la exploración falle o se corte
         run: |
