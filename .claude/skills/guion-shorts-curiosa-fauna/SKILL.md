@@ -1,6 +1,6 @@
 ---
 name: guion-shorts-curiosa-fauna
-description: Escribe los guiones (briefs JSON) de los Shorts de Curiosa Fauna a partir de la biblioteca de momentos verificada. Usar en la sala de redacción semanal o cuando se pida escribir, revisar o mejorar un short del canal. Cubre los cuatro formatos de la prueba A/B (por_que, comparativa, mito, tarjeta), el gancho, la estructura, el estilo en español de España y el formato exacto del brief que consume cf/montaje_short.py.
+description: Escribe los guiones (briefs JSON) de los Shorts de Curiosa Fauna a partir de la biblioteca de momentos verificada. Usar en la sala de redacción semanal o cuando se pida escribir, revisar o mejorar un short del canal. Cubre los cuatro formatos de la prueba A/B (momento, por_que, comparativa, mito), el gancho, la estructura, el estilo en español de España y el formato exacto del brief que consume cf/montaje_short.py.
 ---
 
 # Guiones de Shorts — Curiosa Fauna
@@ -40,14 +40,13 @@ los planos elegidos.
    (en `mito`, la recompensa es la duda: se responde en comentarios y en la descripción).
 4. **Bucle**: la última frase conecta con la primera para invitar a volver a verlo.
 
-## Los cinco formatos (prueba A/B: el reparto lo da trabajo/reparto.txt)
+## Los cuatro formatos (prueba A/B: el reparto lo da trabajo/reparto.txt)
 | formato | nombre en el canal | gancho en pantalla | estructura |
 |---|---|---|---|
 | `por_que` | ¿Sabías que…? con voz | «¿Por qué…?» / «¿Cómo…?» sobre algo que se VE | pregunta → explicación en 2 pasos → giro final |
 | `comparativa` | Comparativa | «X contra Y» / «3 animales que…» | presentación rápida → criterio concreto → ganador sorprendente |
 | `mito` | ¿Verdad o mentira? (pregunta abierta) | la afirmación como reto, sin decir «mito» | afirmación → pistas a favor y en contra → pregunta al espectador SIN respuesta |
 | `momento` | Un solo momento (sin voz, 6-12 s) | «¿Sabías que…?» o lo que pasa: «La garza se traga un pez entero» | el clip más espectacular, entero, con un cartel de 12-30 palabras que explica lo que se ve |
-| `tarjeta` | ¿Sabías que…? en tarjeta (sin voz) | titular corto, p. ej. «¿Sabías que…?» o «Esto NO es una avispa» | texto que se lee en pantalla sobre un vídeo o foto horizontal |
 
 ### Formato `mito` (pregunta abierta, para comentarios)
 El vídeo **no da la respuesta**: deja la duda y pide el voto en comentarios. La respuesta
@@ -66,7 +65,7 @@ verificada va en la descripción. Si el vídeo responde, no hay gancho ni coment
 - `descripcion`: empieza por «👇 Vota en comentarios antes de leer.», una línea en blanco y
   «Respuesta: …» con la explicación (2–3 frases). Todo lo que diga va en `datos` con fuentes.
 
-### Formato `momento` (vídeo primero puro)
+### Formato `momento` (vídeo primero puro; sustituye a la antigua `tarjeta`)
 El formato de los canales de animales que más crecen: un solo momento brutal, corto, que se ve
 dos o tres veces seguidas (bucle). Sin voz.
 - Va `texto_tarjeta` (12-30 palabras) en lugar de `guion`: una frase que explica lo que se ve
@@ -79,15 +78,9 @@ dos o tres veces seguidas (bucle). Sin voz.
 - `descripcion`: 3-4 frases con el dato y su explicación, «En pocas palabras: …» y 5-8 hashtags
   del animal y la acción (más texto = más búsquedas). Fuentes en `datos`, como siempre.
 
-### Formato `tarjeta`
-- Sin voz: se LEE. Va el campo `texto_tarjeta` (30–60 palabras) en lugar de `guion`.
-- Primera frase = el gancho («Esto **no es una avispa**.»). Después 2–3 datos encadenados y
-  un cierre con la cifra más sorprendente.
-- Marca con `**así**` 3–5 palabras clave (se pintan en colores). No resaltes frases enteras.
-- 1–3 planos: el primero, un vídeo con `esp` ≥ 6; detrás pueden ir **fotos** (FOTO en la
-  biblioteca) para identificar la especie. `desde`/`hasta` de una foto = segundos que se ve (2–12).
-- Ideal para animales con buena foto pero poco vídeo, y para identificar especies concretas
-  (las fotos de iNaturalist indican la especie exacta en la ficha).
+### Formato `tarjeta` (RETIRADO el 2026-11-24)
+Lo sustituye `momento`: mismo cartel «¿Sabías que…?» sin voz, pero con un vídeo potente en vez
+de una foto o un plano tranquilo. No escribas guiones nuevos en formato `tarjeta`.
 
 ## Estilo
 - Español de España, tuteo, frases cortas, verbos activos. Nada de «increíble» vacío:
@@ -113,7 +106,7 @@ dos o tres veces seguidas (bucle). Sin voz.
   "formato": "por_que",
   "animal": "pulpo",
   "gancho_pantalla": "¿Cómo desaparece un pulpo?",
-  "guion": "Texto exacto de la locución… (en tarjeta: \"texto_tarjeta\" con **resaltados**)",
+  "guion": "Texto exacto de la locución… (en momento: \"texto_tarjeta\" con **resaltados**)",
   "datos": [{"afirmacion": "…", "fuentes": ["url1", "url2"], "verificado": true}],
   "planos": [{"clave": "pexels:31496835", "desde": 3.0, "hasta": 8.5, "nota": "por qué este plano"}],
   "titulo": "Título con palabra clave al principio (máx. 70 caracteres)",
@@ -128,5 +121,5 @@ Los créditos de los clips los añade el publicador a partir de la biblioteca: n
 - [ ] El primer plano es el visualmente más fuerte y coincide con el gancho.
 - [ ] Lo que dice la voz se corresponde con lo que se ve en cada plano, y nunca dice
       «mira / fíjate / aquí…» sobre algo que no sale en la imagen.
-- [ ] 55–75 palabras (tarjeta: 30–60); el gancho se entiende sin sonido.
+- [ ] 55–75 palabras (momento: 12–30); el gancho se entiende sin sonido.
 - [ ] Formato asignado según la rotación de la semana.

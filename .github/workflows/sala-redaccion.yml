@@ -100,7 +100,7 @@ jobs:
                abren ningún short). Cada guion empieza eligiendo uno de esos momentos como primer
                plano y busca el dato que explica lo que se ve. Para completar planos, lee
                trabajo/biblioteca/NOMBRE.txt y elige SOLO entre esas claves y dentro de sus escenas.
-            4. Escribe exactamente cuántos guiones de cada formato (momento, por_que, comparativa, mito, tarjeta)
+            4. Escribe exactamente cuántos guiones de cada formato (momento, por_que, comparativa, mito)
                dice trabajo/reparto.txt: se calcula con las visitas de los shorts ya publicados.
                Si ese archivo no existe o está vacío, repártelos a partes iguales.
                No repitas animal y ángulo de un guion pendiente o publicado.

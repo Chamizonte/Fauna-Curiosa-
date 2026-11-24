@@ -21,7 +21,7 @@ import requests
 
 from .util import DATOS
 
-FORMATOS = ["momento", "por_que", "comparativa", "mito", "tarjeta"]
+FORMATOS = ["momento", "por_que", "comparativa", "mito"]   # «tarjeta» se retiró: la sustituye «momento»
 PUBL = DATOS / "shorts" / "publicados"
 EDAD = dt.timedelta(days=7)
 MIN_MEDIDOS = 3
