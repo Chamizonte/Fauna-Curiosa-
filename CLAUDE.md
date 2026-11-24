@@ -26,10 +26,11 @@ Este repositorio produce y publica automáticamente:
   Si no quedan guiones, ese turno se queda sin short (aviso en el run). Un guion que no se puede montar
   pasa a `rechazados/` y se usa el siguiente.
 - `planes/`: borradores de temas para vídeos largos (los usa `largo-guion.yml`).
-- Vídeos largos (v2): `largo-guion.yml` (Claude escribe el guion 5 días antes) →
-  material en el explorador nocturno → `largo-publicar.yml` (víspera, sube programado).
-  Escenas `esquema`: dibujos animados con Explainroo (`cf/esquemas.py`,
-  `datos/largos/esquemas/<id>/<nombre>/`), solo donde hay que explicar algo.
+- Vídeos largos (v2): `largo-guion.yml` (Claude escribe el guion 5 días antes; 40-60 % de escenas
+  son animaciones propias de `remotion/src/Graficos.tsx` y el resto clips que muestren lo que dice
+  la voz, con animación de respaldo) → material en el explorador nocturno (solo entra un clip si
+  la visión dice que encaja, 7/10) → `largo-publicar.yml` (dos días antes, sube programado para
+  revisarlo en YouTube Studio). Los esquemas de Explainroo (`cf/esquemas.py`) ya no se usan.
 - `spikes/`: pruebas de riesgo técnicas.
 - Material: no se usa YouTube (bloqueado desde Actions).
 

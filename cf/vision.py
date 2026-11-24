@@ -64,7 +64,7 @@ INTRO_VIDEO = ("La imagen es una hoja de contacto: {n} fotogramas numerados (#1,
 INTRO_FOTO = "La imagen es una fotografía (no un vídeo). En mejores_fotogramas responde [1]."
 
 
-def _llamar(modelo, imagen_jpg, prompt):
+def _llamar(modelo, imagen_jpg, prompt, esquema=ESQUEMA):
     r = requests.post(
         f"{API}/{modelo}:generateContent",
         headers={"x-goog-api-key": env("GEMINI_API_KEY", requerido=True), "Content-Type": "application/json"},
@@ -73,7 +73,7 @@ def _llamar(modelo, imagen_jpg, prompt):
                 {"text": prompt},
                 {"inline_data": {"mime_type": "image/jpeg", "data": base64.b64encode(imagen_jpg).decode()}},
             ]}],
-            "generationConfig": {"responseMimeType": "application/json", "responseSchema": ESQUEMA,
+            "generationConfig": {"responseMimeType": "application/json", "responseSchema": esquema,
                                  "temperature": 0.2},
         },
         timeout=120,
@@ -81,15 +81,27 @@ def _llamar(modelo, imagen_jpg, prompt):
     return r
 
 
-def juzgar(imagen_jpg, n_fotogramas, especie, cientifico="", contexto="", foto=False):
+ENCAJA = {"type": "INTEGER", "description":
+          "0 a 10: ¿se ve EXACTAMENTE lo que pide la escena? 10 = se ve justo eso; 7 = se ve lo "
+          "esencial; 4 = es el animal pero haciendo otra cosa; 0 = nada que ver"}
+
+
+def juzgar(imagen_jpg, n_fotogramas, especie, cientifico="", contexto="", foto=False, pedido=None):
+    """pedido: lo que tiene que verse (vídeos largos). Añade la nota «encaja» 0-10."""
     intro = INTRO_FOTO if foto else INTRO_VIDEO.format(n=n_fotogramas)
     prompt = PROMPT.format(intro=intro, especie=especie, cientifico=cientifico or "?",
                            contexto=(contexto or "sin datos")[:400])
+    esquema = ESQUEMA
+    if pedido:
+        prompt += (f"\nLa escena del documental necesita que se vea: «{pedido}». Puntúa en «encaja» si "
+                   "se ve exactamente eso. Sé exigente: un plano del mismo animal haciendo otra cosa no encaja.")
+        esquema = {**ESQUEMA, "properties": {**ESQUEMA["properties"], "encaja": ENCAJA},
+                   "required": ESQUEMA["required"] + ["encaja"]}
     ultimo = None
     for modelo in MODELOS:
         for intento in range(3):
             try:
-                r = _llamar(modelo, imagen_jpg, prompt)
+                r = _llamar(modelo, imagen_jpg, prompt, esquema)
             except requests.RequestException as e:  # p. ej. tiempo de espera agotado
                 ultimo = type(e).__name__
                 time.sleep(10)

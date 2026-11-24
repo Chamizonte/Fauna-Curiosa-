@@ -1,6 +1,8 @@
 name: Publicar vídeo largo
-# La víspera de los días 1, 11 y 21 monta el vídeo largo y lo sube PROGRAMADO para
-# las 09:00 UTC del día siguiente (queda unas horas privado para poder revisarlo).
+# DOS DÍAS ANTES de los días 1, 11 y 21 monta el vídeo largo y lo sube PROGRAMADO para las
+# 09:00 UTC de su día: queda dos días privado en YouTube Studio para revisarlo (si no gusta,
+# se borra o se edita allí antes de que salga). Si el run de dos días antes no llega a
+# ejecutarse, el de la víspera lo recoge.
 # Se ejecuta a diario a las 06:00 UTC: si mañana no toca vídeo largo, termina enseguida.
 # Si no hay guion o el montaje falla, el run sale en rojo (no hay respaldo).
 on:
@@ -36,7 +38,14 @@ jobs:
         id: toca
         run: |
           fecha="${{ github.event.inputs.fecha }}"
-          [ -z "$fecha" ] && fecha=$(date -u -d tomorrow +%F)
+          if [ -z "$fecha" ]; then
+            # el más próximo entre mañana y pasado mañana que siga pendiente
+            for d in tomorrow "2 days"; do
+              f=$(date -u -d "$d" +%F)
+              if grep -l "\"fecha_publicacion\": \"$f\"" datos/largos/pendientes/*.json >/dev/null 2>&1; then fecha=$f; break; fi
+            done
+            [ -z "$fecha" ] && fecha=$(date -u -d "2 days" +%F)
+          fi
           echo "fecha=$fecha" >> "$GITHUB_OUTPUT"
           if grep -l "\"fecha_publicacion\": \"$fecha\"" datos/largos/pendientes/*.json >/dev/null 2>&1; then
             echo "si=1" >> "$GITHUB_OUTPUT"; echo "Hay guion para $fecha"

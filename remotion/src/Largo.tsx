@@ -12,12 +12,15 @@ import {
   useVideoConfig,
 } from "remotion";
 import { loadFont } from "@remotion/google-fonts/Montserrat";
+import { Grafico, PlanoGrafico } from "./Graficos";
 
 const { fontFamily } = loadFont("normal", { weights: ["600", "800", "900"] });
 
 // Vídeo largo horizontal 1920x1080: planos encadenados, subtítulos por frases,
 // rótulos inferiores, cartelas de capítulo y cartelas de texto (cifras, fechas).
-export type PlanoLargo = { src: string; duracion: number };
+// Un plano es un clip ya recortado (src) o una animación propia (grafico), que puede llevar
+// detrás el clip anterior desenfocado (fondo).
+export type PlanoLargo = { src?: string; duracion: number; grafico?: Grafico; fondo?: string };
 export type Tramo = { texto: string; ini: number; fin: number };
 export type PropsLargo = {
   duracion: number;
@@ -34,9 +37,17 @@ export type PropsLargo = {
 const AMARILLO = "#FFD60A";
 const FUNDIDO = 12;
 
-const Plano: React.FC<{ src: string; frames: number; indice: number }> = ({ src, frames, indice }) => {
+const Plano: React.FC<{ plano: PlanoLargo; frames: number; indice: number }> = ({ plano, frames, indice }) => {
   const f = useCurrentFrame();
   const opacidad = indice === 0 ? 1 : interpolate(f, [0, FUNDIDO], [0, 1], { extrapolateRight: "clamp" });
+  if (plano.grafico) {
+    return (
+      <AbsoluteFill style={{ opacity: opacidad }}>
+        <PlanoGrafico g={plano.grafico} frames={frames + FUNDIDO} fondo={plano.fondo} />
+      </AbsoluteFill>
+    );
+  }
+  const src = plano.src as string;
   const [z0, z1] = indice % 2 === 0 ? [1.0, 1.05] : [1.05, 1.0];
   const zoom = interpolate(f, [0, frames], [z0, z1], { extrapolateRight: "clamp" });
   return (
@@ -162,7 +173,7 @@ export const Largo: React.FC<PropsLargo> = (props) => {
         desde += frames;
         return (
           <Sequence key={`p${i}`} from={inicio} durationInFrames={frames + (i === 0 ? 0 : FUNDIDO)}>
-            <Plano src={p.src} frames={frames} indice={i} />
+            <Plano plano={p} frames={frames} indice={i} />
           </Sequence>
         );
       })}
