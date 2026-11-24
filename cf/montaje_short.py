@@ -30,21 +30,24 @@ def biblioteca():
     return {r["clave"]: r for r in leer_jsonl(DATOS / "biblioteca" / "momentos.jsonl")}
 
 
-MARGEN_CAJA = 1.2      # aire alrededor del animal
-MAX_ANCHO = 0.5        # como mucho se enseña la mitad del ancho del original (término medio
-                       # entre llenar la pantalla y ver el animal entero con mucho fondo desenfocado)
+MARGEN_CAJA = 1.15     # aire alrededor de lo que tiene que verse
+SIN_CAJA = 0.5         # si Gemini no responde: la mitad del ancho, centrado
 
 
 def ventana(iw, ih, w, h, caja, posx):
     """Qué parte del ancho del original se enseña (fracción), dónde se centra y si llena la pantalla.
-    Animal estrecho: recorte que llena la pantalla centrado en él. Animal ancho: se abre el
-    encuadre hasta MAX_ANCHO y el hueco de arriba y abajo se rellena con el plano desenfocado."""
+    Hay tres encuadres: pantalla llena, término medio (la mitad del ancho) y ancho (todo).
+    Se elige el más cerrado en el que cabe el FOCO (lo que tiene que verse: la cara del lobo
+    que aúlla) y se centra en el foco."""
     llena = min(1.0, (w / h) / (iw / ih))   # fracción del ancho que llena la pantalla sin bandas
-    if caja:
-        centro, ancho = (caja[0] + caja[1]) / 2, (caja[1] - caja[0]) * MARGEN_CAJA
-    else:
-        centro, ancho = posx, MAX_ANCHO
-    ancho = min(max(llena, MAX_ANCHO), max(llena, ancho))
+    if not caja:
+        ancho = max(llena, SIN_CAJA)
+        centro = min(max(posx, ancho / 2), 1 - ancho / 2)
+        return ancho, centro, ancho <= llena * 1.05
+    foco = caja.get("foco") or caja["animal"]
+    necesario = (foco[1] - foco[0]) * MARGEN_CAJA
+    ancho = next(a for a in sorted({llena, max(llena, 0.5), 1.0}) if a * 1.1 >= necesario or a == 1.0)
+    centro = (foco[0] + foco[1]) / 2          # lo que importa, en el centro de la pantalla
     centro = min(max(centro, ancho / 2), 1 - ancho / 2)
     return ancho, centro, ancho <= llena * 1.05
 
@@ -52,8 +55,8 @@ def ventana(iw, ih, w, h, caja, posx):
 def recortar_plano(src, desde, disponible, necesario, posx, destino, w=1080, h=1920, foto=False, caja=None):
     """Recorta un tramo a w x h (vertical 1080x1920 por defecto) sin cortar al animal.
     - Si el animal cabe, recorte que llena la pantalla centrado en él.
-    - Si no cabe (primer plano, animal grande), se abre el encuadre (hasta la mitad del
-      ancho) sobre un fondo desenfocado del mismo plano.
+    - Si no cabe, se abre el encuadre (término medio o ancho, según haga falta para que se
+      vea el foco) sobre un fondo desenfocado del mismo plano.
     Vídeo: si el tramo es más corto de lo necesario, lo ralentiza (hasta 1,6x).
     Foto: barrido lento (efecto Ken Burns) cuando llena la pantalla."""
     info = sondear(src)
@@ -102,7 +105,8 @@ def preparar_planos(brief, bib, duracion, tmp, w=1080, h=1920):
         necesario = tramo * escala
         posx = p.get("posicion_x", (m.get("vision") or {}).get("posicion_x", 0.5))
         foto = m.get("tipo") == "foto"
-        caja = caja_animal(descargados[p["clave"]], p["desde"], tramo, m.get("animal") or brief["animal"], foto)
+        caja = caja_animal(descargados[p["clave"]], p["desde"], tramo, m.get("animal") or brief["animal"], foto,
+                           f"nota del plano: «{p.get('nota', '')}»; guion: «{brief.get('guion') or brief.get('texto_tarjeta', '')}»")
         real = recortar_plano(descargados[p["clave"]], p["desde"], tramo, necesario, posx,
                               PUBLICO / f"p{i}.mp4", w, h, foto=foto, caja=caja)
         planos.append({"src": f"render/p{i}.mp4", "duracion": round(min(real, necesario), 3)})
