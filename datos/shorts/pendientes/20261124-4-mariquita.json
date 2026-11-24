@@ -1,0 +1,29 @@
+{
+  "id": "20261124-4-mariquita",
+  "formato": "por_que",
+  "animal": "mariquita",
+  "gancho_pantalla": "¿Sangra por las patas?",
+  "guion": "¿Por qué sangra una mariquita por las patas? Cuando la molestan, suelta gotitas de su sangre por las articulaciones de las patas. Esa sangre lleva alcaloides, sustancias desagradables que disuaden a los depredadores. Si le das un toque en una pata, solo sangra por la articulación más cercana. Lo hacen tanto los adultos como las larvas. ¿Por qué sangra por las patas? Para que no se la coman.",
+  "datos": [
+    {
+      "afirmacion": "Las mariquitas (p. ej. la de siete puntos) sueltan por las articulaciones de las patas sangre con alcaloides cuando se las molesta (sangrado reflejo), como defensa frente a depredadores; adultos y larvas.",
+      "fuentes": [
+        "https://www.colorado.edu/asmagazine/2020/07/21/ladybugs-bright-colors-advertise-toxic-chemical-defenses",
+        "https://genent.cals.ncsu.edu/bug-bytes/defense",
+        "https://www.zin.ru/animalia/coleoptera/addpages/andrey_ukrainsky_library/References_files/Holloway91.pdf"
+      ],
+      "verificado": true,
+      "nota": "Estudio en la mariquita de siete puntos; la intensidad varía entre especies. El detalle 'solo sangra por la articulación más cercana' es de la Univ. de Colorado."
+    }
+  ],
+  "planos": [
+    {"clave": "pixabay:120355", "desde": 0.0, "hasta": 4.0, "nota": "mariquita trepando por un tallo"},
+    {"clave": "pexels:855199", "desde": 0.0, "hasta": 4.0, "nota": "dos mariquitas, colores y patas visibles"},
+    {"clave": "pixabay:120355", "desde": 4.0, "hasta": 8.0, "nota": "otro tramo del tallo"},
+    {"clave": "pexels:855199", "desde": 4.0, "hasta": 8.0, "nota": "segundo tramo de la pareja"},
+    {"clave": "pixabay:120355", "desde": 8.0, "hasta": 11.0, "nota": "cierre"}
+  ],
+  "titulo": "Mariquita: Por Qué Sangra Por Las Patas 🐞",
+  "descripcion": "Cuando se las molesta, las mariquitas sueltan sangre con alcaloides por las articulaciones de las patas (sangrado reflejo). Esas sustancias desagradables disuaden a los depredadores. En pocas palabras: sangra a propósito para que no se la coman. #mariquita #insectos #animales #curiosidades #fauna",
+  "etiquetas": ["mariquita", "insectos", "defensa", "curiosidades"]
+}

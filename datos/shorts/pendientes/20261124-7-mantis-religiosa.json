@@ -1,0 +1,36 @@
+{
+  "id": "20261124-7-mantis-religiosa",
+  "formato": "mito",
+  "animal": "mantis religiosa",
+  "gancho_pantalla": "La mantis devora a su pareja",
+  "guion": "La hembra de la mantis religiosa devora al macho tras aparearse. Es su fama. En el campo, un estudio recoge entre el 13 y el 28 % de los encuentros con canibalismo. En observaciones de laboratorio, solo un macho de cuarenta y cinco acabó devorado. Y hay machos que forcejean con la hembra y salen vivos. ¿Verdad o mentira? Escríbelo en comentarios.",
+  "datos": [
+    {
+      "afirmacion": "El canibalismo sexual ocurre en el 13-28 % de los encuentros naturales de mántidos en el campo.",
+      "fuentes": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC4936037",
+        "https://www.livescience.com/55688-benefits-of-praying-mantis-cannibalism.html"
+      ],
+      "verificado": true,
+      "nota": "PMC cita estudios de campo (Hurd 1994, Maxwell 1998); Live Science da cifra similar (~20 %) según búsqueda. Se dice 'un estudio recoge'."
+    },
+    {
+      "afirmacion": "En dos años de observaciones de laboratorio, 1 de 45 machos fue devorado; los machos que forcejean pueden aparearse y evitar ser comidos.",
+      "fuentes": [
+        "https://ucanr.edu/blog/bug-squad/article/yes-it-happens-sexual-cannibalism-praying-mantids",
+        "https://www.auckland.ac.nz/en/news/2021/01/20/male-praying-mantis-fights-to-avoid-being-eaten.html"
+      ],
+      "verificado": true,
+      "nota": "Auckland (Miomantis caffra, 52 parejas) da cifras muy distintas (35 % devorados): la tasa varía mucho según especie y condiciones."
+    }
+  ],
+  "planos": [
+    {"clave": "wikimedia:197112913", "desde": 0.0, "hasta": 3.0, "nota": "mantis religiosa verde"},
+    {"clave": "wikimedia:197112913", "desde": 3.0, "hasta": 6.0, "nota": "giro de cabeza hacia la cámara"},
+    {"clave": "wikimedia:197112913", "desde": 6.0, "hasta": 9.0, "nota": "mantis sobre la planta"},
+    {"clave": "wikimedia:197112913", "desde": 9.0, "hasta": 12.0, "nota": "cierre"}
+  ],
+  "titulo": "¿Devora Siempre La Mantis Religiosa A Su Pareja? 🦗",
+  "descripcion": "👇 Vota en comentarios antes de leer.\n\nRespuesta: pasa, pero no siempre. En el campo se documenta canibalismo sexual en el 13-28 % de los encuentros (Brown y Barry, 2016, que cita estudios de campo); en observaciones de laboratorio a veces es mucho más raro (1 de 45), y otros estudios con otras especies dan cifras más altas. Depende de la especie, del hambre de la hembra y de la actitud del macho. #mantis #insectos #animales #curiosidades",
+  "etiquetas": ["mantis religiosa", "insectos", "mito", "curiosidades"]
+}

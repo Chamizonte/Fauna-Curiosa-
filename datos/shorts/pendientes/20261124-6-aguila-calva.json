@@ -1,0 +1,34 @@
+{
+  "id": "20261124-6-aguila-calva",
+  "formato": "mito",
+  "animal": "águila",
+  "gancho_pantalla": "El águila calva es calva",
+  "guion": "El águila calva es calva. Lo dice su nombre en español y en inglés, bald eagle. Pero su nombre científico, Haliaeetus leucocephalus, significa águila marina de cabeza blanca. Y los jóvenes tienen la cabeza marrón: no la tienen blanca hasta los cinco años. Una palabra inglesa antigua, balde, también tiene que ver. ¿Verdad o mentira? Escríbelo en comentarios.",
+  "datos": [
+    {
+      "afirmacion": "El nombre científico Haliaeetus leucocephalus significa 'águila marina de cabeza blanca'; el 'bald' inglés viene del inglés antiguo/medio 'balde', que significaba blanco, no sin pelo.",
+      "fuentes": [
+        "https://www.audubon.org/magazine/10-fun-facts-about-bald-eagle",
+        "https://www.nationalgeographic.com/animals/birds/facts/bald-eagle"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Los jóvenes son marrones y desarrollan la cabeza y cola blancas hacia los cinco años.",
+      "fuentes": [
+        "https://www.nationalgeographic.com/animals/birds/facts/bald-eagle",
+        "https://ebsco.com/research-starters/zoology/bald-eagle"
+      ],
+      "verificado": true,
+      "nota": "Merriam-Webster también: cuatro-cinco años."
+    }
+  ],
+  "planos": [
+    {"clave": "pixabay:222030", "desde": 0.0, "hasta": 3.5, "nota": "primer plano de la cabeza del águila calva"},
+    {"clave": "pixabay:222030", "desde": 3.5, "hasta": 7.0, "nota": "giro de cabeza, perfil de pico y ojo"},
+    {"clave": "pixabay:222030", "desde": 7.0, "hasta": 10.5, "nota": "perfil final"}
+  ],
+  "titulo": "¿Es Calva El Águila Calva? 🦅",
+  "descripcion": "👇 Vota en comentarios antes de leer.\n\nRespuesta: no es calva. 'Bald' viene de 'balde', una palabra antigua inglesa que significaba blanco; su nombre científico, Haliaeetus leucocephalus, significa águila marina de cabeza blanca. Los jóvenes son marrones y la cabeza blanca llega hacia los cinco años. #águilacalva #aves #animales #curiosidades",
+  "etiquetas": ["águila calva", "aves", "curiosidades"]
+}

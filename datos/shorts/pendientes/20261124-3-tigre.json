@@ -1,0 +1,36 @@
+{
+  "id": "20261124-3-tigre",
+  "formato": "por_que",
+  "animal": "tigre",
+  "gancho_pantalla": "¿Rayas hasta en la piel?",
+  "guion": "¿Por qué este tigre tiene rayas? No son solo de pelo. Si se afeita a un tigre, su piel también sale rayada, porque los folículos de pelo con color se transparentan, como una barba de varios días. Y no son simétricas: las marcas de un lado de la cara suelen ser distintas a las del otro. ¿Por qué tiene rayas este tigre? Porque las lleva hasta la piel.",
+  "datos": [
+    {
+      "afirmacion": "La piel del tigre también está rayada, con el mismo dibujo que el pelo, por los folículos pigmentados.",
+      "fuentes": [
+        "https://theconversation.com/why-do-tigers-have-stripes-145223",
+        "https://www.nationalgeographic.com/news/2017/03/animals-skin-colors-zebras-big-cats/"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Las marcas de cada lado de la cara del tigre suelen ser asimétricas.",
+      "fuentes": [
+        "https://animaldiversity.org/accounts/Panthera_tigris/",
+        "https://theconversation.com/why-do-tigers-have-stripes-145223"
+      ],
+      "verificado": true,
+      "nota": "ADW lo dice de la cara; The Conversation dice que los dos lados del cuerpo difieren."
+    }
+  ],
+  "planos": [
+    {"clave": "pixabay:145320", "desde": 0.0, "hasta": 3.5, "nota": "tigre caminando, rostro claro"},
+    {"clave": "pixabay:145320", "desde": 3.5, "hasta": 8.0, "nota": "tigre avanzando, flancos rayados"},
+    {"clave": "pixabay:145320", "desde": 10.0, "hasta": 14.0, "nota": "segundo tramo, rayas visibles"},
+    {"clave": "pixabay:145320", "desde": 14.0, "hasta": 17.5, "nota": "primer plano del rostro"},
+    {"clave": "pixabay:145320", "desde": 17.5, "hasta": 21.0, "nota": "cierre del bucle con la cara"}
+  ],
+  "titulo": "Tigre: Sus Rayas Están Hasta En La Piel 🐅",
+  "descripcion": "La piel del tigre está rayada igual que su pelo: lo ven los veterinarios cuando afeitan a un tigre sedado. Los folículos de pelo pigmentados dejan ese dibujo bajo el pelaje. Y las marcas de los dos lados de la cara no coinciden. #tigre #animales #curiosidades #fauna",
+  "etiquetas": ["tigre", "rayas", "animales", "curiosidades"]
+}

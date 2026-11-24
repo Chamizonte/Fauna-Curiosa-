@@ -1,0 +1,28 @@
+{
+  "id": "20261124-5-koala-leon",
+  "formato": "por_que",
+  "animal": "koala",
+  "gancho_pantalla": "¿Por qué duerme tanto el koala?",
+  "guion": "¿Por qué duerme tanto el koala? Su comida es muy pobre. Las hojas de eucalipto aportan poquísima energía y son difíciles de digerir. Por eso el koala gasta lo mínimo: puede pasar entre dieciocho y veintidós horas al día durmiendo o descansando. Casi todo su día es ahorrar energía para digerir el eucalipto. ¿Y por qué no come otra cosa? Porque es su única comida.",
+  "datos": [
+    {
+      "afirmacion": "El koala puede dormir 18-22 horas al día porque el eucalipto aporta muy poca energía.",
+      "fuentes": [
+        "https://www.nationalgeographic.com/animals/mammals/facts/koala",
+        "https://ielc.libguides.com/sdzg/factsheets/koala/behavior"
+      ],
+      "verificado": true,
+      "nota": "San Diego Zoo da 19-20 h sentado o durmiendo; se dice 'puede' con el rango de NatGeo."
+    }
+  ],
+  "planos": [
+    {"clave": "pixabay:304418", "desde": 0.0, "hasta": 4.0, "nota": "koala masticando hojas de eucalipto en primer plano"},
+    {"clave": "pexels:36134032", "desde": 0.0, "hasta": 5.0, "nota": "koala alcanzando y masticando hojas de eucalipto"},
+    {"clave": "pixabay:304418", "desde": 4.0, "hasta": 8.0, "nota": "koala entre ramas de eucalipto, otro tramo"},
+    {"clave": "pexels:36134032", "desde": 5.0, "hasta": 10.0, "nota": "koala entre ramas, otro tramo"},
+    {"clave": "pixabay:304418", "desde": 8.0, "hasta": 12.0, "nota": "cierre koala con hojas de eucalipto"}
+  ],
+  "titulo": "¿Por Qué Duerme Tanto El Koala? 🐨",
+  "descripcion": "El koala puede dormir entre 18 y 22 horas al día porque las hojas de eucalipto aportan muy poca energía. Ahorrar energía es su estrategia para vivir con una dieta tan pobre. #koala #eucalipto #animales #curiosidades #fauna",
+  "etiquetas": ["koala", "dormir", "eucalipto", "curiosidades"]
+}

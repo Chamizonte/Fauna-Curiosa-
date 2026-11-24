@@ -1,0 +1,25 @@
+{
+  "id": "20261124-1-tiburon-zorro",
+  "formato": "momento",
+  "animal": "tiburón zorro",
+  "gancho_pantalla": "El tiburón que caza con la cola",
+  "texto_tarjeta": "El tiburón zorro **golpea con la cola** a los bancos de sardinas para aturdirlas: con un solo latigazo puede dejar fuera de combate a **varios peces** a la vez.",
+  "datos": [
+    {
+      "afirmacion": "El tiburón zorro pelágico (Alopias pelagicus) usa golpes de cola para aturdir sardinas, a menudo varias a la vez.",
+      "fuentes": [
+        "https://www.sciencedaily.com/releases/2013/07/130710182934.htm",
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0067380",
+        "https://www.nationalgeographic.com/science/article/thresher-sharks-hunt-with-huge-weaponised-tails"
+      ],
+      "verificado": true,
+      "nota": "Estudio de 25 eventos en Filipinas; solo un tercio de los golpes captura presas. Se dice 'puede', no 'siempre'."
+    }
+  ],
+  "planos": [
+    {"clave": "wikimedia:69863438", "desde": 10.0, "hasta": 18.0, "nota": "tiburón zorro nadando hacia la cámara con la cola larga visible"}
+  ],
+  "titulo": "El Tiburón Zorro Que Aturde Peces Con La Cola 🦈",
+  "descripcion": "El tiburón zorro pelágico caza dando latigazos con su enorme cola a los bancos de sardinas: un estudio filmado en Filipinas (PLOS ONE, 2013) vio que un solo golpe puede aturdir a varias sardinas a la vez. En pocas palabras: la cola no es solo para nadar, también es un arma. #tiburón #tiburonzorro #animales #curiosidades #mar #fauna",
+  "etiquetas": ["tiburón zorro", "tiburón", "animales", "curiosidades", "océano"]
+}
