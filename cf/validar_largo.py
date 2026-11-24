@@ -14,7 +14,36 @@ from .util import DATOS, log
 PEND = DATOS / "largos" / "pendientes"
 CAMPOS = ["id", "fecha_publicacion", "tema", "titulo", "descripcion", "etiquetas",
           "miniatura", "capitulos", "escenas", "datos"]
-TIPOS = {"video", "foto", "mapa", "texto", "esquema"}
+TIPOS = {"video", "foto", "grafico", "mapa", "texto", "esquema"}
+# animaciones propias (remotion/src/Graficos.tsx): campos obligatorios de cada una
+GRAFICOS = {
+    "cifra": ["valor", "texto"], "comparativa": ["titulo", "items"], "linea_tiempo": ["titulo", "eventos"],
+    "mapa": ["puntos"], "lista": ["titulo", "puntos"], "proceso": ["titulo", "pasos"],
+    "cita": ["texto", "autor"], "titular": ["texto"],
+}
+MIN_GRAFICOS = 0.3   # al menos el 30 % de las escenas son animaciones (el resto, clips que encajen)
+
+
+def errores_grafico(g, donde):
+    if not isinstance(g, dict) or g.get("tipo") not in GRAFICOS:
+        return [f"{donde}: animación desconocida (tipos: {', '.join(GRAFICOS)})"]
+    e = [f"{donde}: a la animación {g['tipo']} le falta {c}" for c in GRAFICOS[g["tipo"]] if not g.get(c)]
+    if e:
+        return e
+    t = g["tipo"]
+    if t == "cifra" and not isinstance(g["valor"], (int, float)):
+        e.append(f"{donde}: cifra.valor tiene que ser un número")
+    if t == "comparativa" and (not 2 <= len(g["items"]) <= 6 or
+                               any(not isinstance(i.get("valor"), (int, float)) or not i.get("nombre") for i in g["items"])):
+        e.append(f"{donde}: comparativa con 2-6 items, cada uno con nombre y valor numérico")
+    if t == "linea_tiempo" and not 2 <= len(g["eventos"]) <= 6:
+        e.append(f"{donde}: línea de tiempo con 2-6 eventos")
+    if t == "mapa" and any(not (-90 <= p.get("lat", 999) <= 90 and -180 <= p.get("lon", 999) <= 180) or not p.get("nombre")
+                           for p in g["puntos"]):
+        e.append(f"{donde}: cada punto del mapa necesita nombre, lat y lon")
+    if t in ("lista", "proceso") and not 2 <= len(g.get("puntos") or g.get("pasos")) <= 5:
+        e.append(f"{donde}: {t} con 2-5 elementos")
+    return e
 
 
 def errores(b):
@@ -40,6 +69,16 @@ def errores(b):
             e.append(f"escena {i}: tipo visual desconocido {v.get('tipo')}")
         if v.get("tipo", "video") in ("video", "foto", "esquema") and not v.get("busqueda"):
             e.append(f"escena {i}: falta visual.busqueda (en un esquema, es el material de respaldo)")
+        if v.get("tipo") == "grafico":
+            e += errores_grafico(v.get("grafico"), f"escena {i}")
+        if v.get("tipo", "video") in ("video", "foto"):
+            if not s.get("respaldo"):
+                e.append(f"escena {i}: falta «respaldo» (la animación que sale si no hay un clip que muestre esto)")
+            else:
+                e += errores_grafico(s["respaldo"], f"escena {i} (respaldo)")
+    n_graf = sum(1 for s in esc if (s.get("visual") or {}).get("tipo") == "grafico")
+    if n_graf < MIN_GRAFICOS * len(esc):
+        e.append(f"solo {n_graf} de {len(esc)} escenas son animaciones (mínimo {MIN_GRAFICOS:.0%})")
     caps = b["capitulos"]
     if not 3 <= len(caps) <= 8 or caps[0].get("escena") != 0:
         e.append("capítulos: entre 3 y 8 y el primero en la escena 0")

@@ -3,7 +3,9 @@
 1. Locución con ElevenLabs Multilingual v2, una petición por capítulo (mejor
    entonación que escena a escena) con tiempos por palabra.
 2. Reparte el tiempo entre escenas y prepara cada plano a 1920x1080.
-   Escenas sin material reutilizan el plano anterior (otro tramo) o una cartela.
+   Escenas "grafico" son animaciones propias (remotion/src/Graficos.tsx: cifra, comparativa,
+   linea_tiempo, mapa, lista, proceso, cita, titular) con el último clip desenfocado detrás.
+   Una escena de clip sin material que encaje muestra su animación de `respaldo`.
    Escenas "esquema" se dibujan con Explainroo (cf.esquemas) sobre nuestra misma voz.
 3. Renderiza con Remotion (composición "Largo") y la miniatura (still "Miniatura").
 4. Volumen a -14 LUFS.
@@ -92,9 +94,22 @@ def subtitulos(palabras, max_palabras=9):
     return out
 
 
+def grafico_de(s):
+    """La animación que corresponde a la escena, o None si es una escena de clip con material."""
+    v = s.get("visual") or {}
+    tipo = v.get("tipo", "video")
+    if tipo == "grafico":
+        return v["grafico"]
+    if tipo in ("mapa", "texto"):  # tipos antiguos: un titular con el rótulo
+        return {"tipo": "titular", "texto": s.get("rotulo") or v.get("describe", "")}
+    if not s.get("planos") and s.get("respaldo"):
+        return s["respaldo"]
+    return None
+
+
 def planos(b, limites, tmp, dibujados=None):
     dibujados = dibujados or {}
-    descargados, out, ultimo, saltar_hasta = {}, [], None, -1
+    descargados, out, ultimo, saltar_hasta, fondo = {}, [], None, -1, None
     for i, (s, (ini, fin)) in enumerate(zip(b["escenas"], limites)):
         if i <= saltar_hasta:
             continue  # escena cubierta por un esquema animado
@@ -103,11 +118,17 @@ def planos(b, limites, tmp, dibujados=None):
             out.append({"src": f"render/{mp4.name}", "duracion": round(dur, 3)})
             continue
         dur = max(0.5, fin - ini)
+        g = grafico_de(s)
+        if g:
+            out.append({"grafico": g, "duracion": round(dur, 3), **({"fondo": fondo} if fondo else {})})
+            continue
         p = (s.get("planos") or [None])[0] or ultimo
         if not p:  # primera escena sin material: busca el primer plano disponible
             p = next((x["planos"][0] for x in b["escenas"] if x.get("planos")), None)
-        if not p:
-            raise RuntimeError("El guion no tiene ningún plano: falta ejecutar cf.material_largo")
+        if not p:  # ni material ni respaldo: un titular con el rótulo o el arranque de la frase
+            texto = s.get("rotulo") or " ".join(s["narracion"].split()[:6])
+            out.append({"grafico": {"tipo": "titular", "texto": texto}, "duracion": round(dur, 3)})
+            continue
         if p["clave"] not in descargados:
             dst = tmp / f"clip{len(descargados)}"
             descargar(p["url"], dst)
@@ -130,6 +151,7 @@ def planos(b, limites, tmp, dibujados=None):
                  "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", str(PUBLICO / f"e{i}b.mp4")])
             (PUBLICO / f"e{i}b.mp4").replace(PUBLICO / f"e{i}.mp4")
         out.append({"src": f"render/e{i}.mp4", "duracion": round(dur, 3)})
+        fondo = f"render/e{i}.mp4"
         if s.get("planos"):
             ultimo = s["planos"][0]
     return out
@@ -180,13 +202,9 @@ def montar(brief_path):
                  for k, c in enumerate(sorted(b["capitulos"], key=lambda c: c["escena"]))]
     rotulos, cartelas = [], []
     for j, (s, (ini, fin)) in enumerate(zip(b["escenas"], limites)):
-        tipo = (s.get("visual") or {}).get("tipo", "video")
-        if j in cubiertas:
-            continue  # el esquema ya lleva sus propios rótulos arriba
-        if tipo in ("mapa", "texto"):
-            cartelas.append({"texto": s.get("rotulo") or (s.get("visual") or {}).get("describe", ""),
-                             "ini": ini, "fin": fin})
-        elif s.get("rotulo"):
+        if j in cubiertas or grafico_de(s):
+            continue  # el esquema o la animación ya llevan su propio texto
+        if s.get("rotulo"):
             rotulos.append({"texto": s["rotulo"], "ini": ini + 0.3, "fin": min(fin, ini + 4.5)})
 
     props = {"duracion": duracion, "planos": lista_planos, "subtitulos": subtitulos(palabras),

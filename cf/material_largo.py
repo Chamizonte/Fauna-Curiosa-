@@ -20,6 +20,7 @@ from .util import DATOS, descargar, log, run
 
 PEND = DATOS / "largos" / "pendientes"
 POR_ESCENA = 3  # candidatos a examinar por escena como máximo
+ENCAJA_MIN = 7  # un clip solo entra si muestra lo que cuenta la escena (si no, va su animación)
 
 
 def candidatos(visual, cache):
@@ -55,7 +56,8 @@ def juzgar(c, visual, tmp):
         img = tmp / "f"
         descargar(c.url_escaneo or c.url, img, max_mb=30)
         run(["ffmpeg", "-y", "-v", "error", "-i", str(img), "-vf", "scale='min(640,iw)':-2", str(tmp / "v.jpg")])
-        v = vision.juzgar((tmp / "v.jpg").read_bytes(), 1, especie, visual.get("cientifico", ""), contexto, foto=True)
+        v = vision.juzgar((tmp / "v.jpg").read_bytes(), 1, especie, visual.get("cientifico", ""), contexto, foto=True,
+                          pedido=describe)
         escenas = []
     else:
         original, proxy = tmp / "o", tmp / "p.mp4"
@@ -67,11 +69,13 @@ def juzgar(c, visual, tmp):
         d = tec["duracion"]
         tiempos = [d * f for f in (0.06, 0.22, 0.38, 0.54, 0.70, 0.88)]
         hoja = analisis.hoja_contacto(analisis.fotogramas(proxy, tiempos))
-        v = vision.juzgar(hoja, 6, especie, visual.get("cientifico", ""), contexto)
+        v = vision.juzgar(hoja, 6, especie, visual.get("cientifico", ""), contexto, pedido=describe)
         escenas = tec["escenas"]
     ok = v.get("es_la_especie_buscada") and v.get("confianza", 0) >= 0.6 and v.get("calidad_visual", 0) >= 3
     if c.tipo == "foto":  # en fotos, nada de ilustraciones, láminas ni ejemplares de museo
         ok = ok and v.get("apto_para_short") and v.get("calidad_visual", 0) >= 4
+    if ok and v.get("encaja", 10) < ENCAJA_MIN:
+        return None, f"no muestra lo que pide la escena (encaja {v.get('encaja')}): {v.get('descripcion', '')[:70]}"
     if not ok:
         return None, (", ".join(v.get("problemas") or []) or v.get("descripcion", ""))[:100]
     # el tramo más largo y con más movimiento
@@ -81,7 +85,7 @@ def juzgar(c, visual, tmp):
         "desde": round(mejor["ini"], 2) if mejor else 0.0,
         "hasta": round(mejor["fin"], 2) if mejor else 0.0,
         "duracion_clip": c.duracion, "posicion_x": v.get("posicion_x", 0.5),
-        "descripcion": v.get("descripcion", ""),
+        "descripcion": v.get("descripcion", ""), "encaja": v.get("encaja"),
     }, None
 
 
@@ -131,7 +135,7 @@ def procesar(path, max_total):
             b["escenas"][i]["planos"] = [elegido]
             log(f"  ✅ escena {i}: {elegido['descripcion'][:90]}")
         elif probados or not cands:  # si solo hubo errores de red, se reintenta otra noche
-            # sin candidatos válidos: el montaje reutilizará un plano cercano
+            # sin candidatos válidos: el montaje pone la animación de respaldo de la escena
             b["escenas"][i]["sin_material"] = True
             log(f"  ➖ escena {i}: sin material ({visual.get('busqueda')})")
         path.write_text(json.dumps(b, ensure_ascii=False, indent=2), encoding="utf-8")
