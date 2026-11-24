@@ -222,6 +222,9 @@ export type PropsMiniatura = { imagen: string; texto: string; posicionX: number 
 export const Miniatura: React.FC<PropsMiniatura> = ({ imagen, texto, posicionX }) => {
   // animal a un lado, texto grande al otro (regla de la miniatura: 1 sujeto + 2-4 palabras)
   const animalIzq = posicionX < 0.5;
+  // la palabra más larga tiene que caber en el ancho del texto (640 px): si no, letra más pequeña
+  const masLarga = Math.max(...texto.split(" ").map((w) => w.length), 1);
+  const tamano = Math.min(118, Math.floor(600 / (masLarga * 0.75)));
   return (
     <AbsoluteFill style={{ backgroundColor: "black" }}>
       <Img
@@ -252,7 +255,7 @@ export const Miniatura: React.FC<PropsMiniatura> = ({ imagen, texto, posicionX }
           style={{
             fontFamily,
             fontWeight: 900,
-            fontSize: 118,
+            fontSize: tamano,
             lineHeight: 0.98,
             color: "white",
             textTransform: "uppercase",
