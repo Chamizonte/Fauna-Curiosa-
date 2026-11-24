@@ -14,7 +14,8 @@ Este repositorio produce y publica automáticamente:
 6. **Cambios de código por PR.** Los agentes pueden editar `playbook.yaml` y datos, pero los cambios de código se proponen en un PR para revisión humana. Nunca auto-merge.
 
 ## Mapa del repositorio
-- Shorts (v2, en producción): `explorador.yml` (00:30 UTC, llena `datos/biblioteca`) →
+- Shorts (v2, en producción, VÍDEO PRIMERO): `explorador.yml` (00:30 UTC, llena `datos/biblioteca` buscando
+  momentos de acción; la visión pone nota de espectacularidad 1-10, `cf/espectacularidad.py` a los antiguos) →
   `sala-redaccion.yml` (02:30 UTC con repescas a las 04:15 y 06:00; Claude escribe guiones en
   `datos/shorts/pendientes`, con el reparto de formatos que da `cf/rendimiento.py` según las visitas) →
   `programar-shorts.yml` (varias veces al día y al acabar la sala; `cf/programar_shorts.py` sube a YouTube

@@ -140,11 +140,17 @@ def numero_tarjeta():
 def montar_tarjeta(brief, bib, tmp):
     from .validar_briefs import texto_plano
     palabras = len(texto_plano(brief["texto_tarjeta"]).split())
-    # tiempo de lectura: ~3 palabras por segundo más margen para ver el vídeo
-    duracion = round(max(10.0, palabras / 3.0 + 3.0), 2)
-    log(f"  duración de la tarjeta: {duracion:.1f} s ({palabras} palabras, sin voz)")
+    if brief["formato"] == "momento":
+        # un solo momento: dura lo que el clip (6-12 s), con tiempo para leer el cartel
+        tramo = sum(max(0.5, x["hasta"] - x["desde"]) for x in brief["planos"])
+        duracion = round(min(12.0, max(6.0, tramo, palabras / 3.0 + 1.0)), 2)
+    else:
+        # tiempo de lectura: ~3 palabras por segundo más margen para ver el vídeo
+        duracion = round(max(10.0, palabras / 3.0 + 3.0), 2)
+    log(f"  duración de la {brief['formato']}: {duracion:.1f} s ({palabras} palabras, sin voz)")
     planos = preparar_planos(brief, bib, duracion, tmp, 1000, 760)  # ANCHO_MEDIA x ALTO_MEDIA de Tarjeta.tsx
-    props = {"duracion": duracion, "titular": brief["gancho_pantalla"], "numero": numero_tarjeta(),
+    numero = numero_tarjeta() if brief["formato"] == "tarjeta" else None
+    props = {"duracion": duracion, "titular": brief["gancho_pantalla"], "numero": numero,
              "texto": brief["texto_tarjeta"], "planos": planos, "musica": musica(), "volMusica": 0.45}
     return props, "Tarjeta"
 
@@ -158,7 +164,7 @@ def montar(brief_path, sin_voz=False):
     SALIDA.mkdir(exist_ok=True)
     tmp = Path(tempfile.mkdtemp())
 
-    if brief["formato"] == "tarjeta":
+    if brief["formato"] in ("tarjeta", "momento"):
         props, composicion = montar_tarjeta(brief, bib, tmp)
         return _finalizar(brief, props, composicion, tmp), False
 

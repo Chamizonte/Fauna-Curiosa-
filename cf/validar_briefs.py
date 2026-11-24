@@ -15,7 +15,8 @@ from .util import DATOS, leer_jsonl, log
 
 PEND = DATOS / "shorts" / "pendientes"
 RECH = DATOS / "shorts" / "rechazados"
-FORMATOS = {"por_que", "comparativa", "mito", "tarjeta"}
+FORMATOS = {"por_que", "comparativa", "mito", "tarjeta", "momento"}
+ESP_MINIMA = 6   # nota de espectacularidad mínima del plano que abre el short (vídeo primero)
 CAMPOS = ["id", "formato", "animal", "gancho_pantalla", "datos", "planos", "titulo", "descripcion", "etiquetas"]
 
 
@@ -63,7 +64,7 @@ def senala_lo_que_no_se_ve(b, bib):
 
 
 def errores(b, bib):
-    tarjeta = b.get("formato") == "tarjeta"
+    tarjeta = b.get("formato") in ("tarjeta", "momento")   # sin voz: texto que se lee
     campos = CAMPOS + (["texto_tarjeta"] if tarjeta else ["guion"])
     e = [f"falta el campo {c}" for c in campos if not b.get(c)]
     if e:
@@ -72,8 +73,9 @@ def errores(b, bib):
         e.append(f"formato desconocido: {b['formato']}")
     if tarjeta:
         n = len(texto_plano(b["texto_tarjeta"]).split())
-        if not 30 <= n <= 70:
-            e.append(f"la tarjeta tiene {n} palabras (30-70)")
+        lo, hi = (12, 30) if b["formato"] == "momento" else (30, 70)
+        if not lo <= n <= hi:
+            e.append(f"el texto de la {b['formato']} tiene {n} palabras ({lo}-{hi})")
         if b["texto_tarjeta"].count("**") % 2:
             e.append("resaltado ** sin cerrar")
     else:
@@ -98,9 +100,22 @@ def errores(b, bib):
         dominios = {u.split("/")[2].removeprefix("www.") for u in urls}
         if len(dominios) < 2:
             e.append(f"dato con menos de 2 fuentes independientes: {d.get('afirmacion', '')[:60]}")
-    lo, hi = (1, 4) if tarjeta else (3, 8)
+    lo, hi = {"momento": (1, 2), "tarjeta": (1, 4)}.get(b["formato"], (3, 8))
     if not lo <= len(b["planos"]) <= hi:
         e.append(f"{len(b['planos'])} planos ({lo}-{hi})")
+    if b["formato"] == "momento":
+        tramo = sum(p.get("hasta", 0) - p.get("desde", 0) for p in b["planos"])
+        if not 5 <= tramo <= 12.5:
+            e.append(f"momento: el clip dura {tramo:.1f} s en pantalla (6-12)")
+    # vídeo primero: el short abre con un vídeo en el que pasa algo, nunca con una foto
+    primero = bib.get((b["planos"] or [{}])[0].get("clave"))
+    if primero:
+        if primero.get("tipo") == "foto":
+            e.append("el primer plano es una foto: el short tiene que abrir con un vídeo en el que pase algo")
+        nota = (primero.get("vision") or {}).get("espectacularidad")
+        if nota is not None and nota < ESP_MINIMA:
+            e.append(f"el primer plano es poco llamativo (espectacularidad {nota}, mínimo {ESP_MINIMA}): "
+                     f"abre con el momento más espectacular del animal")
     e += senala_lo_que_no_se_ve(b, bib)
     for p in b["planos"]:
         m = bib.get(p.get("clave"))

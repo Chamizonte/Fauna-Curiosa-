@@ -228,8 +228,21 @@ def _intercalar(listas):
     return out
 
 
+# Vídeo primero: buscamos MOMENTOS (algo que pasa), no solo la especie. Cada noche se rotan
+# unas pocas acciones por animal para no gastar la cuota de las APIs.
+ACCIONES_EN = ["hunting", "attack", "catching prey", "eating", "baby", "birth", "fight",
+               "jumping", "running", "diving", "flying", "swallowing", "mother and cub", "playing"]
+
+
+def consultas_accion(animal, n=3):
+    import datetime as _dt
+    dia = _dt.date.today().toordinal() + sum(map(ord, animal["en"]))
+    return [f"{animal['en']} {ACCIONES_EN[(dia + i * 5) % len(ACCIONES_EN)]}" for i in range(n)]
+
+
 def buscar(animal, por_fuente=20, fotos=True):
     """Candidatos de todas las fuentes, intercalados (vídeos primero, luego fotos).
+    En Pixabay y Pexels se busca primero por acciones («lion hunting»), después la especie.
 
     En Wikimedia e iNaturalist se busca por nombre científico: el nombre común en
     inglés trae ruido ("wolf" devuelve vídeos del gobernador Tom Wolf)."""
@@ -242,11 +255,13 @@ def buscar(animal, por_fuente=20, fotos=True):
         if cient:
             consultas[inaturalist] = cient
     vistos = set()
-    for fn, q in consultas.items():
+    pares = [(fn, q) for q in consultas_accion(animal) for fn in (pixabay, pexels)]
+    pares += list(consultas.items())
+    for fn, q in pares:
         try:
             res = [c for c in fn(q, por_fuente) if c.clave not in vistos]
             vistos.update(c.clave for c in res)
             listas.append(res)
         except Exception as e:  # una fuente caída no debe parar el resto
-            print(f"  [{fn.__name__}] no disponible: {e}", flush=True)
+            print(f"  [{fn.__name__}] «{q}» no disponible: {e}", flush=True)
     return _intercalar(listas)
