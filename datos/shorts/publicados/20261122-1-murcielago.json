@@ -1,0 +1,68 @@
+{
+  "id": "20261122-1-murcielago",
+  "formato": "mito",
+  "animal": "murciélago",
+  "gancho_pantalla": "Un murciélago es ciego",
+  "guion": "¿Un murciélago es ciego? Todo el mundo lo da por hecho. Cuelga boca abajo y sale de noche. Se orienta con chillidos: emite sonidos y escucha el eco que rebota. Pero tiene ojos, pequeños y muy sensibles, y con ellos distingue algo en una oscuridad que para nosotros es total. ¿Es ciego un murciélago? Escríbelo en comentarios.",
+  "datos": [
+    {
+      "afirmacion": "Los murciélagos se orientan y localizan presas con ecolocalización (emiten sonidos y escuchan el eco).",
+      "fuentes": [
+        "https://www.nps.gov/subjects/bats/myth-busters.htm",
+        "https://www.usgs.gov/faqs/are-bats-blind"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Los murciélagos no son ciegos: tienen ojos pequeños pero sensibles, con los que ven en condiciones que a las personas nos parecen oscuridad total.",
+      "fuentes": [
+        "https://www.usgs.gov/faqs/are-bats-blind",
+        "https://www.nps.gov/subjects/bats/myth-busters.htm"
+      ],
+      "verificado": true
+    }
+  ],
+  "planos": [
+    {
+      "clave": "pixabay:372997",
+      "desde": 0.0,
+      "hasta": 4.0,
+      "nota": "silueta nocturna colgada boca abajo, el plano más fuerte"
+    },
+    {
+      "clave": "pexels:7181542",
+      "desde": 0.0,
+      "hasta": 5.0,
+      "nota": "murciélago colgado a la luz del día"
+    },
+    {
+      "clave": "pexels:7181542",
+      "desde": 8.0,
+      "hasta": 13.0,
+      "nota": "ajusta las alas colgado"
+    },
+    {
+      "clave": "pexels:7181542",
+      "desde": 16.0,
+      "hasta": 21.0,
+      "nota": "cierre con el animal"
+    }
+  ],
+  "titulo": "¿Es ciego un murciélago? ¿Verdad o mentira?",
+  "descripcion": "👇 Vota en comentarios antes de leer.\n\nRespuesta: no, los murciélagos no son ciegos. Usan la ecolocalización para orientarse y cazar en la oscuridad, pero además tienen ojos pequeños y sensibles con los que ven en condiciones que a las personas nos parecen de oscuridad total. Fuentes: USGS y Servicio de Parques Nacionales de EE. UU.",
+  "etiquetas": [
+    "murciélago",
+    "animales",
+    "curiosidades",
+    "mitos",
+    "ecolocalización"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=-oXLV0ozenY",
+    "fecha": "2026-11-25T20:00Z",
+    "subido": "2026-11-24T17:50Z",
+    "programado": true,
+    "con_voz": true,
+    "privacidad": "public"
+  }
+}
