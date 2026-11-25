@@ -17,13 +17,51 @@
     }
   ],
   "planos": [
-    {"clave": "pexels:855199", "desde": 0.0, "hasta": 4.0, "nota": "dos mariquitas, colores y patas visibles (esp 6)"},
-    {"clave": "pixabay:120355", "desde": 0.0, "hasta": 4.0, "nota": "mariquita trepando por un tallo"},
-    {"clave": "pexels:855199", "desde": 4.0, "hasta": 8.0, "nota": "segundo tramo de la pareja"},
-    {"clave": "pixabay:120355", "desde": 4.0, "hasta": 8.0, "nota": "otro tramo del tallo"},
-    {"clave": "pexels:855199", "desde": 8.0, "hasta": 12.0, "nota": "cierre"}
+    {
+      "clave": "pexels:855199",
+      "desde": 0.0,
+      "hasta": 4.0,
+      "nota": "dos mariquitas, colores y patas visibles (esp 6)"
+    },
+    {
+      "clave": "pixabay:120355",
+      "desde": 0.0,
+      "hasta": 4.0,
+      "nota": "mariquita trepando por un tallo"
+    },
+    {
+      "clave": "pexels:855199",
+      "desde": 4.0,
+      "hasta": 8.0,
+      "nota": "segundo tramo de la pareja"
+    },
+    {
+      "clave": "pixabay:120355",
+      "desde": 4.0,
+      "hasta": 8.0,
+      "nota": "otro tramo del tallo"
+    },
+    {
+      "clave": "pexels:855199",
+      "desde": 8.0,
+      "hasta": 12.0,
+      "nota": "cierre"
+    }
   ],
   "titulo": "Mariquita: Por Qué Sangra Por Las Patas 🐞",
   "descripcion": "Cuando se las molesta, las mariquitas sueltan sangre con alcaloides por las articulaciones de las patas (sangrado reflejo). Esas sustancias desagradables disuaden a los depredadores. En pocas palabras: sangra a propósito para que no se la coman. #mariquita #insectos #animales #curiosidades #fauna",
-  "etiquetas": ["mariquita", "insectos", "defensa", "curiosidades"]
+  "etiquetas": [
+    "mariquita",
+    "insectos",
+    "defensa",
+    "curiosidades"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=lTm6cTOASYQ",
+    "fecha": "2026-11-26T16:00Z",
+    "subido": "2026-11-25T13:53Z",
+    "programado": true,
+    "con_voz": true,
+    "privacidad": "public"
+  }
 }
