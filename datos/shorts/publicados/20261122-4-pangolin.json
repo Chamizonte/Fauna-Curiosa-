@@ -1,0 +1,58 @@
+{
+  "id": "20261122-4-pangolin",
+  "formato": "momento",
+  "animal": "pangolín",
+  "gancho_pantalla": "¿Sabías que…?",
+  "texto_tarjeta": "Este pangolín es el único **mamífero** cubierto de **escamas**, hechas de **queratina**, el mismo material que tus uñas. Si se asusta, se enrolla como una **bola**.",
+  "datos": [
+    {
+      "afirmacion": "Los pangolines son los únicos mamíferos cubiertos de escamas.",
+      "fuentes": [
+        "https://www.discoverwildlife.com/animal-facts/mammals/facts-about-pangolins/",
+        "https://kids.nationalgeographic.com/animals/mammals/facts/pangolin"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Sus escamas son de queratina, igual que las uñas humanas.",
+      "fuentes": [
+        "https://www.discoverwildlife.com/animal-facts/mammals/facts-about-pangolins/",
+        "https://kids.nationalgeographic.com/animals/mammals/facts/pangolin"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Al sentirse amenazados se enrollan en una bola.",
+      "fuentes": [
+        "https://www.discoverwildlife.com/animal-facts/mammals/facts-about-pangolins/",
+        "https://kids.nationalgeographic.com/animals/mammals/facts/pangolin"
+      ],
+      "verificado": true
+    }
+  ],
+  "planos": [
+    {
+      "clave": "pexels:857208",
+      "desde": 0.0,
+      "hasta": 10.0,
+      "nota": "pangolín de cerca, escamas visibles (esp 6)"
+    }
+  ],
+  "titulo": "Pangolín: el único mamífero con escamas 🦔",
+  "descripcion": "El pangolín es el único mamífero cubierto de escamas, hechas de queratina como nuestras uñas, y se enrolla en una bola si se siente amenazado. En pocas palabras: un mamífero con armadura. Fuentes: Discover Wildlife y National Geographic Kids. #pangolín #animales #curiosidades #mamíferos #escamas #fauna",
+  "etiquetas": [
+    "pangolín",
+    "animales",
+    "curiosidades",
+    "mamíferos",
+    "escamas"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=FMX8iAyDBn0",
+    "fecha": "2026-11-26T08:00Z",
+    "subido": "2026-11-25T09:46Z",
+    "programado": true,
+    "con_voz": false,
+    "privacidad": "public"
+  }
+}
