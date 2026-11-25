@@ -16,13 +16,51 @@
     }
   ],
   "planos": [
-    {"clave": "pixabay:304418", "desde": 0.0, "hasta": 4.0, "nota": "koala masticando hojas de eucalipto en primer plano"},
-    {"clave": "pexels:36134032", "desde": 0.0, "hasta": 5.0, "nota": "koala alcanzando y masticando hojas de eucalipto"},
-    {"clave": "pixabay:304418", "desde": 4.0, "hasta": 8.0, "nota": "koala entre ramas de eucalipto, otro tramo"},
-    {"clave": "pexels:36134032", "desde": 5.0, "hasta": 10.0, "nota": "koala entre ramas, otro tramo"},
-    {"clave": "pixabay:304418", "desde": 8.0, "hasta": 12.0, "nota": "cierre koala con hojas de eucalipto"}
+    {
+      "clave": "pixabay:304418",
+      "desde": 0.0,
+      "hasta": 4.0,
+      "nota": "koala masticando hojas de eucalipto en primer plano"
+    },
+    {
+      "clave": "pexels:36134032",
+      "desde": 0.0,
+      "hasta": 5.0,
+      "nota": "koala alcanzando y masticando hojas de eucalipto"
+    },
+    {
+      "clave": "pixabay:304418",
+      "desde": 4.0,
+      "hasta": 8.0,
+      "nota": "koala entre ramas de eucalipto, otro tramo"
+    },
+    {
+      "clave": "pexels:36134032",
+      "desde": 5.0,
+      "hasta": 10.0,
+      "nota": "koala entre ramas, otro tramo"
+    },
+    {
+      "clave": "pixabay:304418",
+      "desde": 8.0,
+      "hasta": 12.0,
+      "nota": "cierre koala con hojas de eucalipto"
+    }
   ],
   "titulo": "¿Por Qué Duerme Tanto El Koala? 🐨",
   "descripcion": "El koala puede dormir entre 18 y 22 horas al día porque las hojas de eucalipto aportan muy poca energía. Ahorrar energía es su estrategia para vivir con una dieta tan pobre. #koala #eucalipto #animales #curiosidades #fauna",
-  "etiquetas": ["koala", "dormir", "eucalipto", "curiosidades"]
+  "etiquetas": [
+    "koala",
+    "dormir",
+    "eucalipto",
+    "curiosidades"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=P8HggZG9aNE",
+    "fecha": "2026-11-26T20:00Z",
+    "subido": "2026-11-25T17:27Z",
+    "programado": true,
+    "con_voz": true,
+    "privacidad": "public"
+  }
 }
