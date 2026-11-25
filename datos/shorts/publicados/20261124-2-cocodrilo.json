@@ -16,9 +16,28 @@
     }
   ],
   "planos": [
-    {"clave": "pixabay:173059", "desde": 0.0, "hasta": 7.0, "nota": "cocodrilo en la orilla que se lanza al agua con gran salpicadura"}
+    {
+      "clave": "pixabay:173059",
+      "desde": 0.0,
+      "hasta": 7.0,
+      "nota": "cocodrilo en la orilla que se lanza al agua con gran salpicadura"
+    }
   ],
   "titulo": "La Mordida Más Fuerte Del Mundo Animal: El Cocodrilo 🐊",
   "descripcion": "El cocodrilo marino tiene la mordida más fuerte jamás medida en un animal vivo: 16.414 newton en un ejemplar de 4,59 m (PLOS ONE, 2012; récord Guinness). Los estudios con tiburón blanco son estimaciones por modelo, no medidas directas. En pocas palabras: ningún animal vivo medido muerde con más fuerza. #cocodrilo #cocodrilomarino #animales #curiosidades #fauna #reptiles",
-  "etiquetas": ["cocodrilo", "mordida", "animales", "curiosidades", "reptiles"]
+  "etiquetas": [
+    "cocodrilo",
+    "mordida",
+    "animales",
+    "curiosidades",
+    "reptiles"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=pGWYiTmBQ3A",
+    "fecha": "2026-11-26T12:00Z",
+    "subido": "2026-11-25T09:51Z",
+    "programado": true,
+    "con_voz": false,
+    "privacidad": "public"
+  }
 }
