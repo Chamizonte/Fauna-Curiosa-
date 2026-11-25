@@ -10,9 +10,11 @@
     {"afirmacion": "Ambos se alimentan de insectos (hormigas y termitas).", "fuentes": ["https://nationalzoo.si.edu/animals/giant-anteater", "https://www.discoverwildlife.com/animal-facts/mammals/facts-about-pangolins/"], "verificado": true}
   ],
   "planos": [
+    {"clave": "wikimedia:26444040", "desde": 4.0, "hasta": 6.0, "nota": "oso hormiguero rodando y poniéndose de pie (esp 6)"},
     {"clave": "pexels:26866391", "desde": 0.0, "hasta": 5.0, "nota": "oso hormiguero gigante junto a un termitero"},
+    {"clave": "pexels:857208", "desde": 0.0, "hasta": 6.0, "nota": "pangolín de cerca (esp 6), mientras se habla del pangolín"},
     {"clave": "pexels:26866391", "desde": 7.0, "hasta": 11.0, "nota": "oso hormiguero husmeando el suelo"},
-    {"clave": "pexels:26866391", "desde": 12.0, "hasta": 17.0, "nota": "oso hormiguero explorando el suelo"},
+    {"clave": "pexels:857208", "desde": 6.0, "hasta": 10.0, "nota": "pangolín, segundo tramo"},
     {"clave": "pexels:26866391", "desde": 22.0, "hasta": 27.0, "nota": "cierre con el ganador"}
   ],
   "titulo": "Oso hormiguero vs pangolín: ¿quién tiene la lengua más larga?",

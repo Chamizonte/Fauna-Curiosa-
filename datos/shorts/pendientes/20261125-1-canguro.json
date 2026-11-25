@@ -1,0 +1,26 @@
+{
+  "id": "20261125-1-canguro",
+  "formato": "momento",
+  "animal": "canguro",
+  "gancho_pantalla": "Nació del tamaño de una gominola",
+  "texto_tarjeta": "Esta cría nació del tamaño de una **gominola**: pesaba menos de un gramo y llegó **sola** hasta la bolsa de su madre, trepando por su pelo.",
+  "datos": [
+    {
+      "afirmacion": "Una cría de canguro recién nacida pesa menos de un gramo (canguro gris oriental).",
+      "fuentes": ["https://australian.museum/learn/animals/mammals/eastern-grey-kangaroo/", "https://askabiologist.asu.edu/kangaroo-joey"],
+      "verificado": true,
+      "nota": "El tamaño de gominola lo dice ASU Ask a Biologist; el peso menor de un gramo, el Australian Museum."
+    },
+    {
+      "afirmacion": "La cría recién nacida llega a la bolsa por sus propios medios, sin ayuda de la madre.",
+      "fuentes": ["https://australian.museum/learn/animals/mammals/eastern-grey-kangaroo/", "https://askabiologist.asu.edu/kangaroo-joey"],
+      "verificado": true
+    }
+  ],
+  "planos": [
+    {"clave": "pexels:40176089", "desde": 0.0, "hasta": 10.0, "nota": "Cría asomando la cabeza desde la bolsa; ilustra el texto"}
+  ],
+  "titulo": "Canguro: La Cría Que Nace Del Tamaño De Una Gominola 🦘",
+  "descripcion": "Una cría de canguro pesa menos de un gramo al nacer y llega sola hasta la bolsa de su madre, donde se agarra a una tetilla y sigue desarrollándose. En pocas palabras: nace diminuta y termina el desarrollo dentro de la bolsa. #canguro #cría #marsupial #animales #curiosidades #australia #fauna",
+  "etiquetas": ["canguro", "cría de canguro", "marsupial", "animales", "curiosidades"]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "20261125-2-hipopotamo",
+  "formato": "por_que",
+  "animal": "hipopótamo",
+  "gancho_pantalla": "¿Nada un hipopótamo?",
+  "guion": "¿Nada un hipopótamo? Aunque pasa el día en el agua, no sabe nadar. Sus huesos son tan densos que actúan como lastre y no le dejan flotar. Por eso, en vez de nadar, camina y corre por el fondo del río, empujándose contra el suelo. Solo sube a la superficie para respirar, incluso cuando duerme. Pasa su vida en el agua, pero andando. Entonces, ¿nada un hipopótamo?",
+  "datos": [
+    {
+      "afirmacion": "Los hipopótamos no nadan: caminan o corren por el fondo de ríos y lagos.",
+      "fuentes": ["https://blog.londolozi.com/2021/10/07/can-hippos-swim/", "https://animals.sandiegozoo.org/animals/hippo"],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Sus huesos densos actúan como lastre y les ayudan a mantenerse sumergidos.",
+      "fuentes": ["https://blog.londolozi.com/2021/10/07/can-hippos-swim/", "https://www.nationalgeographic.com/science/article/hippos-and-pezosiren-walking-under-the-water"],
+      "verificado": true,
+      "nota": "Se dice solo que los huesos son lastre y que caminan por el fondo; San Diego Zoo atribuye el no flotar a la densidad general del cuerpo."
+    },
+    {
+      "afirmacion": "Suben a la superficie para respirar, incluso mientras duermen.",
+      "fuentes": ["https://animals.sandiegozoo.org/animals/hippo", "https://www.nationalgeographic.com/animals/mammals/facts/hippopotamus"],
+      "verificado": true
+    }
+  ],
+  "planos": [
+    {"clave": "pexels:32861840", "desde": 0.0, "hasta": 6.0, "nota": "Hipopótamo entra en el río; abre con lo que se ve"},
+    {"clave": "pexels:32861840", "desde": 6.0, "hasta": 12.0, "nota": "Tramo siguiente del mismo clip"},
+    {"clave": "pexels:32861840", "desde": 14.0, "hasta": 20.0, "nota": "Tramo distinto"},
+    {"clave": "pexels:32861840", "desde": 24.0, "hasta": 30.0, "nota": "Tramo final"}
+  ],
+  "titulo": "Hipopótamo: El Gigante Que No Sabe Nadar 🦛",
+  "descripcion": "Los hipopótamos pasan el día en el agua, pero no nadan: caminan y corren por el fondo, ayudados por unos huesos muy densos que les sirven de lastre. Suben a respirar incluso dormidos. #hipopótamo #animales #curiosidades #fauna",
+  "etiquetas": ["hipopótamo", "animales", "curiosidades", "fauna", "África"]
+}
