@@ -1,0 +1,78 @@
+{
+  "id": "20261125-3-licaon-leon",
+  "formato": "comparativa",
+  "animal": "licaón",
+  "gancho_pantalla": "Licaón contra león",
+  "guion": "Licaón contra león: ¿quién caza mejor? El león es el rey de la sabana, pero solo acierta en una de cada cuatro cacerías, más o menos. El licaón, que caza en manada y reparte la comida, consigue entre la mitad y más de ocho de cada diez, según el estudio. Gana el licaón, y no por fuerza, sino por trabajar en equipo. Entonces, ¿quién caza mejor?",
+  "datos": [
+    {
+      "afirmacion": "Los licaones tienen tasas de éxito de caza muy altas, en torno al 80 % según divulgación, con rangos de 50 a 85 % según el estudio.",
+      "fuentes": [
+        "https://www.discoverwildlife.com/animal-facts/mammals/hunting-success-rates-how-predators-compare",
+        "https://www.pbs.org/wnet/nature/blog/african-wild-dog-fact-sheet"
+      ],
+      "verificado": true,
+      "nota": "Cifra variable según estudio y definición de éxito; por eso se dice 'entre la mitad y más de ocho de cada diez, según el estudio'."
+    },
+    {
+      "afirmacion": "El león acierta aproximadamente en el 25 % de sus cacerías (20-30 %).",
+      "fuentes": [
+        "https://www.discoverwildlife.com/animal-facts/mammals/hunting-success-rates-how-predators-compare",
+        "http://www.guinnessworldrecords.com/world-records/most-successful-predator"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "El licaón caza en manada y comparte la presa; su éxito es superior al del león.",
+      "fuentes": [
+        "https://www.pbs.org/wnet/nature/blog/african-wild-dog-fact-sheet",
+        "https://www.discoverwildlife.com/animal-facts/mammals/hunting-success-rates-how-predators-compare"
+      ],
+      "verificado": true
+    }
+  ],
+  "planos": [
+    {
+      "clave": "pexels:39157075",
+      "desde": 3.0,
+      "hasta": 8.0,
+      "nota": "Licaones devorando una presa juntos, esp 7; abre"
+    },
+    {
+      "clave": "inaturalist:120818440",
+      "desde": 0.0,
+      "hasta": 3.0,
+      "nota": "Foto de licaones jugando; sin clip de león, para no mezclar animales"
+    },
+    {
+      "clave": "pexels:39157075",
+      "desde": 8.0,
+      "hasta": 14.0,
+      "nota": "Manada compartiendo comida"
+    },
+    {
+      "clave": "pexels:39157075",
+      "desde": 14.0,
+      "hasta": 20.0,
+      "nota": "Cierre con la manada"
+    }
+  ],
+  "titulo": "Licaón Contra León: ¿Quién Caza Mejor? 🐺🦁",
+  "descripcion": "El león es el rey de la sabana, pero el licaón africano suele acertar bastante más a menudo en sus cacerías gracias a la caza en manada. Las cifras varían según el estudio. #licaón #león #sabana #animales #curiosidades",
+  "etiquetas": [
+    "licaón",
+    "león",
+    "caza",
+    "sabana",
+    "comparativa",
+    "animales"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=0eMtsvYPN0M",
+    "fecha": "2026-11-27T16:00Z",
+    "subido": "2026-11-26T13:29Z",
+    "programado": true,
+    "con_voz": true,
+    "privacidad": "public"
+  }
+}
