@@ -1,0 +1,21 @@
+{
+  "id": "20261126-2-oso-hormiguero-camaleon-jirafa",
+  "formato": "comparativa",
+  "animal": "oso hormiguero",
+  "gancho_pantalla": "3 lenguas imposibles",
+  "guion": "Tres animales, tres lenguas. La jirafa llega a cuarenta y cinco o cincuenta centímetros, y agarra las hojas con ella. El camaleón la dispara hasta dos veces el largo de su cuerpo, en menos de una décima de segundo. Y la del oso hormiguero gigante mide unos sesenta centímetros, en una boca sin un solo diente. ¿Cuál es tu lengua favorita?",
+  "datos": [
+    {"afirmacion": "La lengua del oso hormiguero gigante mide unos dos pies (60 cm) y no tiene dientes.", "fuentes": ["https://nationalzoo.si.edu/animals/giant-anteater", "https://www.nationalgeographic.com/animals/mammals/facts/giant-anteater"], "verificado": true, "nota": "NatGeo confirma que no tiene dientes; la longitud de 2 pies la da el Zoo Nacional del Smithsonian."},
+    {"afirmacion": "La lengua de la jirafa mide 45-50 cm y agarra ramas y hojas.", "fuentes": ["https://giraffeconservation.org/facts-about-giraffe/how-long-is-a-giraffes-tongue-what-color-is-it/", "https://horniman.ac.uk/story/specimen-of-the-month-the-giraffe"], "verificado": true},
+    {"afirmacion": "Los camaleones proyectan la lengua hasta dos veces la longitud de su cuerpo en tan solo 0,07 s.", "fuentes": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC2851764", "https://www.brown.edu/news/2016-01-04/chameleon"], "verificado": true}
+  ],
+  "planos": [
+    {"clave": "wikimedia:26444040", "desde": 4.0, "hasta": 6.0, "nota": "oso hormiguero rodando y levantándose; esp 6"},
+    {"clave": "pexels:26866391", "desde": 0.0, "hasta": 4.0, "nota": "oso hormiguero junto a termitero"},
+    {"clave": "pexels:26866391", "desde": 8.0, "hasta": 12.0, "nota": "oso hormiguero en el suelo al atardecer"},
+    {"clave": "pexels:26866391", "desde": 16.0, "hasta": 20.0, "nota": "oso hormiguero explorando el terreno"}
+  ],
+  "titulo": "Oso Hormiguero vs Camaleón vs Jirafa: ¿Quién Tiene La Mejor Lengua?",
+  "descripcion": "Oso hormiguero gigante: lengua de unos 60 cm. Jirafa: 45-50 cm. Camaleón: la proyecta hasta dos veces su cuerpo en 0,07 s. #osohormiguero #camaleon #jirafa #lengua #animales",
+  "etiquetas": ["oso hormiguero", "camaleón", "jirafa", "lengua", "animales", "curiosidades"]
+}
