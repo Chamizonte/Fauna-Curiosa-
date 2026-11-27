@@ -1,0 +1,33 @@
+{
+  "id": "20261127-5-erizo-puercoespin",
+  "formato": "comparativa",
+  "animal": "erizo",
+  "gancho_pantalla": "Erizo contra puercoespín",
+  "guion": "Erizo contra puercoespín: dos animales con púas, pero distintos. Primera diferencia, la sujeción. Las espinas del erizo están firmes en la piel. Las púas del puercoespín están flojas y se sueltan al clavarse en un atacante. Segunda, la defensa. El erizo se enrolla en una bola y se protege con su armadura. El puercoespín levanta y abre las púas antes de que se acerquen. ¿Con cuál te quedas?",
+  "datos": [
+    {
+      "afirmacion": "Las púas del puercoespín se desprenden con facilidad; las espinas del erizo están firmemente ancladas y no se sueltan fácilmente.",
+      "fuentes": [
+        "https://animaldiversity.org/collections/spinesquills/",
+        "https://www.discoverwildlife.com/animal-facts/mammals/porcupine-vs-hedgehog"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "El erizo se defiende sobre todo enrollándose en una bola; el puercoespín levanta y abre las púas cuando un depredador se acerca.",
+      "fuentes": [
+        "https://animaldiversity.org/collections/spinesquills/",
+        "https://www.discoverwildlife.com/animal-facts/mammals/porcupine-vs-hedgehog"
+      ],
+      "verificado": true
+    }
+  ],
+  "planos": [
+    {"clave": "wikimedia:62023396", "desde": 0.0, "hasta": 4.0, "nota": "Erizo europeo en el jardín, esp 6"},
+    {"clave": "pexels:855279", "desde": 0.0, "hasta": 6.0, "nota": "Erizo explora la hierba de un jardín, esp 4"},
+    {"clave": "pixabay:145053", "desde": 0.0, "hasta": 4.0, "nota": "Erizo sobre la hojarasca"}
+  ],
+  "titulo": "Erizo Contra Puercoespín: Dos Animales, Dos Defensas 🦔",
+  "descripcion": "Erizo y puercoespín no son parientes cercanos: las púas del puercoespín se sueltan con facilidad y las espinas del erizo no, y mientras el erizo se enrolla, el puercoespín levanta y abre las púas (Animal Diversity Web; Discover Wildlife).",
+  "etiquetas": ["erizo", "puercoespín", "comparativa", "animales", "curiosidades"]
+}

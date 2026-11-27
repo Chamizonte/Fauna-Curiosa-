@@ -1,0 +1,34 @@
+{
+  "id": "20261127-3-cebra",
+  "formato": "por_que",
+  "animal": "cebra",
+  "gancho_pantalla": "¿Para qué sirven sus rayas?",
+  "guion": "¿Para qué sirven las rayas de una cebra? Unos investigadores de Bristol grabaron tábanos junto a cebras y caballos. De lejos, las moscas se acercaban igual a cebras que a caballos. De cerca, sobre las cebras fallaban: chocaban o pasaban de largo, y pocas llegaban a picar. Las rayas no las alejan: podrían confundirles la vista en el último instante. Y ahora sabes para qué sirven.",
+  "datos": [
+    {
+      "afirmacion": "En un estudio con cebras y caballos, los tábanos se acercaban igual a unas y otros, pero sobre las cebras fallaban más al aterrizar (chocaban o pasaban de largo) y pocos se quedaban lo bastante para picar.",
+      "fuentes": [
+        "https://bristol.ac.uk/news/2019/february/zebra-stripes.html",
+        "https://www.ucdavis.edu/news/how-zebra-stripes-disrupt-flies-flight-patterns"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Los investigadores sugieren que las rayas pueden deslumbrar o confundir a las moscas en el último momento antes de aterrizar.",
+      "fuentes": [
+        "https://bristol.ac.uk/news/2019/february/zebra-stripes.html",
+        "https://www.ucdavis.edu/news/how-zebra-stripes-disrupt-flies-flight-patterns"
+      ],
+      "verificado": true,
+      "nota": "Hipótesis de los autores, redactada con «podrían»."
+    }
+  ],
+  "planos": [
+    {"clave": "pexels:5146631", "desde": 0.0, "hasta": 6.0, "nota": "Cebra con el pelaje rayado bien visible, esp 6"},
+    {"clave": "pexels:7421701", "desde": 0.0, "hasta": 5.0, "nota": "Cebra corriendo por el camino, esp 6"},
+    {"clave": "pexels:5146631", "desde": 10.0, "hasta": 16.0, "nota": "Otro tramo de la cebra, rayas a la vista"}
+  ],
+  "titulo": "Para Qué Sirven Las Rayas De Una Cebra 🦓",
+  "descripcion": "Las rayas de la cebra desorientan a los tábanos en el último instante: no los alejan, pero les cuesta aterrizar (Universidad de Bristol y UC Davis, estudio de 2019).",
+  "etiquetas": ["cebra", "rayas", "animales", "curiosidades", "tábanos"]
+}

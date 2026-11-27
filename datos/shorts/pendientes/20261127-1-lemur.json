@@ -1,0 +1,23 @@
+{
+  "id": "20261127-1-lemur",
+  "formato": "momento",
+  "animal": "lémur",
+  "gancho_pantalla": "¿Sabías que…? Cuenta sus bandas",
+  "texto_tarjeta": "Esta cola tiene exactamente **13 bandas** alternas blancas y negras, y por ellas el **lémur de cola anillada** lleva ese nombre.",
+  "datos": [
+    {
+      "afirmacion": "El lémur de cola anillada (Lemur catta) tiene 13 bandas alternas blancas y negras en la cola, y de ellas toma su nombre.",
+      "fuentes": [
+        "https://nationalzoo.si.edu/node/6820",
+        "https://www.pbs.org/wnet/nature/ring-tailed-lemur-fact-sheet"
+      ],
+      "verificado": true
+    }
+  ],
+  "planos": [
+    {"clave": "pexels:37766669", "desde": 0.0, "hasta": 9.0, "nota": "El lémur camina por las cuerdas mostrando la cola anillada, esp 6"}
+  ],
+  "titulo": "El Lémur Con 13 Anillos En La Cola 🐒",
+  "descripcion": "El lémur de cola anillada (Lemur catta) debe su nombre a su cola: tiene 13 bandas alternas blancas y negras, según el Zoo Nacional del Smithsonian y la ficha de PBS Nature. En pocas palabras: 13 anillos, un nombre. #lémur #lemurdecolaanillada #madagascar #animales #curiosidades #fauna",
+  "etiquetas": ["lémur", "lémur de cola anillada", "madagascar", "animales", "curiosidades"]
+}

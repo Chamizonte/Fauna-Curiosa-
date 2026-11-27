@@ -1,0 +1,42 @@
+{
+  "id": "20261127-6-leopardo-nieves-leon",
+  "formato": "comparativa",
+  "animal": "leopardo de las nieves",
+  "gancho_pantalla": "Leopardo de las nieves contra león",
+  "guion": "Leopardo de las nieves contra león: ¿quién ruge? Los dos son del género Panthera, el de los grandes felinos. El león ruge gracias a una laringe flexible que da un rugido grave. El leopardo de las nieves no puede, aunque es del mismo género. Se cree que sus cuerdas vocales carecen de una capa de tejido que otros grandes felinos sí tienen. Lo suyo es un soplido suave llamado «chuff». ¿Con cuál te quedas?",
+  "datos": [
+    {
+      "afirmacion": "El león, el tigre, el leopardo y el jaguar rugen; su laringe flexible permite rugidos de baja frecuencia.",
+      "fuentes": [
+        "https://panthera.org/blog-post/which-big-cats-purr",
+        "https://www.discoverwildlife.com/animal-facts/mammals/why-can-only-big-cats-roar"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "El leopardo de las nieves no puede rugir aunque pertenece al género Panthera; emite sonidos suaves como el «chuff».",
+      "fuentes": [
+        "https://snowleopard.org/snow-leopard-facts/behavior/",
+        "https://panthera.org/blog-post/which-big-cats-purr"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Se cree que sus cuerdas vocales carecen de una capa de tejido que en otros grandes felinos produce el rugido.",
+      "fuentes": [
+        "https://www.discoverwildlife.com/animal-facts/mammals/why-can-only-big-cats-roar",
+        "https://snowleopard.org/snow-leopard-facts/behavior/"
+      ],
+      "verificado": true,
+      "nota": "Redactado con «se cree»: Discover Wildlife lo da como «reportedly» y snowleopard.org solo habla de la fisiología de la garganta."
+    }
+  ],
+  "planos": [
+    {"clave": "pixabay:150376", "desde": 0.0, "hasta": 6.0, "nota": "Dos leopardos de las nieves interactúan, esp 7"},
+    {"clave": "pixabay:150376", "desde": 6.0, "hasta": 12.0, "nota": "Otro tramo de los leopardos"},
+    {"clave": "pixabay:150376", "desde": 12.0, "hasta": 16.0, "nota": "Última escena del clip"}
+  ],
+  "titulo": "Leopardo De Las Nieves Contra León: ¿Quién Ruge? 🐆",
+  "descripcion": "El león ruge; el leopardo de las nieves, aunque es del mismo género Panthera, no puede y emite un soplido suave llamado «chuff» (Snow Leopard Trust, Panthera, Discover Wildlife).",
+  "etiquetas": ["leopardo de las nieves", "león", "rugido", "animales", "curiosidades"]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "20261127-8-erizo-leche",
+  "formato": "mito",
+  "animal": "erizo",
+  "gancho_pantalla": "Los erizos beben leche",
+  "guion": "Los erizos beben leche. Hay quien lo cree, y antiguamente se pensó incluso que la tomaban directamente de las vacas. Hoy, la RSPCA, una organización británica de protección animal, pide no dejarles leche en el jardín. Tampoco recomienda dejarles pan. Una afirmación, dos mensajes distintos, y tú decides. ¿Los erizos beben leche? Escríbelo en comentarios.",
+  "datos": [
+    {
+      "afirmacion": "Antiguamente se creía que los erizos tomaban leche directamente de las vacas.",
+      "fuentes": [
+        "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/animals/mammals/hedgehog/",
+        "https://www.hedgehogstreet.org/mythbusters/"
+      ],
+      "verificado": true,
+      "nota": "Woodland Trust abierta y confirmada; Hedgehog Street conocida solo por el resumen de la búsqueda."
+    },
+    {
+      "afirmacion": "La RSPCA pide no dejar leche ni pan a los erizos porque son intolerantes a la lactosa.",
+      "fuentes": [
+        "https://www.rspca.org.uk/adviceandwelfare/wildlife/animals/hedgehogs",
+        "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/animals/mammals/hedgehog/"
+      ],
+      "verificado": true
+    }
+  ],
+  "planos": [
+    {"clave": "wikimedia:62023396", "desde": 0.0, "hasta": 5.0, "nota": "Erizo europeo en el jardín, esp 6"},
+    {"clave": "pixabay:145053", "desde": 0.0, "hasta": 5.0, "nota": "Erizo sobre la hojarasca"},
+    {"clave": "pexels:855279", "desde": 0.0, "hasta": 6.0, "nota": "Erizo en la hierba del jardín"}
+  ],
+  "titulo": "¿Beben Leche Los Erizos? 🦔",
+  "descripcion": "👇 Vota en comentarios antes de leer.\n\nRespuesta: no deben beberla. Los erizos son intolerantes a la lactosa, y la RSPCA recomienda no dejarles ni leche ni pan en el jardín. La idea de que tomaban leche de las vacas era una creencia antigua (RSPCA, Woodland Trust).",
+  "etiquetas": ["erizo", "leche", "verdad o mentira", "animales", "curiosidades"]
+}

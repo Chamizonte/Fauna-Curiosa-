@@ -1,0 +1,33 @@
+{
+  "id": "20261127-4-macaco-japones",
+  "formato": "por_que",
+  "animal": "macaco japonés",
+  "gancho_pantalla": "¿Por qué se acicalan?",
+  "guion": "¿Por qué se acicalan los macacos japoneses? No es solo por higiene. Al acicalarse se quitan parásitos y huevos de piojo, pero también refuerzan los lazos del grupo. En Yakushima, además, a las hembras acicaladas les bajaba el rascado, una señal de menos tensión. En los machos no pasaba. ¿Y tú, a quién acicalarías?",
+  "datos": [
+    {
+      "afirmacion": "En el macaco japonés el acicalamiento cumple una función higiénica (elimina parásitos y huevos de piojo) y además refuerza los vínculos sociales.",
+      "fuentes": [
+        "https://primate.wisc.edu/primate-info-net/pin-factsheets/pin-factsheet-japanese-macaque/",
+        "https://kyoto-u.ac.jp/en/research-news/2016-03-15"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "En macacos japoneses salvajes de Yakushima, ser acicalada redujo el rascado (indicador de tensión) en las hembras, pero no en los machos.",
+      "fuentes": [
+        "https://researchportal.port.ac.uk/en/publications/social-tension-after-grooming-in-wild-japanese-macaques-macaca-fu/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11111682"
+      ],
+      "verificado": true
+    }
+  ],
+  "planos": [
+    {"clave": "pixabay:259546", "desde": 0.0, "hasta": 6.0, "nota": "Un macaco acicala la espalda de otro, esp 6"},
+    {"clave": "pixabay:259546", "desde": 6.0, "hasta": 12.0, "nota": "Continúa el acicalamiento"},
+    {"clave": "pixabay:259546", "desde": 12.0, "hasta": 15.0, "nota": "Última escena del clip"}
+  ],
+  "titulo": "Por Qué Se Acicalan Los Macacos Japoneses 🐒",
+  "descripcion": "El acicalamiento de los macacos japoneses no es solo higiene: quita parásitos y refuerza los lazos del grupo (Primate Info Net, Universidad de Wisconsin; Universidad de Kioto) y en hembras salvajes de Yakushima reduce el rascado, indicador de tensión, aunque no en los machos (Universidad de Portsmouth).",
+  "etiquetas": ["macaco japonés", "acicalamiento", "primates", "animales", "curiosidades"]
+}

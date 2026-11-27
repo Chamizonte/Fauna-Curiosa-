@@ -1,0 +1,34 @@
+{
+  "id": "20261127-7-cebra-color",
+  "formato": "mito",
+  "animal": "cebra",
+  "gancho_pantalla": "La cebra es negra con rayas blancas",
+  "guion": "Una cebra es negra con rayas blancas. Eso dicen algunos. Otros juran que es blanca con rayas negras. Primera pista: bajo su pelaje, la piel es negra. Segunda: su pelo tiene franjas blancas y negras, según el pigmento llegue a unos pelos o a otros. Tercera: aún no se sabe del todo por qué unas células pintan el pelo y otras no. ¿Cebra negra con rayas blancas, verdad o mentira? Escríbelo en comentarios.",
+  "datos": [
+    {
+      "afirmacion": "La piel de la cebra es negra bajo su pelaje a rayas; el color del pelo y de la piel dependen de sistemas distintos.",
+      "fuentes": [
+        "https://www.nationalgeographic.com/news/2017/03/animals-skin-colors-zebras-big-cats/",
+        "https://www.thetech.org/ask-a-geneticist/articles/2011/ask426/"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Las rayas dependen de si los melanocitos aportan pigmento a unos pelos y no a otros; aún no se sabe del todo por qué unos melanocitos se activan y otros no.",
+      "fuentes": [
+        "https://www.thetech.org/ask-a-geneticist/articles/2011/ask426/",
+        "https://www.britannica.com/story/are-zebras-white-with-black-stripes-or-black-with-white-stripes"
+      ],
+      "verificado": true,
+      "nota": "Britannica contrastada solo mediante resumen de búsqueda (la página dio 403 al abrirla); la afirmación principal está respaldada también por thetech.org."
+    }
+  ],
+  "planos": [
+    {"clave": "pexels:5146631", "desde": 0.0, "hasta": 6.0, "nota": "Cebra rodando en el polvo, pelaje rayado visible, esp 6"},
+    {"clave": "pexels:7421701", "desde": 0.0, "hasta": 5.0, "nota": "Cebra en el camino, esp 6"},
+    {"clave": "pexels:5146631", "desde": 20.0, "hasta": 26.0, "nota": "Otro tramo del revolcón"}
+  ],
+  "titulo": "¿Es Una Cebra Negra Con Rayas Blancas? 🦓",
+  "descripcion": "👇 Vota en comentarios antes de leer.\n\nRespuesta: lo más probable es que la cebra sea negra con rayas blancas: su piel es negra bajo el pelaje y las rayas blancas son pelos sin pigmento. Aún no se sabe del todo cómo se forma el patrón (National Geographic, The Tech Museum).",
+  "etiquetas": ["cebra", "rayas", "verdad o mentira", "animales", "curiosidades"]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "20261127-2-panda-gigante",
+  "formato": "momento",
+  "animal": "panda gigante",
+  "gancho_pantalla": "Su pulgar no es un dedo",
+  "texto_tarjeta": "El «pulgar» del panda no es un dedo: es un hueso de la muñeca, el **sesamoideo radial**, que le sirve de **falso pulgar** para sujetar el bambú.",
+  "datos": [
+    {
+      "afirmacion": "El «pulgar» del panda gigante es un hueso de la muñeca agrandado (sesamoideo radial) que usa para sujetar los tallos de bambú.",
+      "fuentes": [
+        "https://nhm.org/stories/eating-bamboo-its-all-wrist",
+        "https://www.nature.com/articles/s41598-022-13402-y"
+      ],
+      "verificado": true
+    }
+  ],
+  "planos": [
+    {"clave": "wikimedia:102573425", "desde": 0.0, "hasta": 9.0, "nota": "El panda sentado en la nieve sujeta y mastica bambú, esp 6"}
+  ],
+  "titulo": "El Panda Y Su Falso Pulgar Para Sujetar Bambú 🐼",
+  "descripcion": "El panda gigante no tiene un pulgar verdadero: lo que parece un sexto dedo es el sesamoideo radial, un hueso de la muñeca muy agrandado que le permite agarrar los tallos de bambú (Museo de Historia Natural de Los Ángeles; Scientific Reports, 2022). En pocas palabras: un hueso de la muñeca hace de pulgar. #panda #pandagigante #bambú #animales #curiosidades #fauna",
+  "etiquetas": ["panda gigante", "panda", "bambú", "animales", "curiosidades"]
+}
