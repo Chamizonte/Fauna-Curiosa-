@@ -4,200 +4,1102 @@
   "tema": "La historia del gato: cómo se domesticó, el culto a Bastet en Egipto, el mito de la bula Vox in Rama y de la peste negra, y el gato Simon",
   "titulo": "Gatos: lo que la historia contó mal (y lo que sí es verdad)",
   "descripcion": "¿Cuándo llegó el gato a Europa? ¿Fue de verdad un dios en Egipto y un demonio en la Edad Media? ¿Mataron a los gatos y por eso llegó la peste negra? Repasamos lo que dice la ciencia, incluido el estudio de ADN de 2025, y separamos los datos de las leyendas. Y terminamos con Simon, el único gato con Medalla Dickin.",
-  "etiquetas": ["gatos", "historia de los gatos", "domesticación del gato", "Bastet", "Antiguo Egipto", "peste negra", "gato negro", "Simon el gato", "mitos animales", "documental"],
-  "miniatura": {"texto": "¿DIOS O DEMONIO?", "busqueda": "cat close up looking at camera", "animal": "gato"},
+  "etiquetas": [
+    "gatos",
+    "historia de los gatos",
+    "domesticación del gato",
+    "Bastet",
+    "Antiguo Egipto",
+    "peste negra",
+    "gato negro",
+    "Simon el gato",
+    "mitos animales",
+    "documental"
+  ],
+  "miniatura": {
+    "texto": "¿DIOS O DEMONIO?",
+    "busqueda": "cat close up looking at camera",
+    "animal": "gato"
+  },
   "capitulos": [
-    {"titulo": "Introducción", "escena": 0},
-    {"titulo": "¿Quién domesticó a quién?", "escena": 4},
-    {"titulo": "Bastet y Bubastis", "escena": 15},
-    {"titulo": "La carta del papa y el gato negro", "escena": 23},
-    {"titulo": "El mito de la peste negra", "escena": 29},
-    {"titulo": "Simon, el gato condecorado", "escena": 37},
-    {"titulo": "Conclusión", "escena": 44}
+    {
+      "titulo": "Introducción",
+      "escena": 0
+    },
+    {
+      "titulo": "¿Quién domesticó a quién?",
+      "escena": 4
+    },
+    {
+      "titulo": "Bastet y Bubastis",
+      "escena": 15
+    },
+    {
+      "titulo": "La carta del papa y el gato negro",
+      "escena": 23
+    },
+    {
+      "titulo": "El mito de la peste negra",
+      "escena": 29
+    },
+    {
+      "titulo": "Simon, el gato condecorado",
+      "escena": 37
+    },
+    {
+      "titulo": "Conclusión",
+      "escena": 44
+    }
   ],
   "escenas": [
-    {"narracion": "Durante décadas se dijo que el gato doméstico llegó a Europa con los primeros agricultores, hace seis o siete mil años. En 2025, el ADN dijo que no: llegó hace unos dos mil.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "cifra", "valor": 2000, "unidad": "años", "texto": "lleva el gato doméstico en Europa, según el ADN de 2025",
-       "comparar": [{"etiqueta": "Teoría anterior · 6.000-7.000 años", "valor": 6500}]}}},
-    {"narracion": "Y esa corrección es solo el principio, porque la historia del gato está llena de relatos que repetimos sin comprobar.",
-     "visual": {"tipo": "video", "busqueda": "cat looking at camera close", "describe": "un gato mirando fijamente a cámara", "animal": "gato", "cientifico": "Felis catus"},
-     "respaldo": {"tipo": "titular", "texto": "Relatos que repetimos sin comprobar"}},
-    {"narracion": "Que si fue un dios en Egipto, que si un papa lo condenó como demonio, que si su ausencia provocó la peste negra.",
-     "visual": {"tipo": "video", "busqueda": "black cat walking night", "describe": "un gato negro caminando de noche", "animal": "gato", "cientifico": "Felis catus"},
-     "respaldo": {"tipo": "titular", "texto": "Dios, demonio y peste negra"}},
-    {"narracion": "En este vídeo vamos a separar lo que está probado de lo que es leyenda. Y empezamos por la primera pregunta: ¿cómo acabó un cazador salvaje durmiendo en tu sofá?",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "titular", "texto": "¿Qué es dato y qué es leyenda?", "subtitulo": "La historia del gato, comprobada"}}},
-    {"narracion": "La versión clásica es sencilla. Hace unos diez mil años, los primeros agricultores del Oriente Próximo empezaron a guardar grano, y el grano atrajo a los roedores.",
-     "visual": {"tipo": "video", "busqueda": "mouse eating grain", "describe": "un ratón comiendo grano o cereal almacenado", "animal": "ratón", "cientifico": "Mus musculus"},
-     "respaldo": {"tipo": "cifra", "valor": 10000, "unidad": "años", "texto": "es la fecha clásica de la domesticación del gato en el Oriente Próximo"}},
-    {"narracion": "Donde hay roedores aparecen los gatos salvajes. Y los agricultores los toleraban, porque protegían las reservas de comida. Según esta idea, fueron ellos quienes se acercaron.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "proceso", "titulo": "La idea clásica", "pasos": ["Los agricultores guardan grano", "Llegan los roedores", "Los gatos salvajes los cazan", "Las personas los toleran"]}}},
-    {"narracion": "Un estudio de 2017 analizó ADN de más de doscientos gatos, de entre cien y nueve mil años de antigüedad, y respaldó la idea de que los primeros poblados agrícolas los atrajeron.",
-     "visual": {"tipo": "video", "busqueda": "wildcat stalking prey", "describe": "un gato montés acechando entre la hierba", "animal": "gato montés", "cientifico": "Felis silvestris"},
-     "respaldo": {"tipo": "cifra", "valor": 200, "prefijo": "más de ", "unidad": "gatos", "texto": "analizados con ADN antiguo en el estudio de 2017"}},
-    {"narracion": "Una pista está en Chipre. Hace unos 9.500 años, alguien enterró a una persona y, a solo cuarenta centímetros, a un gato.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "cifra", "valor": 9500, "unidad": "años", "texto": "tiene la tumba de Chipre donde una persona y un gato se enterraron a 40 cm"}}},
-    {"narracion": "Los arqueólogos lo ven como el indicio más antiguo de una relación estrecha entre una persona y un gato. Pero no prueba que ese animal ya fuera doméstico.",
-     "visual": {"tipo": "video", "busqueda": "cat sitting next to person", "describe": "un gato sentado junto a una persona", "animal": "gato", "cientifico": "Felis catus"},
-     "respaldo": {"tipo": "titular", "texto": "Un vínculo, no una prueba de domesticación"}},
-    {"narracion": "Durante años, la teoría clásica sostuvo que aquellos agricultores llevaron gatos a Europa hace seis o siete mil años. Un estudio de ADN publicado en 2025 la ha desmontado.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "linea_tiempo", "titulo": "¿Cuándo llegó el gato?", "eventos": [
-       {"fecha": "Hace 9.500 años", "texto": "Entierro de Chipre"},
-       {"fecha": "Hace 6.000-7.000 años", "texto": "Teoría clásica: llegan con los agricultores"},
-       {"fecha": "Hace unos 2.000 años", "texto": "Primeros gatos domésticos en Europa, según el ADN"}], "destacado": 2}}},
-    {"narracion": "El resultado es curioso: el gato lleva en Europa mucho menos tiempo del que imaginábamos.",
-     "visual": {"tipo": "video", "busqueda": "kitten exploring", "describe": "un gatito curioseando", "animal": "gato", "cientifico": "Felis catus"},
-     "respaldo": {"tipo": "titular", "texto": "Mucho menos tiempo del que creíamos"}},
-    {"narracion": "Según ese estudio, los gatos domésticos europeos proceden del norte de África y llegaron hace unos dos mil años, en tiempos del Imperio romano.",
-     "visual": {"tipo": "video", "busqueda": "ancient roman ruins", "describe": "ruinas romanas", "animal": "", "cientifico": ""},
-     "respaldo": {"tipo": "titular", "texto": "Del norte de África a Europa", "subtitulo": "Época romana, hace unos 2.000 años"}},
-    {"narracion": "¿Cómo viajaron? Un estudio de 2017 apuntaba a los barcos mercantes egipcios, y el de 2025 propone barcos fenicios y púnicos por sus colonias del norte de África, Cerdeña y el sur de Iberia.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "mapa", "titulo": "Por mar, de colonia en colonia", "puntos": [
-       {"nombre": "Norte de África", "lat": 34.0, "lon": 9.0},
-       {"nombre": "Cerdeña", "lat": 40.0, "lon": 9.0},
-       {"nombre": "Sur de Iberia", "lat": 37.2, "lon": -4.5}], "rutas": [[0, 1], [0, 2]]}}},
-    {"narracion": "A bordo, un gato protegía las provisiones de los roedores. Un servicio demasiado útil como para quedarse en tierra.",
-     "visual": {"tipo": "video", "busqueda": "cat on boat deck", "describe": "un gato a bordo de un barco", "animal": "gato", "cientifico": "Felis catus"},
-     "respaldo": {"tipo": "titular", "texto": "Un gato a bordo protegía la comida"}},
-    {"narracion": "Y la historia sigue abierta: todavía no se sabe si los gatos egipcios descienden de gatos del Oriente Próximo o de otra domesticación propia en Egipto.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "titular", "texto": "La historia sigue abierta", "subtitulo": "¿Oriente Próximo o domesticación propia en Egipto?"}}},
-    {"narracion": "Hablando de Egipto, vamos a su ciudad más famosa por los gatos: Bubastis, en el delta del Nilo.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "titular", "texto": "Bubastis, la ciudad de Bastet", "subtitulo": "Delta del Nilo"}}},
-    {"narracion": "Allí estaba el principal centro de culto de Bastet, una diosa protectora del faraón.",
-     "visual": {"tipo": "video", "busqueda": "ancient egyptian cat statue", "describe": "una estatua egipcia de un gato", "animal": "gato", "cientifico": "Felis catus"},
-     "respaldo": {"tipo": "titular", "texto": "Bastet, diosa protectora del faraón"}},
-    {"narracion": "Con el tiempo, su imagen más conocida fue la de una gata, a menudo con cuerpo de mujer y cabeza felina.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "lista", "titulo": "Bastet", "puntos": ["Protectora del faraón", "Su centro de culto: Bubastis", "Imagen más conocida: una gata", "Cuerpo de mujer, cabeza de gata"]}}},
-    {"narracion": "Pero ¿cómo sabemos cómo era su culto? Por los textos antiguos, y el más famoso es el de un viajero griego.",
-     "visual": {"tipo": "video", "busqueda": "nile river sunset", "describe": "el río Nilo con barcas al atardecer", "animal": "", "cientifico": ""},
-     "respaldo": {"tipo": "titular", "texto": "Un testigo griego"}},
-    {"narracion": "Se llamaba Heródoto y escribió hacia el año 450 antes de Cristo. Describió las fiestas que se celebraban cada año en Bubastis.",
-     "visual": {"tipo": "video", "busqueda": "egyptian hieroglyphs wall", "describe": "jeroglíficos egipcios en un muro", "animal": "", "cientifico": ""},
-     "respaldo": {"tipo": "titular", "texto": "Heródoto, hacia 450 a. C.", "subtitulo": "Las fiestas de Bubastis"}},
-    {"narracion": "Según él, acudía gente de todo Egipto, muchos en barco, y en esa fiesta se bebía más vino que durante el resto del año.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "titular", "texto": "Más vino que en todo el resto del año", "subtitulo": "Heródoto sobre la fiesta de Bastet"}}},
-    {"narracion": "Y la imagen central era la estatua de la diosa, que se paseaba en una barca por los canales junto al templo.",
-     "visual": {"tipo": "video", "busqueda": "boats on river festival", "describe": "barcas con gente en un río en una fiesta", "animal": "", "cientifico": ""},
-     "respaldo": {"tipo": "titular", "texto": "La diosa, en barca por los canales"}},
-    {"narracion": "Así que sí: en Egipto el gato fue un animal divino. Pero la caída desde ese altar no ocurrió allí, sino siglos después, en Europa.",
-     "visual": {"tipo": "video", "busqueda": "cat sleeping peacefully", "describe": "un gato durmiendo plácidamente", "animal": "gato", "cientifico": "Felis catus"},
-     "respaldo": {"tipo": "titular", "texto": "Del altar a la mala fama"}},
-    {"narracion": "En junio de 1233, el papa Gregorio noveno firma una carta conocida como «Vox in Rama», «voz en Ramá».",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "cifra", "valor": 1233, "unidad": "", "texto": "el año de la carta «Vox in Rama» del papa Gregorio IX", "decimales": 0}}},
-    {"narracion": "Iba dirigida a arzobispos alemanes y respaldaba a un inquisidor, Conrado de Marburgo, que decía haber descubierto una secta satánica.",
-     "visual": {"tipo": "video", "busqueda": "old manuscript pages", "describe": "páginas de un manuscrito antiguo", "animal": "", "cientifico": ""},
-     "respaldo": {"tipo": "titular", "texto": "Un inquisidor y una secta imaginaria", "subtitulo": "Conrado de Marburgo, Alemania, 1233"}},
-    {"narracion": "La carta describe rituales en los que aparece un gato, y presenta al diablo como una figura mitad gato, mitad hombre.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "lista", "titulo": "Lo que cuenta la carta", "puntos": ["Acusaciones de un inquisidor", "Rituales con un gato", "El diablo, mitad gato, mitad hombre"]}}},
-    {"narracion": "Es uno de los textos que más se citan para explicar el origen de la mala fama del gato negro.",
-     "visual": {"tipo": "video", "busqueda": "black cat portrait", "describe": "un gato negro de cerca", "animal": "gato", "cientifico": "Felis catus"},
-     "respaldo": {"tipo": "titular", "texto": "El origen de la mala fama del gato negro"}},
-    {"narracion": "Se repite que esa carta ordenó exterminar a los gatos. Pero el texto no dice que todos los gatos sean satánicos, ni ordena matarlos.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "titular", "texto": "¿Ordenó matar a los gatos?", "subtitulo": "El texto no lo dice"}}},
-    {"narracion": "Una cosa es que la carta mencionara a un gato, y otra muy distinta que ordenara matarlos a todos. Quédate con esa diferencia, porque nos hará falta.",
-     "visual": {"tipo": "video", "busqueda": "cat portrait calm", "describe": "un gato sereno en primer plano", "animal": "gato", "cientifico": "Felis catus"},
-     "respaldo": {"tipo": "titular", "texto": "Mencionar no es ordenar"}},
-    {"narracion": "Más de un siglo después, entre 1347 y 1351, la peste negra recorre Europa. Y aquí aparece el mito más famoso de todos.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "linea_tiempo", "titulo": "Del siglo XIII a hoy", "eventos": [
-       {"fecha": "1233", "texto": "Carta «Vox in Rama»"},
-       {"fecha": "1347-1351", "texto": "La peste negra recorre Europa"},
-       {"fecha": "2018", "texto": "Estudio que cuestiona el papel de las ratas"}], "destacado": 1}}},
-    {"narracion": "Una pandemia que golpeó con fuerza el continente a mediados del siglo catorce.",
-     "visual": {"tipo": "video", "busqueda": "medieval village fog", "describe": "un pueblo medieval entre la niebla", "animal": "", "cientifico": ""},
-     "respaldo": {"tipo": "titular", "texto": "Mediados del siglo XIV"}},
-    {"narracion": "La idea es esta: se mató a los gatos, hubo más ratas, y por eso murió tanta gente.",
-     "visual": {"tipo": "video", "busqueda": "rat walking", "describe": "una rata caminando", "animal": "rata", "cientifico": "Rattus rattus"},
-     "respaldo": {"tipo": "proceso", "titulo": "El mito", "pasos": ["Se mata a los gatos", "Hay más ratas", "Muere más gente"]}},
-    {"narracion": "El problema es que quizá las ratas no fueron las grandes culpables.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "titular", "texto": "¿Y si no fueron las ratas?", "subtitulo": "Lo que dice un estudio de 2018"}}},
-    {"narracion": "Un estudio de 2018 comparó nueve brotes en ciudades europeas. En siete de ellos, el modelo de pulgas y piojos humanos encajaba mejor con los datos que el de las ratas.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "cifra", "valor": 7, "unidad": "de 9 ciudades", "texto": "en las que los parásitos humanos explicaban mejor la peste que las ratas"}}},
-    {"narracion": "Eso no significa que las ratas fueran inocentes, ni que los gatos no cazaran roedores.",
-     "visual": {"tipo": "video", "busqueda": "medieval city street", "describe": "una calle antigua de ciudad europea", "animal": "", "cientifico": ""},
-     "respaldo": {"tipo": "titular", "texto": "Ni ratas inocentes ni gatos inútiles"}},
-    {"narracion": "Resumiendo: hoy se discute mucho el papel de las ratas, y atribuir millones de muertes a la falta de gatos es, como mínimo, muy discutible.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "lista", "titulo": "La peste negra, en claro", "puntos": ["Recorre Europa entre 1347 y 1351", "Un estudio de 2018 apunta a parásitos humanos", "El papel de las ratas se discute", "Culpar a la falta de gatos es discutible"]}}},
-    {"narracion": "Eso sí: un gato cazando roedores sigue siendo un gato cazando roedores, igual que hace miles de años. Ese servicio, y no un destino místico, explica por qué lo han querido tantas culturas.",
-     "visual": {"tipo": "video", "busqueda": "cat hunting mouse grass", "describe": "un gato acechando o cazando un roedor", "animal": "gato", "cientifico": "Felis catus"},
-     "respaldo": {"tipo": "titular", "texto": "El mismo oficio de siempre"}},
-    {"narracion": "Pasemos a una historia que sí está bien documentada: la de Simon, un gato de a bordo en un buque de guerra británico.",
-     "visual": {"tipo": "video", "busqueda": "navy ship sailing", "describe": "un buque de guerra navegando", "animal": "", "cientifico": ""},
-     "respaldo": {"tipo": "titular", "texto": "Simon, gato de a bordo", "subtitulo": "HMS Amethyst"}},
-    {"narracion": "En 1949, el HMS Amethyst quedó atrapado en el río Yangtsé, en el llamado incidente del Yangtsé.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "titular", "texto": "HMS Amethyst, 1949", "subtitulo": "Incidente del Yangtsé"}}},
-    {"narracion": "Estuvo así unas diez semanas, con una tripulación que tenía que cuidar muy bien unas provisiones limitadas.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "cifra", "valor": 10, "prefijo": "unas ", "unidad": "semanas", "texto": "atrapado en el río, con comida limitada"}}},
-    {"narracion": "Simon resultó herido por metralla. Aun así, siguió cazando las ratas que amenazaban las provisiones de la tripulación.",
-     "visual": {"tipo": "video", "busqueda": "cat on ship deck", "describe": "un gato sobre la cubierta de un barco", "animal": "gato", "cientifico": "Felis catus"},
-     "respaldo": {"tipo": "titular", "texto": "Herido, siguió cazando ratas"}},
-    {"narracion": "Por eso recibió la Medalla Dickin, una condecoración para animales, en agosto de 1949.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "lista", "titulo": "Simon", "puntos": ["Gato de a bordo del HMS Amethyst", "Herido por metralla en 1949", "Cazó ratas que amenazaban la comida", "Medalla Dickin, agosto de 1949"]}}},
-    {"narracion": "Que se sepa, sigue siendo el único gato que la ha recibido.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "cifra", "valor": 1, "unidad": "gato", "texto": "ha recibido hasta hoy la Medalla Dickin"}}},
-    {"narracion": "Y así, de barco en barco y de puerto en puerto, el gato siguió acompañando a las personas.",
-     "visual": {"tipo": "video", "busqueda": "cat relaxing on sofa", "describe": "un gato relajado en un sofá", "animal": "gato", "cientifico": "Felis catus"},
-     "respaldo": {"tipo": "titular", "texto": "De puerto en puerto"}},
-    {"narracion": "Resumamos lo que hemos comprobado: el gato se acercó por los roedores, llegó a Europa hace unos dos mil años y en Egipto tuvo una diosa propia.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "lista", "titulo": "Lo que sabemos", "puntos": ["Los roedores los atrajeron", "Llegaron a Europa hace unos 2.000 años", "Egipto tuvo una diosa gata", "Simon, único gato con la Medalla Dickin"]}}},
-    {"narracion": "También hemos visto lo que no se sostiene tan bien: que un papa ordenara exterminarlos o que su ausencia explicara la peste negra.",
-     "visual": {"tipo": "video", "busqueda": "cat looking out window", "describe": "un gato mirando por una ventana", "animal": "gato", "cientifico": "Felis catus"},
-     "respaldo": {"tipo": "titular", "texto": "Lo que no se sostiene tan bien"}},
-    {"narracion": "Entonces, ¿cómo acabó un cazador salvaje durmiendo en tu sofá? Porque a los dos nos convenía: él tenía comida, y nosotros, graneros sin plagas.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "titular", "texto": "A los dos nos convenía", "subtitulo": "Comida para él, graneros sin plagas para nosotros"}}},
-    {"narracion": "No hay una fecha exacta ni un solo momento: es una historia que los científicos siguen reescribiendo con cada nuevo ADN.",
-     "visual": {"tipo": "video", "busqueda": "cat on lap", "describe": "un gato tumbado en el regazo de una persona", "animal": "gato", "cientifico": "Felis catus"},
-     "respaldo": {"tipo": "titular", "texto": "Una historia que se reescribe"}},
-    {"narracion": "Y por eso conviene desconfiar de las historias demasiado redondas, aunque salgan en mil vídeos.",
-     "visual": {"tipo": "video", "busqueda": "cat eyes close up", "describe": "los ojos de un gato en primer plano", "animal": "gato", "cientifico": "Felis catus"},
-     "respaldo": {"tipo": "titular", "texto": "Desconfía de las historias redondas"}},
-    {"narracion": "Si te ha gustado separar el mito de los datos, suscríbete: en el canal tienes más animales con historias que merece la pena comprobar.",
-     "visual": {"tipo": "grafico", "grafico": {"tipo": "titular", "texto": "Más historias de animales, comprobadas", "subtitulo": "Suscríbete a Curiosa Fauna"}}}
+    {
+      "narracion": "Durante décadas se dijo que el gato doméstico llegó a Europa con los primeros agricultores, hace seis o siete mil años. En 2025, el ADN dijo que no: llegó hace unos dos mil.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "cifra",
+          "valor": 2000,
+          "unidad": "años",
+          "texto": "lleva el gato doméstico en Europa, según el ADN de 2025",
+          "comparar": [
+            {
+              "etiqueta": "Teoría anterior · 6.000-7.000 años",
+              "valor": 6500
+            }
+          ]
+        }
+      }
+    },
+    {
+      "narracion": "Y esa corrección es solo el principio, porque la historia del gato está llena de relatos que repetimos sin comprobar.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "cat looking at camera close",
+        "describe": "un gato mirando fijamente a cámara",
+        "animal": "gato",
+        "cientifico": "Felis catus"
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "Relatos que repetimos sin comprobar"
+      },
+      "planos": [
+        {
+          "clave": "pixabay:46230",
+          "url": "https://cdn.pixabay.com/video/2020/08/02/46230-447422850_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de yeracastelan en Pixabay (https://pixabay.com/videos/id-46230/)",
+          "desde": 0.0,
+          "hasta": 7.38,
+          "duracion_clip": 7.0,
+          "posicion_x": 0.5,
+          "descripcion": "Un gato blanco de ojos claros mira fijamente hacia la cámara y hacia arriba desde el interior de una ventana.",
+          "encaja": 9
+        }
+      ]
+    },
+    {
+      "narracion": "Que si fue un dios en Egipto, que si un papa lo condenó como demonio, que si su ausencia provocó la peste negra.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "black cat walking night",
+        "describe": "un gato negro caminando de noche",
+        "animal": "gato",
+        "cientifico": "Felis catus"
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "Dios, demonio y peste negra"
+      },
+      "sin_material": true
+    },
+    {
+      "narracion": "En este vídeo vamos a separar lo que está probado de lo que es leyenda. Y empezamos por la primera pregunta: ¿cómo acabó un cazador salvaje durmiendo en tu sofá?",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "titular",
+          "texto": "¿Qué es dato y qué es leyenda?",
+          "subtitulo": "La historia del gato, comprobada"
+        }
+      }
+    },
+    {
+      "narracion": "La versión clásica es sencilla. Hace unos diez mil años, los primeros agricultores del Oriente Próximo empezaron a guardar grano, y el grano atrajo a los roedores.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "mouse eating grain",
+        "describe": "un ratón comiendo grano o cereal almacenado",
+        "animal": "ratón",
+        "cientifico": "Mus musculus"
+      },
+      "respaldo": {
+        "tipo": "cifra",
+        "valor": 10000,
+        "unidad": "años",
+        "texto": "es la fecha clásica de la domesticación del gato en el Oriente Próximo"
+      },
+      "planos": [
+        {
+          "clave": "pexels:12281161",
+          "url": "https://videos.pexels.com/video-files/12281161/12281161-hd_1920_1080_25fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Stefan en Pexels (https://www.pexels.com/video/close-up-of-a-mouse-eating-sunflower-seeds-12281161/)",
+          "desde": 0.0,
+          "hasta": 31.28,
+          "duracion_clip": 31.0,
+          "posicion_x": 0.45,
+          "descripcion": "Un plano detalle de un ratón situado dentro de un cuenco lleno de semillas de girasol, comiendo y mirando atentamente a su alrededor.",
+          "encaja": 9
+        }
+      ]
+    },
+    {
+      "narracion": "Donde hay roedores aparecen los gatos salvajes. Y los agricultores los toleraban, porque protegían las reservas de comida. Según esta idea, fueron ellos quienes se acercaron.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "proceso",
+          "titulo": "La idea clásica",
+          "pasos": [
+            "Los agricultores guardan grano",
+            "Llegan los roedores",
+            "Los gatos salvajes los cazan",
+            "Las personas los toleran"
+          ]
+        }
+      }
+    },
+    {
+      "narracion": "Un estudio de 2017 analizó ADN de más de doscientos gatos, de entre cien y nueve mil años de antigüedad, y respaldó la idea de que los primeros poblados agrícolas los atrajeron.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "wildcat stalking prey",
+        "describe": "un gato montés acechando entre la hierba",
+        "animal": "gato montés",
+        "cientifico": "Felis silvestris"
+      },
+      "respaldo": {
+        "tipo": "cifra",
+        "valor": 200,
+        "prefijo": "más de ",
+        "unidad": "gatos",
+        "texto": "analizados con ADN antiguo en el estudio de 2017"
+      },
+      "sin_material": true
+    },
+    {
+      "narracion": "Una pista está en Chipre. Hace unos 9.500 años, alguien enterró a una persona y, a solo cuarenta centímetros, a un gato.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "cifra",
+          "valor": 9500,
+          "unidad": "años",
+          "texto": "tiene la tumba de Chipre donde una persona y un gato se enterraron a 40 cm"
+        }
+      }
+    },
+    {
+      "narracion": "Los arqueólogos lo ven como el indicio más antiguo de una relación estrecha entre una persona y un gato. Pero no prueba que ese animal ya fuera doméstico.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "cat sitting next to person",
+        "describe": "un gato sentado junto a una persona",
+        "animal": "gato",
+        "cientifico": "Felis catus"
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "Un vínculo, no una prueba de domesticación"
+      },
+      "planos": [
+        {
+          "clave": "pexels:26790995",
+          "url": "https://videos.pexels.com/video-files/26790995/12006829_1920_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de utopia 36 en Pexels (https://www.pexels.com/video/a-person-is-petting-a-cat-on-the-grass-26790995/)",
+          "desde": 0.0,
+          "hasta": 25.26,
+          "duracion_clip": 25.0,
+          "posicion_x": 0.55,
+          "descripcion": "Un gato blanco y gris con arnés está sentado en la hierba entre los pies de una persona que lo cepilla con un guante.",
+          "encaja": 10
+        }
+      ]
+    },
+    {
+      "narracion": "Durante años, la teoría clásica sostuvo que aquellos agricultores llevaron gatos a Europa hace seis o siete mil años. Un estudio de ADN publicado en 2025 la ha desmontado.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "linea_tiempo",
+          "titulo": "¿Cuándo llegó el gato?",
+          "eventos": [
+            {
+              "fecha": "Hace 9.500 años",
+              "texto": "Entierro de Chipre"
+            },
+            {
+              "fecha": "Hace 6.000-7.000 años",
+              "texto": "Teoría clásica: llegan con los agricultores"
+            },
+            {
+              "fecha": "Hace unos 2.000 años",
+              "texto": "Primeros gatos domésticos en Europa, según el ADN"
+            }
+          ],
+          "destacado": 2
+        }
+      }
+    },
+    {
+      "narracion": "El resultado es curioso: el gato lleva en Europa mucho menos tiempo del que imaginábamos.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "kitten exploring",
+        "describe": "un gatito curioseando",
+        "animal": "gato",
+        "cientifico": "Felis catus"
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "Mucho menos tiempo del que creíamos"
+      },
+      "planos": [
+        {
+          "clave": "pixabay:278205",
+          "url": "https://cdn.pixabay.com/video/2025/05/11/278205_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de fspikcat en Pixabay (https://pixabay.com/videos/id-278205/)",
+          "desde": 0.0,
+          "hasta": 6.64,
+          "duracion_clip": 6.0,
+          "posicion_x": 0.5,
+          "descripcion": "Un gato doméstico de pelaje atigrado y blanco observa a su alrededor atentamente desde entre las hojas de un jardín.",
+          "encaja": 9
+        }
+      ]
+    },
+    {
+      "narracion": "Según ese estudio, los gatos domésticos europeos proceden del norte de África y llegaron hace unos dos mil años, en tiempos del Imperio romano.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "ancient roman ruins",
+        "describe": "ruinas romanas",
+        "animal": "",
+        "cientifico": ""
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "Del norte de África a Europa",
+        "subtitulo": "Época romana, hace unos 2.000 años"
+      },
+      "planos": [
+        {
+          "clave": "pexels:29153312",
+          "url": "https://videos.pexels.com/video-files/29153312/12592146_1920_1080_60fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Rose TheGuide en Pexels (https://www.pexels.com/video/ancient-roman-arches-of-hierapolis-turkey-29153312/)",
+          "desde": 4.25,
+          "hasta": 7.75,
+          "duracion_clip": 10.0,
+          "posicion_x": 0.5,
+          "descripcion": "Panorámica de arcos de piedra y muros pertenecientes a las ruinas romanas de Hierápolis.",
+          "encaja": 10
+        }
+      ]
+    },
+    {
+      "narracion": "¿Cómo viajaron? Un estudio de 2017 apuntaba a los barcos mercantes egipcios, y el de 2025 propone barcos fenicios y púnicos por sus colonias del norte de África, Cerdeña y el sur de Iberia.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "mapa",
+          "titulo": "Por mar, de colonia en colonia",
+          "puntos": [
+            {
+              "nombre": "Norte de África",
+              "lat": 34.0,
+              "lon": 9.0
+            },
+            {
+              "nombre": "Cerdeña",
+              "lat": 40.0,
+              "lon": 9.0
+            },
+            {
+              "nombre": "Sur de Iberia",
+              "lat": 37.2,
+              "lon": -4.5
+            }
+          ],
+          "rutas": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "narracion": "A bordo, un gato protegía las provisiones de los roedores. Un servicio demasiado útil como para quedarse en tierra.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "cat on boat deck",
+        "describe": "un gato a bordo de un barco",
+        "animal": "gato",
+        "cientifico": "Felis catus"
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "Un gato a bordo protegía la comida"
+      },
+      "sin_material": true
+    },
+    {
+      "narracion": "Y la historia sigue abierta: todavía no se sabe si los gatos egipcios descienden de gatos del Oriente Próximo o de otra domesticación propia en Egipto.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "titular",
+          "texto": "La historia sigue abierta",
+          "subtitulo": "¿Oriente Próximo o domesticación propia en Egipto?"
+        }
+      }
+    },
+    {
+      "narracion": "Hablando de Egipto, vamos a su ciudad más famosa por los gatos: Bubastis, en el delta del Nilo.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "titular",
+          "texto": "Bubastis, la ciudad de Bastet",
+          "subtitulo": "Delta del Nilo"
+        }
+      }
+    },
+    {
+      "narracion": "Allí estaba el principal centro de culto de Bastet, una diosa protectora del faraón.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "ancient egyptian cat statue",
+        "describe": "una estatua egipcia de un gato",
+        "animal": "gato",
+        "cientifico": "Felis catus"
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "Bastet, diosa protectora del faraón"
+      },
+      "sin_material": true
+    },
+    {
+      "narracion": "Con el tiempo, su imagen más conocida fue la de una gata, a menudo con cuerpo de mujer y cabeza felina.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "lista",
+          "titulo": "Bastet",
+          "puntos": [
+            "Protectora del faraón",
+            "Su centro de culto: Bubastis",
+            "Imagen más conocida: una gata",
+            "Cuerpo de mujer, cabeza de gata"
+          ]
+        }
+      }
+    },
+    {
+      "narracion": "Pero ¿cómo sabemos cómo era su culto? Por los textos antiguos, y el más famoso es el de un viajero griego.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "nile river sunset",
+        "describe": "el río Nilo con barcas al atardecer",
+        "animal": "",
+        "cientifico": ""
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "Un testigo griego"
+      },
+      "sin_material": true
+    },
+    {
+      "narracion": "Se llamaba Heródoto y escribió hacia el año 450 antes de Cristo. Describió las fiestas que se celebraban cada año en Bubastis.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "egyptian hieroglyphs wall",
+        "describe": "jeroglíficos egipcios en un muro",
+        "animal": "",
+        "cientifico": ""
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "Heródoto, hacia 450 a. C.",
+        "subtitulo": "Las fiestas de Bubastis"
+      },
+      "planos": [
+        {
+          "clave": "pexels:32537461",
+          "url": "https://videos.pexels.com/video-files/32537461/13875935_1920_1080_24fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de K en Pexels (https://www.pexels.com/video/ancient-egyptian-hieroglyphs-on-stone-wall-32537461/)",
+          "desde": 0.0,
+          "hasta": 10.59,
+          "duracion_clip": 10.0,
+          "posicion_x": 0.5,
+          "descripcion": "Detalle en primer plano de un muro de piedra tallado con grabados y jeroglíficos de estilo egipcio antiguo.",
+          "encaja": 10
+        }
+      ]
+    },
+    {
+      "narracion": "Según él, acudía gente de todo Egipto, muchos en barco, y en esa fiesta se bebía más vino que durante el resto del año.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "titular",
+          "texto": "Más vino que en todo el resto del año",
+          "subtitulo": "Heródoto sobre la fiesta de Bastet"
+        }
+      }
+    },
+    {
+      "narracion": "Y la imagen central era la estatua de la diosa, que se paseaba en una barca por los canales junto al templo.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "boats on river festival",
+        "describe": "barcas con gente en un río en una fiesta",
+        "animal": "",
+        "cientifico": ""
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "La diosa, en barca por los canales"
+      },
+      "planos": [
+        {
+          "clave": "pexels:12690271",
+          "url": "https://videos.pexels.com/video-files/12690271/12690271-hd_1920_1080_24fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de khanhhoangminh en Pexels (https://www.pexels.com/video/boats-on-river-in-city-12690271/)",
+          "desde": 0.0,
+          "hasta": 29.92,
+          "duracion_clip": 30.0,
+          "posicion_x": 0.5,
+          "descripcion": "Paisaje de un río al atardecer con numerosas barcas llenas de gente y farolillos festivos.",
+          "encaja": 10
+        }
+      ]
+    },
+    {
+      "narracion": "Así que sí: en Egipto el gato fue un animal divino. Pero la caída desde ese altar no ocurrió allí, sino siglos después, en Europa.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "cat sleeping peacefully",
+        "describe": "un gato durmiendo plácidamente",
+        "animal": "gato",
+        "cientifico": "Felis catus"
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "Del altar a la mala fama"
+      },
+      "planos": [
+        {
+          "clave": "pixabay:39009",
+          "url": "https://cdn.pixabay.com/video/2020/05/13/39009-420224623_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de yeracastelan en Pixabay (https://pixabay.com/videos/id-39009/)",
+          "desde": 0.0,
+          "hasta": 11.14,
+          "duracion_clip": 11.0,
+          "posicion_x": 0.65,
+          "descripcion": "Un primer plano lateral de la cabeza de un gato doméstico blanco durmiendo con los ojos cerrados.",
+          "encaja": 10
+        }
+      ]
+    },
+    {
+      "narracion": "En junio de 1233, el papa Gregorio noveno firma una carta conocida como «Vox in Rama», «voz en Ramá».",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "cifra",
+          "valor": 1233,
+          "unidad": "",
+          "texto": "el año de la carta «Vox in Rama» del papa Gregorio IX",
+          "decimales": 0
+        }
+      }
+    },
+    {
+      "narracion": "Iba dirigida a arzobispos alemanes y respaldaba a un inquisidor, Conrado de Marburgo, que decía haber descubierto una secta satánica.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "old manuscript pages",
+        "describe": "páginas de un manuscrito antiguo",
+        "animal": "",
+        "cientifico": ""
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "Un inquisidor y una secta imaginaria",
+        "subtitulo": "Conrado de Marburgo, Alemania, 1233"
+      },
+      "sin_material": true
+    },
+    {
+      "narracion": "La carta describe rituales en los que aparece un gato, y presenta al diablo como una figura mitad gato, mitad hombre.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "lista",
+          "titulo": "Lo que cuenta la carta",
+          "puntos": [
+            "Acusaciones de un inquisidor",
+            "Rituales con un gato",
+            "El diablo, mitad gato, mitad hombre"
+          ]
+        }
+      }
+    },
+    {
+      "narracion": "Es uno de los textos que más se citan para explicar el origen de la mala fama del gato negro.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "black cat portrait",
+        "describe": "un gato negro de cerca",
+        "animal": "gato",
+        "cientifico": "Felis catus"
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "El origen de la mala fama del gato negro"
+      },
+      "planos": [
+        {
+          "clave": "pexels:6853916",
+          "url": "https://videos.pexels.com/video-files/6853916/6853916-hd_2048_1080_25fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de cottonbro studio en Pexels (https://www.pexels.com/video/close-up-footage-of-a-black-cat-6853916/)",
+          "desde": 0.0,
+          "hasta": 6.04,
+          "duracion_clip": 6.0,
+          "posicion_x": 0.5,
+          "descripcion": "Un plano cerrado de la cabeza de un gato negro que mira a diferentes lados.",
+          "encaja": 10
+        }
+      ]
+    },
+    {
+      "narracion": "Se repite que esa carta ordenó exterminar a los gatos. Pero el texto no dice que todos los gatos sean satánicos, ni ordena matarlos.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "titular",
+          "texto": "¿Ordenó matar a los gatos?",
+          "subtitulo": "El texto no lo dice"
+        }
+      }
+    },
+    {
+      "narracion": "Una cosa es que la carta mencionara a un gato, y otra muy distinta que ordenara matarlos a todos. Quédate con esa diferencia, porque nos hará falta.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "cat portrait calm",
+        "describe": "un gato sereno en primer plano",
+        "animal": "gato",
+        "cientifico": "Felis catus"
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "Mencionar no es ordenar"
+      },
+      "planos": [
+        {
+          "clave": "pixabay:142005",
+          "url": "https://cdn.pixabay.com/video/2022/12/07/142005-779025538_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Engin_Akyurt en Pixabay (https://pixabay.com/videos/id-142005/)",
+          "desde": 0.0,
+          "hasta": 12.48,
+          "duracion_clip": 12.0,
+          "posicion_x": 0.5,
+          "descripcion": "Un gato blanco de pelaje largo descansa plácidamente en primer plano con los ojos cerrados o semicerrados.",
+          "encaja": 10
+        }
+      ]
+    },
+    {
+      "narracion": "Más de un siglo después, entre 1347 y 1351, la peste negra recorre Europa. Y aquí aparece el mito más famoso de todos.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "linea_tiempo",
+          "titulo": "Del siglo XIII a hoy",
+          "eventos": [
+            {
+              "fecha": "1233",
+              "texto": "Carta «Vox in Rama»"
+            },
+            {
+              "fecha": "1347-1351",
+              "texto": "La peste negra recorre Europa"
+            },
+            {
+              "fecha": "2018",
+              "texto": "Estudio que cuestiona el papel de las ratas"
+            }
+          ],
+          "destacado": 1
+        }
+      }
+    },
+    {
+      "narracion": "Una pandemia que golpeó con fuerza el continente a mediados del siglo catorce.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "medieval village fog",
+        "describe": "un pueblo medieval entre la niebla",
+        "animal": "",
+        "cientifico": ""
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "Mediados del siglo XIV"
+      },
+      "planos": [
+        {
+          "clave": "pixabay:97999",
+          "url": "https://cdn.pixabay.com/video/2021/11/16/97999-646668828_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de patrickgregerson en Pixabay (https://pixabay.com/videos/id-97999/)",
+          "desde": 0.0,
+          "hasta": 12.07,
+          "duracion_clip": 12.0,
+          "posicion_x": 0.5,
+          "descripcion": "Un time-lapse de un amanecer sobre un pueblo medieval con tejados en primer plano y montañas al fondo.",
+          "encaja": 8
+        }
+      ]
+    },
+    {
+      "narracion": "La idea es esta: se mató a los gatos, hubo más ratas, y por eso murió tanta gente.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "rat walking",
+        "describe": "una rata caminando",
+        "animal": "rata",
+        "cientifico": "Rattus rattus"
+      },
+      "respaldo": {
+        "tipo": "proceso",
+        "titulo": "El mito",
+        "pasos": [
+          "Se mata a los gatos",
+          "Hay más ratas",
+          "Muere más gente"
+        ]
+      },
+      "sin_material": true
+    },
+    {
+      "narracion": "El problema es que quizá las ratas no fueron las grandes culpables.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "titular",
+          "texto": "¿Y si no fueron las ratas?",
+          "subtitulo": "Lo que dice un estudio de 2018"
+        }
+      }
+    },
+    {
+      "narracion": "Un estudio de 2018 comparó nueve brotes en ciudades europeas. En siete de ellos, el modelo de pulgas y piojos humanos encajaba mejor con los datos que el de las ratas.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "cifra",
+          "valor": 7,
+          "unidad": "de 9 ciudades",
+          "texto": "en las que los parásitos humanos explicaban mejor la peste que las ratas"
+        }
+      }
+    },
+    {
+      "narracion": "Eso no significa que las ratas fueran inocentes, ni que los gatos no cazaran roedores.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "medieval city street",
+        "describe": "una calle antigua de ciudad europea",
+        "animal": "",
+        "cientifico": ""
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "Ni ratas inocentes ni gatos inútiles"
+      },
+      "sin_material": true
+    },
+    {
+      "narracion": "Resumiendo: hoy se discute mucho el papel de las ratas, y atribuir millones de muertes a la falta de gatos es, como mínimo, muy discutible.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "lista",
+          "titulo": "La peste negra, en claro",
+          "puntos": [
+            "Recorre Europa entre 1347 y 1351",
+            "Un estudio de 2018 apunta a parásitos humanos",
+            "El papel de las ratas se discute",
+            "Culpar a la falta de gatos es discutible"
+          ]
+        }
+      }
+    },
+    {
+      "narracion": "Eso sí: un gato cazando roedores sigue siendo un gato cazando roedores, igual que hace miles de años. Ese servicio, y no un destino místico, explica por qué lo han querido tantas culturas.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "cat hunting mouse grass",
+        "describe": "un gato acechando o cazando un roedor",
+        "animal": "gato",
+        "cientifico": "Felis catus"
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "El mismo oficio de siempre"
+      },
+      "planos": [
+        {
+          "clave": "pexels:34464301",
+          "url": "https://videos.pexels.com/video-files/34464301/14603519_1920_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Be The Observer en Pexels (https://www.pexels.com/video/wild-ginger-cat-hidden-in-foliage-outdoors-34464301/)",
+          "desde": 0.0,
+          "hasta": 15.82,
+          "duracion_clip": 15.0,
+          "posicion_x": 0.5,
+          "descripcion": "Un gato de color anaranjado está agazapado y oculto entre la hierba y la vegetación al aire libre.",
+          "encaja": 7
+        }
+      ]
+    },
+    {
+      "narracion": "Pasemos a una historia que sí está bien documentada: la de Simon, un gato de a bordo en un buque de guerra británico.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "navy ship sailing",
+        "describe": "un buque de guerra navegando",
+        "animal": "",
+        "cientifico": ""
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "Simon, gato de a bordo",
+        "subtitulo": "HMS Amethyst"
+      }
+    },
+    {
+      "narracion": "En 1949, el HMS Amethyst quedó atrapado en el río Yangtsé, en el llamado incidente del Yangtsé.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "titular",
+          "texto": "HMS Amethyst, 1949",
+          "subtitulo": "Incidente del Yangtsé"
+        }
+      }
+    },
+    {
+      "narracion": "Estuvo así unas diez semanas, con una tripulación que tenía que cuidar muy bien unas provisiones limitadas.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "cifra",
+          "valor": 10,
+          "prefijo": "unas ",
+          "unidad": "semanas",
+          "texto": "atrapado en el río, con comida limitada"
+        }
+      }
+    },
+    {
+      "narracion": "Simon resultó herido por metralla. Aun así, siguió cazando las ratas que amenazaban las provisiones de la tripulación.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "cat on ship deck",
+        "describe": "un gato sobre la cubierta de un barco",
+        "animal": "gato",
+        "cientifico": "Felis catus"
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "Herido, siguió cazando ratas"
+      }
+    },
+    {
+      "narracion": "Por eso recibió la Medalla Dickin, una condecoración para animales, en agosto de 1949.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "lista",
+          "titulo": "Simon",
+          "puntos": [
+            "Gato de a bordo del HMS Amethyst",
+            "Herido por metralla en 1949",
+            "Cazó ratas que amenazaban la comida",
+            "Medalla Dickin, agosto de 1949"
+          ]
+        }
+      }
+    },
+    {
+      "narracion": "Que se sepa, sigue siendo el único gato que la ha recibido.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "cifra",
+          "valor": 1,
+          "unidad": "gato",
+          "texto": "ha recibido hasta hoy la Medalla Dickin"
+        }
+      }
+    },
+    {
+      "narracion": "Y así, de barco en barco y de puerto en puerto, el gato siguió acompañando a las personas.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "cat relaxing on sofa",
+        "describe": "un gato relajado en un sofá",
+        "animal": "gato",
+        "cientifico": "Felis catus"
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "De puerto en puerto"
+      }
+    },
+    {
+      "narracion": "Resumamos lo que hemos comprobado: el gato se acercó por los roedores, llegó a Europa hace unos dos mil años y en Egipto tuvo una diosa propia.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "lista",
+          "titulo": "Lo que sabemos",
+          "puntos": [
+            "Los roedores los atrajeron",
+            "Llegaron a Europa hace unos 2.000 años",
+            "Egipto tuvo una diosa gata",
+            "Simon, único gato con la Medalla Dickin"
+          ]
+        }
+      }
+    },
+    {
+      "narracion": "También hemos visto lo que no se sostiene tan bien: que un papa ordenara exterminarlos o que su ausencia explicara la peste negra.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "cat looking out window",
+        "describe": "un gato mirando por una ventana",
+        "animal": "gato",
+        "cientifico": "Felis catus"
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "Lo que no se sostiene tan bien"
+      }
+    },
+    {
+      "narracion": "Entonces, ¿cómo acabó un cazador salvaje durmiendo en tu sofá? Porque a los dos nos convenía: él tenía comida, y nosotros, graneros sin plagas.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "titular",
+          "texto": "A los dos nos convenía",
+          "subtitulo": "Comida para él, graneros sin plagas para nosotros"
+        }
+      }
+    },
+    {
+      "narracion": "No hay una fecha exacta ni un solo momento: es una historia que los científicos siguen reescribiendo con cada nuevo ADN.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "cat on lap",
+        "describe": "un gato tumbado en el regazo de una persona",
+        "animal": "gato",
+        "cientifico": "Felis catus"
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "Una historia que se reescribe"
+      }
+    },
+    {
+      "narracion": "Y por eso conviene desconfiar de las historias demasiado redondas, aunque salgan en mil vídeos.",
+      "visual": {
+        "tipo": "video",
+        "busqueda": "cat eyes close up",
+        "describe": "los ojos de un gato en primer plano",
+        "animal": "gato",
+        "cientifico": "Felis catus"
+      },
+      "respaldo": {
+        "tipo": "titular",
+        "texto": "Desconfía de las historias redondas"
+      }
+    },
+    {
+      "narracion": "Si te ha gustado separar el mito de los datos, suscríbete: en el canal tienes más animales con historias que merece la pena comprobar.",
+      "visual": {
+        "tipo": "grafico",
+        "grafico": {
+          "tipo": "titular",
+          "texto": "Más historias de animales, comprobadas",
+          "subtitulo": "Suscríbete a Curiosa Fauna"
+        }
+      }
+    }
   ],
   "datos": [
-    {"afirmacion": "Hace unos 10.000 años los primeros agricultores del Oriente Próximo atrajeron a gatos salvajes por los roedores de sus reservas de grano (teoría clásica, corregida en parte por el estudio de 2025).",
-     "fuentes": ["https://www.naturalsciences.be/en/science/archives/2017/domestication-of-the-cat-ancient-dna-reveals-significant-role-of-the-near-east-and-egypt", "https://www.nationalgeographic.com/animals/article/when-did-cats-become-domesticated"],
-     "verificado": true, "nota": "Se presenta como 'versión clásica' porque el estudio de 2025 la cuestiona; la fuente de 2017 y la de 2025 se contrastan en el guion."},
-    {"afirmacion": "El estudio de 2017 analizó ADN de más de 200 gatos de entre 100 y 9.000 años de antigüedad del Próximo Oriente, África y Europa.",
-     "fuentes": ["https://www.naturalsciences.be/en/science/archives/2017/domestication-of-the-cat-ancient-dna-reveals-significant-role-of-the-near-east-and-egypt", "https://www.nature.com/articles/s41559-017-0139.pdf"],
-     "verificado": true, "nota": "La segunda URL (artículo original en Nature Ecology & Evolution) se conoce por la búsqueda y la cifra de 200 gatos y el rango de edad coincide con el resumen; el texto íntegro no se abrió."},
-    {"afirmacion": "Entierro de Shillourokambos (Chipre): hace unos 9.500 años una persona y un gato fueron enterrados con solo unos 40 cm de separación.",
-     "fuentes": ["https://www.sciencedaily.com/releases/2004/04/040409092827.htm", "https://www.nationalgeographic.com/animals/article/oldest-known-pet-cat-9500-year-old-burial-found-on-cyprus"],
-     "verificado": true},
-    {"afirmacion": "El entierro de Chipre es el indicio más antiguo de un vínculo estrecho persona-gato, pero no prueba que el animal fuera doméstico; los gatos anteriores al 200 a. C. no son los antepasados de los gatos domésticos actuales según el estudio de 2025.",
-     "fuentes": ["https://www.nationalgeographic.com/animals/article/oldest-known-pet-cat-9500-year-old-burial-found-on-cyprus", "https://www.sciencedaily.com/releases/2004/04/040409092827.htm", "https://www.nationalgeographic.com/animals/article/when-did-cats-become-domesticated"],
-     "verificado": true, "nota": "ScienceDaily (otro dominio) confirma que el entierro es el indicio más antiguo de vínculo; lo de 2025 viene de National Geographic. Redactado con prudencia ('no prueba'); el cierre de sciencedaily indica además que el gato era de la especie salvaje Felis silvestris."},
-    {"afirmacion": "Un estudio de ADN publicado en Science en 2025 concluye que los gatos domésticos llegaron a Europa hace unos 2.000 años desde el norte de África (época romana), no hace 6.000-7.000 años con los agricultores neolíticos.",
-     "fuentes": ["https://www.lmu.de/en/newsroom/news-overview/news/later-than-expected-domestic-cats-arrived-in-europe-only-2000-years-ago.html", "https://www.nationalgeographic.com/animals/article/when-did-cats-become-domesticated"],
-     "verificado": true},
-    {"afirmacion": "Los barcos mercantes egipcios (estudio de 2017) y, según el estudio de 2025, los fenicios y púnicos (colonias del norte de África, Cerdeña y sur de Iberia) llevaron gatos para controlar roedores.",
-     "fuentes": ["https://www.naturalsciences.be/en/science/archives/2017/domestication-of-the-cat-ancient-dna-reveals-significant-role-of-the-near-east-and-egypt", "https://www.nationalgeographic.com/animals/article/when-did-cats-become-domesticated"],
-     "verificado": true, "nota": "Se atribuye cada hipótesis a su estudio; la de 2025 se presenta como propuesta ('propone')."},
-    {"afirmacion": "Aún no se ha determinado si los gatos egipcios descienden de gatos importados del Oriente Próximo o de una domesticación independiente en Egipto; el equipo de 2025 planea analizar gatos momificados egipcios.",
-     "fuentes": ["https://www.naturalsciences.be/en/science/archives/2017/domestication-of-the-cat-ancient-dna-reveals-significant-role-of-the-near-east-and-egypt", "https://www.nationalgeographic.com/animals/article/when-did-cats-become-domesticated"],
-     "verificado": true},
-    {"afirmacion": "Bubastis (Tell Basta), en el sureste del delta del Nilo, era el principal centro de culto de Bastet, diosa protectora real; su imagen más conocida es la de una gata, a menudo con cuerpo de mujer.",
-     "fuentes": ["https://www.phil.uni-wuerzburg.de/en/tell-basta-bubastis/", "https://www.nationalgeographic.com/history/history-magazine/article/bubastis-egyptian-sacred-city-of-cats"],
-     "verificado": true, "nota": "Se evita decir cuál fue su forma original (las fuentes difieren: leona o cabeza de gata)."},
-    {"afirmacion": "Heródoto (hacia 450 a. C.) describió fiestas anuales en Bubastis con multitudes llegadas de todo Egipto, muchos en barco; se bebía más vino en esa fiesta que en el resto del año; la estatua de la diosa se paseaba en una barca por los canales del templo.",
-     "fuentes": ["https://www.phil.uni-wuerzburg.de/en/tell-basta-bubastis/", "https://www.nationalgeographic.com/history/history-magazine/article/bubastis-egyptian-sacred-city-of-cats"],
-     "verificado": true, "nota": "No se usan cifras de asistentes ni de gatos momificados ni la pena de muerte por matar un gato: las fuentes no coinciden o solo una las recoge."},
-    {"afirmacion": "El papa Gregorio IX firmó la decretal Vox in Rama en junio de 1233, dirigida a arzobispos alemanes (Maguncia e Hildesheim) en apoyo de Conrado de Marburgo, que denunciaba una secta satánica.",
-     "fuentes": ["https://en.wikipedia.org/wiki/Vox_in_Rama", "https://historycollection.com/thou-shalt-not-suffer-a-cat-to-live-why-pope-gregory-ixs-vox-in-rama-implicated-cats-in-devil-worship/"],
-     "verificado": true, "nota": "Fuentes de nivel C/divulgación; el artículo de Wikipedia cita bibliografía académica (Barber, Russell, Moore, Byrne). Conviene revisar a mano con una fuente A/B si hay tiempo."},
-    {"afirmacion": "La carta describe rituales con un gato y presenta al diablo como figura mitad gato, mitad hombre; el texto no declara satánicos a todos los gatos ni ordena matarlos.",
-     "fuentes": ["https://en.wikipedia.org/wiki/Vox_in_Rama", "https://historycollection.com/thou-shalt-not-suffer-a-cat-to-live-why-pope-gregory-ixs-vox-in-rama-implicated-cats-in-devil-worship/"],
-     "verificado": true, "nota": "Wikipedia afirma expresamente que no hay orden de matar gatos; historycollection no menciona tal orden. Redactado con prudencia. La frase 'uno de los textos que más se citan' es una valoración suave, no una cifra."},
-    {"afirmacion": "La peste negra recorrió Europa entre 1347 y 1351 (mediados del siglo XIV).",
-     "fuentes": ["https://www.history.com/articles/rats-didnt-spread-the-black-death-it-was-humans", "https://www.nationalgeographic.com/science/article/rats-plague-black-death-humans-lice-health-science"],
-     "verificado": true},
-    {"afirmacion": "Un estudio de 2018 (PNAS, universidades de Oslo y Ferrara) comparó nueve brotes de peste en ciudades europeas: en siete, el modelo de pulgas y piojos humanos encajaba mejor que el de las ratas.",
-     "fuentes": ["https://www.nationalgeographic.com/science/article/rats-plague-black-death-humans-lice-health-science", "https://www.rnz.co.nz/news/world/348195/black-death-spread-by-humans-not-rats-study"],
-     "verificado": true, "nota": "history.com tiene la fecha del estudio confusa (2017/2018); National Geographic y RNZ lo sitúan en enero de 2018. Conclusión del guion ('muy discutible') es una inferencia prudente, no una cifra."},
-    {"afirmacion": "El HMS Amethyst quedó atrapado en el río Yangtsé unas diez semanas en 1949 (incidente del Yangtsé, abril-agosto); Simon, el gato de a bordo, resultó herido por metralla y siguió cazando las ratas que amenazaban las provisiones.",
-     "fuentes": ["https://pdsa.org.uk/get-involved/dm75/the-diligent/simon", "https://time.com/5396568/simon-cat-war-medal/"],
-     "verificado": true, "nota": "La duración (~10 semanas) procede de PDSA; el marco abril-agosto de Guinness."},
-    {"afirmacion": "Simon recibió la Medalla Dickin (PDSA) en agosto de 1949 y es el único gato que la ha recibido (hasta 2021).",
-     "fuentes": ["https://www.guinnessworldrecords.com/world-records/676056-first-cat-to-receive-the-dickin-medal", "https://time.com/5396568/simon-cat-war-medal/"],
-     "verificado": true, "nota": "Se redacta 'que se sepa'. Las fuentes discrepan en si la entrega fue póstuma; el guion no lo menciona."}
+    {
+      "afirmacion": "Hace unos 10.000 años los primeros agricultores del Oriente Próximo atrajeron a gatos salvajes por los roedores de sus reservas de grano (teoría clásica, corregida en parte por el estudio de 2025).",
+      "fuentes": [
+        "https://www.naturalsciences.be/en/science/archives/2017/domestication-of-the-cat-ancient-dna-reveals-significant-role-of-the-near-east-and-egypt",
+        "https://www.nationalgeographic.com/animals/article/when-did-cats-become-domesticated"
+      ],
+      "verificado": true,
+      "nota": "Se presenta como 'versión clásica' porque el estudio de 2025 la cuestiona; la fuente de 2017 y la de 2025 se contrastan en el guion."
+    },
+    {
+      "afirmacion": "El estudio de 2017 analizó ADN de más de 200 gatos de entre 100 y 9.000 años de antigüedad del Próximo Oriente, África y Europa.",
+      "fuentes": [
+        "https://www.naturalsciences.be/en/science/archives/2017/domestication-of-the-cat-ancient-dna-reveals-significant-role-of-the-near-east-and-egypt",
+        "https://www.nature.com/articles/s41559-017-0139.pdf"
+      ],
+      "verificado": true,
+      "nota": "La segunda URL (artículo original en Nature Ecology & Evolution) se conoce por la búsqueda y la cifra de 200 gatos y el rango de edad coincide con el resumen; el texto íntegro no se abrió."
+    },
+    {
+      "afirmacion": "Entierro de Shillourokambos (Chipre): hace unos 9.500 años una persona y un gato fueron enterrados con solo unos 40 cm de separación.",
+      "fuentes": [
+        "https://www.sciencedaily.com/releases/2004/04/040409092827.htm",
+        "https://www.nationalgeographic.com/animals/article/oldest-known-pet-cat-9500-year-old-burial-found-on-cyprus"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "El entierro de Chipre es el indicio más antiguo de un vínculo estrecho persona-gato, pero no prueba que el animal fuera doméstico; los gatos anteriores al 200 a. C. no son los antepasados de los gatos domésticos actuales según el estudio de 2025.",
+      "fuentes": [
+        "https://www.nationalgeographic.com/animals/article/oldest-known-pet-cat-9500-year-old-burial-found-on-cyprus",
+        "https://www.sciencedaily.com/releases/2004/04/040409092827.htm",
+        "https://www.nationalgeographic.com/animals/article/when-did-cats-become-domesticated"
+      ],
+      "verificado": true,
+      "nota": "ScienceDaily (otro dominio) confirma que el entierro es el indicio más antiguo de vínculo; lo de 2025 viene de National Geographic. Redactado con prudencia ('no prueba'); el cierre de sciencedaily indica además que el gato era de la especie salvaje Felis silvestris."
+    },
+    {
+      "afirmacion": "Un estudio de ADN publicado en Science en 2025 concluye que los gatos domésticos llegaron a Europa hace unos 2.000 años desde el norte de África (época romana), no hace 6.000-7.000 años con los agricultores neolíticos.",
+      "fuentes": [
+        "https://www.lmu.de/en/newsroom/news-overview/news/later-than-expected-domestic-cats-arrived-in-europe-only-2000-years-ago.html",
+        "https://www.nationalgeographic.com/animals/article/when-did-cats-become-domesticated"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Los barcos mercantes egipcios (estudio de 2017) y, según el estudio de 2025, los fenicios y púnicos (colonias del norte de África, Cerdeña y sur de Iberia) llevaron gatos para controlar roedores.",
+      "fuentes": [
+        "https://www.naturalsciences.be/en/science/archives/2017/domestication-of-the-cat-ancient-dna-reveals-significant-role-of-the-near-east-and-egypt",
+        "https://www.nationalgeographic.com/animals/article/when-did-cats-become-domesticated"
+      ],
+      "verificado": true,
+      "nota": "Se atribuye cada hipótesis a su estudio; la de 2025 se presenta como propuesta ('propone')."
+    },
+    {
+      "afirmacion": "Aún no se ha determinado si los gatos egipcios descienden de gatos importados del Oriente Próximo o de una domesticación independiente en Egipto; el equipo de 2025 planea analizar gatos momificados egipcios.",
+      "fuentes": [
+        "https://www.naturalsciences.be/en/science/archives/2017/domestication-of-the-cat-ancient-dna-reveals-significant-role-of-the-near-east-and-egypt",
+        "https://www.nationalgeographic.com/animals/article/when-did-cats-become-domesticated"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Bubastis (Tell Basta), en el sureste del delta del Nilo, era el principal centro de culto de Bastet, diosa protectora real; su imagen más conocida es la de una gata, a menudo con cuerpo de mujer.",
+      "fuentes": [
+        "https://www.phil.uni-wuerzburg.de/en/tell-basta-bubastis/",
+        "https://www.nationalgeographic.com/history/history-magazine/article/bubastis-egyptian-sacred-city-of-cats"
+      ],
+      "verificado": true,
+      "nota": "Se evita decir cuál fue su forma original (las fuentes difieren: leona o cabeza de gata)."
+    },
+    {
+      "afirmacion": "Heródoto (hacia 450 a. C.) describió fiestas anuales en Bubastis con multitudes llegadas de todo Egipto, muchos en barco; se bebía más vino en esa fiesta que en el resto del año; la estatua de la diosa se paseaba en una barca por los canales del templo.",
+      "fuentes": [
+        "https://www.phil.uni-wuerzburg.de/en/tell-basta-bubastis/",
+        "https://www.nationalgeographic.com/history/history-magazine/article/bubastis-egyptian-sacred-city-of-cats"
+      ],
+      "verificado": true,
+      "nota": "No se usan cifras de asistentes ni de gatos momificados ni la pena de muerte por matar un gato: las fuentes no coinciden o solo una las recoge."
+    },
+    {
+      "afirmacion": "El papa Gregorio IX firmó la decretal Vox in Rama en junio de 1233, dirigida a arzobispos alemanes (Maguncia e Hildesheim) en apoyo de Conrado de Marburgo, que denunciaba una secta satánica.",
+      "fuentes": [
+        "https://en.wikipedia.org/wiki/Vox_in_Rama",
+        "https://historycollection.com/thou-shalt-not-suffer-a-cat-to-live-why-pope-gregory-ixs-vox-in-rama-implicated-cats-in-devil-worship/"
+      ],
+      "verificado": true,
+      "nota": "Fuentes de nivel C/divulgación; el artículo de Wikipedia cita bibliografía académica (Barber, Russell, Moore, Byrne). Conviene revisar a mano con una fuente A/B si hay tiempo."
+    },
+    {
+      "afirmacion": "La carta describe rituales con un gato y presenta al diablo como figura mitad gato, mitad hombre; el texto no declara satánicos a todos los gatos ni ordena matarlos.",
+      "fuentes": [
+        "https://en.wikipedia.org/wiki/Vox_in_Rama",
+        "https://historycollection.com/thou-shalt-not-suffer-a-cat-to-live-why-pope-gregory-ixs-vox-in-rama-implicated-cats-in-devil-worship/"
+      ],
+      "verificado": true,
+      "nota": "Wikipedia afirma expresamente que no hay orden de matar gatos; historycollection no menciona tal orden. Redactado con prudencia. La frase 'uno de los textos que más se citan' es una valoración suave, no una cifra."
+    },
+    {
+      "afirmacion": "La peste negra recorrió Europa entre 1347 y 1351 (mediados del siglo XIV).",
+      "fuentes": [
+        "https://www.history.com/articles/rats-didnt-spread-the-black-death-it-was-humans",
+        "https://www.nationalgeographic.com/science/article/rats-plague-black-death-humans-lice-health-science"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Un estudio de 2018 (PNAS, universidades de Oslo y Ferrara) comparó nueve brotes de peste en ciudades europeas: en siete, el modelo de pulgas y piojos humanos encajaba mejor que el de las ratas.",
+      "fuentes": [
+        "https://www.nationalgeographic.com/science/article/rats-plague-black-death-humans-lice-health-science",
+        "https://www.rnz.co.nz/news/world/348195/black-death-spread-by-humans-not-rats-study"
+      ],
+      "verificado": true,
+      "nota": "history.com tiene la fecha del estudio confusa (2017/2018); National Geographic y RNZ lo sitúan en enero de 2018. Conclusión del guion ('muy discutible') es una inferencia prudente, no una cifra."
+    },
+    {
+      "afirmacion": "El HMS Amethyst quedó atrapado en el río Yangtsé unas diez semanas en 1949 (incidente del Yangtsé, abril-agosto); Simon, el gato de a bordo, resultó herido por metralla y siguió cazando las ratas que amenazaban las provisiones.",
+      "fuentes": [
+        "https://pdsa.org.uk/get-involved/dm75/the-diligent/simon",
+        "https://time.com/5396568/simon-cat-war-medal/"
+      ],
+      "verificado": true,
+      "nota": "La duración (~10 semanas) procede de PDSA; el marco abril-agosto de Guinness."
+    },
+    {
+      "afirmacion": "Simon recibió la Medalla Dickin (PDSA) en agosto de 1949 y es el único gato que la ha recibido (hasta 2021).",
+      "fuentes": [
+        "https://www.guinnessworldrecords.com/world-records/676056-first-cat-to-receive-the-dickin-medal",
+        "https://time.com/5396568/simon-cat-war-medal/"
+      ],
+      "verificado": true,
+      "nota": "Se redacta 'que se sepa'. Las fuentes discrepan en si la entrega fue póstuma; el guion no lo menciona."
+    }
   ]
 }
