@@ -1,0 +1,63 @@
+{
+  "id": "20261126-3-camello",
+  "formato": "mito",
+  "animal": "camello",
+  "gancho_pantalla": "Su joroba guarda agua",
+  "guion": "Casi todo el mundo cree que la joroba de un camello es un depósito de agua. Esa joroba concentra buena parte de la grasa de su cuerpo. Puede pesar decenas de kilos y cambia de tamaño según lo que come el camello. Y cuando pasa hambre, se queda flácida y caída. ¿Verdad o mentira? Escríbelo en comentarios.",
+  "datos": [
+    {
+      "afirmacion": "La joroba del camello almacena grasa, no agua; la mayor parte de la grasa del camello está en las jorobas y se convierte en energía cuando escasean comida y agua.",
+      "fuentes": [
+        "https://www.nhm.ac.uk/discover/how-do-camels-survive-in-deserts.html",
+        "https://www.clevelandzoosociety.org/z/2021/04/06/truth-or-tail-a-camels-hump"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "La joroba puede contener hasta unas 80 libras (unos 36 kg) de grasa y su tamaño cambia según cuánto come el camello.",
+      "fuentes": [
+        "https://www.clevelandzoosociety.org/z/2021/04/06/truth-or-tail-a-camels-hump",
+        "https://www.loc.gov/everyday-mysteries/zoology/item/how-much-water-does-a-camels-hump-hold/"
+      ],
+      "verificado": true,
+      "nota": "La página de la Biblioteca del Congreso devolvió 403 al abrirla; la cifra se leyó en Cleveland Zoo Society y la LOC la recoge en el resumen de búsqueda. El guion solo dice 'decenas de kilos'. La joroba flácida al gastar la grasa: LOC (resumen de búsqueda)."
+    }
+  ],
+  "planos": [
+    {
+      "clave": "pexels:27626040",
+      "desde": 1.0,
+      "hasta": 6.0,
+      "nota": "camello decorado en movimiento; esp 6"
+    },
+    {
+      "clave": "pexels:35667988",
+      "desde": 0.0,
+      "hasta": 5.0,
+      "nota": "camello poniéndose en pie"
+    },
+    {
+      "clave": "pixabay:134296",
+      "desde": 0.0,
+      "hasta": 5.0,
+      "nota": "camello mirando a cámara"
+    }
+  ],
+  "titulo": "¿Guarda Agua La Joroba De Un Camello? 🐪",
+  "descripcion": "👇 Vota en comentarios antes de leer.\n\nRespuesta: Falso. La joroba almacena grasa, que el camello convierte en energía cuando escasean la comida y el agua; no es un depósito de agua. Su tamaño cambia según lo que come el animal. #camello #desierto #mito #animales",
+  "etiquetas": [
+    "camello",
+    "joroba",
+    "desierto",
+    "animales",
+    "mitos"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=Nfn3AL9qOek",
+    "fecha": "2026-11-28T12:00Z",
+    "subido": "2026-11-27T10:45Z",
+    "programado": true,
+    "con_voz": true,
+    "privacidad": "public"
+  }
+}
