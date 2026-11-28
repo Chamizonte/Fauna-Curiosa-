@@ -805,7 +805,21 @@
         "tipo": "titular",
         "texto": "Simon, gato de a bordo",
         "subtitulo": "HMS Amethyst"
-      }
+      },
+      "planos": [
+        {
+          "clave": "pexels:35239446",
+          "url": "https://videos.pexels.com/video-files/35239446/14929132_1920_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Beata L. en Pexels (https://www.pexels.com/video/naval-vessel-on-ocean-with-choppy-waves-35239446/)",
+          "desde": 0.0,
+          "hasta": 20.82,
+          "duracion_clip": 20.0,
+          "posicion_x": 0.5,
+          "descripcion": "Vista desde la cubierta delantera de un buque de guerra navegando a través de un océano con oleaje moderado, con armamento antiaéreo visible.",
+          "encaja": 10
+        }
+      ]
     },
     {
       "narracion": "En 1949, el HMS Amethyst quedó atrapado en el río Yangtsé, en el llamado incidente del Yangtsé.",
@@ -843,7 +857,21 @@
       "respaldo": {
         "tipo": "titular",
         "texto": "Herido, siguió cazando ratas"
-      }
+      },
+      "planos": [
+        {
+          "clave": "pexels:40059058",
+          "url": "https://videos.pexels.com/video-files/40059058/17099273_1920_1080_60fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de licht sam1 en Pexels (https://www.pexels.com/video/white-cat-relaxing-on-fishing-net-at-sunset-harbor-40059058/)",
+          "desde": 0.0,
+          "hasta": 9.65,
+          "duracion_clip": 9.0,
+          "posicion_x": 0.51,
+          "descripcion": "Un gato blanco con manchas claras descansa pacíficamente sobre una red de pesca roja a bordo de un barco en el puerto al atardecer.",
+          "encaja": 10
+        }
+      ]
     },
     {
       "narracion": "Por eso recibió la Medalla Dickin, una condecoración para animales, en agosto de 1949.",
@@ -885,7 +913,21 @@
       "respaldo": {
         "tipo": "titular",
         "texto": "De puerto en puerto"
-      }
+      },
+      "planos": [
+        {
+          "clave": "pixabay:129543",
+          "url": "https://cdn.pixabay.com/video/2022/08/29/129543-744385658_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de chris_muschard en Pixabay (https://pixabay.com/videos/id-129543/)",
+          "desde": 0.0,
+          "hasta": 15.18,
+          "duracion_clip": 15.0,
+          "posicion_x": 0.5,
+          "descripcion": "Un gato negro de pelaje corto descansa tranquilamente en una superficie blanda, parpadeando despacio y mirando a su alrededor.",
+          "encaja": 9
+        }
+      ]
     },
     {
       "narracion": "Resumamos lo que hemos comprobado: el gato se acercó por los roedores, llegó a Europa hace unos dos mil años y en Egipto tuvo una diosa propia.",
@@ -915,7 +957,21 @@
       "respaldo": {
         "tipo": "titular",
         "texto": "Lo que no se sostiene tan bien"
-      }
+      },
+      "planos": [
+        {
+          "clave": "pixabay:46226",
+          "url": "https://cdn.pixabay.com/video/2020/08/02/46226-447422835_large.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de yeracastelan en Pixabay (https://pixabay.com/videos/id-46226/)",
+          "desde": 0.0,
+          "hasta": 12.0,
+          "duracion_clip": 12.0,
+          "posicion_x": 0.55,
+          "descripcion": "Un gato blanco con ojos azules mira atentamente a través de los cristales de una ventana de madera.",
+          "encaja": 10
+        }
+      ]
     },
     {
       "narracion": "Entonces, ¿cómo acabó un cazador salvaje durmiendo en tu sofá? Porque a los dos nos convenía: él tenía comida, y nosotros, graneros sin plagas.",
@@ -940,7 +996,21 @@
       "respaldo": {
         "tipo": "titular",
         "texto": "Una historia que se reescribe"
-      }
+      },
+      "planos": [
+        {
+          "clave": "pexels:20032541",
+          "url": "https://videos.pexels.com/video-files/20032541/20032541-hd_1920_1080_30fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Rin Gakusho en Pexels (https://www.pexels.com/video/a-cat-is-laying-on-a-person-s-lap-20032541/)",
+          "desde": 0.0,
+          "hasta": 17.25,
+          "duracion_clip": 17.0,
+          "posicion_x": 0.45,
+          "descripcion": "Un gato doméstico tricolor permanece descansando en el regazo de una persona mientras es acariciado dulcemente alrededor de la cabeza.",
+          "encaja": 10
+        }
+      ]
     },
     {
       "narracion": "Y por eso conviene desconfiar de las historias demasiado redondas, aunque salgan en mil vídeos.",
@@ -954,7 +1024,21 @@
       "respaldo": {
         "tipo": "titular",
         "texto": "Desconfía de las historias redondas"
-      }
+      },
+      "planos": [
+        {
+          "clave": "pexels:35839670",
+          "url": "https://videos.pexels.com/video-files/35839670/15197035_1920_1080_24fps.mp4",
+          "tipo": "video",
+          "atribucion": "Vídeo de Luz Calor Som en Pexels (https://www.pexels.com/video/close-up-of-blue-cat-eye-with-detailed-texture-35839670/)",
+          "desde": 0.0,
+          "hasta": 7.59,
+          "duracion_clip": 7.0,
+          "posicion_x": 0.5,
+          "descripcion": "Primer plano macro del ojo azul de un gato atigrado, mostrando detalles del iris, la pupila rasgada y el pelaje.",
+          "encaja": 10
+        }
+      ]
     },
     {
       "narracion": "Si te ha gustado separar el mito de los datos, suscríbete: en el canal tienes más animales con historias que merece la pena comprobar.",
