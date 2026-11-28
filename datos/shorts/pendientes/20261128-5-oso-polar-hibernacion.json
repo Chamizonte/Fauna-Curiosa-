@@ -1,0 +1,45 @@
+{
+  "id": "20261128-5-oso-polar-hibernacion",
+  "formato": "mito",
+  "animal": "oso polar",
+  "gancho_pantalla": "El oso polar hiberna",
+  "guion": "Los osos polares hibernan en invierno. Los osos pardos pasan el invierno en una guarida, bajando su temperatura para ahorrar energía. Y las osas polares preñadas cavan una guarida en la nieve donde nacen sus crías y pasan meses. Pero el oso polar vive sobre el hielo del mar, y no todos los osos polares hacen lo mismo en invierno. ¿Verdad o mentira: los osos polares hibernan? Escríbelo en comentarios.",
+  "datos": [
+    {
+      "afirmacion": "Solo las hembras preñadas buscan una guarida en invierno y allí paren; el resto de osos polares permanece activo todo el invierno.",
+      "fuentes": [
+        "https://fws.gov/story/polar-bear-year-spring?page=4",
+        "https://www.pbs.org/wnet/nature/bears-of-the-last-frontier-polar-bear-fact-sheet/7053"
+      ],
+      "verificado": true,
+      "nota": "USFWS: 'only pregnant females seek out dens, while the rest remain active throughout winter'. PBS Nature: 'all polar bears do not hibernate for the winter – only pregnant female polar bears do... not a deep hibernation'."
+    },
+    {
+      "afirmacion": "Los osos pardos pasan el invierno en guaridas que excavan, bajando su temperatura corporal y su actividad para ahorrar energía.",
+      "fuentes": [
+        "https://fws.gov/story/polar-bear-year-spring?page=4",
+        "https://www.nps.gov/articles/000/brooks-range-bear-denning.htm"
+      ],
+      "verificado": true,
+      "nota": "USFWS: 'Most other bears in the Arctic Refuge, such as black and brown bears, sleep through the winter'. NPS (Brooks Range): 'they spend their winters in earthen dens they dig'; lower body temperature and activity (torpor). Pista de contexto, no determina la respuesta."
+    },
+    {
+      "afirmacion": "Las osas preñadas excavan guaridas en la nieve y las crías nacen durante ese retiro.",
+      "fuentes": [
+        "https://www.pbs.org/wnet/nature/bears-of-the-last-frontier-polar-bear-fact-sheet/7053",
+        "https://fws.gov/story/polar-bear-year-spring?page=4"
+      ],
+      "verificado": true
+    }
+  ],
+  "planos": [
+    {"clave": "wikimedia:90991371", "desde": 17.0, "hasta": 21.0, "nota": "osos polares en la costa"},
+    {"clave": "pexels:35371254", "desde": 20.0, "hasta": 24.0, "nota": "oso polar sobre la nieve"},
+    {"clave": "wikimedia:90991371", "desde": 30.0, "hasta": 34.0, "nota": "osos polares junto al mar"},
+    {"clave": "pexels:35371254", "desde": 40.0, "hasta": 44.0, "nota": "oso polar sobre la nieve"},
+    {"clave": "wikimedia:90991371", "desde": 41.0, "hasta": 45.0, "nota": "cierre con osos polares"}
+  ],
+  "titulo": "¿Hibernan los osos polares? Vota en comentarios",
+  "descripcion": "👇 Vota en comentarios antes de leer.\n\nRespuesta: no todos. Solo las hembras preñadas se refugian en una guarida de nieve, donde paren a sus crías; el resto de osos polares sigue activo durante todo el invierno, según el Servicio de Pesca y Vida Silvestre de EE. UU. Y ni siquiera ese retiro es una hibernación profunda, como explica PBS Nature. #osopolar #hibernacion #animales #fauna #curiosidades #artico",
+  "etiquetas": ["oso polar", "hibernación", "animales", "curiosidades", "mito"]
+}

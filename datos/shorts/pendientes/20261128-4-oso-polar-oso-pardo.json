@@ -1,0 +1,45 @@
+{
+  "id": "20261128-4-oso-polar-oso-pardo",
+  "formato": "comparativa",
+  "animal": "oso polar",
+  "gancho_pantalla": "Oso polar contra oso pardo",
+  "guion": "Oso polar contra oso pardo: ¿quién pesa más? Un oso polar macho suele pesar entre cuatrocientos y seiscientos kilos, y los más grandes se acercan a ochocientos. El pardo más grande es el kodiak, y su máximo se queda por debajo. Gana el polar: es el mayor oso del mundo y el mayor carnívoro terrestre. Pero el kodiak es más robusto. Oso polar contra oso pardo: casi empatan.",
+  "datos": [
+    {
+      "afirmacion": "El oso polar es el oso más grande y el mayor carnívoro terrestre.",
+      "fuentes": [
+        "https://www.guinnessworldrecords.com/world-records/largest-carnivore-on-land.html",
+        "https://www.discoverwildlife.com/animal-facts/mammals/worlds-biggest-bears"
+      ],
+      "verificado": true
+    },
+    {
+      "afirmacion": "Los osos polares machos pesan generalmente entre 400 y 600 kg y los mayores llegan hacia los 800 kg.",
+      "fuentes": [
+        "https://www.guinnessworldrecords.com/world-records/largest-carnivore-on-land.html",
+        "https://www.discoverwildlife.com/animal-facts/mammals/worlds-biggest-bears"
+      ],
+      "verificado": true,
+      "nota": "Guinness: machos 400-600 kg. Discover Wildlife: machos 350-800 kg."
+    },
+    {
+      "afirmacion": "El pardo más grande, el kodiak, queda por debajo del máximo del polar y es de constitución más robusta (más corto pero más corpulento).",
+      "fuentes": [
+        "https://www.guinnessworldrecords.com/world-records/largest-carnivore-on-land.html",
+        "https://www.discoverwildlife.com/animal-facts/mammals/worlds-biggest-bears"
+      ],
+      "verificado": true,
+      "nota": "Discover Wildlife: kodiak machos 270-630 kg, hasta 680 kg en su pico; Guinness: más corto pero más robusto que el polar."
+    }
+  ],
+  "planos": [
+    {"clave": "wikimedia:90991371", "desde": 13.0, "hasta": 17.0, "nota": "osos polares en la costa"},
+    {"clave": "pexels:35371254", "desde": 0.0, "hasta": 4.0, "nota": "oso polar tumbado en la nieve"},
+    {"clave": "wikimedia:90991371", "desde": 25.0, "hasta": 29.0, "nota": "osos polares en la orilla"},
+    {"clave": "pexels:35371254", "desde": 8.0, "hasta": 12.0, "nota": "oso polar jugando en la nieve"},
+    {"clave": "wikimedia:90991371", "desde": 36.0, "hasta": 39.0, "nota": "polares, de vuelta al cierre"}
+  ],
+  "titulo": "Oso polar contra oso pardo: ¿quién pesa más?",
+  "descripcion": "El oso polar es el oso más grande del mundo y el mayor carnívoro terrestre: los machos pesan entre 400 y 600 kg y los mayores se acercan a 800. El kodiak, el oso pardo más grande, se queda algo por debajo, aunque es más robusto. En pocas palabras: gana el polar, pero por poco. #osopolar #osopardo #kodiak #animales #fauna #curiosidades",
+  "etiquetas": ["oso polar", "oso pardo", "kodiak", "animales", "comparativa"]
+}

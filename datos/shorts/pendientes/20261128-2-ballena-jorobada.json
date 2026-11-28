@@ -1,0 +1,33 @@
+{
+  "id": "20261128-2-ballena-jorobada",
+  "formato": "momento",
+  "animal": "ballena jorobada",
+  "gancho_pantalla": "Una madre y su ballenato",
+  "texto_tarjeta": "Una ballena jorobada produce una leche con **casi la mitad de grasa**: tan espesa que no se disuelve en el agua y permite al ballenato **engordar muy rápido**.",
+  "datos": [
+    {
+      "afirmacion": "La leche de ballena contiene hasta un 50 % de grasa (casi la mitad).",
+      "fuentes": [
+        "https://hakaimagazine.com/?p=26463",
+        "https://www.sciencenorway.no/biology-whales/this-is-how-whales-nurse-underwater/2273287"
+      ],
+      "verificado": true,
+      "nota": "Hakai: grasa 'up to 50 percent' en leche de jorobada. ScienceNorway (NTNU): 'Almost half of whale milk is fat', dato general de cetáceos."
+    },
+    {
+      "afirmacion": "La leche de ballena tiene tanta grasa que no se disuelve en el agua y el ballenato gana peso rápidamente.",
+      "fuentes": [
+        "https://www.nationalparks.nsw.gov.au/get-inspired/stories/motherly-whale-facts-about-our-favourite-gentle-giants",
+        "https://www.sciencenorway.no/biology-whales/this-is-how-whales-nurse-underwater/2273287"
+      ],
+      "verificado": true,
+      "nota": "NSW NPWS: 'very high-fat content, which helps prevent it from dissolving in the water'. ScienceNorway: 'A whale calf can gain up to 100 kilograms per day' (cetáceos en general)."
+    }
+  ],
+  "planos": [
+    {"clave": "pexels:11279748", "desde": 0.0, "hasta": 7.0, "nota": "vista aérea de la madre con su ballenato"}
+  ],
+  "titulo": "La Leche De Ballena Jorobada: Casi La Mitad Es Grasa 🐋",
+  "descripcion": "La leche de las ballenas es de las más ricas del mundo: puede llevar hasta un 50 % de grasa. Esa grasa la hace tan espesa que no se disuelve en el agua mientras el ballenato mama, y le ayuda a ganar peso muy rápido antes de su primera gran migración. En pocas palabras: casi la mitad de la leche de una ballena es grasa. #ballenajorobada #ballenas #animales #fauna #curiosidades #oceano",
+  "etiquetas": ["ballena jorobada", "ballena", "animales", "curiosidades", "oceano"]
+}

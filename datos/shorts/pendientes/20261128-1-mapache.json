@@ -1,0 +1,29 @@
+{
+  "id": "20261128-1-mapache",
+  "formato": "por_que",
+  "animal": "mapache",
+  "gancho_pantalla": "¿Cómo baja de cabeza?",
+  "guion": "Este mapache baja del árbol con la cabeza por delante. Bajar así parece difícil, pero él tiene un truco. Gira las patas traseras hasta apuntarlas hacia atrás. Así las uñas se agarran a la corteza mientras la cabeza va primero. Baja viendo adónde va, sin tener que descender de espaldas. Un tobillo que da la vuelta lo cambia todo. ¿Cómo baja un mapache de un árbol? De cabeza.",
+  "datos": [
+    {
+      "afirmacion": "Los mapaches pueden bajar de un árbol de cabeza porque giran las patas traseras hacia atrás.",
+      "fuentes": [
+        "https://www.esf.edu/aec/adks/mammals/raccoon.php",
+        "https://biodiversity.utexas.edu/news/features/campus-biodiversity-raccoons"
+      ],
+      "verificado": true,
+      "nota": "ESF: 'by rotating their hind feet, can descend from trees head-first'. UT Austin: 'able to rotate their feet to point backwards'."
+    }
+  ],
+  "planos": [
+    {"clave": "pixabay:81448", "desde": 0.0, "hasta": 2.0, "nota": "el mapache baja por el tronco mirando abajo"},
+    {"clave": "pixabay:81448", "desde": 9.0, "hasta": 12.0, "nota": "asoma entre los troncos mirando a cámara"},
+    {"clave": "pexels:32087341", "desde": 5.0, "hasta": 8.0, "nota": "primer plano del antifaz"},
+    {"clave": "pexels:32087341", "desde": 8.0, "hasta": 11.0, "nota": "husmea en el suelo"},
+    {"clave": "pexels:32087341", "desde": 13.0, "hasta": 16.0, "nota": "cola anillada y movimiento"},
+    {"clave": "wikimedia:28875190", "desde": 0.0, "hasta": 8.0, "nota": "explora las rocas"}
+  ],
+  "titulo": "Mapache: ¿cómo baja de un árbol de cabeza?",
+  "descripcion": "Los mapaches pueden bajar de un árbol con la cabeza por delante porque giran las patas traseras hacia atrás y se agarran con las uñas a la corteza.",
+  "etiquetas": ["mapache", "animales", "curiosidades", "fauna", "naturaleza"]
+}

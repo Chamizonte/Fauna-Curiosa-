@@ -1,0 +1,33 @@
+{
+  "id": "20261128-3-caballito-de-mar",
+  "formato": "momento",
+  "animal": "caballito de mar",
+  "gancho_pantalla": "¿Sabías que su cola es cuadrada?",
+  "texto_tarjeta": "La cola del caballito de mar es **cuadrada**, no redonda: sus segmentos tocan más superficie y se agarra con más firmeza, y además aguanta **más aplastamiento**.",
+  "datos": [
+    {
+      "afirmacion": "La cola del caballito de mar tiene sección cuadrada; sus segmentos cuadrados presionan más superficie contra lo que agarra que los redondos.",
+      "fuentes": [
+        "https://today.ucsd.edu/story/why_the_seahorses_tail_is_square_and_how_it_could_be_an_inspiration",
+        "https://www.sciencenews.org/blog/science-ticker/why-seahorses-have-square-tails"
+      ],
+      "verificado": true,
+      "nota": "Estudio de Porter et al., Science 2015 (UC San Diego), con modelos impresos en 3D; Science News: 'press more surface area against a perch than round ones'."
+    },
+    {
+      "afirmacion": "Los segmentos cuadrados resisten mejor el aplastamiento que los redondos (en los modelos, hasta cuatro veces más).",
+      "fuentes": [
+        "https://today.ucsd.edu/story/why_the_seahorses_tail_is_square_and_how_it_could_be_an_inspiration",
+        "https://www.sciencenews.org/blog/science-ticker/why-seahorses-have-square-tails"
+      ],
+      "verificado": true,
+      "nota": "Se dice 'más aplastamiento' sin cifra; Science News da 'four times stronger' en los modelos."
+    }
+  ],
+  "planos": [
+    {"clave": "pixabay:245968", "desde": 0.0, "hasta": 9.0, "nota": "grupo de caballitos sujetos a ramas de coral"}
+  ],
+  "titulo": "El Caballito De Mar Tiene La Cola Cuadrada 🐴",
+  "descripcion": "La cola de un caballito de mar no es redonda, es cuadrada. Un estudio de 2015 publicado en Science comparó modelos de colas cuadradas y redondas: los segmentos cuadrados presionan más superficie contra lo que agarran y resisten mejor el aplastamiento. En pocas palabras: una cola cuadrada agarra mejor y protege más. #caballitodemar #animales #oceano #fauna #curiosidades #naturaleza",
+  "etiquetas": ["caballito de mar", "animales", "curiosidades", "oceano", "fauna"]
+}
