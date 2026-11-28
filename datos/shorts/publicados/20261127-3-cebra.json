@@ -24,11 +24,40 @@
     }
   ],
   "planos": [
-    {"clave": "pexels:5146631", "desde": 0.0, "hasta": 6.0, "nota": "Cebra con el pelaje rayado bien visible, esp 6"},
-    {"clave": "pexels:7421701", "desde": 0.0, "hasta": 5.0, "nota": "Cebra corriendo por el camino, esp 6"},
-    {"clave": "pexels:5146631", "desde": 10.0, "hasta": 16.0, "nota": "Otro tramo de la cebra, rayas a la vista"}
+    {
+      "clave": "pexels:5146631",
+      "desde": 0.0,
+      "hasta": 6.0,
+      "nota": "Cebra con el pelaje rayado bien visible, esp 6"
+    },
+    {
+      "clave": "pexels:7421701",
+      "desde": 0.0,
+      "hasta": 5.0,
+      "nota": "Cebra corriendo por el camino, esp 6"
+    },
+    {
+      "clave": "pexels:5146631",
+      "desde": 10.0,
+      "hasta": 16.0,
+      "nota": "Otro tramo de la cebra, rayas a la vista"
+    }
   ],
   "titulo": "Para Qué Sirven Las Rayas De Una Cebra 🦓",
   "descripcion": "Las rayas de la cebra desorientan a los tábanos en el último instante: no los alejan, pero les cuesta aterrizar (Universidad de Bristol y UC Davis, estudio de 2019).",
-  "etiquetas": ["cebra", "rayas", "animales", "curiosidades", "tábanos"]
+  "etiquetas": [
+    "cebra",
+    "rayas",
+    "animales",
+    "curiosidades",
+    "tábanos"
+  ],
+  "publicacion": {
+    "url": "https://youtube.com/watch?v=E1gdjntpYX0",
+    "fecha": "2026-11-29T12:00Z",
+    "subido": "2026-11-28T09:22Z",
+    "programado": true,
+    "con_voz": true,
+    "privacidad": "public"
+  }
 }
